@@ -1,6 +1,0 @@
-prefix=@prefix@
-
-Name: sdf-library
-Version: 1.0
-Description:
-Requires: 
