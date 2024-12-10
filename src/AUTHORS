@@ -12,3 +12,21 @@ error-support
 
     Jurgen Vinju <Jurgen.Vinju@cwi.nl>
 
+ptable-support
+
+    Jurgen Vinju
+
+toolbuslib
+    Hayco de Jong    (jong@cwi.nl)
+    Merijn de Jonge  (mdejonge@cwi.nl)
+    Paul Klint       (paulk@cwi.nl)
+    Tobias Kuipers   (kuipers@cwi.nl)
+    Pieter Oliver    (olivierp@cwi.nl)
+    Jeroen Scheerder (js@cwi.nl)
+    Robert van Liere (provided the first version of the socket code)
+    Simon Gray (binary strings, improvements to socket code)
+    Jan Friso Groote (new garbage collection strategy)
+
+sglr
+
+    Jeroen Scheerder (js@cwi.nl)
