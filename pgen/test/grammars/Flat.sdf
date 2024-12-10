@@ -1,0 +1,15 @@
+%%                       $Id: Flat.sdf 13495 2004-05-04 09:04:08Z markvdb $
+definition
+
+module Main
+imports Layout
+exports
+  sorts Any
+  context-free start-symbols Any
+  lexical syntax
+    ~[ ]*         ->  Any
+
+module Layout
+exports
+  lexical syntax
+                 ->  LAYOUT {reject}
