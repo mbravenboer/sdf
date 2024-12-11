@@ -1,5 +1,5 @@
 
-sglr_sources = files(
+libsglr_sources = files(
     'c-library/logging/logging.c',
     'c-library/statistics/rsrc-usage.c',
     'toolbuslib/src/atb-tool.c',
@@ -80,7 +80,7 @@ sglr_sources = files(
 
 sglr_library = library(
   'sglr',
-  sglr_sources,
+  libsglr_sources,
   # TODO
   include_directories : [
     'pt-support/libmept',
@@ -93,3 +93,21 @@ sglr_library = library(
   link_args : ['-Wl,-no-undefined'],
   dependencies : [aterm],
   install: true)
+
+sglr_exe = executable('sglr', [
+    'sglr/src/main.c',
+    'sglr/src/sglr.c',
+    'sglr/src/toolbusInterface.c', 'sglr/src/commandLineInterface.c'],
+  include_directories : [
+    'pt-support/libmept',
+    'ptable-support/lib',
+    'config-support/lib',
+    'toolbuslib/src',
+    'error-support/lib',
+    'c-library/statistics',
+    'sglr/src'],
+    dependencies : [aterm],
+    link_with : [sglr_library],
+    install: true,
+    # TODO
+    install_rpath : '/opt/stratego/lib/x86_64-linux-gnu/')

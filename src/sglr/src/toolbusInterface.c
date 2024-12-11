@@ -4,13 +4,13 @@
 #include "sglrInterface.h"
 #include "inputStringBuilder.h"
 #include "inputString-api.h"
-#include "parseTable.h"
+#include "parseTable/parseTable.h"
 
 #include <assert.h>
 #include <MEPT-utils.h>
 #include <Error-manager.h>
 #include <mainOptions.h>
-#include <filterOptions.h>
+#include "parseForest/filterOptions.h"
 
 static const char PARSETABLE_ID[] = "ToolBusParseTable";
 
@@ -63,7 +63,7 @@ ATerm parse(int conn, const char *input, ATerm packedParseTable, const char *top
 
     if (forest != NULL) {
       if (ERR_getManagerCount() > 0) {
-        message = ATmake("parse-succeeded(<term>,<term>)", 
+        message = ATmake("parse-succeeded(<term>,<term>)",
             ATBpack((ATerm)forest), ERR_SummaryToTerm(ERR_getManagerSummary()));
       }
       else {
@@ -73,12 +73,12 @@ ATerm parse(int conn, const char *input, ATerm packedParseTable, const char *top
     }
     else {
       assert(ERR_getManagerCount() > 0  && "no result should imply an error");
-      message = ATmake("parse-failed(<term>)", 
+      message = ATmake("parse-failed(<term>)",
           ERR_SummaryToTerm(ERR_getManagerSummary()));
     }
   }
   else {
-    message = ATmake("parse-failed(<term>)", 
+    message = ATmake("parse-failed(<term>)",
         ERR_SummaryToTerm(SGLR_PTBL_makeErrorSummary("parse table")));
   }
 

@@ -1,5 +1,3 @@
-/*  $Id$  */
-
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
@@ -10,21 +8,22 @@
 #include <Error-manager.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <mainOptions.h>
-#include <filterOptions.h>
-#include <parserOptions.h>
+
+#include "mainOptions.h"
+#include "parseForest/filterOptions.h"
+#include "parser/parserOptions.h"
 
 #include "sglrInterface.h"
-#include "parseTableDB.h"
+#include "parseTable/parseTableDB.h"
 #include "options.h"
 #include "toolbusInterface.h"
-#include "filters.h"
+#include "parseForest/filters.h"
 #include "inputStringBuilder.h"
-#include "parserStatistics.h"
+#include "parser/parserStatistics.h"
 
 static const char programName[] = "sglr";
 static const char myArguments[] = "2Acd:f::hi:l:mno:p:s:S:tvV";
-static const char myVersion[]   = VERSION;
+static const char myVersion[]   = "TODO";
 
 static const char *flag(ATbool value) {
   static const char on[]  = "on";
@@ -87,7 +86,7 @@ static void usage() {
 	  flag(flattenFlag),
 	  flag(ambiguityErrorFlag),
       flag(countPosIndAmbsFlag),
-	  flag(debugFlag), 
+	  flag(debugFlag),
 	  flag(filterFlag),
       flag(filterRemoveCyclesFlag),
 	  flag(filterDirectPreferenceFlag),
@@ -113,7 +112,7 @@ static void handleFilterOptions(const char *arg) {
   else {
     if (strlen(arg) == 1) {
       switch(arg[0]) {
-        case 'c': 
+        case 'c':
           FLT_setRemoveCyclesFlag(!FLT_getRemoveCyclesFlag());
           break;
         case 'd':
@@ -135,14 +134,14 @@ static void handleFilterOptions(const char *arg) {
           FLT_setDirectPreferenceFlag(!FLT_getDirectPreferenceFlag());
           break;
         default:
-          usage(); 
+          usage();
           exit(1);
       }
     }
     else {
       fprintf(stderr, "%s: filter option %s is not recognized.\n",
 	      programName, arg);
-      usage(); 
+      usage();
       exit(1);
     }
   }
@@ -169,7 +168,7 @@ static void handleOptions (int argc, char **argv) {
   char *parseTableName  = NULL;
   char *statsFilename   = NULL;
   char *debugFilename   = NULL;
-  
+
   ATbool outputToFile = ATfalse;
   ATbool showHelp    = ATfalse;
   ATbool showVersion = ATfalse;
@@ -179,27 +178,27 @@ static void handleOptions (int argc, char **argv) {
       case 0:   break;
       case '2':   flattenFlag        = !flattenFlag;        break;
       case 'A':   ambiguityerrorflag = !ambiguityerrorflag; break;
-      case 'c':   
+      case 'c':
           countPosIndependentAmbFlag = !countPosIndependentAmbFlag; break;
       case 'd':   debugflag          = !debugflag;
                   debugFilename      = optarg;              break;
-      case 'f':   handleFilterOptions(optarg);              break;     
+      case 'f':   handleFilterOptions(optarg);              break;
       case 'h':   showHelp           = !showHelp;           break;
       case 'i':   inputFileName      = optarg;              break;
       case 'l':   statisticsflag     = !statisticsflag;
                   statsFilename      = optarg;              break;
-      case 'm':   outputflag         = !outputflag;         break;  
-      case 'n':   parser             = !parser;             break;  
-      case 'o':   
+      case 'm':   outputflag         = !outputflag;         break;
+      case 'n':   parser             = !parser;             break;
+      case 'o':
           outputFileName = optarg;
           outputToFile = ATtrue;
           break;
       case 'p':   parseTableName     = optarg;              break;
       case 'S':
-          startSymbolIsATermFlag = !startSymbolIsATermFlag;  
-      case 's':   
+          startSymbolIsATermFlag = !startSymbolIsATermFlag;
+      case 's':
           startSymbolFlag = !startSymbolFlag;
-          startSymbol = optarg;              
+          startSymbol = optarg;
           break;
       case 't':   textualflag        = !textualflag;         break;
       case 'v':   verboseflag        = !verboseflag;        break;
@@ -218,7 +217,7 @@ static void handleOptions (int argc, char **argv) {
     exit(0);
   }
 
-  if (!outputflag && outputToFile) { 
+  if (!outputflag && outputToFile) {
     ATfprintf(stderr, "%s: Cannot output parse tree because -m flag is off.\n", programName);
     usage();
     exit(1);
@@ -277,8 +276,8 @@ static void outputResult(ATerm result, const char *fileName){
   }
 }
 
-/* When executed from the command line the program reads a parse table from 
- * file and uses it to parse text from the input file. The result is written 
+/* When executed from the command line the program reads a parse table from
+ * file and uses it to parse text from the input file. The result is written
  * to the specified output file. The file names should be specified as
  * command line options, which are parsed by |handleOptions()|.
  */

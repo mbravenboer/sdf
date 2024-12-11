@@ -11,7 +11,7 @@
 /* Prototypes for functions called from the event handler */
 void rec_terminate(int conn, ATerm);
 ATerm parse(int conn, const char *, ATerm, const char *, ATerm);
-extern ATerm sglr_handler(int conn, ATerm term);
-extern ATerm sglr_checker(int conn, ATerm sigs);
+ATerm sglr_handler(int conn, ATerm term);
+ATerm sglr_checker(int conn, ATerm sigs);
 
 #endif
