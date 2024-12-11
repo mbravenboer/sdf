@@ -793,21 +793,21 @@ ATbool _PLOC_isEqualAreaAreas (PLOC_AreaAreas arg0, PLOC_AreaAreas arg1);
 #define PLOC_isEqualAreaAreas(arg0, arg1) (_PLOC_isEqualAreaAreas(arg0, arg1))
 #endif
 ATbool PLOC_isValidOptLayout (PLOC_OptLayout arg);
-inline ATbool PLOC_isOptLayoutAbsent (PLOC_OptLayout arg);
-inline ATbool PLOC_isOptLayoutPresent (PLOC_OptLayout arg);
+ATbool PLOC_isOptLayoutAbsent (PLOC_OptLayout arg);
+ATbool PLOC_isOptLayoutPresent (PLOC_OptLayout arg);
 ATbool PLOC_hasOptLayoutLayout (PLOC_OptLayout arg);
 PLOC_Layout PLOC_getOptLayoutLayout (PLOC_OptLayout arg);
 PLOC_OptLayout PLOC_setOptLayoutLayout (PLOC_OptLayout arg,
 					PLOC_Layout layout);
 ATbool PLOC_isValidLayout (PLOC_Layout arg);
-inline ATbool PLOC_isLayoutLexToCf (PLOC_Layout arg);
+ATbool PLOC_isLayoutLexToCf (PLOC_Layout arg);
 ATbool PLOC_hasLayoutList (PLOC_Layout arg);
 PLOC_LexLayoutList PLOC_getLayoutList (PLOC_Layout arg);
 PLOC_Layout PLOC_setLayoutList (PLOC_Layout arg, PLOC_LexLayoutList list);
 ATbool PLOC_isValidLexLayoutList (PLOC_LexLayoutList arg);
-inline ATbool PLOC_isLexLayoutListEmpty (PLOC_LexLayoutList arg);
-inline ATbool PLOC_isLexLayoutListSingle (PLOC_LexLayoutList arg);
-inline ATbool PLOC_isLexLayoutListMany (PLOC_LexLayoutList arg);
+ATbool PLOC_isLexLayoutListEmpty (PLOC_LexLayoutList arg);
+ATbool PLOC_isLexLayoutListSingle (PLOC_LexLayoutList arg);
+ATbool PLOC_isLexLayoutListMany (PLOC_LexLayoutList arg);
 ATbool PLOC_hasLexLayoutListHead (PLOC_LexLayoutList arg);
 ATbool PLOC_hasLexLayoutListTail (PLOC_LexLayoutList arg);
 PLOC_LexLayout PLOC_getLexLayoutListHead (PLOC_LexLayoutList arg);
@@ -817,12 +817,12 @@ PLOC_LexLayoutList PLOC_setLexLayoutListHead (PLOC_LexLayoutList arg,
 PLOC_LexLayoutList PLOC_setLexLayoutListTail (PLOC_LexLayoutList arg,
 					      PLOC_LexLayoutList tail);
 ATbool PLOC_isValidLexStrChar (PLOC_LexStrChar arg);
-inline ATbool PLOC_isLexStrCharNewline (PLOC_LexStrChar arg);
-inline ATbool PLOC_isLexStrCharTab (PLOC_LexStrChar arg);
-inline ATbool PLOC_isLexStrCharQuote (PLOC_LexStrChar arg);
-inline ATbool PLOC_isLexStrCharBackslash (PLOC_LexStrChar arg);
-inline ATbool PLOC_isLexStrCharDecimal (PLOC_LexStrChar arg);
-inline ATbool PLOC_isLexStrCharNormal (PLOC_LexStrChar arg);
+ATbool PLOC_isLexStrCharNewline (PLOC_LexStrChar arg);
+ATbool PLOC_isLexStrCharTab (PLOC_LexStrChar arg);
+ATbool PLOC_isLexStrCharQuote (PLOC_LexStrChar arg);
+ATbool PLOC_isLexStrCharBackslash (PLOC_LexStrChar arg);
+ATbool PLOC_isLexStrCharDecimal (PLOC_LexStrChar arg);
+ATbool PLOC_isLexStrCharNormal (PLOC_LexStrChar arg);
 ATbool PLOC_hasLexStrCharA (PLOC_LexStrChar arg);
 ATbool PLOC_hasLexStrCharB (PLOC_LexStrChar arg);
 ATbool PLOC_hasLexStrCharC (PLOC_LexStrChar arg);
@@ -836,26 +836,26 @@ PLOC_LexStrChar PLOC_setLexStrCharB (PLOC_LexStrChar arg, char b);
 PLOC_LexStrChar PLOC_setLexStrCharC (PLOC_LexStrChar arg, char c);
 PLOC_LexStrChar PLOC_setLexStrCharCh (PLOC_LexStrChar arg, char ch);
 ATbool PLOC_isValidStrChar (PLOC_StrChar arg);
-inline ATbool PLOC_isStrCharLexToCf (PLOC_StrChar arg);
+ATbool PLOC_isStrCharLexToCf (PLOC_StrChar arg);
 ATbool PLOC_hasStrCharStrChar (PLOC_StrChar arg);
 PLOC_LexStrChar PLOC_getStrCharStrChar (PLOC_StrChar arg);
 PLOC_StrChar PLOC_setStrCharStrChar (PLOC_StrChar arg,
 				     PLOC_LexStrChar StrChar);
 ATbool PLOC_isValidLexStrCon (PLOC_LexStrCon arg);
-inline ATbool PLOC_isLexStrConDefault (PLOC_LexStrCon arg);
+ATbool PLOC_isLexStrConDefault (PLOC_LexStrCon arg);
 ATbool PLOC_hasLexStrConChars (PLOC_LexStrCon arg);
 PLOC_LexStrCharChars PLOC_getLexStrConChars (PLOC_LexStrCon arg);
 PLOC_LexStrCon PLOC_setLexStrConChars (PLOC_LexStrCon arg,
 				       PLOC_LexStrCharChars chars);
 ATbool PLOC_isValidStrCon (PLOC_StrCon arg);
-inline ATbool PLOC_isStrConLexToCf (PLOC_StrCon arg);
+ATbool PLOC_isStrConLexToCf (PLOC_StrCon arg);
 ATbool PLOC_hasStrConStrCon (PLOC_StrCon arg);
 PLOC_LexStrCon PLOC_getStrConStrCon (PLOC_StrCon arg);
 PLOC_StrCon PLOC_setStrConStrCon (PLOC_StrCon arg, PLOC_LexStrCon StrCon);
 ATbool PLOC_isValidLexStrCharChars (PLOC_LexStrCharChars arg);
-inline ATbool PLOC_isLexStrCharCharsEmpty (PLOC_LexStrCharChars arg);
-inline ATbool PLOC_isLexStrCharCharsSingle (PLOC_LexStrCharChars arg);
-inline ATbool PLOC_isLexStrCharCharsMany (PLOC_LexStrCharChars arg);
+ATbool PLOC_isLexStrCharCharsEmpty (PLOC_LexStrCharChars arg);
+ATbool PLOC_isLexStrCharCharsSingle (PLOC_LexStrCharChars arg);
+ATbool PLOC_isLexStrCharCharsMany (PLOC_LexStrCharChars arg);
 ATbool PLOC_hasLexStrCharCharsHead (PLOC_LexStrCharChars arg);
 ATbool PLOC_hasLexStrCharCharsTail (PLOC_LexStrCharChars arg);
 PLOC_LexStrChar PLOC_getLexStrCharCharsHead (PLOC_LexStrCharChars arg);
@@ -865,24 +865,24 @@ PLOC_LexStrCharChars PLOC_setLexStrCharCharsHead (PLOC_LexStrCharChars arg,
 PLOC_LexStrCharChars PLOC_setLexStrCharCharsTail (PLOC_LexStrCharChars arg,
 						  PLOC_LexStrCharChars tail);
 ATbool PLOC_isValidLexNatCon (PLOC_LexNatCon arg);
-inline ATbool PLOC_isLexNatConDigits (PLOC_LexNatCon arg);
+ATbool PLOC_isLexNatConDigits (PLOC_LexNatCon arg);
 ATbool PLOC_hasLexNatConList (PLOC_LexNatCon arg);
 char *PLOC_getLexNatConList (PLOC_LexNatCon arg);
 PLOC_LexNatCon PLOC_setLexNatConList (PLOC_LexNatCon arg, const char *list);
 ATbool PLOC_isValidNatCon (PLOC_NatCon arg);
-inline ATbool PLOC_isNatConLexToCf (PLOC_NatCon arg);
+ATbool PLOC_isNatConLexToCf (PLOC_NatCon arg);
 ATbool PLOC_hasNatConNatCon (PLOC_NatCon arg);
 PLOC_LexNatCon PLOC_getNatConNatCon (PLOC_NatCon arg);
 PLOC_NatCon PLOC_setNatConNatCon (PLOC_NatCon arg, PLOC_LexNatCon NatCon);
 ATbool PLOC_isValidLexLayout (PLOC_LexLayout arg);
-inline ATbool PLOC_isLexLayoutWhitespace (PLOC_LexLayout arg);
+ATbool PLOC_isLexLayoutWhitespace (PLOC_LexLayout arg);
 ATbool PLOC_hasLexLayoutCh (PLOC_LexLayout arg);
 char PLOC_getLexLayoutCh (PLOC_LexLayout arg);
 PLOC_LexLayout PLOC_setLexLayoutCh (PLOC_LexLayout arg, char ch);
 ATbool PLOC_isValidLocation (PLOC_Location arg);
-inline ATbool PLOC_isLocationFile (PLOC_Location arg);
-inline ATbool PLOC_isLocationArea (PLOC_Location arg);
-inline ATbool PLOC_isLocationAreaInFile (PLOC_Location arg);
+ATbool PLOC_isLocationFile (PLOC_Location arg);
+ATbool PLOC_isLocationArea (PLOC_Location arg);
+ATbool PLOC_isLocationAreaInFile (PLOC_Location arg);
 ATbool PLOC_hasLocationWsAfterFile (PLOC_Location arg);
 ATbool PLOC_hasLocationWsAfterParenOpen (PLOC_Location arg);
 ATbool PLOC_hasLocationFilename (PLOC_Location arg);
@@ -922,7 +922,7 @@ PLOC_Location PLOC_setLocationWsAfterAreaInFile (PLOC_Location arg,
 PLOC_Location PLOC_setLocationWsAfterComma (PLOC_Location arg,
 					    PLOC_OptLayout wsAfterComma);
 ATbool PLOC_isValidArea (PLOC_Area arg);
-inline ATbool PLOC_isAreaArea (PLOC_Area arg);
+ATbool PLOC_isAreaArea (PLOC_Area arg);
 ATbool PLOC_hasAreaWsAfterArea (PLOC_Area arg);
 ATbool PLOC_hasAreaWsAfterParenOpen (PLOC_Area arg);
 ATbool PLOC_hasAreaBeginLine (PLOC_Area arg);
@@ -993,7 +993,7 @@ PLOC_Area PLOC_setAreaLength (PLOC_Area arg, PLOC_NatCon length);
 PLOC_Area PLOC_setAreaWsAfterLength (PLOC_Area arg,
 				     PLOC_OptLayout wsAfterLength);
 ATbool PLOC_isValidSlice (PLOC_Slice arg);
-inline ATbool PLOC_isSliceSlice (PLOC_Slice arg);
+ATbool PLOC_isSliceSlice (PLOC_Slice arg);
 ATbool PLOC_hasSliceWsAfterSlice (PLOC_Slice arg);
 ATbool PLOC_hasSliceWsAfterParenOpen (PLOC_Slice arg);
 ATbool PLOC_hasSliceId (PLOC_Slice arg);
@@ -1030,9 +1030,9 @@ PLOC_Slice PLOC_setSliceWsAfterBracketClose (PLOC_Slice arg,
 					     PLOC_OptLayout
 					     wsAfterBracketClose);
 ATbool PLOC_isValidAreaAreas (PLOC_AreaAreas arg);
-inline ATbool PLOC_isAreaAreasEmpty (PLOC_AreaAreas arg);
-inline ATbool PLOC_isAreaAreasSingle (PLOC_AreaAreas arg);
-inline ATbool PLOC_isAreaAreasMany (PLOC_AreaAreas arg);
+ATbool PLOC_isAreaAreasEmpty (PLOC_AreaAreas arg);
+ATbool PLOC_isAreaAreasSingle (PLOC_AreaAreas arg);
+ATbool PLOC_isAreaAreasMany (PLOC_AreaAreas arg);
 ATbool PLOC_hasAreaAreasHead (PLOC_AreaAreas arg);
 ATbool PLOC_hasAreaAreasWsAfterHead (PLOC_AreaAreas arg);
 ATbool PLOC_hasAreaAreasWsAfterSep (PLOC_AreaAreas arg);

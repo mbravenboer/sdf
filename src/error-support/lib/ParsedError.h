@@ -1177,21 +1177,21 @@ ATbool _PERR_isEqualAreaAreas (PERR_AreaAreas arg0, PERR_AreaAreas arg1);
 #define PERR_isEqualAreaAreas(arg0, arg1) (_PERR_isEqualAreaAreas(arg0, arg1))
 #endif
 ATbool PERR_isValidOptLayout (PERR_OptLayout arg);
-inline ATbool PERR_isOptLayoutAbsent (PERR_OptLayout arg);
-inline ATbool PERR_isOptLayoutPresent (PERR_OptLayout arg);
+ATbool PERR_isOptLayoutAbsent (PERR_OptLayout arg);
+ATbool PERR_isOptLayoutPresent (PERR_OptLayout arg);
 ATbool PERR_hasOptLayoutLayout (PERR_OptLayout arg);
 PERR_Layout PERR_getOptLayoutLayout (PERR_OptLayout arg);
 PERR_OptLayout PERR_setOptLayoutLayout (PERR_OptLayout arg,
 					PERR_Layout layout);
 ATbool PERR_isValidLayout (PERR_Layout arg);
-inline ATbool PERR_isLayoutLexToCf (PERR_Layout arg);
+ATbool PERR_isLayoutLexToCf (PERR_Layout arg);
 ATbool PERR_hasLayoutList (PERR_Layout arg);
 PERR_LexLayoutList PERR_getLayoutList (PERR_Layout arg);
 PERR_Layout PERR_setLayoutList (PERR_Layout arg, PERR_LexLayoutList list);
 ATbool PERR_isValidLexLayoutList (PERR_LexLayoutList arg);
-inline ATbool PERR_isLexLayoutListEmpty (PERR_LexLayoutList arg);
-inline ATbool PERR_isLexLayoutListSingle (PERR_LexLayoutList arg);
-inline ATbool PERR_isLexLayoutListMany (PERR_LexLayoutList arg);
+ATbool PERR_isLexLayoutListEmpty (PERR_LexLayoutList arg);
+ATbool PERR_isLexLayoutListSingle (PERR_LexLayoutList arg);
+ATbool PERR_isLexLayoutListMany (PERR_LexLayoutList arg);
 ATbool PERR_hasLexLayoutListHead (PERR_LexLayoutList arg);
 ATbool PERR_hasLexLayoutListTail (PERR_LexLayoutList arg);
 PERR_LexLayout PERR_getLexLayoutListHead (PERR_LexLayoutList arg);
@@ -1201,12 +1201,12 @@ PERR_LexLayoutList PERR_setLexLayoutListHead (PERR_LexLayoutList arg,
 PERR_LexLayoutList PERR_setLexLayoutListTail (PERR_LexLayoutList arg,
 					      PERR_LexLayoutList tail);
 ATbool PERR_isValidLexStrChar (PERR_LexStrChar arg);
-inline ATbool PERR_isLexStrCharNewline (PERR_LexStrChar arg);
-inline ATbool PERR_isLexStrCharTab (PERR_LexStrChar arg);
-inline ATbool PERR_isLexStrCharQuote (PERR_LexStrChar arg);
-inline ATbool PERR_isLexStrCharBackslash (PERR_LexStrChar arg);
-inline ATbool PERR_isLexStrCharDecimal (PERR_LexStrChar arg);
-inline ATbool PERR_isLexStrCharNormal (PERR_LexStrChar arg);
+ATbool PERR_isLexStrCharNewline (PERR_LexStrChar arg);
+ATbool PERR_isLexStrCharTab (PERR_LexStrChar arg);
+ATbool PERR_isLexStrCharQuote (PERR_LexStrChar arg);
+ATbool PERR_isLexStrCharBackslash (PERR_LexStrChar arg);
+ATbool PERR_isLexStrCharDecimal (PERR_LexStrChar arg);
+ATbool PERR_isLexStrCharNormal (PERR_LexStrChar arg);
 ATbool PERR_hasLexStrCharA (PERR_LexStrChar arg);
 ATbool PERR_hasLexStrCharB (PERR_LexStrChar arg);
 ATbool PERR_hasLexStrCharC (PERR_LexStrChar arg);
@@ -1220,26 +1220,26 @@ PERR_LexStrChar PERR_setLexStrCharB (PERR_LexStrChar arg, char b);
 PERR_LexStrChar PERR_setLexStrCharC (PERR_LexStrChar arg, char c);
 PERR_LexStrChar PERR_setLexStrCharCh (PERR_LexStrChar arg, char ch);
 ATbool PERR_isValidStrChar (PERR_StrChar arg);
-inline ATbool PERR_isStrCharLexToCf (PERR_StrChar arg);
+ATbool PERR_isStrCharLexToCf (PERR_StrChar arg);
 ATbool PERR_hasStrCharStrChar (PERR_StrChar arg);
 PERR_LexStrChar PERR_getStrCharStrChar (PERR_StrChar arg);
 PERR_StrChar PERR_setStrCharStrChar (PERR_StrChar arg,
 				     PERR_LexStrChar StrChar);
 ATbool PERR_isValidLexStrCon (PERR_LexStrCon arg);
-inline ATbool PERR_isLexStrConDefault (PERR_LexStrCon arg);
+ATbool PERR_isLexStrConDefault (PERR_LexStrCon arg);
 ATbool PERR_hasLexStrConChars (PERR_LexStrCon arg);
 PERR_LexStrCharChars PERR_getLexStrConChars (PERR_LexStrCon arg);
 PERR_LexStrCon PERR_setLexStrConChars (PERR_LexStrCon arg,
 				       PERR_LexStrCharChars chars);
 ATbool PERR_isValidStrCon (PERR_StrCon arg);
-inline ATbool PERR_isStrConLexToCf (PERR_StrCon arg);
+ATbool PERR_isStrConLexToCf (PERR_StrCon arg);
 ATbool PERR_hasStrConStrCon (PERR_StrCon arg);
 PERR_LexStrCon PERR_getStrConStrCon (PERR_StrCon arg);
 PERR_StrCon PERR_setStrConStrCon (PERR_StrCon arg, PERR_LexStrCon StrCon);
 ATbool PERR_isValidLexStrCharChars (PERR_LexStrCharChars arg);
-inline ATbool PERR_isLexStrCharCharsEmpty (PERR_LexStrCharChars arg);
-inline ATbool PERR_isLexStrCharCharsSingle (PERR_LexStrCharChars arg);
-inline ATbool PERR_isLexStrCharCharsMany (PERR_LexStrCharChars arg);
+ATbool PERR_isLexStrCharCharsEmpty (PERR_LexStrCharChars arg);
+ATbool PERR_isLexStrCharCharsSingle (PERR_LexStrCharChars arg);
+ATbool PERR_isLexStrCharCharsMany (PERR_LexStrCharChars arg);
 ATbool PERR_hasLexStrCharCharsHead (PERR_LexStrCharChars arg);
 ATbool PERR_hasLexStrCharCharsTail (PERR_LexStrCharChars arg);
 PERR_LexStrChar PERR_getLexStrCharCharsHead (PERR_LexStrCharChars arg);
@@ -1249,23 +1249,23 @@ PERR_LexStrCharChars PERR_setLexStrCharCharsHead (PERR_LexStrCharChars arg,
 PERR_LexStrCharChars PERR_setLexStrCharCharsTail (PERR_LexStrCharChars arg,
 						  PERR_LexStrCharChars tail);
 ATbool PERR_isValidLexNatCon (PERR_LexNatCon arg);
-inline ATbool PERR_isLexNatConDigits (PERR_LexNatCon arg);
+ATbool PERR_isLexNatConDigits (PERR_LexNatCon arg);
 ATbool PERR_hasLexNatConList (PERR_LexNatCon arg);
 char *PERR_getLexNatConList (PERR_LexNatCon arg);
 PERR_LexNatCon PERR_setLexNatConList (PERR_LexNatCon arg, const char *list);
 ATbool PERR_isValidNatCon (PERR_NatCon arg);
-inline ATbool PERR_isNatConLexToCf (PERR_NatCon arg);
+ATbool PERR_isNatConLexToCf (PERR_NatCon arg);
 ATbool PERR_hasNatConNatCon (PERR_NatCon arg);
 PERR_LexNatCon PERR_getNatConNatCon (PERR_NatCon arg);
 PERR_NatCon PERR_setNatConNatCon (PERR_NatCon arg, PERR_LexNatCon NatCon);
 ATbool PERR_isValidLexLayout (PERR_LexLayout arg);
-inline ATbool PERR_isLexLayoutWhitespace (PERR_LexLayout arg);
+ATbool PERR_isLexLayoutWhitespace (PERR_LexLayout arg);
 ATbool PERR_hasLexLayoutCh (PERR_LexLayout arg);
 char PERR_getLexLayoutCh (PERR_LexLayout arg);
 PERR_LexLayout PERR_setLexLayoutCh (PERR_LexLayout arg, char ch);
 ATbool PERR_isValidStart (PERR_Start arg);
-inline ATbool PERR_isStartSummary (PERR_Start arg);
-inline ATbool PERR_isStartError (PERR_Start arg);
+ATbool PERR_isStartSummary (PERR_Start arg);
+ATbool PERR_isStartError (PERR_Start arg);
 ATbool PERR_hasStartWsBefore (PERR_Start arg);
 ATbool PERR_hasStartTopSummary (PERR_Start arg);
 ATbool PERR_hasStartWsAfter (PERR_Start arg);
@@ -1282,8 +1282,8 @@ PERR_Start PERR_setStartWsAfter (PERR_Start arg, PERR_OptLayout wsAfter);
 PERR_Start PERR_setStartAmbCnt (PERR_Start arg, int ambCnt);
 PERR_Start PERR_setStartTopError (PERR_Start arg, PERR_Error topError);
 ATbool PERR_isValidSubject (PERR_Subject arg);
-inline ATbool PERR_isSubjectSubject (PERR_Subject arg);
-inline ATbool PERR_isSubjectLocalized (PERR_Subject arg);
+ATbool PERR_isSubjectSubject (PERR_Subject arg);
+ATbool PERR_isSubjectLocalized (PERR_Subject arg);
 ATbool PERR_hasSubjectWsAfterSubject (PERR_Subject arg);
 ATbool PERR_hasSubjectWsAfterParenOpen (PERR_Subject arg);
 ATbool PERR_hasSubjectDescription (PERR_Subject arg);
@@ -1320,10 +1320,10 @@ PERR_Subject PERR_setSubjectLocation (PERR_Subject arg,
 PERR_Subject PERR_setSubjectWsAfterLocation (PERR_Subject arg,
 					     PERR_OptLayout wsAfterLocation);
 ATbool PERR_isValidError (PERR_Error arg);
-inline ATbool PERR_isErrorInfo (PERR_Error arg);
-inline ATbool PERR_isErrorWarning (PERR_Error arg);
-inline ATbool PERR_isErrorError (PERR_Error arg);
-inline ATbool PERR_isErrorFatal (PERR_Error arg);
+ATbool PERR_isErrorInfo (PERR_Error arg);
+ATbool PERR_isErrorWarning (PERR_Error arg);
+ATbool PERR_isErrorError (PERR_Error arg);
+ATbool PERR_isErrorFatal (PERR_Error arg);
 ATbool PERR_hasErrorWsAfterInfo (PERR_Error arg);
 ATbool PERR_hasErrorWsAfterParenOpen (PERR_Error arg);
 ATbool PERR_hasErrorDescription (PERR_Error arg);
@@ -1374,7 +1374,7 @@ PERR_Error PERR_setErrorWsAfterError (PERR_Error arg,
 PERR_Error PERR_setErrorWsAfterFatal (PERR_Error arg,
 				      PERR_OptLayout wsAfterFatal);
 ATbool PERR_isValidSummary (PERR_Summary arg);
-inline ATbool PERR_isSummarySummary (PERR_Summary arg);
+ATbool PERR_isSummarySummary (PERR_Summary arg);
 ATbool PERR_hasSummaryWsAfterSummary (PERR_Summary arg);
 ATbool PERR_hasSummaryWsAfterParenOpen (PERR_Summary arg);
 ATbool PERR_hasSummaryProducer (PERR_Summary arg);
@@ -1424,9 +1424,9 @@ PERR_Summary PERR_setSummaryWsAfterBracketClose (PERR_Summary arg,
 						 PERR_OptLayout
 						 wsAfterBracketClose);
 ATbool PERR_isValidSubjectList (PERR_SubjectList arg);
-inline ATbool PERR_isSubjectListEmpty (PERR_SubjectList arg);
-inline ATbool PERR_isSubjectListSingle (PERR_SubjectList arg);
-inline ATbool PERR_isSubjectListMany (PERR_SubjectList arg);
+ATbool PERR_isSubjectListEmpty (PERR_SubjectList arg);
+ATbool PERR_isSubjectListSingle (PERR_SubjectList arg);
+ATbool PERR_isSubjectListMany (PERR_SubjectList arg);
 ATbool PERR_hasSubjectListHead (PERR_SubjectList arg);
 ATbool PERR_hasSubjectListWsAfterHead (PERR_SubjectList arg);
 ATbool PERR_hasSubjectListWsAfterSep (PERR_SubjectList arg);
@@ -1444,9 +1444,9 @@ PERR_SubjectList PERR_setSubjectListWsAfterSep (PERR_SubjectList arg,
 PERR_SubjectList PERR_setSubjectListTail (PERR_SubjectList arg,
 					  PERR_SubjectList tail);
 ATbool PERR_isValidErrorList (PERR_ErrorList arg);
-inline ATbool PERR_isErrorListEmpty (PERR_ErrorList arg);
-inline ATbool PERR_isErrorListSingle (PERR_ErrorList arg);
-inline ATbool PERR_isErrorListMany (PERR_ErrorList arg);
+ATbool PERR_isErrorListEmpty (PERR_ErrorList arg);
+ATbool PERR_isErrorListSingle (PERR_ErrorList arg);
+ATbool PERR_isErrorListMany (PERR_ErrorList arg);
 ATbool PERR_hasErrorListHead (PERR_ErrorList arg);
 ATbool PERR_hasErrorListWsAfterHead (PERR_ErrorList arg);
 ATbool PERR_hasErrorListWsAfterSep (PERR_ErrorList arg);
@@ -1463,9 +1463,9 @@ PERR_ErrorList PERR_setErrorListWsAfterSep (PERR_ErrorList arg,
 PERR_ErrorList PERR_setErrorListTail (PERR_ErrorList arg,
 				      PERR_ErrorList tail);
 ATbool PERR_isValidLocation (PERR_Location arg);
-inline ATbool PERR_isLocationFile (PERR_Location arg);
-inline ATbool PERR_isLocationArea (PERR_Location arg);
-inline ATbool PERR_isLocationAreaInFile (PERR_Location arg);
+ATbool PERR_isLocationFile (PERR_Location arg);
+ATbool PERR_isLocationArea (PERR_Location arg);
+ATbool PERR_isLocationAreaInFile (PERR_Location arg);
 ATbool PERR_hasLocationWsAfterFile (PERR_Location arg);
 ATbool PERR_hasLocationWsAfterParenOpen (PERR_Location arg);
 ATbool PERR_hasLocationFilename (PERR_Location arg);
@@ -1505,7 +1505,7 @@ PERR_Location PERR_setLocationWsAfterAreaInFile (PERR_Location arg,
 PERR_Location PERR_setLocationWsAfterComma (PERR_Location arg,
 					    PERR_OptLayout wsAfterComma);
 ATbool PERR_isValidArea (PERR_Area arg);
-inline ATbool PERR_isAreaArea (PERR_Area arg);
+ATbool PERR_isAreaArea (PERR_Area arg);
 ATbool PERR_hasAreaWsAfterArea (PERR_Area arg);
 ATbool PERR_hasAreaWsAfterParenOpen (PERR_Area arg);
 ATbool PERR_hasAreaBeginLine (PERR_Area arg);
@@ -1576,7 +1576,7 @@ PERR_Area PERR_setAreaLength (PERR_Area arg, PERR_NatCon length);
 PERR_Area PERR_setAreaWsAfterLength (PERR_Area arg,
 				     PERR_OptLayout wsAfterLength);
 ATbool PERR_isValidSlice (PERR_Slice arg);
-inline ATbool PERR_isSliceSlice (PERR_Slice arg);
+ATbool PERR_isSliceSlice (PERR_Slice arg);
 ATbool PERR_hasSliceWsAfterSlice (PERR_Slice arg);
 ATbool PERR_hasSliceWsAfterParenOpen (PERR_Slice arg);
 ATbool PERR_hasSliceId (PERR_Slice arg);
@@ -1613,9 +1613,9 @@ PERR_Slice PERR_setSliceWsAfterBracketClose (PERR_Slice arg,
 					     PERR_OptLayout
 					     wsAfterBracketClose);
 ATbool PERR_isValidAreaAreas (PERR_AreaAreas arg);
-inline ATbool PERR_isAreaAreasEmpty (PERR_AreaAreas arg);
-inline ATbool PERR_isAreaAreasSingle (PERR_AreaAreas arg);
-inline ATbool PERR_isAreaAreasMany (PERR_AreaAreas arg);
+ATbool PERR_isAreaAreasEmpty (PERR_AreaAreas arg);
+ATbool PERR_isAreaAreasSingle (PERR_AreaAreas arg);
+ATbool PERR_isAreaAreasMany (PERR_AreaAreas arg);
 ATbool PERR_hasAreaAreasHead (PERR_AreaAreas arg);
 ATbool PERR_hasAreaAreasWsAfterHead (PERR_AreaAreas arg);
 ATbool PERR_hasAreaAreasWsAfterSep (PERR_AreaAreas arg);

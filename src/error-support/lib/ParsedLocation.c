@@ -5,7 +5,7 @@
 #include "ParsedLocation.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm PLOC_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm PLOC_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -595,7 +595,7 @@ ATerm _PLOC_AreaAreasToTerm(PLOC_AreaAreas arg) {
 }
 
 /**
- * Retrieve the length of a PLOC_LexLayoutList. 
+ * Retrieve the length of a PLOC_LexLayoutList.
  * \param[in] arg input PLOC_LexLayoutList
  * \return The number of elements in the PLOC_LexLayoutList
  */
@@ -604,7 +604,7 @@ int _PLOC_getLexLayoutListLength(PLOC_LexLayoutList arg) {
 }
 
 /**
- * Reverse a PLOC_LexLayoutList. 
+ * Reverse a PLOC_LexLayoutList.
  * \param[in] arg PLOC_LexLayoutList to be reversed
  * \return a reversed #arg
  */
@@ -613,7 +613,7 @@ PLOC_LexLayoutList _PLOC_reverseLexLayoutList(PLOC_LexLayoutList arg) {
 }
 
 /**
- * Append a PLOC_LexLayout to the end of a PLOC_LexLayoutList. 
+ * Append a PLOC_LexLayout to the end of a PLOC_LexLayoutList.
  * \param[in] arg PLOC_LexLayoutList to append the PLOC_LexLayout to
  * \param[in] elem PLOC_LexLayout to be appended
  * \return new PLOC_LexLayoutList with #elem appended
@@ -623,7 +623,7 @@ PLOC_LexLayoutList _PLOC_appendLexLayoutList(PLOC_LexLayoutList arg, PLOC_LexLay
 }
 
 /**
- * Concatenate two PLOC_LexLayoutLists. 
+ * Concatenate two PLOC_LexLayoutLists.
  * \param[in] arg0 first PLOC_LexLayoutList
  * \param[in] arg1 second PLOC_LexLayoutList
  * \return PLOC_LexLayoutList with the elements of #arg0 before the elements of #arg1
@@ -633,7 +633,7 @@ PLOC_LexLayoutList _PLOC_concatLexLayoutList(PLOC_LexLayoutList arg0, PLOC_LexLa
 }
 
 /**
- * Extract a sublist from a PLOC_LexLayoutList. 
+ * Extract a sublist from a PLOC_LexLayoutList.
  * \param[in] arg PLOC_LexLayoutList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -644,7 +644,7 @@ PLOC_LexLayoutList _PLOC_sliceLexLayoutList(PLOC_LexLayoutList arg, int start, i
 }
 
 /**
- * Retrieve the PLOC_LexLayout at #index from a PLOC_LexLayoutList. 
+ * Retrieve the PLOC_LexLayout at #index from a PLOC_LexLayoutList.
  * \param[in] arg PLOC_LexLayoutList to retrieve the PLOC_LexLayout from
  * \param[in] index index to use to point in the PLOC_LexLayoutList
  * \return PLOC_LexLayout at position #index in #arg
@@ -654,7 +654,7 @@ PLOC_LexLayout _PLOC_getLexLayoutListLexLayoutAt(PLOC_LexLayoutList arg, int ind
 }
 
 /**
- * Replace the PLOC_LexLayout at #index from a PLOC_LexLayoutList by a new one. 
+ * Replace the PLOC_LexLayout at #index from a PLOC_LexLayoutList by a new one.
  * \param[in] arg PLOC_LexLayoutList to retrieve the PLOC_LexLayout from
  * \param[in] elem new PLOC_LexLayout to replace another
  * \param[in] index index to use to point in the PLOC_LexLayoutList
@@ -665,7 +665,7 @@ PLOC_LexLayoutList _PLOC_replaceLexLayoutListLexLayoutAt(PLOC_LexLayoutList arg,
 }
 
 /**
- * Builds a PLOC_LexLayoutList of 2 consecutive elements. 
+ * Builds a PLOC_LexLayoutList of 2 consecutive elements.
  * \param[in] elem1 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem2 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \return A new PLOC_LexLayoutList consisting of 2 PLOC_LexLayouts
@@ -675,7 +675,7 @@ PLOC_LexLayoutList _PLOC_makeLexLayoutList2(PLOC_LexLayout elem1, PLOC_LexLayout
 }
 
 /**
- * Builds a PLOC_LexLayoutList of 3 consecutive elements. 
+ * Builds a PLOC_LexLayoutList of 3 consecutive elements.
  * \param[in] elem1 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem2 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem3 One PLOC_LexLayout element of the new PLOC_LexLayoutList
@@ -686,7 +686,7 @@ PLOC_LexLayoutList _PLOC_makeLexLayoutList3(PLOC_LexLayout elem1, PLOC_LexLayout
 }
 
 /**
- * Builds a PLOC_LexLayoutList of 4 consecutive elements. 
+ * Builds a PLOC_LexLayoutList of 4 consecutive elements.
  * \param[in] elem1 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem2 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem3 One PLOC_LexLayout element of the new PLOC_LexLayoutList
@@ -698,7 +698,7 @@ PLOC_LexLayoutList _PLOC_makeLexLayoutList4(PLOC_LexLayout elem1, PLOC_LexLayout
 }
 
 /**
- * Builds a PLOC_LexLayoutList of 5 consecutive elements. 
+ * Builds a PLOC_LexLayoutList of 5 consecutive elements.
  * \param[in] elem1 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem2 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem3 One PLOC_LexLayout element of the new PLOC_LexLayoutList
@@ -711,7 +711,7 @@ PLOC_LexLayoutList _PLOC_makeLexLayoutList5(PLOC_LexLayout elem1, PLOC_LexLayout
 }
 
 /**
- * Builds a PLOC_LexLayoutList of 6 consecutive elements. 
+ * Builds a PLOC_LexLayoutList of 6 consecutive elements.
  * \param[in] elem1 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem2 One PLOC_LexLayout element of the new PLOC_LexLayoutList
  * \param[in] elem3 One PLOC_LexLayout element of the new PLOC_LexLayoutList
@@ -725,7 +725,7 @@ PLOC_LexLayoutList _PLOC_makeLexLayoutList6(PLOC_LexLayout elem1, PLOC_LexLayout
 }
 
 /**
- * Retrieve the length of a PLOC_LexStrCharChars. 
+ * Retrieve the length of a PLOC_LexStrCharChars.
  * \param[in] arg input PLOC_LexStrCharChars
  * \return The number of elements in the PLOC_LexStrCharChars
  */
@@ -734,7 +734,7 @@ int _PLOC_getLexStrCharCharsLength(PLOC_LexStrCharChars arg) {
 }
 
 /**
- * Reverse a PLOC_LexStrCharChars. 
+ * Reverse a PLOC_LexStrCharChars.
  * \param[in] arg PLOC_LexStrCharChars to be reversed
  * \return a reversed #arg
  */
@@ -743,7 +743,7 @@ PLOC_LexStrCharChars _PLOC_reverseLexStrCharChars(PLOC_LexStrCharChars arg) {
 }
 
 /**
- * Append a PLOC_LexStrChar to the end of a PLOC_LexStrCharChars. 
+ * Append a PLOC_LexStrChar to the end of a PLOC_LexStrCharChars.
  * \param[in] arg PLOC_LexStrCharChars to append the PLOC_LexStrChar to
  * \param[in] elem PLOC_LexStrChar to be appended
  * \return new PLOC_LexStrCharChars with #elem appended
@@ -753,7 +753,7 @@ PLOC_LexStrCharChars _PLOC_appendLexStrCharChars(PLOC_LexStrCharChars arg, PLOC_
 }
 
 /**
- * Concatenate two PLOC_LexStrCharCharss. 
+ * Concatenate two PLOC_LexStrCharCharss.
  * \param[in] arg0 first PLOC_LexStrCharChars
  * \param[in] arg1 second PLOC_LexStrCharChars
  * \return PLOC_LexStrCharChars with the elements of #arg0 before the elements of #arg1
@@ -763,7 +763,7 @@ PLOC_LexStrCharChars _PLOC_concatLexStrCharChars(PLOC_LexStrCharChars arg0, PLOC
 }
 
 /**
- * Extract a sublist from a PLOC_LexStrCharChars. 
+ * Extract a sublist from a PLOC_LexStrCharChars.
  * \param[in] arg PLOC_LexStrCharChars to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -774,7 +774,7 @@ PLOC_LexStrCharChars _PLOC_sliceLexStrCharChars(PLOC_LexStrCharChars arg, int st
 }
 
 /**
- * Retrieve the PLOC_LexStrChar at #index from a PLOC_LexStrCharChars. 
+ * Retrieve the PLOC_LexStrChar at #index from a PLOC_LexStrCharChars.
  * \param[in] arg PLOC_LexStrCharChars to retrieve the PLOC_LexStrChar from
  * \param[in] index index to use to point in the PLOC_LexStrCharChars
  * \return PLOC_LexStrChar at position #index in #arg
@@ -784,7 +784,7 @@ PLOC_LexStrChar _PLOC_getLexStrCharCharsLexStrCharAt(PLOC_LexStrCharChars arg, i
 }
 
 /**
- * Replace the PLOC_LexStrChar at #index from a PLOC_LexStrCharChars by a new one. 
+ * Replace the PLOC_LexStrChar at #index from a PLOC_LexStrCharChars by a new one.
  * \param[in] arg PLOC_LexStrCharChars to retrieve the PLOC_LexStrChar from
  * \param[in] elem new PLOC_LexStrChar to replace another
  * \param[in] index index to use to point in the PLOC_LexStrCharChars
@@ -795,7 +795,7 @@ PLOC_LexStrCharChars _PLOC_replaceLexStrCharCharsLexStrCharAt(PLOC_LexStrCharCha
 }
 
 /**
- * Builds a PLOC_LexStrCharChars of 2 consecutive elements. 
+ * Builds a PLOC_LexStrCharChars of 2 consecutive elements.
  * \param[in] elem1 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem2 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \return A new PLOC_LexStrCharChars consisting of 2 PLOC_LexStrChars
@@ -805,7 +805,7 @@ PLOC_LexStrCharChars _PLOC_makeLexStrCharChars2(PLOC_LexStrChar elem1, PLOC_LexS
 }
 
 /**
- * Builds a PLOC_LexStrCharChars of 3 consecutive elements. 
+ * Builds a PLOC_LexStrCharChars of 3 consecutive elements.
  * \param[in] elem1 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem2 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem3 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
@@ -816,7 +816,7 @@ PLOC_LexStrCharChars _PLOC_makeLexStrCharChars3(PLOC_LexStrChar elem1, PLOC_LexS
 }
 
 /**
- * Builds a PLOC_LexStrCharChars of 4 consecutive elements. 
+ * Builds a PLOC_LexStrCharChars of 4 consecutive elements.
  * \param[in] elem1 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem2 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem3 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
@@ -828,7 +828,7 @@ PLOC_LexStrCharChars _PLOC_makeLexStrCharChars4(PLOC_LexStrChar elem1, PLOC_LexS
 }
 
 /**
- * Builds a PLOC_LexStrCharChars of 5 consecutive elements. 
+ * Builds a PLOC_LexStrCharChars of 5 consecutive elements.
  * \param[in] elem1 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem2 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem3 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
@@ -841,7 +841,7 @@ PLOC_LexStrCharChars _PLOC_makeLexStrCharChars5(PLOC_LexStrChar elem1, PLOC_LexS
 }
 
 /**
- * Builds a PLOC_LexStrCharChars of 6 consecutive elements. 
+ * Builds a PLOC_LexStrCharChars of 6 consecutive elements.
  * \param[in] elem1 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem2 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
  * \param[in] elem3 One PLOC_LexStrChar element of the new PLOC_LexStrCharChars
@@ -855,7 +855,7 @@ PLOC_LexStrCharChars _PLOC_makeLexStrCharChars6(PLOC_LexStrChar elem1, PLOC_LexS
 }
 
 /**
- * Retrieve the number of elements in a PLOC_AreaAreas. 
+ * Retrieve the number of elements in a PLOC_AreaAreas.
  * \param[in] arg input PLOC_AreaAreas
  * \return The number of elements in #arg, excluding any separators
  */
@@ -915,7 +915,7 @@ PLOC_AreaAreas PLOC_reverseAreaAreas(PLOC_AreaAreas arg) {
 }
 
 /**
- * Append a PLOC_Area to the end of a PLOC_AreaAreas. 
+ * Append a PLOC_Area to the end of a PLOC_AreaAreas.
  * \param[in] arg PLOC_AreaAreas to append the PLOC_Area to
  * \param[in] elem PLOC_Area to be appended
  * \return new PLOC_AreaAreas with #elem appended after the separators
@@ -925,7 +925,7 @@ PLOC_AreaAreas PLOC_appendAreaAreas(PLOC_AreaAreas arg0, PLOC_OptLayout wsAfterH
 }
 
 /**
- * Concatenate two PLOC_AreaAreass. 
+ * Concatenate two PLOC_AreaAreass.
  * \param[in] arg0 first PLOC_AreaAreas
  * \param[in] arg1 second PLOC_AreaAreas
  * \return PLOC_AreaAreas with the elements of #arg0 before the elements of #arg1, with the separators in between.
@@ -940,7 +940,7 @@ PLOC_AreaAreas PLOC_concatAreaAreas(PLOC_AreaAreas arg0, PLOC_OptLayout wsAfterH
 }
 
 /**
- * Extract a sublist from a PLOC_AreaAreas. 
+ * Extract a sublist from a PLOC_AreaAreas.
  * \param[in] arg PLOC_AreaAreas to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -951,7 +951,7 @@ PLOC_AreaAreas _PLOC_sliceAreaAreas(PLOC_AreaAreas arg, int start, int end) {
 }
 
 /**
- * Retrieve the PLOC_Area at #index from a PLOC_AreaAreas. 
+ * Retrieve the PLOC_Area at #index from a PLOC_AreaAreas.
  * \param[in] arg PLOC_AreaAreas to retrieve the PLOC_Area from
  * \param[in] index index to use to point in the PLOC_AreaAreas
  * \return PLOC_Area at position #index in #arg
@@ -961,7 +961,7 @@ PLOC_Area _PLOC_getAreaAreasAreaAt(PLOC_AreaAreas arg, int index) {
 }
 
 /**
- * Replace the PLOC_Area at #index from a PLOC_AreaAreas by a new one. 
+ * Replace the PLOC_Area at #index from a PLOC_AreaAreas by a new one.
  * \param[in] arg PLOC_AreaAreas to retrieve the PLOC_Area from
  * \param[in] elem new PLOC_Area to replace another
  * \param[in] index index to use to point in the PLOC_AreaAreas
@@ -1474,7 +1474,7 @@ ATbool PLOC_isValidOptLayout(PLOC_OptLayout arg) {
  * \param[in] arg input PLOC_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Absent, or ATfalse otherwise
  */
-inline ATbool PLOC_isOptLayoutAbsent(PLOC_OptLayout arg){
+ATbool PLOC_isOptLayoutAbsent(PLOC_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1513,7 +1513,7 @@ inline ATbool PLOC_isOptLayoutAbsent(PLOC_OptLayout arg){
  * \param[in] arg input PLOC_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Present, or ATfalse otherwise
  */
-inline ATbool PLOC_isOptLayoutPresent(PLOC_OptLayout arg){
+ATbool PLOC_isOptLayoutPresent(PLOC_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1565,7 +1565,7 @@ inline ATbool PLOC_isOptLayoutPresent(PLOC_OptLayout arg){
 }
 
 /**
- * Assert whether a PLOC_OptLayout has a layout. 
+ * Assert whether a PLOC_OptLayout has a layout.
  * \param[in] arg input PLOC_OptLayout
  * \return ATtrue if the PLOC_OptLayout had a layout, or ATfalse otherwise
  */
@@ -1582,7 +1582,7 @@ ATbool PLOC_hasOptLayoutLayout(PLOC_OptLayout arg) {
  * \return the layout of #arg, if it exist or an undefined value if it does not
  */
 PLOC_Layout PLOC_getOptLayoutLayout(PLOC_OptLayout arg) {
-  
+
     return (PLOC_Layout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -1618,7 +1618,7 @@ ATbool PLOC_isValidLayout(PLOC_Layout arg) {
  * \param[in] arg input PLOC_Layout
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PLOC_isLayoutLexToCf(PLOC_Layout arg){
+ATbool PLOC_isLayoutLexToCf(PLOC_Layout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1691,7 +1691,7 @@ inline ATbool PLOC_isLayoutLexToCf(PLOC_Layout arg){
 }
 
 /**
- * Assert whether a PLOC_Layout has a list. 
+ * Assert whether a PLOC_Layout has a list.
  * \param[in] arg input PLOC_Layout
  * \return ATtrue if the PLOC_Layout had a list, or ATfalse otherwise
  */
@@ -1708,7 +1708,7 @@ ATbool PLOC_hasLayoutList(PLOC_Layout arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexLayoutList PLOC_getLayoutList(PLOC_Layout arg) {
-  
+
     return (PLOC_LexLayoutList)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1);
 }
 
@@ -1750,7 +1750,7 @@ ATbool PLOC_isValidLexLayoutList(PLOC_LexLayoutList arg) {
  * \param[in] arg input PLOC_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexLayoutListEmpty(PLOC_LexLayoutList arg){
+ATbool PLOC_isLexLayoutListEmpty(PLOC_LexLayoutList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -1762,7 +1762,7 @@ inline ATbool PLOC_isLexLayoutListEmpty(PLOC_LexLayoutList arg){
  * \param[in] arg input PLOC_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexLayoutListSingle(PLOC_LexLayoutList arg){
+ATbool PLOC_isLexLayoutListSingle(PLOC_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -1778,7 +1778,7 @@ inline ATbool PLOC_isLexLayoutListSingle(PLOC_LexLayoutList arg){
  * \param[in] arg input PLOC_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexLayoutListMany(PLOC_LexLayoutList arg){
+ATbool PLOC_isLexLayoutListMany(PLOC_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -1786,7 +1786,7 @@ inline ATbool PLOC_isLexLayoutListMany(PLOC_LexLayoutList arg){
 }
 
 /**
- * Assert whether a PLOC_LexLayoutList has a head. 
+ * Assert whether a PLOC_LexLayoutList has a head.
  * \param[in] arg input PLOC_LexLayoutList
  * \return ATtrue if the PLOC_LexLayoutList had a head, or ATfalse otherwise
  */
@@ -1801,7 +1801,7 @@ ATbool PLOC_hasLexLayoutListHead(PLOC_LexLayoutList arg) {
 }
 
 /**
- * Assert whether a PLOC_LexLayoutList has a tail. 
+ * Assert whether a PLOC_LexLayoutList has a tail.
  * \param[in] arg input PLOC_LexLayoutList
  * \return ATtrue if the PLOC_LexLayoutList had a tail, or ATfalse otherwise
  */
@@ -1821,7 +1821,7 @@ PLOC_LexLayout PLOC_getLexLayoutListHead(PLOC_LexLayoutList arg) {
   if (PLOC_isLexLayoutListSingle(arg)) {
     return (PLOC_LexLayout)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PLOC_LexLayout)ATgetFirst((ATermList)arg);
 }
 
@@ -1831,7 +1831,7 @@ PLOC_LexLayout PLOC_getLexLayoutListHead(PLOC_LexLayoutList arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexLayoutList PLOC_getLexLayoutListTail(PLOC_LexLayoutList arg) {
-  
+
     return (PLOC_LexLayoutList)ATgetNext((ATermList)arg);
 }
 
@@ -1900,7 +1900,7 @@ ATbool PLOC_isValidLexStrChar(PLOC_LexStrChar arg) {
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a newline, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharNewline(PLOC_LexStrChar arg){
+ATbool PLOC_isLexStrCharNewline(PLOC_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2059,7 +2059,7 @@ inline ATbool PLOC_isLexStrCharNewline(PLOC_LexStrChar arg){
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a tab, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharTab(PLOC_LexStrChar arg){
+ATbool PLOC_isLexStrCharTab(PLOC_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2218,7 +2218,7 @@ inline ATbool PLOC_isLexStrCharTab(PLOC_LexStrChar arg){
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a quote, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharQuote(PLOC_LexStrChar arg){
+ATbool PLOC_isLexStrCharQuote(PLOC_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2377,7 +2377,7 @@ inline ATbool PLOC_isLexStrCharQuote(PLOC_LexStrChar arg){
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a backslash, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharBackslash(PLOC_LexStrChar arg){
+ATbool PLOC_isLexStrCharBackslash(PLOC_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2536,7 +2536,7 @@ inline ATbool PLOC_isLexStrCharBackslash(PLOC_LexStrChar arg){
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a decimal, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharDecimal(PLOC_LexStrChar arg){
+ATbool PLOC_isLexStrCharDecimal(PLOC_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2768,7 +2768,7 @@ inline ATbool PLOC_isLexStrCharDecimal(PLOC_LexStrChar arg){
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a normal, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharNormal(PLOC_LexStrChar arg){
+ATbool PLOC_isLexStrCharNormal(PLOC_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2890,7 +2890,7 @@ inline ATbool PLOC_isLexStrCharNormal(PLOC_LexStrChar arg){
 }
 
 /**
- * Assert whether a PLOC_LexStrChar has a a. 
+ * Assert whether a PLOC_LexStrChar has a a.
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if the PLOC_LexStrChar had a a, or ATfalse otherwise
  */
@@ -2902,7 +2902,7 @@ ATbool PLOC_hasLexStrCharA(PLOC_LexStrChar arg) {
 }
 
 /**
- * Assert whether a PLOC_LexStrChar has a b. 
+ * Assert whether a PLOC_LexStrChar has a b.
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if the PLOC_LexStrChar had a b, or ATfalse otherwise
  */
@@ -2914,7 +2914,7 @@ ATbool PLOC_hasLexStrCharB(PLOC_LexStrChar arg) {
 }
 
 /**
- * Assert whether a PLOC_LexStrChar has a c. 
+ * Assert whether a PLOC_LexStrChar has a c.
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if the PLOC_LexStrChar had a c, or ATfalse otherwise
  */
@@ -2926,7 +2926,7 @@ ATbool PLOC_hasLexStrCharC(PLOC_LexStrChar arg) {
 }
 
 /**
- * Assert whether a PLOC_LexStrChar has a ch. 
+ * Assert whether a PLOC_LexStrChar has a ch.
  * \param[in] arg input PLOC_LexStrChar
  * \return ATtrue if the PLOC_LexStrChar had a ch, or ATfalse otherwise
  */
@@ -2943,7 +2943,7 @@ ATbool PLOC_hasLexStrCharCh(PLOC_LexStrChar arg) {
  * \return the a of #arg, if it exist or an undefined value if it does not
  */
 char PLOC_getLexStrCharA(PLOC_LexStrChar arg) {
-  
+
     return (char)PLOC_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1));
 }
 
@@ -2953,7 +2953,7 @@ char PLOC_getLexStrCharA(PLOC_LexStrChar arg) {
  * \return the b of #arg, if it exist or an undefined value if it does not
  */
 char PLOC_getLexStrCharB(PLOC_LexStrChar arg) {
-  
+
     return (char)PLOC_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2));
 }
 
@@ -2963,7 +2963,7 @@ char PLOC_getLexStrCharB(PLOC_LexStrChar arg) {
  * \return the c of #arg, if it exist or an undefined value if it does not
  */
 char PLOC_getLexStrCharC(PLOC_LexStrChar arg) {
-  
+
     return (char)PLOC_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3));
 }
 
@@ -2973,7 +2973,7 @@ char PLOC_getLexStrCharC(PLOC_LexStrChar arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char PLOC_getLexStrCharCh(PLOC_LexStrChar arg) {
-  
+
     return (char)PLOC_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -3054,7 +3054,7 @@ ATbool PLOC_isValidStrChar(PLOC_StrChar arg) {
  * \param[in] arg input PLOC_StrChar
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PLOC_isStrCharLexToCf(PLOC_StrChar arg){
+ATbool PLOC_isStrCharLexToCf(PLOC_StrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3110,7 +3110,7 @@ inline ATbool PLOC_isStrCharLexToCf(PLOC_StrChar arg){
 }
 
 /**
- * Assert whether a PLOC_StrChar has a StrChar. 
+ * Assert whether a PLOC_StrChar has a StrChar.
  * \param[in] arg input PLOC_StrChar
  * \return ATtrue if the PLOC_StrChar had a StrChar, or ATfalse otherwise
  */
@@ -3127,7 +3127,7 @@ ATbool PLOC_hasStrCharStrChar(PLOC_StrChar arg) {
  * \return the StrChar of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexStrChar PLOC_getStrCharStrChar(PLOC_StrChar arg) {
-  
+
     return (PLOC_LexStrChar)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -3163,7 +3163,7 @@ ATbool PLOC_isValidLexStrCon(PLOC_LexStrCon arg) {
  * \param[in] arg input PLOC_LexStrCon
  * \return ATtrue if #arg corresponds to the signature of a default, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrConDefault(PLOC_LexStrCon arg){
+ATbool PLOC_isLexStrConDefault(PLOC_LexStrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3320,7 +3320,7 @@ inline ATbool PLOC_isLexStrConDefault(PLOC_LexStrCon arg){
 }
 
 /**
- * Assert whether a PLOC_LexStrCon has a chars. 
+ * Assert whether a PLOC_LexStrCon has a chars.
  * \param[in] arg input PLOC_LexStrCon
  * \return ATtrue if the PLOC_LexStrCon had a chars, or ATfalse otherwise
  */
@@ -3337,7 +3337,7 @@ ATbool PLOC_hasLexStrConChars(PLOC_LexStrCon arg) {
  * \return the chars of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexStrCharChars PLOC_getLexStrConChars(PLOC_LexStrCon arg) {
-  
+
     return (PLOC_LexStrCharChars)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1), 1);
 }
 
@@ -3373,7 +3373,7 @@ ATbool PLOC_isValidStrCon(PLOC_StrCon arg) {
  * \param[in] arg input PLOC_StrCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PLOC_isStrConLexToCf(PLOC_StrCon arg){
+ATbool PLOC_isStrConLexToCf(PLOC_StrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3429,7 +3429,7 @@ inline ATbool PLOC_isStrConLexToCf(PLOC_StrCon arg){
 }
 
 /**
- * Assert whether a PLOC_StrCon has a StrCon. 
+ * Assert whether a PLOC_StrCon has a StrCon.
  * \param[in] arg input PLOC_StrCon
  * \return ATtrue if the PLOC_StrCon had a StrCon, or ATfalse otherwise
  */
@@ -3446,7 +3446,7 @@ ATbool PLOC_hasStrConStrCon(PLOC_StrCon arg) {
  * \return the StrCon of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexStrCon PLOC_getStrConStrCon(PLOC_StrCon arg) {
-  
+
     return (PLOC_LexStrCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -3488,7 +3488,7 @@ ATbool PLOC_isValidLexStrCharChars(PLOC_LexStrCharChars arg) {
  * \param[in] arg input PLOC_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharCharsEmpty(PLOC_LexStrCharChars arg){
+ATbool PLOC_isLexStrCharCharsEmpty(PLOC_LexStrCharChars arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3500,7 +3500,7 @@ inline ATbool PLOC_isLexStrCharCharsEmpty(PLOC_LexStrCharChars arg){
  * \param[in] arg input PLOC_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharCharsSingle(PLOC_LexStrCharChars arg){
+ATbool PLOC_isLexStrCharCharsSingle(PLOC_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3516,7 +3516,7 @@ inline ATbool PLOC_isLexStrCharCharsSingle(PLOC_LexStrCharChars arg){
  * \param[in] arg input PLOC_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexStrCharCharsMany(PLOC_LexStrCharChars arg){
+ATbool PLOC_isLexStrCharCharsMany(PLOC_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3524,7 +3524,7 @@ inline ATbool PLOC_isLexStrCharCharsMany(PLOC_LexStrCharChars arg){
 }
 
 /**
- * Assert whether a PLOC_LexStrCharChars has a head. 
+ * Assert whether a PLOC_LexStrCharChars has a head.
  * \param[in] arg input PLOC_LexStrCharChars
  * \return ATtrue if the PLOC_LexStrCharChars had a head, or ATfalse otherwise
  */
@@ -3539,7 +3539,7 @@ ATbool PLOC_hasLexStrCharCharsHead(PLOC_LexStrCharChars arg) {
 }
 
 /**
- * Assert whether a PLOC_LexStrCharChars has a tail. 
+ * Assert whether a PLOC_LexStrCharChars has a tail.
  * \param[in] arg input PLOC_LexStrCharChars
  * \return ATtrue if the PLOC_LexStrCharChars had a tail, or ATfalse otherwise
  */
@@ -3559,7 +3559,7 @@ PLOC_LexStrChar PLOC_getLexStrCharCharsHead(PLOC_LexStrCharChars arg) {
   if (PLOC_isLexStrCharCharsSingle(arg)) {
     return (PLOC_LexStrChar)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PLOC_LexStrChar)ATgetFirst((ATermList)arg);
 }
 
@@ -3569,7 +3569,7 @@ PLOC_LexStrChar PLOC_getLexStrCharCharsHead(PLOC_LexStrCharChars arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexStrCharChars PLOC_getLexStrCharCharsTail(PLOC_LexStrCharChars arg) {
-  
+
     return (PLOC_LexStrCharChars)ATgetNext((ATermList)arg);
 }
 
@@ -3623,7 +3623,7 @@ ATbool PLOC_isValidLexNatCon(PLOC_LexNatCon arg) {
  * \param[in] arg input PLOC_LexNatCon
  * \return ATtrue if #arg corresponds to the signature of a digits, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexNatConDigits(PLOC_LexNatCon arg){
+ATbool PLOC_isLexNatConDigits(PLOC_LexNatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3763,7 +3763,7 @@ inline ATbool PLOC_isLexNatConDigits(PLOC_LexNatCon arg){
 }
 
 /**
- * Assert whether a PLOC_LexNatCon has a list. 
+ * Assert whether a PLOC_LexNatCon has a list.
  * \param[in] arg input PLOC_LexNatCon
  * \return ATtrue if the PLOC_LexNatCon had a list, or ATfalse otherwise
  */
@@ -3780,7 +3780,7 @@ ATbool PLOC_hasLexNatConList(PLOC_LexNatCon arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 char* PLOC_getLexNatConList(PLOC_LexNatCon arg) {
-  
+
     return (char*)PLOC_charsToString((ATerm)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1));
 }
 
@@ -3816,7 +3816,7 @@ ATbool PLOC_isValidNatCon(PLOC_NatCon arg) {
  * \param[in] arg input PLOC_NatCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PLOC_isNatConLexToCf(PLOC_NatCon arg){
+ATbool PLOC_isNatConLexToCf(PLOC_NatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3872,7 +3872,7 @@ inline ATbool PLOC_isNatConLexToCf(PLOC_NatCon arg){
 }
 
 /**
- * Assert whether a PLOC_NatCon has a NatCon. 
+ * Assert whether a PLOC_NatCon has a NatCon.
  * \param[in] arg input PLOC_NatCon
  * \return ATtrue if the PLOC_NatCon had a NatCon, or ATfalse otherwise
  */
@@ -3889,7 +3889,7 @@ ATbool PLOC_hasNatConNatCon(PLOC_NatCon arg) {
  * \return the NatCon of #arg, if it exist or an undefined value if it does not
  */
 PLOC_LexNatCon PLOC_getNatConNatCon(PLOC_NatCon arg) {
-  
+
     return (PLOC_LexNatCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -3925,7 +3925,7 @@ ATbool PLOC_isValidLexLayout(PLOC_LexLayout arg) {
  * \param[in] arg input PLOC_LexLayout
  * \return ATtrue if #arg corresponds to the signature of a whitespace, or ATfalse otherwise
  */
-inline ATbool PLOC_isLexLayoutWhitespace(PLOC_LexLayout arg){
+ATbool PLOC_isLexLayoutWhitespace(PLOC_LexLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4027,7 +4027,7 @@ inline ATbool PLOC_isLexLayoutWhitespace(PLOC_LexLayout arg){
 }
 
 /**
- * Assert whether a PLOC_LexLayout has a ch. 
+ * Assert whether a PLOC_LexLayout has a ch.
  * \param[in] arg input PLOC_LexLayout
  * \return ATtrue if the PLOC_LexLayout had a ch, or ATfalse otherwise
  */
@@ -4044,7 +4044,7 @@ ATbool PLOC_hasLexLayoutCh(PLOC_LexLayout arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char PLOC_getLexLayoutCh(PLOC_LexLayout arg) {
-  
+
     return (char)PLOC_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -4086,7 +4086,7 @@ ATbool PLOC_isValidLocation(PLOC_Location arg) {
  * \param[in] arg input PLOC_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool PLOC_isLocationFile(PLOC_Location arg){
+ATbool PLOC_isLocationFile(PLOC_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4509,7 +4509,7 @@ inline ATbool PLOC_isLocationFile(PLOC_Location arg){
  * \param[in] arg input PLOC_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool PLOC_isLocationArea(PLOC_Location arg){
+ATbool PLOC_isLocationArea(PLOC_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4932,7 +4932,7 @@ inline ATbool PLOC_isLocationArea(PLOC_Location arg){
  * \param[in] arg input PLOC_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool PLOC_isLocationAreaInFile(PLOC_Location arg){
+ATbool PLOC_isLocationAreaInFile(PLOC_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5683,7 +5683,7 @@ inline ATbool PLOC_isLocationAreaInFile(PLOC_Location arg){
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-file. 
+ * Assert whether a PLOC_Location has a ws-after-file.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-file, or ATfalse otherwise
  */
@@ -5695,7 +5695,7 @@ ATbool PLOC_hasLocationWsAfterFile(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-(. 
+ * Assert whether a PLOC_Location has a ws-after-(.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-(, or ATfalse otherwise
  */
@@ -5713,7 +5713,7 @@ ATbool PLOC_hasLocationWsAfterParenOpen(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a filename. 
+ * Assert whether a PLOC_Location has a filename.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a filename, or ATfalse otherwise
  */
@@ -5728,7 +5728,7 @@ ATbool PLOC_hasLocationFilename(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-filename. 
+ * Assert whether a PLOC_Location has a ws-after-filename.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-filename, or ATfalse otherwise
  */
@@ -5743,7 +5743,7 @@ ATbool PLOC_hasLocationWsAfterFilename(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-a. 
+ * Assert whether a PLOC_Location has a ws-after-a.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-a, or ATfalse otherwise
  */
@@ -5755,7 +5755,7 @@ ATbool PLOC_hasLocationWsAfterA(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a Area. 
+ * Assert whether a PLOC_Location has a Area.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a Area, or ATfalse otherwise
  */
@@ -5770,7 +5770,7 @@ ATbool PLOC_hasLocationArea(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-Area. 
+ * Assert whether a PLOC_Location has a ws-after-Area.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-Area, or ATfalse otherwise
  */
@@ -5785,7 +5785,7 @@ ATbool PLOC_hasLocationWsAfterArea(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-area-in-file. 
+ * Assert whether a PLOC_Location has a ws-after-area-in-file.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-area-in-file, or ATfalse otherwise
  */
@@ -5797,7 +5797,7 @@ ATbool PLOC_hasLocationWsAfterAreaInFile(PLOC_Location arg) {
 }
 
 /**
- * Assert whether a PLOC_Location has a ws-after-,. 
+ * Assert whether a PLOC_Location has a ws-after-,.
  * \param[in] arg input PLOC_Location
  * \return ATtrue if the PLOC_Location had a ws-after-,, or ATfalse otherwise
  */
@@ -5814,7 +5814,7 @@ ATbool PLOC_hasLocationWsAfterComma(PLOC_Location arg) {
  * \return the ws-after-file of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getLocationWsAfterFile(PLOC_Location arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -5830,7 +5830,7 @@ PLOC_OptLayout PLOC_getLocationWsAfterParenOpen(PLOC_Location arg) {
   else if (PLOC_isLocationArea(arg)) {
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -5843,7 +5843,7 @@ PLOC_StrCon PLOC_getLocationFilename(PLOC_Location arg) {
   if (PLOC_isLocationFile(arg)) {
     return (PLOC_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (PLOC_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -5856,7 +5856,7 @@ PLOC_OptLayout PLOC_getLocationWsAfterFilename(PLOC_Location arg) {
   if (PLOC_isLocationFile(arg)) {
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -5866,7 +5866,7 @@ PLOC_OptLayout PLOC_getLocationWsAfterFilename(PLOC_Location arg) {
  * \return the ws-after-a of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getLocationWsAfterA(PLOC_Location arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -5879,7 +5879,7 @@ PLOC_Area PLOC_getLocationArea(PLOC_Location arg) {
   if (PLOC_isLocationArea(arg)) {
     return (PLOC_Area)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (PLOC_Area)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -5892,7 +5892,7 @@ PLOC_OptLayout PLOC_getLocationWsAfterArea(PLOC_Location arg) {
   if (PLOC_isLocationArea(arg)) {
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -5902,7 +5902,7 @@ PLOC_OptLayout PLOC_getLocationWsAfterArea(PLOC_Location arg) {
  * \return the ws-after-area-in-file of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getLocationWsAfterAreaInFile(PLOC_Location arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -5912,7 +5912,7 @@ PLOC_OptLayout PLOC_getLocationWsAfterAreaInFile(PLOC_Location arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getLocationWsAfterComma(PLOC_Location arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -6086,7 +6086,7 @@ ATbool PLOC_isValidArea(PLOC_Area arg) {
  * \param[in] arg input PLOC_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool PLOC_isAreaArea(PLOC_Area arg){
+ATbool PLOC_isAreaArea(PLOC_Area arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7125,7 +7125,7 @@ inline ATbool PLOC_isAreaArea(PLOC_Area arg){
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-area. 
+ * Assert whether a PLOC_Area has a ws-after-area.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-area, or ATfalse otherwise
  */
@@ -7137,7 +7137,7 @@ ATbool PLOC_hasAreaWsAfterArea(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-(. 
+ * Assert whether a PLOC_Area has a ws-after-(.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-(, or ATfalse otherwise
  */
@@ -7149,7 +7149,7 @@ ATbool PLOC_hasAreaWsAfterParenOpen(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a begin-line. 
+ * Assert whether a PLOC_Area has a begin-line.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a begin-line, or ATfalse otherwise
  */
@@ -7161,7 +7161,7 @@ ATbool PLOC_hasAreaBeginLine(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-begin-line. 
+ * Assert whether a PLOC_Area has a ws-after-begin-line.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-begin-line, or ATfalse otherwise
  */
@@ -7173,7 +7173,7 @@ ATbool PLOC_hasAreaWsAfterBeginLine(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-,. 
+ * Assert whether a PLOC_Area has a ws-after-,.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-,, or ATfalse otherwise
  */
@@ -7185,7 +7185,7 @@ ATbool PLOC_hasAreaWsAfterComma(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a begin-column. 
+ * Assert whether a PLOC_Area has a begin-column.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a begin-column, or ATfalse otherwise
  */
@@ -7197,7 +7197,7 @@ ATbool PLOC_hasAreaBeginColumn(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-begin-column. 
+ * Assert whether a PLOC_Area has a ws-after-begin-column.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-begin-column, or ATfalse otherwise
  */
@@ -7209,7 +7209,7 @@ ATbool PLOC_hasAreaWsAfterBeginColumn(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-,-1. 
+ * Assert whether a PLOC_Area has a ws-after-,-1.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-,-1, or ATfalse otherwise
  */
@@ -7221,7 +7221,7 @@ ATbool PLOC_hasAreaWsAfterComma1(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a end-line. 
+ * Assert whether a PLOC_Area has a end-line.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a end-line, or ATfalse otherwise
  */
@@ -7233,7 +7233,7 @@ ATbool PLOC_hasAreaEndLine(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-end-line. 
+ * Assert whether a PLOC_Area has a ws-after-end-line.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-end-line, or ATfalse otherwise
  */
@@ -7245,7 +7245,7 @@ ATbool PLOC_hasAreaWsAfterEndLine(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-,-2. 
+ * Assert whether a PLOC_Area has a ws-after-,-2.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-,-2, or ATfalse otherwise
  */
@@ -7257,7 +7257,7 @@ ATbool PLOC_hasAreaWsAfterComma2(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a end-column. 
+ * Assert whether a PLOC_Area has a end-column.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a end-column, or ATfalse otherwise
  */
@@ -7269,7 +7269,7 @@ ATbool PLOC_hasAreaEndColumn(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-end-column. 
+ * Assert whether a PLOC_Area has a ws-after-end-column.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-end-column, or ATfalse otherwise
  */
@@ -7281,7 +7281,7 @@ ATbool PLOC_hasAreaWsAfterEndColumn(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-,-3. 
+ * Assert whether a PLOC_Area has a ws-after-,-3.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-,-3, or ATfalse otherwise
  */
@@ -7293,7 +7293,7 @@ ATbool PLOC_hasAreaWsAfterComma3(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a offset. 
+ * Assert whether a PLOC_Area has a offset.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a offset, or ATfalse otherwise
  */
@@ -7305,7 +7305,7 @@ ATbool PLOC_hasAreaOffset(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-offset. 
+ * Assert whether a PLOC_Area has a ws-after-offset.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-offset, or ATfalse otherwise
  */
@@ -7317,7 +7317,7 @@ ATbool PLOC_hasAreaWsAfterOffset(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-,-4. 
+ * Assert whether a PLOC_Area has a ws-after-,-4.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-,-4, or ATfalse otherwise
  */
@@ -7329,7 +7329,7 @@ ATbool PLOC_hasAreaWsAfterComma4(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a length. 
+ * Assert whether a PLOC_Area has a length.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a length, or ATfalse otherwise
  */
@@ -7341,7 +7341,7 @@ ATbool PLOC_hasAreaLength(PLOC_Area arg) {
 }
 
 /**
- * Assert whether a PLOC_Area has a ws-after-length. 
+ * Assert whether a PLOC_Area has a ws-after-length.
  * \param[in] arg input PLOC_Area
  * \return ATtrue if the PLOC_Area had a ws-after-length, or ATfalse otherwise
  */
@@ -7358,7 +7358,7 @@ ATbool PLOC_hasAreaWsAfterLength(PLOC_Area arg) {
  * \return the ws-after-area of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterArea(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -7368,7 +7368,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterArea(PLOC_Area arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterParenOpen(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -7378,7 +7378,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterParenOpen(PLOC_Area arg) {
  * \return the begin-line of #arg, if it exist or an undefined value if it does not
  */
 PLOC_NatCon PLOC_getAreaBeginLine(PLOC_Area arg) {
-  
+
     return (PLOC_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -7388,7 +7388,7 @@ PLOC_NatCon PLOC_getAreaBeginLine(PLOC_Area arg) {
  * \return the ws-after-begin-line of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterBeginLine(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -7398,7 +7398,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterBeginLine(PLOC_Area arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterComma(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -7408,7 +7408,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterComma(PLOC_Area arg) {
  * \return the begin-column of #arg, if it exist or an undefined value if it does not
  */
 PLOC_NatCon PLOC_getAreaBeginColumn(PLOC_Area arg) {
-  
+
     return (PLOC_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -7418,7 +7418,7 @@ PLOC_NatCon PLOC_getAreaBeginColumn(PLOC_Area arg) {
  * \return the ws-after-begin-column of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterBeginColumn(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -7428,7 +7428,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterBeginColumn(PLOC_Area arg) {
  * \return the ws-after-,-1 of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterComma1(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -7438,7 +7438,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterComma1(PLOC_Area arg) {
  * \return the end-line of #arg, if it exist or an undefined value if it does not
  */
 PLOC_NatCon PLOC_getAreaEndLine(PLOC_Area arg) {
-  
+
     return (PLOC_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 12);
 }
 
@@ -7448,7 +7448,7 @@ PLOC_NatCon PLOC_getAreaEndLine(PLOC_Area arg) {
  * \return the ws-after-end-line of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterEndLine(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -7458,7 +7458,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterEndLine(PLOC_Area arg) {
  * \return the ws-after-,-2 of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterComma2(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 15);
 }
 
@@ -7468,7 +7468,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterComma2(PLOC_Area arg) {
  * \return the end-column of #arg, if it exist or an undefined value if it does not
  */
 PLOC_NatCon PLOC_getAreaEndColumn(PLOC_Area arg) {
-  
+
     return (PLOC_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 16);
 }
 
@@ -7478,7 +7478,7 @@ PLOC_NatCon PLOC_getAreaEndColumn(PLOC_Area arg) {
  * \return the ws-after-end-column of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterEndColumn(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 17);
 }
 
@@ -7488,7 +7488,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterEndColumn(PLOC_Area arg) {
  * \return the ws-after-,-3 of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterComma3(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 19);
 }
 
@@ -7498,7 +7498,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterComma3(PLOC_Area arg) {
  * \return the offset of #arg, if it exist or an undefined value if it does not
  */
 PLOC_NatCon PLOC_getAreaOffset(PLOC_Area arg) {
-  
+
     return (PLOC_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 20);
 }
 
@@ -7508,7 +7508,7 @@ PLOC_NatCon PLOC_getAreaOffset(PLOC_Area arg) {
  * \return the ws-after-offset of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterOffset(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 21);
 }
 
@@ -7518,7 +7518,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterOffset(PLOC_Area arg) {
  * \return the ws-after-,-4 of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterComma4(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 23);
 }
 
@@ -7528,7 +7528,7 @@ PLOC_OptLayout PLOC_getAreaWsAfterComma4(PLOC_Area arg) {
  * \return the length of #arg, if it exist or an undefined value if it does not
  */
 PLOC_NatCon PLOC_getAreaLength(PLOC_Area arg) {
-  
+
     return (PLOC_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 24);
 }
 
@@ -7538,7 +7538,7 @@ PLOC_NatCon PLOC_getAreaLength(PLOC_Area arg) {
  * \return the ws-after-length of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaWsAfterLength(PLOC_Area arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 25);
 }
 
@@ -7844,7 +7844,7 @@ ATbool PLOC_isValidSlice(PLOC_Slice arg) {
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if #arg corresponds to the signature of a slice, or ATfalse otherwise
  */
-inline ATbool PLOC_isSliceSlice(PLOC_Slice arg){
+ATbool PLOC_isSliceSlice(PLOC_Slice arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PLOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -8633,7 +8633,7 @@ inline ATbool PLOC_isSliceSlice(PLOC_Slice arg){
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-slice. 
+ * Assert whether a PLOC_Slice has a ws-after-slice.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-slice, or ATfalse otherwise
  */
@@ -8645,7 +8645,7 @@ ATbool PLOC_hasSliceWsAfterSlice(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-(. 
+ * Assert whether a PLOC_Slice has a ws-after-(.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-(, or ATfalse otherwise
  */
@@ -8657,7 +8657,7 @@ ATbool PLOC_hasSliceWsAfterParenOpen(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a id. 
+ * Assert whether a PLOC_Slice has a id.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a id, or ATfalse otherwise
  */
@@ -8669,7 +8669,7 @@ ATbool PLOC_hasSliceId(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-id. 
+ * Assert whether a PLOC_Slice has a ws-after-id.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-id, or ATfalse otherwise
  */
@@ -8681,7 +8681,7 @@ ATbool PLOC_hasSliceWsAfterId(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-,. 
+ * Assert whether a PLOC_Slice has a ws-after-,.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-,, or ATfalse otherwise
  */
@@ -8693,7 +8693,7 @@ ATbool PLOC_hasSliceWsAfterComma(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-[. 
+ * Assert whether a PLOC_Slice has a ws-after-[.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-[, or ATfalse otherwise
  */
@@ -8705,7 +8705,7 @@ ATbool PLOC_hasSliceWsAfterBracketOpen(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a areas. 
+ * Assert whether a PLOC_Slice has a areas.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a areas, or ATfalse otherwise
  */
@@ -8717,7 +8717,7 @@ ATbool PLOC_hasSliceAreas(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-areas. 
+ * Assert whether a PLOC_Slice has a ws-after-areas.
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-areas, or ATfalse otherwise
  */
@@ -8729,7 +8729,7 @@ ATbool PLOC_hasSliceWsAfterAreas(PLOC_Slice arg) {
 }
 
 /**
- * Assert whether a PLOC_Slice has a ws-after-]. 
+ * Assert whether a PLOC_Slice has a ws-after-].
  * \param[in] arg input PLOC_Slice
  * \return ATtrue if the PLOC_Slice had a ws-after-], or ATfalse otherwise
  */
@@ -8746,7 +8746,7 @@ ATbool PLOC_hasSliceWsAfterBracketClose(PLOC_Slice arg) {
  * \return the ws-after-slice of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterSlice(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -8756,7 +8756,7 @@ PLOC_OptLayout PLOC_getSliceWsAfterSlice(PLOC_Slice arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterParenOpen(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -8766,7 +8766,7 @@ PLOC_OptLayout PLOC_getSliceWsAfterParenOpen(PLOC_Slice arg) {
  * \return the id of #arg, if it exist or an undefined value if it does not
  */
 PLOC_StrCon PLOC_getSliceId(PLOC_Slice arg) {
-  
+
     return (PLOC_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -8776,7 +8776,7 @@ PLOC_StrCon PLOC_getSliceId(PLOC_Slice arg) {
  * \return the ws-after-id of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterId(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -8786,7 +8786,7 @@ PLOC_OptLayout PLOC_getSliceWsAfterId(PLOC_Slice arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterComma(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -8796,7 +8796,7 @@ PLOC_OptLayout PLOC_getSliceWsAfterComma(PLOC_Slice arg) {
  * \return the ws-after-[ of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterBracketOpen(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -8806,7 +8806,7 @@ PLOC_OptLayout PLOC_getSliceWsAfterBracketOpen(PLOC_Slice arg) {
  * \return the areas of #arg, if it exist or an undefined value if it does not
  */
 PLOC_AreaAreas PLOC_getSliceAreas(PLOC_Slice arg) {
-  
+
     return (PLOC_AreaAreas)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 10), 1);
 }
 
@@ -8816,7 +8816,7 @@ PLOC_AreaAreas PLOC_getSliceAreas(PLOC_Slice arg) {
  * \return the ws-after-areas of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterAreas(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -8826,7 +8826,7 @@ PLOC_OptLayout PLOC_getSliceWsAfterAreas(PLOC_Slice arg) {
  * \return the ws-after-] of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getSliceWsAfterBracketClose(PLOC_Slice arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -8988,7 +8988,7 @@ ATbool PLOC_isValidAreaAreas(PLOC_AreaAreas arg) {
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PLOC_isAreaAreasEmpty(PLOC_AreaAreas arg){
+ATbool PLOC_isAreaAreasEmpty(PLOC_AreaAreas arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -9000,7 +9000,7 @@ inline ATbool PLOC_isAreaAreasEmpty(PLOC_AreaAreas arg){
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PLOC_isAreaAreasSingle(PLOC_AreaAreas arg){
+ATbool PLOC_isAreaAreasSingle(PLOC_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -9016,7 +9016,7 @@ inline ATbool PLOC_isAreaAreasSingle(PLOC_AreaAreas arg){
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PLOC_isAreaAreasMany(PLOC_AreaAreas arg){
+ATbool PLOC_isAreaAreasMany(PLOC_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -9091,7 +9091,7 @@ inline ATbool PLOC_isAreaAreasMany(PLOC_AreaAreas arg){
 }
 
 /**
- * Assert whether a PLOC_AreaAreas has a head. 
+ * Assert whether a PLOC_AreaAreas has a head.
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if the PLOC_AreaAreas had a head, or ATfalse otherwise
  */
@@ -9106,7 +9106,7 @@ ATbool PLOC_hasAreaAreasHead(PLOC_AreaAreas arg) {
 }
 
 /**
- * Assert whether a PLOC_AreaAreas has a ws-after-head. 
+ * Assert whether a PLOC_AreaAreas has a ws-after-head.
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if the PLOC_AreaAreas had a ws-after-head, or ATfalse otherwise
  */
@@ -9118,7 +9118,7 @@ ATbool PLOC_hasAreaAreasWsAfterHead(PLOC_AreaAreas arg) {
 }
 
 /**
- * Assert whether a PLOC_AreaAreas has a ws-after-sep. 
+ * Assert whether a PLOC_AreaAreas has a ws-after-sep.
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if the PLOC_AreaAreas had a ws-after-sep, or ATfalse otherwise
  */
@@ -9130,7 +9130,7 @@ ATbool PLOC_hasAreaAreasWsAfterSep(PLOC_AreaAreas arg) {
 }
 
 /**
- * Assert whether a PLOC_AreaAreas has a tail. 
+ * Assert whether a PLOC_AreaAreas has a tail.
  * \param[in] arg input PLOC_AreaAreas
  * \return ATtrue if the PLOC_AreaAreas had a tail, or ATfalse otherwise
  */
@@ -9142,7 +9142,7 @@ ATbool PLOC_hasAreaAreasTail(PLOC_AreaAreas arg) {
 }
 
 /**
- * Returns a list of all but the first element of a PLOC_AreaAreas. 
+ * Returns a list of all but the first element of a PLOC_AreaAreas.
  * \param[in] arg input PLOC_AreaAreas
  * \return A new PLOC_AreaAreas, without the first element and the separator(s) just after it.)
  */
@@ -9152,7 +9152,7 @@ PLOC_AreaAreas PLOC_getAreaAreasTail(PLOC_AreaAreas arg) {
     return (PLOC_AreaAreas) PLOC_makeAreaAreasEmpty();
   }
   else {
-  
+
     return (PLOC_AreaAreas)ATgetTail((ATermList)arg, 4);
   }
 }
@@ -9166,7 +9166,7 @@ PLOC_Area PLOC_getAreaAreasHead(PLOC_AreaAreas arg) {
   if (PLOC_isAreaAreasSingle(arg)) {
     return (PLOC_Area)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PLOC_Area)ATgetFirst((ATermList)arg);
 }
 
@@ -9176,7 +9176,7 @@ PLOC_Area PLOC_getAreaAreasHead(PLOC_AreaAreas arg) {
  * \return the ws-after-head of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaAreasWsAfterHead(PLOC_AreaAreas arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)arg, 1);
 }
 
@@ -9186,7 +9186,7 @@ PLOC_OptLayout PLOC_getAreaAreasWsAfterHead(PLOC_AreaAreas arg) {
  * \return the ws-after-sep of #arg, if it exist or an undefined value if it does not
  */
 PLOC_OptLayout PLOC_getAreaAreasWsAfterSep(PLOC_AreaAreas arg) {
-  
+
     return (PLOC_OptLayout)ATelementAt((ATermList)arg, 3);
 }
 
@@ -9254,7 +9254,7 @@ PLOC_AreaAreas PLOC_setAreaAreasTail(PLOC_AreaAreas arg, PLOC_AreaAreas tail) {
 }
 
 /**
- * Apply functions to the children of a PLOC_OptLayout. 
+ * Apply functions to the children of a PLOC_OptLayout.
  * \return A new PLOC_OptLayout with new children where the argument functions might have applied
  */
 PLOC_OptLayout PLOC_visitOptLayout(PLOC_OptLayout arg, PLOC_Layout (*acceptLayout)(PLOC_Layout)) {
@@ -9269,7 +9269,7 @@ PLOC_OptLayout PLOC_visitOptLayout(PLOC_OptLayout arg, PLOC_Layout (*acceptLayou
   return (PLOC_OptLayout)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_Layout. 
+ * Apply functions to the children of a PLOC_Layout.
  * \return A new PLOC_Layout with new children where the argument functions might have applied
  */
 PLOC_Layout PLOC_visitLayout(PLOC_Layout arg, PLOC_LexLayoutList (*acceptList)(PLOC_LexLayoutList)) {
@@ -9281,7 +9281,7 @@ PLOC_Layout PLOC_visitLayout(PLOC_Layout arg, PLOC_LexLayoutList (*acceptList)(P
   return (PLOC_Layout)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_LexLayoutList. 
+ * Apply functions to the children of a PLOC_LexLayoutList.
  * \return A new PLOC_LexLayoutList with new children where the argument functions might have applied
  */
 PLOC_LexLayoutList PLOC_visitLexLayoutList(PLOC_LexLayoutList arg, PLOC_LexLayout (*acceptHead)(PLOC_LexLayout)) {
@@ -9301,7 +9301,7 @@ PLOC_LexLayoutList PLOC_visitLexLayoutList(PLOC_LexLayoutList arg, PLOC_LexLayou
   return (PLOC_LexLayoutList)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_LexStrChar. 
+ * Apply functions to the children of a PLOC_LexStrChar.
  * \return A new PLOC_LexStrChar with new children where the argument functions might have applied
  */
 PLOC_LexStrChar PLOC_visitLexStrChar(PLOC_LexStrChar arg, char (*acceptA)(char), char (*acceptB)(char), char (*acceptC)(char), char (*acceptCh)(char)) {
@@ -9331,7 +9331,7 @@ PLOC_LexStrChar PLOC_visitLexStrChar(PLOC_LexStrChar arg, char (*acceptA)(char),
   return (PLOC_LexStrChar)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_StrChar. 
+ * Apply functions to the children of a PLOC_StrChar.
  * \return A new PLOC_StrChar with new children where the argument functions might have applied
  */
 PLOC_StrChar PLOC_visitStrChar(PLOC_StrChar arg, PLOC_LexStrChar (*acceptStrChar)(PLOC_LexStrChar)) {
@@ -9343,7 +9343,7 @@ PLOC_StrChar PLOC_visitStrChar(PLOC_StrChar arg, PLOC_LexStrChar (*acceptStrChar
   return (PLOC_StrChar)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_LexStrCon. 
+ * Apply functions to the children of a PLOC_LexStrCon.
  * \return A new PLOC_LexStrCon with new children where the argument functions might have applied
  */
 PLOC_LexStrCon PLOC_visitLexStrCon(PLOC_LexStrCon arg, PLOC_LexStrCharChars (*acceptChars)(PLOC_LexStrCharChars)) {
@@ -9355,7 +9355,7 @@ PLOC_LexStrCon PLOC_visitLexStrCon(PLOC_LexStrCon arg, PLOC_LexStrCharChars (*ac
   return (PLOC_LexStrCon)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_StrCon. 
+ * Apply functions to the children of a PLOC_StrCon.
  * \return A new PLOC_StrCon with new children where the argument functions might have applied
  */
 PLOC_StrCon PLOC_visitStrCon(PLOC_StrCon arg, PLOC_LexStrCon (*acceptStrCon)(PLOC_LexStrCon)) {
@@ -9367,7 +9367,7 @@ PLOC_StrCon PLOC_visitStrCon(PLOC_StrCon arg, PLOC_LexStrCon (*acceptStrCon)(PLO
   return (PLOC_StrCon)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_LexStrCharChars. 
+ * Apply functions to the children of a PLOC_LexStrCharChars.
  * \return A new PLOC_LexStrCharChars with new children where the argument functions might have applied
  */
 PLOC_LexStrCharChars PLOC_visitLexStrCharChars(PLOC_LexStrCharChars arg, PLOC_LexStrChar (*acceptHead)(PLOC_LexStrChar)) {
@@ -9387,7 +9387,7 @@ PLOC_LexStrCharChars PLOC_visitLexStrCharChars(PLOC_LexStrCharChars arg, PLOC_Le
   return (PLOC_LexStrCharChars)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_LexNatCon. 
+ * Apply functions to the children of a PLOC_LexNatCon.
  * \return A new PLOC_LexNatCon with new children where the argument functions might have applied
  */
 PLOC_LexNatCon PLOC_visitLexNatCon(PLOC_LexNatCon arg, char* (*acceptList)(char*)) {
@@ -9399,7 +9399,7 @@ PLOC_LexNatCon PLOC_visitLexNatCon(PLOC_LexNatCon arg, char* (*acceptList)(char*
   return (PLOC_LexNatCon)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_NatCon. 
+ * Apply functions to the children of a PLOC_NatCon.
  * \return A new PLOC_NatCon with new children where the argument functions might have applied
  */
 PLOC_NatCon PLOC_visitNatCon(PLOC_NatCon arg, PLOC_LexNatCon (*acceptNatCon)(PLOC_LexNatCon)) {
@@ -9411,7 +9411,7 @@ PLOC_NatCon PLOC_visitNatCon(PLOC_NatCon arg, PLOC_LexNatCon (*acceptNatCon)(PLO
   return (PLOC_NatCon)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_LexLayout. 
+ * Apply functions to the children of a PLOC_LexLayout.
  * \return A new PLOC_LexLayout with new children where the argument functions might have applied
  */
 PLOC_LexLayout PLOC_visitLexLayout(PLOC_LexLayout arg, char (*acceptCh)(char)) {
@@ -9423,7 +9423,7 @@ PLOC_LexLayout PLOC_visitLexLayout(PLOC_LexLayout arg, char (*acceptCh)(char)) {
   return (PLOC_LexLayout)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_Location. 
+ * Apply functions to the children of a PLOC_Location.
  * \return A new PLOC_Location with new children where the argument functions might have applied
  */
 PLOC_Location PLOC_visitLocation(PLOC_Location arg, PLOC_OptLayout (*acceptWsAfterFile)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterParenOpen)(PLOC_OptLayout), PLOC_StrCon (*acceptFilename)(PLOC_StrCon), PLOC_OptLayout (*acceptWsAfterFilename)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterA)(PLOC_OptLayout), PLOC_Area (*acceptArea)(PLOC_Area), PLOC_OptLayout (*acceptWsAfterArea)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterAreaInFile)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma)(PLOC_OptLayout)) {
@@ -9455,7 +9455,7 @@ PLOC_Location PLOC_visitLocation(PLOC_Location arg, PLOC_OptLayout (*acceptWsAft
   return (PLOC_Location)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_Area. 
+ * Apply functions to the children of a PLOC_Area.
  * \return A new PLOC_Area with new children where the argument functions might have applied
  */
 PLOC_Area PLOC_visitArea(PLOC_Area arg, PLOC_OptLayout (*acceptWsAfterArea)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterParenOpen)(PLOC_OptLayout), PLOC_NatCon (*acceptBeginLine)(PLOC_NatCon), PLOC_OptLayout (*acceptWsAfterBeginLine)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma)(PLOC_OptLayout), PLOC_NatCon (*acceptBeginColumn)(PLOC_NatCon), PLOC_OptLayout (*acceptWsAfterBeginColumn)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma1)(PLOC_OptLayout), PLOC_NatCon (*acceptEndLine)(PLOC_NatCon), PLOC_OptLayout (*acceptWsAfterEndLine)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma2)(PLOC_OptLayout), PLOC_NatCon (*acceptEndColumn)(PLOC_NatCon), PLOC_OptLayout (*acceptWsAfterEndColumn)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma3)(PLOC_OptLayout), PLOC_NatCon (*acceptOffset)(PLOC_NatCon), PLOC_OptLayout (*acceptWsAfterOffset)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma4)(PLOC_OptLayout), PLOC_NatCon (*acceptLength)(PLOC_NatCon), PLOC_OptLayout (*acceptWsAfterLength)(PLOC_OptLayout)) {
@@ -9485,7 +9485,7 @@ PLOC_Area PLOC_visitArea(PLOC_Area arg, PLOC_OptLayout (*acceptWsAfterArea)(PLOC
   return (PLOC_Area)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_Slice. 
+ * Apply functions to the children of a PLOC_Slice.
  * \return A new PLOC_Slice with new children where the argument functions might have applied
  */
 PLOC_Slice PLOC_visitSlice(PLOC_Slice arg, PLOC_OptLayout (*acceptWsAfterSlice)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterParenOpen)(PLOC_OptLayout), PLOC_StrCon (*acceptId)(PLOC_StrCon), PLOC_OptLayout (*acceptWsAfterId)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterComma)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterBracketOpen)(PLOC_OptLayout), PLOC_AreaAreas (*acceptAreas)(PLOC_AreaAreas), PLOC_OptLayout (*acceptWsAfterAreas)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterBracketClose)(PLOC_OptLayout)) {
@@ -9505,7 +9505,7 @@ PLOC_Slice PLOC_visitSlice(PLOC_Slice arg, PLOC_OptLayout (*acceptWsAfterSlice)(
   return (PLOC_Slice)NULL;
 }
 /**
- * Apply functions to the children of a PLOC_AreaAreas. 
+ * Apply functions to the children of a PLOC_AreaAreas.
  * \return A new PLOC_AreaAreas with new children where the argument functions might have applied
  */
 PLOC_AreaAreas PLOC_visitAreaAreas(PLOC_AreaAreas arg, PLOC_Area (*acceptHead)(PLOC_Area), PLOC_OptLayout (*acceptWsAfterHead)(PLOC_OptLayout), PLOC_OptLayout (*acceptWsAfterSep)(PLOC_OptLayout)) {

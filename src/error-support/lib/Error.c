@@ -5,7 +5,7 @@
 #include "Error.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm ERR_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm ERR_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -490,7 +490,7 @@ ATerm _ERR_AreaAreasToTerm(ERR_AreaAreas arg) {
 }
 
 /**
- * Retrieve the length of a ERR_SubjectList. 
+ * Retrieve the length of a ERR_SubjectList.
  * \param[in] arg input ERR_SubjectList
  * \return The number of elements in the ERR_SubjectList
  */
@@ -499,7 +499,7 @@ int _ERR_getSubjectListLength(ERR_SubjectList arg) {
 }
 
 /**
- * Reverse a ERR_SubjectList. 
+ * Reverse a ERR_SubjectList.
  * \param[in] arg ERR_SubjectList to be reversed
  * \return a reversed #arg
  */
@@ -508,7 +508,7 @@ ERR_SubjectList _ERR_reverseSubjectList(ERR_SubjectList arg) {
 }
 
 /**
- * Append a ERR_Subject to the end of a ERR_SubjectList. 
+ * Append a ERR_Subject to the end of a ERR_SubjectList.
  * \param[in] arg ERR_SubjectList to append the ERR_Subject to
  * \param[in] elem ERR_Subject to be appended
  * \return new ERR_SubjectList with #elem appended
@@ -518,7 +518,7 @@ ERR_SubjectList _ERR_appendSubjectList(ERR_SubjectList arg, ERR_Subject elem) {
 }
 
 /**
- * Concatenate two ERR_SubjectLists. 
+ * Concatenate two ERR_SubjectLists.
  * \param[in] arg0 first ERR_SubjectList
  * \param[in] arg1 second ERR_SubjectList
  * \return ERR_SubjectList with the elements of #arg0 before the elements of #arg1
@@ -528,7 +528,7 @@ ERR_SubjectList _ERR_concatSubjectList(ERR_SubjectList arg0, ERR_SubjectList arg
 }
 
 /**
- * Extract a sublist from a ERR_SubjectList. 
+ * Extract a sublist from a ERR_SubjectList.
  * \param[in] arg ERR_SubjectList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -539,7 +539,7 @@ ERR_SubjectList _ERR_sliceSubjectList(ERR_SubjectList arg, int start, int end) {
 }
 
 /**
- * Retrieve the ERR_Subject at #index from a ERR_SubjectList. 
+ * Retrieve the ERR_Subject at #index from a ERR_SubjectList.
  * \param[in] arg ERR_SubjectList to retrieve the ERR_Subject from
  * \param[in] index index to use to point in the ERR_SubjectList
  * \return ERR_Subject at position #index in #arg
@@ -549,7 +549,7 @@ ERR_Subject _ERR_getSubjectListSubjectAt(ERR_SubjectList arg, int index) {
 }
 
 /**
- * Replace the ERR_Subject at #index from a ERR_SubjectList by a new one. 
+ * Replace the ERR_Subject at #index from a ERR_SubjectList by a new one.
  * \param[in] arg ERR_SubjectList to retrieve the ERR_Subject from
  * \param[in] elem new ERR_Subject to replace another
  * \param[in] index index to use to point in the ERR_SubjectList
@@ -560,7 +560,7 @@ ERR_SubjectList _ERR_replaceSubjectListSubjectAt(ERR_SubjectList arg, ERR_Subjec
 }
 
 /**
- * Builds a ERR_SubjectList of 2 consecutive elements. 
+ * Builds a ERR_SubjectList of 2 consecutive elements.
  * \param[in] elem1 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem2 One ERR_Subject element of the new ERR_SubjectList
  * \return A new ERR_SubjectList consisting of 2 ERR_Subjects
@@ -570,7 +570,7 @@ ERR_SubjectList _ERR_makeSubjectList2(ERR_Subject elem1, ERR_Subject elem2) {
 }
 
 /**
- * Builds a ERR_SubjectList of 3 consecutive elements. 
+ * Builds a ERR_SubjectList of 3 consecutive elements.
  * \param[in] elem1 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem2 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem3 One ERR_Subject element of the new ERR_SubjectList
@@ -581,7 +581,7 @@ ERR_SubjectList _ERR_makeSubjectList3(ERR_Subject elem1, ERR_Subject elem2, ERR_
 }
 
 /**
- * Builds a ERR_SubjectList of 4 consecutive elements. 
+ * Builds a ERR_SubjectList of 4 consecutive elements.
  * \param[in] elem1 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem2 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem3 One ERR_Subject element of the new ERR_SubjectList
@@ -593,7 +593,7 @@ ERR_SubjectList _ERR_makeSubjectList4(ERR_Subject elem1, ERR_Subject elem2, ERR_
 }
 
 /**
- * Builds a ERR_SubjectList of 5 consecutive elements. 
+ * Builds a ERR_SubjectList of 5 consecutive elements.
  * \param[in] elem1 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem2 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem3 One ERR_Subject element of the new ERR_SubjectList
@@ -606,7 +606,7 @@ ERR_SubjectList _ERR_makeSubjectList5(ERR_Subject elem1, ERR_Subject elem2, ERR_
 }
 
 /**
- * Builds a ERR_SubjectList of 6 consecutive elements. 
+ * Builds a ERR_SubjectList of 6 consecutive elements.
  * \param[in] elem1 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem2 One ERR_Subject element of the new ERR_SubjectList
  * \param[in] elem3 One ERR_Subject element of the new ERR_SubjectList
@@ -620,7 +620,7 @@ ERR_SubjectList _ERR_makeSubjectList6(ERR_Subject elem1, ERR_Subject elem2, ERR_
 }
 
 /**
- * Retrieve the length of a ERR_ErrorList. 
+ * Retrieve the length of a ERR_ErrorList.
  * \param[in] arg input ERR_ErrorList
  * \return The number of elements in the ERR_ErrorList
  */
@@ -629,7 +629,7 @@ int _ERR_getErrorListLength(ERR_ErrorList arg) {
 }
 
 /**
- * Reverse a ERR_ErrorList. 
+ * Reverse a ERR_ErrorList.
  * \param[in] arg ERR_ErrorList to be reversed
  * \return a reversed #arg
  */
@@ -638,7 +638,7 @@ ERR_ErrorList _ERR_reverseErrorList(ERR_ErrorList arg) {
 }
 
 /**
- * Append a ERR_Error to the end of a ERR_ErrorList. 
+ * Append a ERR_Error to the end of a ERR_ErrorList.
  * \param[in] arg ERR_ErrorList to append the ERR_Error to
  * \param[in] elem ERR_Error to be appended
  * \return new ERR_ErrorList with #elem appended
@@ -648,7 +648,7 @@ ERR_ErrorList _ERR_appendErrorList(ERR_ErrorList arg, ERR_Error elem) {
 }
 
 /**
- * Concatenate two ERR_ErrorLists. 
+ * Concatenate two ERR_ErrorLists.
  * \param[in] arg0 first ERR_ErrorList
  * \param[in] arg1 second ERR_ErrorList
  * \return ERR_ErrorList with the elements of #arg0 before the elements of #arg1
@@ -658,7 +658,7 @@ ERR_ErrorList _ERR_concatErrorList(ERR_ErrorList arg0, ERR_ErrorList arg1) {
 }
 
 /**
- * Extract a sublist from a ERR_ErrorList. 
+ * Extract a sublist from a ERR_ErrorList.
  * \param[in] arg ERR_ErrorList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -669,7 +669,7 @@ ERR_ErrorList _ERR_sliceErrorList(ERR_ErrorList arg, int start, int end) {
 }
 
 /**
- * Retrieve the ERR_Error at #index from a ERR_ErrorList. 
+ * Retrieve the ERR_Error at #index from a ERR_ErrorList.
  * \param[in] arg ERR_ErrorList to retrieve the ERR_Error from
  * \param[in] index index to use to point in the ERR_ErrorList
  * \return ERR_Error at position #index in #arg
@@ -679,7 +679,7 @@ ERR_Error _ERR_getErrorListErrorAt(ERR_ErrorList arg, int index) {
 }
 
 /**
- * Replace the ERR_Error at #index from a ERR_ErrorList by a new one. 
+ * Replace the ERR_Error at #index from a ERR_ErrorList by a new one.
  * \param[in] arg ERR_ErrorList to retrieve the ERR_Error from
  * \param[in] elem new ERR_Error to replace another
  * \param[in] index index to use to point in the ERR_ErrorList
@@ -690,7 +690,7 @@ ERR_ErrorList _ERR_replaceErrorListErrorAt(ERR_ErrorList arg, ERR_Error elem, in
 }
 
 /**
- * Builds a ERR_ErrorList of 2 consecutive elements. 
+ * Builds a ERR_ErrorList of 2 consecutive elements.
  * \param[in] elem1 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem2 One ERR_Error element of the new ERR_ErrorList
  * \return A new ERR_ErrorList consisting of 2 ERR_Errors
@@ -700,7 +700,7 @@ ERR_ErrorList _ERR_makeErrorList2(ERR_Error elem1, ERR_Error elem2) {
 }
 
 /**
- * Builds a ERR_ErrorList of 3 consecutive elements. 
+ * Builds a ERR_ErrorList of 3 consecutive elements.
  * \param[in] elem1 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem2 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem3 One ERR_Error element of the new ERR_ErrorList
@@ -711,7 +711,7 @@ ERR_ErrorList _ERR_makeErrorList3(ERR_Error elem1, ERR_Error elem2, ERR_Error el
 }
 
 /**
- * Builds a ERR_ErrorList of 4 consecutive elements. 
+ * Builds a ERR_ErrorList of 4 consecutive elements.
  * \param[in] elem1 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem2 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem3 One ERR_Error element of the new ERR_ErrorList
@@ -723,7 +723,7 @@ ERR_ErrorList _ERR_makeErrorList4(ERR_Error elem1, ERR_Error elem2, ERR_Error el
 }
 
 /**
- * Builds a ERR_ErrorList of 5 consecutive elements. 
+ * Builds a ERR_ErrorList of 5 consecutive elements.
  * \param[in] elem1 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem2 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem3 One ERR_Error element of the new ERR_ErrorList
@@ -736,7 +736,7 @@ ERR_ErrorList _ERR_makeErrorList5(ERR_Error elem1, ERR_Error elem2, ERR_Error el
 }
 
 /**
- * Builds a ERR_ErrorList of 6 consecutive elements. 
+ * Builds a ERR_ErrorList of 6 consecutive elements.
  * \param[in] elem1 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem2 One ERR_Error element of the new ERR_ErrorList
  * \param[in] elem3 One ERR_Error element of the new ERR_ErrorList
@@ -750,7 +750,7 @@ ERR_ErrorList _ERR_makeErrorList6(ERR_Error elem1, ERR_Error elem2, ERR_Error el
 }
 
 /**
- * Retrieve the length of a ERR_AreaAreas. 
+ * Retrieve the length of a ERR_AreaAreas.
  * \param[in] arg input ERR_AreaAreas
  * \return The number of elements in the ERR_AreaAreas
  */
@@ -759,7 +759,7 @@ int _ERR_getAreaAreasLength(ERR_AreaAreas arg) {
 }
 
 /**
- * Reverse a ERR_AreaAreas. 
+ * Reverse a ERR_AreaAreas.
  * \param[in] arg ERR_AreaAreas to be reversed
  * \return a reversed #arg
  */
@@ -768,7 +768,7 @@ ERR_AreaAreas _ERR_reverseAreaAreas(ERR_AreaAreas arg) {
 }
 
 /**
- * Append a ERR_Area to the end of a ERR_AreaAreas. 
+ * Append a ERR_Area to the end of a ERR_AreaAreas.
  * \param[in] arg ERR_AreaAreas to append the ERR_Area to
  * \param[in] elem ERR_Area to be appended
  * \return new ERR_AreaAreas with #elem appended
@@ -778,7 +778,7 @@ ERR_AreaAreas _ERR_appendAreaAreas(ERR_AreaAreas arg, ERR_Area elem) {
 }
 
 /**
- * Concatenate two ERR_AreaAreass. 
+ * Concatenate two ERR_AreaAreass.
  * \param[in] arg0 first ERR_AreaAreas
  * \param[in] arg1 second ERR_AreaAreas
  * \return ERR_AreaAreas with the elements of #arg0 before the elements of #arg1
@@ -788,7 +788,7 @@ ERR_AreaAreas _ERR_concatAreaAreas(ERR_AreaAreas arg0, ERR_AreaAreas arg1) {
 }
 
 /**
- * Extract a sublist from a ERR_AreaAreas. 
+ * Extract a sublist from a ERR_AreaAreas.
  * \param[in] arg ERR_AreaAreas to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -799,7 +799,7 @@ ERR_AreaAreas _ERR_sliceAreaAreas(ERR_AreaAreas arg, int start, int end) {
 }
 
 /**
- * Retrieve the ERR_Area at #index from a ERR_AreaAreas. 
+ * Retrieve the ERR_Area at #index from a ERR_AreaAreas.
  * \param[in] arg ERR_AreaAreas to retrieve the ERR_Area from
  * \param[in] index index to use to point in the ERR_AreaAreas
  * \return ERR_Area at position #index in #arg
@@ -809,7 +809,7 @@ ERR_Area _ERR_getAreaAreasAreaAt(ERR_AreaAreas arg, int index) {
 }
 
 /**
- * Replace the ERR_Area at #index from a ERR_AreaAreas by a new one. 
+ * Replace the ERR_Area at #index from a ERR_AreaAreas by a new one.
  * \param[in] arg ERR_AreaAreas to retrieve the ERR_Area from
  * \param[in] elem new ERR_Area to replace another
  * \param[in] index index to use to point in the ERR_AreaAreas
@@ -820,7 +820,7 @@ ERR_AreaAreas _ERR_replaceAreaAreasAreaAt(ERR_AreaAreas arg, ERR_Area elem, int 
 }
 
 /**
- * Builds a ERR_AreaAreas of 2 consecutive elements. 
+ * Builds a ERR_AreaAreas of 2 consecutive elements.
  * \param[in] elem1 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem2 One ERR_Area element of the new ERR_AreaAreas
  * \return A new ERR_AreaAreas consisting of 2 ERR_Areas
@@ -830,7 +830,7 @@ ERR_AreaAreas _ERR_makeAreaAreas2(ERR_Area elem1, ERR_Area elem2) {
 }
 
 /**
- * Builds a ERR_AreaAreas of 3 consecutive elements. 
+ * Builds a ERR_AreaAreas of 3 consecutive elements.
  * \param[in] elem1 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem2 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem3 One ERR_Area element of the new ERR_AreaAreas
@@ -841,7 +841,7 @@ ERR_AreaAreas _ERR_makeAreaAreas3(ERR_Area elem1, ERR_Area elem2, ERR_Area elem3
 }
 
 /**
- * Builds a ERR_AreaAreas of 4 consecutive elements. 
+ * Builds a ERR_AreaAreas of 4 consecutive elements.
  * \param[in] elem1 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem2 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem3 One ERR_Area element of the new ERR_AreaAreas
@@ -853,7 +853,7 @@ ERR_AreaAreas _ERR_makeAreaAreas4(ERR_Area elem1, ERR_Area elem2, ERR_Area elem3
 }
 
 /**
- * Builds a ERR_AreaAreas of 5 consecutive elements. 
+ * Builds a ERR_AreaAreas of 5 consecutive elements.
  * \param[in] elem1 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem2 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem3 One ERR_Area element of the new ERR_AreaAreas
@@ -866,7 +866,7 @@ ERR_AreaAreas _ERR_makeAreaAreas5(ERR_Area elem1, ERR_Area elem2, ERR_Area elem3
 }
 
 /**
- * Builds a ERR_AreaAreas of 6 consecutive elements. 
+ * Builds a ERR_AreaAreas of 6 consecutive elements.
  * \param[in] elem1 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem2 One ERR_Area element of the new ERR_AreaAreas
  * \param[in] elem3 One ERR_Area element of the new ERR_AreaAreas
@@ -1223,7 +1223,7 @@ ATbool ERR_isValidStrChar(ERR_StrChar arg) {
  * \param[in] arg input ERR_StrChar
  * \return ATtrue if #arg corresponds to the signature of a StrChar, or ATfalse otherwise
  */
-inline ATbool ERR_isStrCharStrChar(ERR_StrChar arg){
+ATbool ERR_isStrCharStrChar(ERR_StrChar arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -1231,7 +1231,7 @@ inline ATbool ERR_isStrCharStrChar(ERR_StrChar arg){
 }
 
 /**
- * Assert whether a ERR_StrChar has a string. 
+ * Assert whether a ERR_StrChar has a string.
  * \param[in] arg input ERR_StrChar
  * \return ATtrue if the ERR_StrChar had a string, or ATfalse otherwise
  */
@@ -1248,7 +1248,7 @@ ATbool ERR_hasStrCharString(ERR_StrChar arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* ERR_getStrCharString(ERR_StrChar arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -1284,7 +1284,7 @@ ATbool ERR_isValidStrCon(ERR_StrCon arg) {
  * \param[in] arg input ERR_StrCon
  * \return ATtrue if #arg corresponds to the signature of a StrCon, or ATfalse otherwise
  */
-inline ATbool ERR_isStrConStrCon(ERR_StrCon arg){
+ATbool ERR_isStrConStrCon(ERR_StrCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -1292,7 +1292,7 @@ inline ATbool ERR_isStrConStrCon(ERR_StrCon arg){
 }
 
 /**
- * Assert whether a ERR_StrCon has a string. 
+ * Assert whether a ERR_StrCon has a string.
  * \param[in] arg input ERR_StrCon
  * \return ATtrue if the ERR_StrCon had a string, or ATfalse otherwise
  */
@@ -1309,7 +1309,7 @@ ATbool ERR_hasStrConString(ERR_StrCon arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* ERR_getStrConString(ERR_StrCon arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -1345,7 +1345,7 @@ ATbool ERR_isValidNatCon(ERR_NatCon arg) {
  * \param[in] arg input ERR_NatCon
  * \return ATtrue if #arg corresponds to the signature of a NatCon, or ATfalse otherwise
  */
-inline ATbool ERR_isNatConNatCon(ERR_NatCon arg){
+ATbool ERR_isNatConNatCon(ERR_NatCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -1353,7 +1353,7 @@ inline ATbool ERR_isNatConNatCon(ERR_NatCon arg){
 }
 
 /**
- * Assert whether a ERR_NatCon has a string. 
+ * Assert whether a ERR_NatCon has a string.
  * \param[in] arg input ERR_NatCon
  * \return ATtrue if the ERR_NatCon had a string, or ATfalse otherwise
  */
@@ -1370,7 +1370,7 @@ ATbool ERR_hasNatConString(ERR_NatCon arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* ERR_getNatConString(ERR_NatCon arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -1409,7 +1409,7 @@ ATbool ERR_isValidSubject(ERR_Subject arg) {
  * \param[in] arg input ERR_Subject
  * \return ATtrue if #arg corresponds to the signature of a subject, or ATfalse otherwise
  */
-inline ATbool ERR_isSubjectSubject(ERR_Subject arg){
+ATbool ERR_isSubjectSubject(ERR_Subject arg){
   /* checking for: subject */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1425,7 +1425,7 @@ inline ATbool ERR_isSubjectSubject(ERR_Subject arg){
  * \param[in] arg input ERR_Subject
  * \return ATtrue if #arg corresponds to the signature of a localized, or ATfalse otherwise
  */
-inline ATbool ERR_isSubjectLocalized(ERR_Subject arg){
+ATbool ERR_isSubjectLocalized(ERR_Subject arg){
   /* checking for: localized */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun1) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1437,7 +1437,7 @@ inline ATbool ERR_isSubjectLocalized(ERR_Subject arg){
 }
 
 /**
- * Assert whether a ERR_Subject has a description. 
+ * Assert whether a ERR_Subject has a description.
  * \param[in] arg input ERR_Subject
  * \return ATtrue if the ERR_Subject had a description, or ATfalse otherwise
  */
@@ -1452,7 +1452,7 @@ ATbool ERR_hasSubjectDescription(ERR_Subject arg) {
 }
 
 /**
- * Assert whether a ERR_Subject has a Location. 
+ * Assert whether a ERR_Subject has a Location.
  * \param[in] arg input ERR_Subject
  * \return ATtrue if the ERR_Subject had a Location, or ATfalse otherwise
  */
@@ -1472,7 +1472,7 @@ char* ERR_getSubjectDescription(ERR_Subject arg) {
   if (ERR_isSubjectSubject(arg)) {
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
   }
-  else 
+  else
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -1482,7 +1482,7 @@ char* ERR_getSubjectDescription(ERR_Subject arg) {
  * \return the Location of #arg, if it exist or an undefined value if it does not
  */
 ERR_Location ERR_getSubjectLocation(ERR_Subject arg) {
-  
+
     return (ERR_Location)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -1545,7 +1545,7 @@ ATbool ERR_isValidError(ERR_Error arg) {
  * \param[in] arg input ERR_Error
  * \return ATtrue if #arg corresponds to the signature of a info, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorInfo(ERR_Error arg){
+ATbool ERR_isErrorInfo(ERR_Error arg){
   /* checking for: info */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun2) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1561,7 +1561,7 @@ inline ATbool ERR_isErrorInfo(ERR_Error arg){
  * \param[in] arg input ERR_Error
  * \return ATtrue if #arg corresponds to the signature of a warning, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorWarning(ERR_Error arg){
+ATbool ERR_isErrorWarning(ERR_Error arg){
   /* checking for: warning */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun3) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1577,7 +1577,7 @@ inline ATbool ERR_isErrorWarning(ERR_Error arg){
  * \param[in] arg input ERR_Error
  * \return ATtrue if #arg corresponds to the signature of a error, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorError(ERR_Error arg){
+ATbool ERR_isErrorError(ERR_Error arg){
   /* checking for: error */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun4) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1593,7 +1593,7 @@ inline ATbool ERR_isErrorError(ERR_Error arg){
  * \param[in] arg input ERR_Error
  * \return ATtrue if #arg corresponds to the signature of a fatal, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorFatal(ERR_Error arg){
+ATbool ERR_isErrorFatal(ERR_Error arg){
   /* checking for: fatal */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun5) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1605,7 +1605,7 @@ inline ATbool ERR_isErrorFatal(ERR_Error arg){
 }
 
 /**
- * Assert whether a ERR_Error has a description. 
+ * Assert whether a ERR_Error has a description.
  * \param[in] arg input ERR_Error
  * \return ATtrue if the ERR_Error had a description, or ATfalse otherwise
  */
@@ -1626,7 +1626,7 @@ ATbool ERR_hasErrorDescription(ERR_Error arg) {
 }
 
 /**
- * Assert whether a ERR_Error has a list. 
+ * Assert whether a ERR_Error has a list.
  * \param[in] arg input ERR_Error
  * \return ATtrue if the ERR_Error had a list, or ATfalse otherwise
  */
@@ -1661,7 +1661,7 @@ char* ERR_getErrorDescription(ERR_Error arg) {
   else if (ERR_isErrorError(arg)) {
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
   }
-  else 
+  else
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -1680,7 +1680,7 @@ ERR_SubjectList ERR_getErrorList(ERR_Error arg) {
   else if (ERR_isErrorError(arg)) {
     return (ERR_SubjectList)ATgetArgument((ATermAppl)arg, 1);
   }
-  else 
+  else
     return (ERR_SubjectList)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -1749,7 +1749,7 @@ ATbool ERR_isValidSummary(ERR_Summary arg) {
  * \param[in] arg input ERR_Summary
  * \return ATtrue if #arg corresponds to the signature of a summary, or ATfalse otherwise
  */
-inline ATbool ERR_isSummarySummary(ERR_Summary arg){
+ATbool ERR_isSummarySummary(ERR_Summary arg){
   /* checking for: summary */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun6) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1764,7 +1764,7 @@ inline ATbool ERR_isSummarySummary(ERR_Summary arg){
 }
 
 /**
- * Assert whether a ERR_Summary has a producer. 
+ * Assert whether a ERR_Summary has a producer.
  * \param[in] arg input ERR_Summary
  * \return ATtrue if the ERR_Summary had a producer, or ATfalse otherwise
  */
@@ -1776,7 +1776,7 @@ ATbool ERR_hasSummaryProducer(ERR_Summary arg) {
 }
 
 /**
- * Assert whether a ERR_Summary has a id. 
+ * Assert whether a ERR_Summary has a id.
  * \param[in] arg input ERR_Summary
  * \return ATtrue if the ERR_Summary had a id, or ATfalse otherwise
  */
@@ -1788,7 +1788,7 @@ ATbool ERR_hasSummaryId(ERR_Summary arg) {
 }
 
 /**
- * Assert whether a ERR_Summary has a list. 
+ * Assert whether a ERR_Summary has a list.
  * \param[in] arg input ERR_Summary
  * \return ATtrue if the ERR_Summary had a list, or ATfalse otherwise
  */
@@ -1805,7 +1805,7 @@ ATbool ERR_hasSummaryList(ERR_Summary arg) {
  * \return the producer of #arg, if it exist or an undefined value if it does not
  */
 char* ERR_getSummaryProducer(ERR_Summary arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -1815,7 +1815,7 @@ char* ERR_getSummaryProducer(ERR_Summary arg) {
  * \return the id of #arg, if it exist or an undefined value if it does not
  */
 char* ERR_getSummaryId(ERR_Summary arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -1825,7 +1825,7 @@ char* ERR_getSummaryId(ERR_Summary arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 ERR_ErrorList ERR_getSummaryList(ERR_Summary arg) {
-  
+
     return (ERR_ErrorList)ATgetArgument((ATermAppl)arg, 2);
 }
 
@@ -1897,7 +1897,7 @@ ATbool ERR_isValidSubjectList(ERR_SubjectList arg) {
  * \param[in] arg input ERR_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool ERR_isSubjectListEmpty(ERR_SubjectList arg){
+ATbool ERR_isSubjectListEmpty(ERR_SubjectList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -1909,7 +1909,7 @@ inline ATbool ERR_isSubjectListEmpty(ERR_SubjectList arg){
  * \param[in] arg input ERR_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool ERR_isSubjectListSingle(ERR_SubjectList arg){
+ATbool ERR_isSubjectListSingle(ERR_SubjectList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -1925,7 +1925,7 @@ inline ATbool ERR_isSubjectListSingle(ERR_SubjectList arg){
  * \param[in] arg input ERR_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool ERR_isSubjectListMany(ERR_SubjectList arg){
+ATbool ERR_isSubjectListMany(ERR_SubjectList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -1933,7 +1933,7 @@ inline ATbool ERR_isSubjectListMany(ERR_SubjectList arg){
 }
 
 /**
- * Assert whether a ERR_SubjectList has a head. 
+ * Assert whether a ERR_SubjectList has a head.
  * \param[in] arg input ERR_SubjectList
  * \return ATtrue if the ERR_SubjectList had a head, or ATfalse otherwise
  */
@@ -1948,7 +1948,7 @@ ATbool ERR_hasSubjectListHead(ERR_SubjectList arg) {
 }
 
 /**
- * Assert whether a ERR_SubjectList has a tail. 
+ * Assert whether a ERR_SubjectList has a tail.
  * \param[in] arg input ERR_SubjectList
  * \return ATtrue if the ERR_SubjectList had a tail, or ATfalse otherwise
  */
@@ -1968,7 +1968,7 @@ ERR_Subject ERR_getSubjectListHead(ERR_SubjectList arg) {
   if (ERR_isSubjectListSingle(arg)) {
     return (ERR_Subject)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (ERR_Subject)ATgetFirst((ATermList)arg);
 }
 
@@ -1978,7 +1978,7 @@ ERR_Subject ERR_getSubjectListHead(ERR_SubjectList arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 ERR_SubjectList ERR_getSubjectListTail(ERR_SubjectList arg) {
-  
+
     return (ERR_SubjectList)ATgetNext((ATermList)arg);
 }
 
@@ -2038,7 +2038,7 @@ ATbool ERR_isValidErrorList(ERR_ErrorList arg) {
  * \param[in] arg input ERR_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorListEmpty(ERR_ErrorList arg){
+ATbool ERR_isErrorListEmpty(ERR_ErrorList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2050,7 +2050,7 @@ inline ATbool ERR_isErrorListEmpty(ERR_ErrorList arg){
  * \param[in] arg input ERR_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorListSingle(ERR_ErrorList arg){
+ATbool ERR_isErrorListSingle(ERR_ErrorList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2066,7 +2066,7 @@ inline ATbool ERR_isErrorListSingle(ERR_ErrorList arg){
  * \param[in] arg input ERR_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool ERR_isErrorListMany(ERR_ErrorList arg){
+ATbool ERR_isErrorListMany(ERR_ErrorList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2074,7 +2074,7 @@ inline ATbool ERR_isErrorListMany(ERR_ErrorList arg){
 }
 
 /**
- * Assert whether a ERR_ErrorList has a head. 
+ * Assert whether a ERR_ErrorList has a head.
  * \param[in] arg input ERR_ErrorList
  * \return ATtrue if the ERR_ErrorList had a head, or ATfalse otherwise
  */
@@ -2089,7 +2089,7 @@ ATbool ERR_hasErrorListHead(ERR_ErrorList arg) {
 }
 
 /**
- * Assert whether a ERR_ErrorList has a tail. 
+ * Assert whether a ERR_ErrorList has a tail.
  * \param[in] arg input ERR_ErrorList
  * \return ATtrue if the ERR_ErrorList had a tail, or ATfalse otherwise
  */
@@ -2109,7 +2109,7 @@ ERR_Error ERR_getErrorListHead(ERR_ErrorList arg) {
   if (ERR_isErrorListSingle(arg)) {
     return (ERR_Error)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (ERR_Error)ATgetFirst((ATermList)arg);
 }
 
@@ -2119,7 +2119,7 @@ ERR_Error ERR_getErrorListHead(ERR_ErrorList arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 ERR_ErrorList ERR_getErrorListTail(ERR_ErrorList arg) {
-  
+
     return (ERR_ErrorList)ATgetNext((ATermList)arg);
 }
 
@@ -2179,7 +2179,7 @@ ATbool ERR_isValidLocation(ERR_Location arg) {
  * \param[in] arg input ERR_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool ERR_isLocationFile(ERR_Location arg){
+ATbool ERR_isLocationFile(ERR_Location arg){
   /* checking for: file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun7) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2195,7 +2195,7 @@ inline ATbool ERR_isLocationFile(ERR_Location arg){
  * \param[in] arg input ERR_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool ERR_isLocationArea(ERR_Location arg){
+ATbool ERR_isLocationArea(ERR_Location arg){
   /* checking for: area */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun8) {
     return ATtrue;
@@ -2208,7 +2208,7 @@ inline ATbool ERR_isLocationArea(ERR_Location arg){
  * \param[in] arg input ERR_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool ERR_isLocationAreaInFile(ERR_Location arg){
+ATbool ERR_isLocationAreaInFile(ERR_Location arg){
   /* checking for: area-in-file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun9) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2220,7 +2220,7 @@ inline ATbool ERR_isLocationAreaInFile(ERR_Location arg){
 }
 
 /**
- * Assert whether a ERR_Location has a filename. 
+ * Assert whether a ERR_Location has a filename.
  * \param[in] arg input ERR_Location
  * \return ATtrue if the ERR_Location had a filename, or ATfalse otherwise
  */
@@ -2235,7 +2235,7 @@ ATbool ERR_hasLocationFilename(ERR_Location arg) {
 }
 
 /**
- * Assert whether a ERR_Location has a Area. 
+ * Assert whether a ERR_Location has a Area.
  * \param[in] arg input ERR_Location
  * \return ATtrue if the ERR_Location had a Area, or ATfalse otherwise
  */
@@ -2258,7 +2258,7 @@ char* ERR_getLocationFilename(ERR_Location arg) {
   if (ERR_isLocationFile(arg)) {
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
   }
-  else 
+  else
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -2271,7 +2271,7 @@ ERR_Area ERR_getLocationArea(ERR_Location arg) {
   if (ERR_isLocationArea(arg)) {
     return (ERR_Area)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (ERR_Area)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -2328,7 +2328,7 @@ ATbool ERR_isValidArea(ERR_Area arg) {
  * \param[in] arg input ERR_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool ERR_isAreaArea(ERR_Area arg){
+ATbool ERR_isAreaArea(ERR_Area arg){
   /* checking for: area */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun10) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2355,7 +2355,7 @@ inline ATbool ERR_isAreaArea(ERR_Area arg){
 }
 
 /**
- * Assert whether a ERR_Area has a begin-line. 
+ * Assert whether a ERR_Area has a begin-line.
  * \param[in] arg input ERR_Area
  * \return ATtrue if the ERR_Area had a begin-line, or ATfalse otherwise
  */
@@ -2367,7 +2367,7 @@ ATbool ERR_hasAreaBeginLine(ERR_Area arg) {
 }
 
 /**
- * Assert whether a ERR_Area has a begin-column. 
+ * Assert whether a ERR_Area has a begin-column.
  * \param[in] arg input ERR_Area
  * \return ATtrue if the ERR_Area had a begin-column, or ATfalse otherwise
  */
@@ -2379,7 +2379,7 @@ ATbool ERR_hasAreaBeginColumn(ERR_Area arg) {
 }
 
 /**
- * Assert whether a ERR_Area has a end-line. 
+ * Assert whether a ERR_Area has a end-line.
  * \param[in] arg input ERR_Area
  * \return ATtrue if the ERR_Area had a end-line, or ATfalse otherwise
  */
@@ -2391,7 +2391,7 @@ ATbool ERR_hasAreaEndLine(ERR_Area arg) {
 }
 
 /**
- * Assert whether a ERR_Area has a end-column. 
+ * Assert whether a ERR_Area has a end-column.
  * \param[in] arg input ERR_Area
  * \return ATtrue if the ERR_Area had a end-column, or ATfalse otherwise
  */
@@ -2403,7 +2403,7 @@ ATbool ERR_hasAreaEndColumn(ERR_Area arg) {
 }
 
 /**
- * Assert whether a ERR_Area has a offset. 
+ * Assert whether a ERR_Area has a offset.
  * \param[in] arg input ERR_Area
  * \return ATtrue if the ERR_Area had a offset, or ATfalse otherwise
  */
@@ -2415,7 +2415,7 @@ ATbool ERR_hasAreaOffset(ERR_Area arg) {
 }
 
 /**
- * Assert whether a ERR_Area has a length. 
+ * Assert whether a ERR_Area has a length.
  * \param[in] arg input ERR_Area
  * \return ATtrue if the ERR_Area had a length, or ATfalse otherwise
  */
@@ -2432,7 +2432,7 @@ ATbool ERR_hasAreaLength(ERR_Area arg) {
  * \return the begin-line of #arg, if it exist or an undefined value if it does not
  */
 int ERR_getAreaBeginLine(ERR_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -2442,7 +2442,7 @@ int ERR_getAreaBeginLine(ERR_Area arg) {
  * \return the begin-column of #arg, if it exist or an undefined value if it does not
  */
 int ERR_getAreaBeginColumn(ERR_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -2452,7 +2452,7 @@ int ERR_getAreaBeginColumn(ERR_Area arg) {
  * \return the end-line of #arg, if it exist or an undefined value if it does not
  */
 int ERR_getAreaEndLine(ERR_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 2));
 }
 
@@ -2462,7 +2462,7 @@ int ERR_getAreaEndLine(ERR_Area arg) {
  * \return the end-column of #arg, if it exist or an undefined value if it does not
  */
 int ERR_getAreaEndColumn(ERR_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 3));
 }
 
@@ -2472,7 +2472,7 @@ int ERR_getAreaEndColumn(ERR_Area arg) {
  * \return the offset of #arg, if it exist or an undefined value if it does not
  */
 int ERR_getAreaOffset(ERR_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 4));
 }
 
@@ -2482,7 +2482,7 @@ int ERR_getAreaOffset(ERR_Area arg) {
  * \return the length of #arg, if it exist or an undefined value if it does not
  */
 int ERR_getAreaLength(ERR_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 5));
 }
 
@@ -2593,7 +2593,7 @@ ATbool ERR_isValidSlice(ERR_Slice arg) {
  * \param[in] arg input ERR_Slice
  * \return ATtrue if #arg corresponds to the signature of a slice, or ATfalse otherwise
  */
-inline ATbool ERR_isSliceSlice(ERR_Slice arg){
+ATbool ERR_isSliceSlice(ERR_Slice arg){
   /* checking for: slice */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == ERR_afun11) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2605,7 +2605,7 @@ inline ATbool ERR_isSliceSlice(ERR_Slice arg){
 }
 
 /**
- * Assert whether a ERR_Slice has a id. 
+ * Assert whether a ERR_Slice has a id.
  * \param[in] arg input ERR_Slice
  * \return ATtrue if the ERR_Slice had a id, or ATfalse otherwise
  */
@@ -2617,7 +2617,7 @@ ATbool ERR_hasSliceId(ERR_Slice arg) {
 }
 
 /**
- * Assert whether a ERR_Slice has a areas. 
+ * Assert whether a ERR_Slice has a areas.
  * \param[in] arg input ERR_Slice
  * \return ATtrue if the ERR_Slice had a areas, or ATfalse otherwise
  */
@@ -2634,7 +2634,7 @@ ATbool ERR_hasSliceAreas(ERR_Slice arg) {
  * \return the id of #arg, if it exist or an undefined value if it does not
  */
 char* ERR_getSliceId(ERR_Slice arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -2644,7 +2644,7 @@ char* ERR_getSliceId(ERR_Slice arg) {
  * \return the areas of #arg, if it exist or an undefined value if it does not
  */
 ERR_AreaAreas ERR_getSliceAreas(ERR_Slice arg) {
-  
+
     return (ERR_AreaAreas)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -2701,7 +2701,7 @@ ATbool ERR_isValidAreaAreas(ERR_AreaAreas arg) {
  * \param[in] arg input ERR_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool ERR_isAreaAreasEmpty(ERR_AreaAreas arg){
+ATbool ERR_isAreaAreasEmpty(ERR_AreaAreas arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2713,7 +2713,7 @@ inline ATbool ERR_isAreaAreasEmpty(ERR_AreaAreas arg){
  * \param[in] arg input ERR_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool ERR_isAreaAreasSingle(ERR_AreaAreas arg){
+ATbool ERR_isAreaAreasSingle(ERR_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2729,7 +2729,7 @@ inline ATbool ERR_isAreaAreasSingle(ERR_AreaAreas arg){
  * \param[in] arg input ERR_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool ERR_isAreaAreasMany(ERR_AreaAreas arg){
+ATbool ERR_isAreaAreasMany(ERR_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2737,7 +2737,7 @@ inline ATbool ERR_isAreaAreasMany(ERR_AreaAreas arg){
 }
 
 /**
- * Assert whether a ERR_AreaAreas has a head. 
+ * Assert whether a ERR_AreaAreas has a head.
  * \param[in] arg input ERR_AreaAreas
  * \return ATtrue if the ERR_AreaAreas had a head, or ATfalse otherwise
  */
@@ -2752,7 +2752,7 @@ ATbool ERR_hasAreaAreasHead(ERR_AreaAreas arg) {
 }
 
 /**
- * Assert whether a ERR_AreaAreas has a tail. 
+ * Assert whether a ERR_AreaAreas has a tail.
  * \param[in] arg input ERR_AreaAreas
  * \return ATtrue if the ERR_AreaAreas had a tail, or ATfalse otherwise
  */
@@ -2772,7 +2772,7 @@ ERR_Area ERR_getAreaAreasHead(ERR_AreaAreas arg) {
   if (ERR_isAreaAreasSingle(arg)) {
     return (ERR_Area)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (ERR_Area)ATgetFirst((ATermList)arg);
 }
 
@@ -2782,7 +2782,7 @@ ERR_Area ERR_getAreaAreasHead(ERR_AreaAreas arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 ERR_AreaAreas ERR_getAreaAreasTail(ERR_AreaAreas arg) {
-  
+
     return (ERR_AreaAreas)ATgetNext((ATermList)arg);
 }
 
@@ -2820,7 +2820,7 @@ ERR_AreaAreas ERR_setAreaAreasTail(ERR_AreaAreas arg, ERR_AreaAreas tail) {
 }
 
 /**
- * Apply functions to the children of a ERR_StrChar. 
+ * Apply functions to the children of a ERR_StrChar.
  * \return A new ERR_StrChar with new children where the argument functions might have applied
  */
 ERR_StrChar ERR_visitStrChar(ERR_StrChar arg, char* (*acceptString)(char*)) {
@@ -2832,7 +2832,7 @@ ERR_StrChar ERR_visitStrChar(ERR_StrChar arg, char* (*acceptString)(char*)) {
   return (ERR_StrChar)NULL;
 }
 /**
- * Apply functions to the children of a ERR_StrCon. 
+ * Apply functions to the children of a ERR_StrCon.
  * \return A new ERR_StrCon with new children where the argument functions might have applied
  */
 ERR_StrCon ERR_visitStrCon(ERR_StrCon arg, char* (*acceptString)(char*)) {
@@ -2844,7 +2844,7 @@ ERR_StrCon ERR_visitStrCon(ERR_StrCon arg, char* (*acceptString)(char*)) {
   return (ERR_StrCon)NULL;
 }
 /**
- * Apply functions to the children of a ERR_NatCon. 
+ * Apply functions to the children of a ERR_NatCon.
  * \return A new ERR_NatCon with new children where the argument functions might have applied
  */
 ERR_NatCon ERR_visitNatCon(ERR_NatCon arg, char* (*acceptString)(char*)) {
@@ -2856,7 +2856,7 @@ ERR_NatCon ERR_visitNatCon(ERR_NatCon arg, char* (*acceptString)(char*)) {
   return (ERR_NatCon)NULL;
 }
 /**
- * Apply functions to the children of a ERR_Subject. 
+ * Apply functions to the children of a ERR_Subject.
  * \return A new ERR_Subject with new children where the argument functions might have applied
  */
 ERR_Subject ERR_visitSubject(ERR_Subject arg, char* (*acceptDescription)(char*), ERR_Location (*acceptLocation)(ERR_Location)) {
@@ -2873,7 +2873,7 @@ ERR_Subject ERR_visitSubject(ERR_Subject arg, char* (*acceptDescription)(char*),
   return (ERR_Subject)NULL;
 }
 /**
- * Apply functions to the children of a ERR_Error. 
+ * Apply functions to the children of a ERR_Error.
  * \return A new ERR_Error with new children where the argument functions might have applied
  */
 ERR_Error ERR_visitError(ERR_Error arg, char* (*acceptDescription)(char*), ERR_SubjectList (*acceptList)(ERR_SubjectList)) {
@@ -2901,7 +2901,7 @@ ERR_Error ERR_visitError(ERR_Error arg, char* (*acceptDescription)(char*), ERR_S
   return (ERR_Error)NULL;
 }
 /**
- * Apply functions to the children of a ERR_Summary. 
+ * Apply functions to the children of a ERR_Summary.
  * \return A new ERR_Summary with new children where the argument functions might have applied
  */
 ERR_Summary ERR_visitSummary(ERR_Summary arg, char* (*acceptProducer)(char*), char* (*acceptId)(char*), ERR_ErrorList (*acceptList)(ERR_ErrorList)) {
@@ -2915,7 +2915,7 @@ ERR_Summary ERR_visitSummary(ERR_Summary arg, char* (*acceptProducer)(char*), ch
   return (ERR_Summary)NULL;
 }
 /**
- * Apply functions to the children of a ERR_SubjectList. 
+ * Apply functions to the children of a ERR_SubjectList.
  * \return A new ERR_SubjectList with new children where the argument functions might have applied
  */
 ERR_SubjectList ERR_visitSubjectList(ERR_SubjectList arg, ERR_Subject (*acceptHead)(ERR_Subject)) {
@@ -2935,7 +2935,7 @@ ERR_SubjectList ERR_visitSubjectList(ERR_SubjectList arg, ERR_Subject (*acceptHe
   return (ERR_SubjectList)NULL;
 }
 /**
- * Apply functions to the children of a ERR_ErrorList. 
+ * Apply functions to the children of a ERR_ErrorList.
  * \return A new ERR_ErrorList with new children where the argument functions might have applied
  */
 ERR_ErrorList ERR_visitErrorList(ERR_ErrorList arg, ERR_Error (*acceptHead)(ERR_Error)) {
@@ -2955,7 +2955,7 @@ ERR_ErrorList ERR_visitErrorList(ERR_ErrorList arg, ERR_Error (*acceptHead)(ERR_
   return (ERR_ErrorList)NULL;
 }
 /**
- * Apply functions to the children of a ERR_Location. 
+ * Apply functions to the children of a ERR_Location.
  * \return A new ERR_Location with new children where the argument functions might have applied
  */
 ERR_Location ERR_visitLocation(ERR_Location arg, char* (*acceptFilename)(char*), ERR_Area (*acceptArea)(ERR_Area)) {
@@ -2976,7 +2976,7 @@ ERR_Location ERR_visitLocation(ERR_Location arg, char* (*acceptFilename)(char*),
   return (ERR_Location)NULL;
 }
 /**
- * Apply functions to the children of a ERR_Area. 
+ * Apply functions to the children of a ERR_Area.
  * \return A new ERR_Area with new children where the argument functions might have applied
  */
 ERR_Area ERR_visitArea(ERR_Area arg, int (*acceptBeginLine)(int), int (*acceptBeginColumn)(int), int (*acceptEndLine)(int), int (*acceptEndColumn)(int), int (*acceptOffset)(int), int (*acceptLength)(int)) {
@@ -2993,7 +2993,7 @@ ERR_Area ERR_visitArea(ERR_Area arg, int (*acceptBeginLine)(int), int (*acceptBe
   return (ERR_Area)NULL;
 }
 /**
- * Apply functions to the children of a ERR_Slice. 
+ * Apply functions to the children of a ERR_Slice.
  * \return A new ERR_Slice with new children where the argument functions might have applied
  */
 ERR_Slice ERR_visitSlice(ERR_Slice arg, char* (*acceptId)(char*), ERR_AreaAreas (*acceptAreas)(ERR_AreaAreas)) {
@@ -3006,7 +3006,7 @@ ERR_Slice ERR_visitSlice(ERR_Slice arg, char* (*acceptId)(char*), ERR_AreaAreas 
   return (ERR_Slice)NULL;
 }
 /**
- * Apply functions to the children of a ERR_AreaAreas. 
+ * Apply functions to the children of a ERR_AreaAreas.
  * \return A new ERR_AreaAreas with new children where the argument functions might have applied
  */
 ERR_AreaAreas ERR_visitAreaAreas(ERR_AreaAreas arg, ERR_Area (*acceptHead)(ERR_Area)) {

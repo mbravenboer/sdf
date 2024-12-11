@@ -4,8 +4,8 @@
  * For static storage of errors during a computation.
  */
 
-#include <Error.h>
-#include <Error-manager.h>
+#include "Error.h"
+#include "Error-manager.h"
 #include <assert.h>
 
 static ERR_Summary store = NULL;
