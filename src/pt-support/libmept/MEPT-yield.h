@@ -1,6 +1,6 @@
 #ifndef YIELD_PT
 #define YIELD_PT
-#include <MEPT.h>
+#include "MEPT.h"
 #include <aterm2.h>
 
 char *PT_yieldTree(PT_Tree tree);

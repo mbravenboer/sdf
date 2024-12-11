@@ -1,29 +1,29 @@
 /**
  * \file
  * applyFunction constructs a fresh production on-the-fly and applies
- * is to a number of children. The types of the children are used to 
+ * is to a number of children. The types of the children are used to
  * construct the symbols of the left-hand side of the production.
  *
  * This functionality is needed to apply a function to a parse tree without
  * the overhead of reparsing an entire input string.
  */
-#include <MEPT-apply.h>
-#include <MEPT-symbols.h>
-#include <MEPT-start.h>
-#include <MEPT-layout.h>
-#include <MEPT-tree.h>
+#include "MEPT-apply.h"
+#include "MEPT-symbols.h"
+#include "MEPT-start.h"
+#include "MEPT-layout.h"
+#include "MEPT-tree.h"
 
 static PT_Symbols makeNewLhs(const char *sort)
 {
   return  PT_makeSymbolsMany(PT_makeOptLayoutSymbol(),
             PT_makeSymbolsMany(PT_makeSymbolCf(
-			         PT_makeSymbolSort(sort)), 
+			         PT_makeSymbolSort(sort)),
               PT_makeSymbolsSingle(PT_makeOptLayoutSymbol())));
 }
 
 
 
-PT_ParseTree PT_applyFunctionToArgsParseTree(const char *function, const char *sort, 
+PT_ParseTree PT_applyFunctionToArgsParseTree(const char *function, const char *sort,
 					     PT_Args args)
 {
   PT_Tree tree = PT_applyFunctionToArgs(function, sort, args);
@@ -106,7 +106,7 @@ PT_Tree PT_applyFunction(const char* function, PT_Symbol rhs, PT_Args args,
 }
 
 
-PT_Tree PT_applyFunctionToArgs(const char *function, const char* sort, PT_Args args) 
+PT_Tree PT_applyFunctionToArgs(const char *function, const char* sort, PT_Args args)
 {
   PT_Symbol rhs = PT_makeSymbolCf(PT_makeSymbolSort((char*) sort));
   PT_Attributes attributes = PT_makeAttributesNoAttrs();

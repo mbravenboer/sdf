@@ -1,7 +1,7 @@
 #ifndef POS_INFO_H
 #define POS_INFO_H
-#include <Error.h>
-#include <MEPT.h>
+#include <error-support/lib/Error.h>
+#include "MEPT.h"
 #include <aterm2.h>
 
 PT_ParseTree PT_addParseTreePosInfoSome(const char *path,

@@ -1,4 +1,4 @@
-#include <MEPT.h>
+#include "MEPT.h"
 #include <assert.h>
 
 /**
@@ -7,7 +7,7 @@
  * and character classes
  */
 
-/** 
+/**
  * Tests if an element is included in a character class
  * \param character character to be searched for
  * \param charClass an ordered character class
@@ -20,7 +20,7 @@ ATbool PT_elementOfCharClass(PT_Tree character, PT_Symbol charClass)
 
   for (;!PT_isCharRangesEmpty(ranges); ranges = PT_getCharRangesTail(ranges)) {
     PT_CharRange range = PT_getCharRangesHead(ranges);
-    
+
     if (PT_isCharRangeRange(range)) {
       int start = PT_getCharRangeStart(range);
       int end = PT_getCharRangeEnd(range);
@@ -64,20 +64,20 @@ ATbool PT_subsetOfCharClass(PT_Symbol c1, PT_Symbol c2)
    * This is due to the SDF normalizer.
    */
 
-  for ( ; !PT_isCharRangesEmpty(ranges2); 
+  for ( ; !PT_isCharRangesEmpty(ranges2);
 	ranges2 = PT_getCharRangesTail(ranges2)) {
 
     PT_CharRange range2 = PT_getCharRangesHead(ranges2);
     int start2 = PT_getCharRangeStart(range2);
-    int end2 = PT_isCharRangeRange(range2) ? 
+    int end2 = PT_isCharRangeRange(range2) ?
       PT_getCharRangeEnd(range2) : start2;
 
-    for ( ; !PT_isCharRangesEmpty(ranges1); 
+    for ( ; !PT_isCharRangesEmpty(ranges1);
 	  ranges1 = PT_getCharRangesTail(ranges1)) {
 
       PT_CharRange range1 = PT_getCharRangesHead(ranges1);
       int start1 = PT_getCharRangeStart(range1);
-      int end1 = PT_isCharRangeRange(range1) ? 
+      int end1 = PT_isCharRangeRange(range1) ?
 	PT_getCharRangeEnd(range1) : start1;
 
       if (start1 < start2) {

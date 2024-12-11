@@ -1,6 +1,6 @@
 #ifndef MEPT_LENGTH
 #define MEPT_LENGTH
-#include <MEPT.h>
+#include "MEPT.h"
 
 PT_Tree PT_annotateTreeWithLength(PT_Tree tree);
 PT_ParseTree PT_annotateParseTreeWithLength(PT_ParseTree parse_tree);

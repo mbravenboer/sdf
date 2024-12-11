@@ -1,6 +1,6 @@
 #ifndef MEPT_PRODUCTIONS
 #define MEPT_PRODUCTIONS
-#include <MEPT.h>
+#include "MEPT.h"
 #include <aterm2.h>
 
 ATbool PT_isGeneratedKernelProduction(PT_Production arg);

@@ -5,7 +5,7 @@
 #include "MEPT.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm PT_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm PT_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -490,7 +490,7 @@ ATerm _PT_CharRangesToTerm(PT_CharRanges arg) {
 }
 
 /**
- * Retrieve the length of a PT_Args. 
+ * Retrieve the length of a PT_Args.
  * \param[in] arg input PT_Args
  * \return The number of elements in the PT_Args
  */
@@ -499,7 +499,7 @@ int _PT_getArgsLength(PT_Args arg) {
 }
 
 /**
- * Reverse a PT_Args. 
+ * Reverse a PT_Args.
  * \param[in] arg PT_Args to be reversed
  * \return a reversed #arg
  */
@@ -508,7 +508,7 @@ PT_Args _PT_reverseArgs(PT_Args arg) {
 }
 
 /**
- * Append a PT_Tree to the end of a PT_Args. 
+ * Append a PT_Tree to the end of a PT_Args.
  * \param[in] arg PT_Args to append the PT_Tree to
  * \param[in] elem PT_Tree to be appended
  * \return new PT_Args with #elem appended
@@ -518,7 +518,7 @@ PT_Args _PT_appendArgs(PT_Args arg, PT_Tree elem) {
 }
 
 /**
- * Concatenate two PT_Argss. 
+ * Concatenate two PT_Argss.
  * \param[in] arg0 first PT_Args
  * \param[in] arg1 second PT_Args
  * \return PT_Args with the elements of #arg0 before the elements of #arg1
@@ -528,7 +528,7 @@ PT_Args _PT_concatArgs(PT_Args arg0, PT_Args arg1) {
 }
 
 /**
- * Extract a sublist from a PT_Args. 
+ * Extract a sublist from a PT_Args.
  * \param[in] arg PT_Args to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -539,7 +539,7 @@ PT_Args _PT_sliceArgs(PT_Args arg, int start, int end) {
 }
 
 /**
- * Retrieve the PT_Tree at #index from a PT_Args. 
+ * Retrieve the PT_Tree at #index from a PT_Args.
  * \param[in] arg PT_Args to retrieve the PT_Tree from
  * \param[in] index index to use to point in the PT_Args
  * \return PT_Tree at position #index in #arg
@@ -549,7 +549,7 @@ PT_Tree _PT_getArgsTreeAt(PT_Args arg, int index) {
 }
 
 /**
- * Replace the PT_Tree at #index from a PT_Args by a new one. 
+ * Replace the PT_Tree at #index from a PT_Args by a new one.
  * \param[in] arg PT_Args to retrieve the PT_Tree from
  * \param[in] elem new PT_Tree to replace another
  * \param[in] index index to use to point in the PT_Args
@@ -560,7 +560,7 @@ PT_Args _PT_replaceArgsTreeAt(PT_Args arg, PT_Tree elem, int index) {
 }
 
 /**
- * Builds a PT_Args of 2 consecutive elements. 
+ * Builds a PT_Args of 2 consecutive elements.
  * \param[in] elem1 One PT_Tree element of the new PT_Args
  * \param[in] elem2 One PT_Tree element of the new PT_Args
  * \return A new PT_Args consisting of 2 PT_Trees
@@ -570,7 +570,7 @@ PT_Args _PT_makeArgs2(PT_Tree elem1, PT_Tree elem2) {
 }
 
 /**
- * Builds a PT_Args of 3 consecutive elements. 
+ * Builds a PT_Args of 3 consecutive elements.
  * \param[in] elem1 One PT_Tree element of the new PT_Args
  * \param[in] elem2 One PT_Tree element of the new PT_Args
  * \param[in] elem3 One PT_Tree element of the new PT_Args
@@ -581,7 +581,7 @@ PT_Args _PT_makeArgs3(PT_Tree elem1, PT_Tree elem2, PT_Tree elem3) {
 }
 
 /**
- * Builds a PT_Args of 4 consecutive elements. 
+ * Builds a PT_Args of 4 consecutive elements.
  * \param[in] elem1 One PT_Tree element of the new PT_Args
  * \param[in] elem2 One PT_Tree element of the new PT_Args
  * \param[in] elem3 One PT_Tree element of the new PT_Args
@@ -593,7 +593,7 @@ PT_Args _PT_makeArgs4(PT_Tree elem1, PT_Tree elem2, PT_Tree elem3, PT_Tree elem4
 }
 
 /**
- * Builds a PT_Args of 5 consecutive elements. 
+ * Builds a PT_Args of 5 consecutive elements.
  * \param[in] elem1 One PT_Tree element of the new PT_Args
  * \param[in] elem2 One PT_Tree element of the new PT_Args
  * \param[in] elem3 One PT_Tree element of the new PT_Args
@@ -606,7 +606,7 @@ PT_Args _PT_makeArgs5(PT_Tree elem1, PT_Tree elem2, PT_Tree elem3, PT_Tree elem4
 }
 
 /**
- * Builds a PT_Args of 6 consecutive elements. 
+ * Builds a PT_Args of 6 consecutive elements.
  * \param[in] elem1 One PT_Tree element of the new PT_Args
  * \param[in] elem2 One PT_Tree element of the new PT_Args
  * \param[in] elem3 One PT_Tree element of the new PT_Args
@@ -620,7 +620,7 @@ PT_Args _PT_makeArgs6(PT_Tree elem1, PT_Tree elem2, PT_Tree elem3, PT_Tree elem4
 }
 
 /**
- * Retrieve the length of a PT_Attrs. 
+ * Retrieve the length of a PT_Attrs.
  * \param[in] arg input PT_Attrs
  * \return The number of elements in the PT_Attrs
  */
@@ -629,7 +629,7 @@ int _PT_getAttrsLength(PT_Attrs arg) {
 }
 
 /**
- * Reverse a PT_Attrs. 
+ * Reverse a PT_Attrs.
  * \param[in] arg PT_Attrs to be reversed
  * \return a reversed #arg
  */
@@ -638,7 +638,7 @@ PT_Attrs _PT_reverseAttrs(PT_Attrs arg) {
 }
 
 /**
- * Append a PT_Attr to the end of a PT_Attrs. 
+ * Append a PT_Attr to the end of a PT_Attrs.
  * \param[in] arg PT_Attrs to append the PT_Attr to
  * \param[in] elem PT_Attr to be appended
  * \return new PT_Attrs with #elem appended
@@ -648,7 +648,7 @@ PT_Attrs _PT_appendAttrs(PT_Attrs arg, PT_Attr elem) {
 }
 
 /**
- * Concatenate two PT_Attrss. 
+ * Concatenate two PT_Attrss.
  * \param[in] arg0 first PT_Attrs
  * \param[in] arg1 second PT_Attrs
  * \return PT_Attrs with the elements of #arg0 before the elements of #arg1
@@ -658,7 +658,7 @@ PT_Attrs _PT_concatAttrs(PT_Attrs arg0, PT_Attrs arg1) {
 }
 
 /**
- * Extract a sublist from a PT_Attrs. 
+ * Extract a sublist from a PT_Attrs.
  * \param[in] arg PT_Attrs to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -669,7 +669,7 @@ PT_Attrs _PT_sliceAttrs(PT_Attrs arg, int start, int end) {
 }
 
 /**
- * Retrieve the PT_Attr at #index from a PT_Attrs. 
+ * Retrieve the PT_Attr at #index from a PT_Attrs.
  * \param[in] arg PT_Attrs to retrieve the PT_Attr from
  * \param[in] index index to use to point in the PT_Attrs
  * \return PT_Attr at position #index in #arg
@@ -679,7 +679,7 @@ PT_Attr _PT_getAttrsAttrAt(PT_Attrs arg, int index) {
 }
 
 /**
- * Replace the PT_Attr at #index from a PT_Attrs by a new one. 
+ * Replace the PT_Attr at #index from a PT_Attrs by a new one.
  * \param[in] arg PT_Attrs to retrieve the PT_Attr from
  * \param[in] elem new PT_Attr to replace another
  * \param[in] index index to use to point in the PT_Attrs
@@ -690,7 +690,7 @@ PT_Attrs _PT_replaceAttrsAttrAt(PT_Attrs arg, PT_Attr elem, int index) {
 }
 
 /**
- * Builds a PT_Attrs of 2 consecutive elements. 
+ * Builds a PT_Attrs of 2 consecutive elements.
  * \param[in] elem1 One PT_Attr element of the new PT_Attrs
  * \param[in] elem2 One PT_Attr element of the new PT_Attrs
  * \return A new PT_Attrs consisting of 2 PT_Attrs
@@ -700,7 +700,7 @@ PT_Attrs _PT_makeAttrs2(PT_Attr elem1, PT_Attr elem2) {
 }
 
 /**
- * Builds a PT_Attrs of 3 consecutive elements. 
+ * Builds a PT_Attrs of 3 consecutive elements.
  * \param[in] elem1 One PT_Attr element of the new PT_Attrs
  * \param[in] elem2 One PT_Attr element of the new PT_Attrs
  * \param[in] elem3 One PT_Attr element of the new PT_Attrs
@@ -711,7 +711,7 @@ PT_Attrs _PT_makeAttrs3(PT_Attr elem1, PT_Attr elem2, PT_Attr elem3) {
 }
 
 /**
- * Builds a PT_Attrs of 4 consecutive elements. 
+ * Builds a PT_Attrs of 4 consecutive elements.
  * \param[in] elem1 One PT_Attr element of the new PT_Attrs
  * \param[in] elem2 One PT_Attr element of the new PT_Attrs
  * \param[in] elem3 One PT_Attr element of the new PT_Attrs
@@ -723,7 +723,7 @@ PT_Attrs _PT_makeAttrs4(PT_Attr elem1, PT_Attr elem2, PT_Attr elem3, PT_Attr ele
 }
 
 /**
- * Builds a PT_Attrs of 5 consecutive elements. 
+ * Builds a PT_Attrs of 5 consecutive elements.
  * \param[in] elem1 One PT_Attr element of the new PT_Attrs
  * \param[in] elem2 One PT_Attr element of the new PT_Attrs
  * \param[in] elem3 One PT_Attr element of the new PT_Attrs
@@ -736,7 +736,7 @@ PT_Attrs _PT_makeAttrs5(PT_Attr elem1, PT_Attr elem2, PT_Attr elem3, PT_Attr ele
 }
 
 /**
- * Builds a PT_Attrs of 6 consecutive elements. 
+ * Builds a PT_Attrs of 6 consecutive elements.
  * \param[in] elem1 One PT_Attr element of the new PT_Attrs
  * \param[in] elem2 One PT_Attr element of the new PT_Attrs
  * \param[in] elem3 One PT_Attr element of the new PT_Attrs
@@ -750,7 +750,7 @@ PT_Attrs _PT_makeAttrs6(PT_Attr elem1, PT_Attr elem2, PT_Attr elem3, PT_Attr ele
 }
 
 /**
- * Retrieve the length of a PT_Symbols. 
+ * Retrieve the length of a PT_Symbols.
  * \param[in] arg input PT_Symbols
  * \return The number of elements in the PT_Symbols
  */
@@ -759,7 +759,7 @@ int _PT_getSymbolsLength(PT_Symbols arg) {
 }
 
 /**
- * Reverse a PT_Symbols. 
+ * Reverse a PT_Symbols.
  * \param[in] arg PT_Symbols to be reversed
  * \return a reversed #arg
  */
@@ -768,7 +768,7 @@ PT_Symbols _PT_reverseSymbols(PT_Symbols arg) {
 }
 
 /**
- * Append a PT_Symbol to the end of a PT_Symbols. 
+ * Append a PT_Symbol to the end of a PT_Symbols.
  * \param[in] arg PT_Symbols to append the PT_Symbol to
  * \param[in] elem PT_Symbol to be appended
  * \return new PT_Symbols with #elem appended
@@ -778,7 +778,7 @@ PT_Symbols _PT_appendSymbols(PT_Symbols arg, PT_Symbol elem) {
 }
 
 /**
- * Concatenate two PT_Symbolss. 
+ * Concatenate two PT_Symbolss.
  * \param[in] arg0 first PT_Symbols
  * \param[in] arg1 second PT_Symbols
  * \return PT_Symbols with the elements of #arg0 before the elements of #arg1
@@ -788,7 +788,7 @@ PT_Symbols _PT_concatSymbols(PT_Symbols arg0, PT_Symbols arg1) {
 }
 
 /**
- * Extract a sublist from a PT_Symbols. 
+ * Extract a sublist from a PT_Symbols.
  * \param[in] arg PT_Symbols to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -799,7 +799,7 @@ PT_Symbols _PT_sliceSymbols(PT_Symbols arg, int start, int end) {
 }
 
 /**
- * Retrieve the PT_Symbol at #index from a PT_Symbols. 
+ * Retrieve the PT_Symbol at #index from a PT_Symbols.
  * \param[in] arg PT_Symbols to retrieve the PT_Symbol from
  * \param[in] index index to use to point in the PT_Symbols
  * \return PT_Symbol at position #index in #arg
@@ -809,7 +809,7 @@ PT_Symbol _PT_getSymbolsSymbolAt(PT_Symbols arg, int index) {
 }
 
 /**
- * Replace the PT_Symbol at #index from a PT_Symbols by a new one. 
+ * Replace the PT_Symbol at #index from a PT_Symbols by a new one.
  * \param[in] arg PT_Symbols to retrieve the PT_Symbol from
  * \param[in] elem new PT_Symbol to replace another
  * \param[in] index index to use to point in the PT_Symbols
@@ -820,7 +820,7 @@ PT_Symbols _PT_replaceSymbolsSymbolAt(PT_Symbols arg, PT_Symbol elem, int index)
 }
 
 /**
- * Builds a PT_Symbols of 2 consecutive elements. 
+ * Builds a PT_Symbols of 2 consecutive elements.
  * \param[in] elem1 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem2 One PT_Symbol element of the new PT_Symbols
  * \return A new PT_Symbols consisting of 2 PT_Symbols
@@ -830,7 +830,7 @@ PT_Symbols _PT_makeSymbols2(PT_Symbol elem1, PT_Symbol elem2) {
 }
 
 /**
- * Builds a PT_Symbols of 3 consecutive elements. 
+ * Builds a PT_Symbols of 3 consecutive elements.
  * \param[in] elem1 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem2 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem3 One PT_Symbol element of the new PT_Symbols
@@ -841,7 +841,7 @@ PT_Symbols _PT_makeSymbols3(PT_Symbol elem1, PT_Symbol elem2, PT_Symbol elem3) {
 }
 
 /**
- * Builds a PT_Symbols of 4 consecutive elements. 
+ * Builds a PT_Symbols of 4 consecutive elements.
  * \param[in] elem1 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem2 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem3 One PT_Symbol element of the new PT_Symbols
@@ -853,7 +853,7 @@ PT_Symbols _PT_makeSymbols4(PT_Symbol elem1, PT_Symbol elem2, PT_Symbol elem3, P
 }
 
 /**
- * Builds a PT_Symbols of 5 consecutive elements. 
+ * Builds a PT_Symbols of 5 consecutive elements.
  * \param[in] elem1 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem2 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem3 One PT_Symbol element of the new PT_Symbols
@@ -866,7 +866,7 @@ PT_Symbols _PT_makeSymbols5(PT_Symbol elem1, PT_Symbol elem2, PT_Symbol elem3, P
 }
 
 /**
- * Builds a PT_Symbols of 6 consecutive elements. 
+ * Builds a PT_Symbols of 6 consecutive elements.
  * \param[in] elem1 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem2 One PT_Symbol element of the new PT_Symbols
  * \param[in] elem3 One PT_Symbol element of the new PT_Symbols
@@ -880,7 +880,7 @@ PT_Symbols _PT_makeSymbols6(PT_Symbol elem1, PT_Symbol elem2, PT_Symbol elem3, P
 }
 
 /**
- * Retrieve the length of a PT_CharRanges. 
+ * Retrieve the length of a PT_CharRanges.
  * \param[in] arg input PT_CharRanges
  * \return The number of elements in the PT_CharRanges
  */
@@ -889,7 +889,7 @@ int _PT_getCharRangesLength(PT_CharRanges arg) {
 }
 
 /**
- * Reverse a PT_CharRanges. 
+ * Reverse a PT_CharRanges.
  * \param[in] arg PT_CharRanges to be reversed
  * \return a reversed #arg
  */
@@ -898,7 +898,7 @@ PT_CharRanges _PT_reverseCharRanges(PT_CharRanges arg) {
 }
 
 /**
- * Append a PT_CharRange to the end of a PT_CharRanges. 
+ * Append a PT_CharRange to the end of a PT_CharRanges.
  * \param[in] arg PT_CharRanges to append the PT_CharRange to
  * \param[in] elem PT_CharRange to be appended
  * \return new PT_CharRanges with #elem appended
@@ -908,7 +908,7 @@ PT_CharRanges _PT_appendCharRanges(PT_CharRanges arg, PT_CharRange elem) {
 }
 
 /**
- * Concatenate two PT_CharRangess. 
+ * Concatenate two PT_CharRangess.
  * \param[in] arg0 first PT_CharRanges
  * \param[in] arg1 second PT_CharRanges
  * \return PT_CharRanges with the elements of #arg0 before the elements of #arg1
@@ -918,7 +918,7 @@ PT_CharRanges _PT_concatCharRanges(PT_CharRanges arg0, PT_CharRanges arg1) {
 }
 
 /**
- * Extract a sublist from a PT_CharRanges. 
+ * Extract a sublist from a PT_CharRanges.
  * \param[in] arg PT_CharRanges to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -929,7 +929,7 @@ PT_CharRanges _PT_sliceCharRanges(PT_CharRanges arg, int start, int end) {
 }
 
 /**
- * Retrieve the PT_CharRange at #index from a PT_CharRanges. 
+ * Retrieve the PT_CharRange at #index from a PT_CharRanges.
  * \param[in] arg PT_CharRanges to retrieve the PT_CharRange from
  * \param[in] index index to use to point in the PT_CharRanges
  * \return PT_CharRange at position #index in #arg
@@ -939,7 +939,7 @@ PT_CharRange _PT_getCharRangesCharRangeAt(PT_CharRanges arg, int index) {
 }
 
 /**
- * Replace the PT_CharRange at #index from a PT_CharRanges by a new one. 
+ * Replace the PT_CharRange at #index from a PT_CharRanges by a new one.
  * \param[in] arg PT_CharRanges to retrieve the PT_CharRange from
  * \param[in] elem new PT_CharRange to replace another
  * \param[in] index index to use to point in the PT_CharRanges
@@ -950,7 +950,7 @@ PT_CharRanges _PT_replaceCharRangesCharRangeAt(PT_CharRanges arg, PT_CharRange e
 }
 
 /**
- * Builds a PT_CharRanges of 2 consecutive elements. 
+ * Builds a PT_CharRanges of 2 consecutive elements.
  * \param[in] elem1 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem2 One PT_CharRange element of the new PT_CharRanges
  * \return A new PT_CharRanges consisting of 2 PT_CharRanges
@@ -960,7 +960,7 @@ PT_CharRanges _PT_makeCharRanges2(PT_CharRange elem1, PT_CharRange elem2) {
 }
 
 /**
- * Builds a PT_CharRanges of 3 consecutive elements. 
+ * Builds a PT_CharRanges of 3 consecutive elements.
  * \param[in] elem1 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem2 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem3 One PT_CharRange element of the new PT_CharRanges
@@ -971,7 +971,7 @@ PT_CharRanges _PT_makeCharRanges3(PT_CharRange elem1, PT_CharRange elem2, PT_Cha
 }
 
 /**
- * Builds a PT_CharRanges of 4 consecutive elements. 
+ * Builds a PT_CharRanges of 4 consecutive elements.
  * \param[in] elem1 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem2 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem3 One PT_CharRange element of the new PT_CharRanges
@@ -983,7 +983,7 @@ PT_CharRanges _PT_makeCharRanges4(PT_CharRange elem1, PT_CharRange elem2, PT_Cha
 }
 
 /**
- * Builds a PT_CharRanges of 5 consecutive elements. 
+ * Builds a PT_CharRanges of 5 consecutive elements.
  * \param[in] elem1 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem2 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem3 One PT_CharRange element of the new PT_CharRanges
@@ -996,7 +996,7 @@ PT_CharRanges _PT_makeCharRanges5(PT_CharRange elem1, PT_CharRange elem2, PT_Cha
 }
 
 /**
- * Builds a PT_CharRanges of 6 consecutive elements. 
+ * Builds a PT_CharRanges of 6 consecutive elements.
  * \param[in] elem1 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem2 One PT_CharRange element of the new PT_CharRanges
  * \param[in] elem3 One PT_CharRange element of the new PT_CharRanges
@@ -1600,7 +1600,7 @@ ATbool PT_isValidParseTree(PT_ParseTree arg) {
  * \param[in] arg input PT_ParseTree
  * \return ATtrue if #arg corresponds to the signature of a top, or ATfalse otherwise
  */
-inline ATbool PT_isParseTreeTop(PT_ParseTree arg){
+ATbool PT_isParseTreeTop(PT_ParseTree arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun0) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -1612,7 +1612,7 @@ inline ATbool PT_isParseTreeTop(PT_ParseTree arg){
 }
 
 /**
- * Assert whether a PT_ParseTree has a top. 
+ * Assert whether a PT_ParseTree has a top.
  * \param[in] arg input PT_ParseTree
  * \return ATtrue if the PT_ParseTree had a top, or ATfalse otherwise
  */
@@ -1624,7 +1624,7 @@ ATbool PT_hasParseTreeTop(PT_ParseTree arg) {
 }
 
 /**
- * Assert whether a PT_ParseTree has a amb-cnt. 
+ * Assert whether a PT_ParseTree has a amb-cnt.
  * \param[in] arg input PT_ParseTree
  * \return ATtrue if the PT_ParseTree had a amb-cnt, or ATfalse otherwise
  */
@@ -1641,7 +1641,7 @@ ATbool PT_hasParseTreeAmbCnt(PT_ParseTree arg) {
  * \return the top of #arg, if it exist or an undefined value if it does not
  */
 PT_Tree PT_getParseTreeTop(PT_ParseTree arg) {
-  
+
     return (PT_Tree)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1651,7 +1651,7 @@ PT_Tree PT_getParseTreeTop(PT_ParseTree arg) {
  * \return the amb-cnt of #arg, if it exist or an undefined value if it does not
  */
 int PT_getParseTreeAmbCnt(PT_ParseTree arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -1711,7 +1711,7 @@ ATbool PT_isValidTree(PT_Tree arg) {
  * \param[in] arg input PT_Tree
  * \return ATtrue if #arg corresponds to the signature of a appl, or ATfalse otherwise
  */
-inline ATbool PT_isTreeAppl(PT_Tree arg){
+ATbool PT_isTreeAppl(PT_Tree arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun1) {
     return ATtrue;
@@ -1724,7 +1724,7 @@ inline ATbool PT_isTreeAppl(PT_Tree arg){
  * \param[in] arg input PT_Tree
  * \return ATtrue if #arg corresponds to the signature of a cycle, or ATfalse otherwise
  */
-inline ATbool PT_isTreeCycle(PT_Tree arg){
+ATbool PT_isTreeCycle(PT_Tree arg){
   /* checking for: cycle */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun2) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -1740,7 +1740,7 @@ inline ATbool PT_isTreeCycle(PT_Tree arg){
  * \param[in] arg input PT_Tree
  * \return ATtrue if #arg corresponds to the signature of a amb, or ATfalse otherwise
  */
-inline ATbool PT_isTreeAmb(PT_Tree arg){
+ATbool PT_isTreeAmb(PT_Tree arg){
   /* checking for: amb */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun3) {
     return ATtrue;
@@ -1753,7 +1753,7 @@ inline ATbool PT_isTreeAmb(PT_Tree arg){
  * \param[in] arg input PT_Tree
  * \return ATtrue if #arg corresponds to the signature of a char, or ATfalse otherwise
  */
-inline ATbool PT_isTreeChar(PT_Tree arg){
+ATbool PT_isTreeChar(PT_Tree arg){
   if (ATgetType((ATerm)arg) == AT_INT) {
     return ATtrue;
   }
@@ -1761,7 +1761,7 @@ inline ATbool PT_isTreeChar(PT_Tree arg){
 }
 
 /**
- * Assert whether a PT_Tree has a prod. 
+ * Assert whether a PT_Tree has a prod.
  * \param[in] arg input PT_Tree
  * \return ATtrue if the PT_Tree had a prod, or ATfalse otherwise
  */
@@ -1773,7 +1773,7 @@ ATbool PT_hasTreeProd(PT_Tree arg) {
 }
 
 /**
- * Assert whether a PT_Tree has a args. 
+ * Assert whether a PT_Tree has a args.
  * \param[in] arg input PT_Tree
  * \return ATtrue if the PT_Tree had a args, or ATfalse otherwise
  */
@@ -1788,7 +1788,7 @@ ATbool PT_hasTreeArgs(PT_Tree arg) {
 }
 
 /**
- * Assert whether a PT_Tree has a symbol. 
+ * Assert whether a PT_Tree has a symbol.
  * \param[in] arg input PT_Tree
  * \return ATtrue if the PT_Tree had a symbol, or ATfalse otherwise
  */
@@ -1800,7 +1800,7 @@ ATbool PT_hasTreeSymbol(PT_Tree arg) {
 }
 
 /**
- * Assert whether a PT_Tree has a cycle-length. 
+ * Assert whether a PT_Tree has a cycle-length.
  * \param[in] arg input PT_Tree
  * \return ATtrue if the PT_Tree had a cycle-length, or ATfalse otherwise
  */
@@ -1812,7 +1812,7 @@ ATbool PT_hasTreeCycleLength(PT_Tree arg) {
 }
 
 /**
- * Assert whether a PT_Tree has a character. 
+ * Assert whether a PT_Tree has a character.
  * \param[in] arg input PT_Tree
  * \return ATtrue if the PT_Tree had a character, or ATfalse otherwise
  */
@@ -1829,7 +1829,7 @@ ATbool PT_hasTreeCharacter(PT_Tree arg) {
  * \return the prod of #arg, if it exist or an undefined value if it does not
  */
 PT_Production PT_getTreeProd(PT_Tree arg) {
-  
+
     return (PT_Production)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1842,7 +1842,7 @@ PT_Args PT_getTreeArgs(PT_Tree arg) {
   if (PT_isTreeAppl(arg)) {
     return (PT_Args)ATgetArgument((ATermAppl)arg, 1);
   }
-  else 
+  else
     return (PT_Args)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1852,7 +1852,7 @@ PT_Args PT_getTreeArgs(PT_Tree arg) {
  * \return the symbol of #arg, if it exist or an undefined value if it does not
  */
 PT_Symbol PT_getTreeSymbol(PT_Tree arg) {
-  
+
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1862,7 +1862,7 @@ PT_Symbol PT_getTreeSymbol(PT_Tree arg) {
  * \return the cycle-length of #arg, if it exist or an undefined value if it does not
  */
 int PT_getTreeCycleLength(PT_Tree arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -1872,7 +1872,7 @@ int PT_getTreeCycleLength(PT_Tree arg) {
  * \return the character of #arg, if it exist or an undefined value if it does not
  */
 int PT_getTreeCharacter(PT_Tree arg) {
-  
+
     return (int)ATgetInt((ATermInt) arg);
 }
 
@@ -1977,7 +1977,7 @@ ATbool PT_isValidArgs(PT_Args arg) {
  * \param[in] arg input PT_Args
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PT_isArgsEmpty(PT_Args arg){
+ATbool PT_isArgsEmpty(PT_Args arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -1989,7 +1989,7 @@ inline ATbool PT_isArgsEmpty(PT_Args arg){
  * \param[in] arg input PT_Args
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PT_isArgsSingle(PT_Args arg){
+ATbool PT_isArgsSingle(PT_Args arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2005,7 +2005,7 @@ inline ATbool PT_isArgsSingle(PT_Args arg){
  * \param[in] arg input PT_Args
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PT_isArgsMany(PT_Args arg){
+ATbool PT_isArgsMany(PT_Args arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2013,7 +2013,7 @@ inline ATbool PT_isArgsMany(PT_Args arg){
 }
 
 /**
- * Assert whether a PT_Args has a head. 
+ * Assert whether a PT_Args has a head.
  * \param[in] arg input PT_Args
  * \return ATtrue if the PT_Args had a head, or ATfalse otherwise
  */
@@ -2028,7 +2028,7 @@ ATbool PT_hasArgsHead(PT_Args arg) {
 }
 
 /**
- * Assert whether a PT_Args has a tail. 
+ * Assert whether a PT_Args has a tail.
  * \param[in] arg input PT_Args
  * \return ATtrue if the PT_Args had a tail, or ATfalse otherwise
  */
@@ -2048,7 +2048,7 @@ PT_Tree PT_getArgsHead(PT_Args arg) {
   if (PT_isArgsSingle(arg)) {
     return (PT_Tree)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PT_Tree)ATgetFirst((ATermList)arg);
 }
 
@@ -2058,7 +2058,7 @@ PT_Tree PT_getArgsHead(PT_Args arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PT_Args PT_getArgsTail(PT_Args arg) {
-  
+
     return (PT_Args)ATgetNext((ATermList)arg);
 }
 
@@ -2115,7 +2115,7 @@ ATbool PT_isValidProduction(PT_Production arg) {
  * \param[in] arg input PT_Production
  * \return ATtrue if #arg corresponds to the signature of a Default, or ATfalse otherwise
  */
-inline ATbool PT_isProductionDefault(PT_Production arg){
+ATbool PT_isProductionDefault(PT_Production arg){
   /* checking for: prod */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun4) {
     return ATtrue;
@@ -2128,7 +2128,7 @@ inline ATbool PT_isProductionDefault(PT_Production arg){
  * \param[in] arg input PT_Production
  * \return ATtrue if #arg corresponds to the signature of a List, or ATfalse otherwise
  */
-inline ATbool PT_isProductionList(PT_Production arg){
+ATbool PT_isProductionList(PT_Production arg){
   /* checking for: list */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun5) {
     return ATtrue;
@@ -2137,7 +2137,7 @@ inline ATbool PT_isProductionList(PT_Production arg){
 }
 
 /**
- * Assert whether a PT_Production has a lhs. 
+ * Assert whether a PT_Production has a lhs.
  * \param[in] arg input PT_Production
  * \return ATtrue if the PT_Production had a lhs, or ATfalse otherwise
  */
@@ -2149,7 +2149,7 @@ ATbool PT_hasProductionLhs(PT_Production arg) {
 }
 
 /**
- * Assert whether a PT_Production has a rhs. 
+ * Assert whether a PT_Production has a rhs.
  * \param[in] arg input PT_Production
  * \return ATtrue if the PT_Production had a rhs, or ATfalse otherwise
  */
@@ -2164,7 +2164,7 @@ ATbool PT_hasProductionRhs(PT_Production arg) {
 }
 
 /**
- * Assert whether a PT_Production has a attributes. 
+ * Assert whether a PT_Production has a attributes.
  * \param[in] arg input PT_Production
  * \return ATtrue if the PT_Production had a attributes, or ATfalse otherwise
  */
@@ -2181,7 +2181,7 @@ ATbool PT_hasProductionAttributes(PT_Production arg) {
  * \return the lhs of #arg, if it exist or an undefined value if it does not
  */
 PT_Symbols PT_getProductionLhs(PT_Production arg) {
-  
+
     return (PT_Symbols)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2194,7 +2194,7 @@ PT_Symbol PT_getProductionRhs(PT_Production arg) {
   if (PT_isProductionDefault(arg)) {
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 1);
   }
-  else 
+  else
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2204,7 +2204,7 @@ PT_Symbol PT_getProductionRhs(PT_Production arg) {
  * \return the attributes of #arg, if it exist or an undefined value if it does not
  */
 PT_Attributes PT_getProductionAttributes(PT_Production arg) {
-  
+
     return (PT_Attributes)ATgetArgument((ATermAppl)arg, 2);
 }
 
@@ -2276,7 +2276,7 @@ ATbool PT_isValidAttributes(PT_Attributes arg) {
  * \param[in] arg input PT_Attributes
  * \return ATtrue if #arg corresponds to the signature of a no-attrs, or ATfalse otherwise
  */
-inline ATbool PT_isAttributesNoAttrs(PT_Attributes arg){
+ATbool PT_isAttributesNoAttrs(PT_Attributes arg){
   /* checking for: no-attrs */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun6) {
     return ATtrue;
@@ -2289,7 +2289,7 @@ inline ATbool PT_isAttributesNoAttrs(PT_Attributes arg){
  * \param[in] arg input PT_Attributes
  * \return ATtrue if #arg corresponds to the signature of a attrs, or ATfalse otherwise
  */
-inline ATbool PT_isAttributesAttrs(PT_Attributes arg){
+ATbool PT_isAttributesAttrs(PT_Attributes arg){
   /* checking for: attrs */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun7) {
     return ATtrue;
@@ -2298,7 +2298,7 @@ inline ATbool PT_isAttributesAttrs(PT_Attributes arg){
 }
 
 /**
- * Assert whether a PT_Attributes has a attrs. 
+ * Assert whether a PT_Attributes has a attrs.
  * \param[in] arg input PT_Attributes
  * \return ATtrue if the PT_Attributes had a attrs, or ATfalse otherwise
  */
@@ -2315,7 +2315,7 @@ ATbool PT_hasAttributesAttrs(PT_Attributes arg) {
  * \return the attrs of #arg, if it exist or an undefined value if it does not
  */
 PT_Attrs PT_getAttributesAttrs(PT_Attributes arg) {
-  
+
     return (PT_Attrs)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2357,7 +2357,7 @@ ATbool PT_isValidAttrs(PT_Attrs arg) {
  * \param[in] arg input PT_Attrs
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PT_isAttrsEmpty(PT_Attrs arg){
+ATbool PT_isAttrsEmpty(PT_Attrs arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2369,7 +2369,7 @@ inline ATbool PT_isAttrsEmpty(PT_Attrs arg){
  * \param[in] arg input PT_Attrs
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PT_isAttrsSingle(PT_Attrs arg){
+ATbool PT_isAttrsSingle(PT_Attrs arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2385,7 +2385,7 @@ inline ATbool PT_isAttrsSingle(PT_Attrs arg){
  * \param[in] arg input PT_Attrs
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PT_isAttrsMany(PT_Attrs arg){
+ATbool PT_isAttrsMany(PT_Attrs arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2393,7 +2393,7 @@ inline ATbool PT_isAttrsMany(PT_Attrs arg){
 }
 
 /**
- * Assert whether a PT_Attrs has a head. 
+ * Assert whether a PT_Attrs has a head.
  * \param[in] arg input PT_Attrs
  * \return ATtrue if the PT_Attrs had a head, or ATfalse otherwise
  */
@@ -2408,7 +2408,7 @@ ATbool PT_hasAttrsHead(PT_Attrs arg) {
 }
 
 /**
- * Assert whether a PT_Attrs has a tail. 
+ * Assert whether a PT_Attrs has a tail.
  * \param[in] arg input PT_Attrs
  * \return ATtrue if the PT_Attrs had a tail, or ATfalse otherwise
  */
@@ -2428,7 +2428,7 @@ PT_Attr PT_getAttrsHead(PT_Attrs arg) {
   if (PT_isAttrsSingle(arg)) {
     return (PT_Attr)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PT_Attr)ATgetFirst((ATermList)arg);
 }
 
@@ -2438,7 +2438,7 @@ PT_Attr PT_getAttrsHead(PT_Attrs arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PT_Attrs PT_getAttrsTail(PT_Attrs arg) {
-  
+
     return (PT_Attrs)ATgetNext((ATermList)arg);
 }
 
@@ -2510,7 +2510,7 @@ ATbool PT_isValidAttr(PT_Attr arg) {
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a assoc, or ATfalse otherwise
  */
-inline ATbool PT_isAttrAssoc(PT_Attr arg){
+ATbool PT_isAttrAssoc(PT_Attr arg){
   /* checking for: assoc */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun8) {
     return ATtrue;
@@ -2523,7 +2523,7 @@ inline ATbool PT_isAttrAssoc(PT_Attr arg){
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a term, or ATfalse otherwise
  */
-inline ATbool PT_isAttrTerm(PT_Attr arg){
+ATbool PT_isAttrTerm(PT_Attr arg){
   /* checking for: term */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun9) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2539,7 +2539,7 @@ inline ATbool PT_isAttrTerm(PT_Attr arg){
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a id, or ATfalse otherwise
  */
-inline ATbool PT_isAttrId(PT_Attr arg){
+ATbool PT_isAttrId(PT_Attr arg){
   /* checking for: id */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun10) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2555,7 +2555,7 @@ inline ATbool PT_isAttrId(PT_Attr arg){
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a bracket, or ATfalse otherwise
  */
-inline ATbool PT_isAttrBracket(PT_Attr arg){
+ATbool PT_isAttrBracket(PT_Attr arg){
   /* checking for: bracket */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun11) {
     return ATtrue;
@@ -2568,7 +2568,7 @@ inline ATbool PT_isAttrBracket(PT_Attr arg){
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a reject, or ATfalse otherwise
  */
-inline ATbool PT_isAttrReject(PT_Attr arg){
+ATbool PT_isAttrReject(PT_Attr arg){
   /* checking for: reject */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun12) {
     return ATtrue;
@@ -2581,7 +2581,7 @@ inline ATbool PT_isAttrReject(PT_Attr arg){
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a prefer, or ATfalse otherwise
  */
-inline ATbool PT_isAttrPrefer(PT_Attr arg){
+ATbool PT_isAttrPrefer(PT_Attr arg){
   /* checking for: prefer */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun13) {
     return ATtrue;
@@ -2594,7 +2594,7 @@ inline ATbool PT_isAttrPrefer(PT_Attr arg){
  * \param[in] arg input PT_Attr
  * \return ATtrue if #arg corresponds to the signature of a avoid, or ATfalse otherwise
  */
-inline ATbool PT_isAttrAvoid(PT_Attr arg){
+ATbool PT_isAttrAvoid(PT_Attr arg){
   /* checking for: avoid */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun14) {
     return ATtrue;
@@ -2603,7 +2603,7 @@ inline ATbool PT_isAttrAvoid(PT_Attr arg){
 }
 
 /**
- * Assert whether a PT_Attr has a assoc. 
+ * Assert whether a PT_Attr has a assoc.
  * \param[in] arg input PT_Attr
  * \return ATtrue if the PT_Attr had a assoc, or ATfalse otherwise
  */
@@ -2615,7 +2615,7 @@ ATbool PT_hasAttrAssoc(PT_Attr arg) {
 }
 
 /**
- * Assert whether a PT_Attr has a value. 
+ * Assert whether a PT_Attr has a value.
  * \param[in] arg input PT_Attr
  * \return ATtrue if the PT_Attr had a value, or ATfalse otherwise
  */
@@ -2627,7 +2627,7 @@ ATbool PT_hasAttrValue(PT_Attr arg) {
 }
 
 /**
- * Assert whether a PT_Attr has a module-name. 
+ * Assert whether a PT_Attr has a module-name.
  * \param[in] arg input PT_Attr
  * \return ATtrue if the PT_Attr had a module-name, or ATfalse otherwise
  */
@@ -2644,7 +2644,7 @@ ATbool PT_hasAttrModuleName(PT_Attr arg) {
  * \return the assoc of #arg, if it exist or an undefined value if it does not
  */
 PT_Associativity PT_getAttrAssoc(PT_Attr arg) {
-  
+
     return (PT_Associativity)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2654,7 +2654,7 @@ PT_Associativity PT_getAttrAssoc(PT_Attr arg) {
  * \return the value of #arg, if it exist or an undefined value if it does not
  */
 ATerm PT_getAttrValue(PT_Attr arg) {
-  
+
     return (ATerm)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2664,7 +2664,7 @@ ATerm PT_getAttrValue(PT_Attr arg) {
  * \return the module-name of #arg, if it exist or an undefined value if it does not
  */
 char* PT_getAttrModuleName(PT_Attr arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -2739,7 +2739,7 @@ ATbool PT_isValidAssociativity(PT_Associativity arg) {
  * \param[in] arg input PT_Associativity
  * \return ATtrue if #arg corresponds to the signature of a left, or ATfalse otherwise
  */
-inline ATbool PT_isAssociativityLeft(PT_Associativity arg){
+ATbool PT_isAssociativityLeft(PT_Associativity arg){
   /* checking for: left */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun15) {
     return ATtrue;
@@ -2752,7 +2752,7 @@ inline ATbool PT_isAssociativityLeft(PT_Associativity arg){
  * \param[in] arg input PT_Associativity
  * \return ATtrue if #arg corresponds to the signature of a right, or ATfalse otherwise
  */
-inline ATbool PT_isAssociativityRight(PT_Associativity arg){
+ATbool PT_isAssociativityRight(PT_Associativity arg){
   /* checking for: right */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun16) {
     return ATtrue;
@@ -2765,7 +2765,7 @@ inline ATbool PT_isAssociativityRight(PT_Associativity arg){
  * \param[in] arg input PT_Associativity
  * \return ATtrue if #arg corresponds to the signature of a assoc, or ATfalse otherwise
  */
-inline ATbool PT_isAssociativityAssoc(PT_Associativity arg){
+ATbool PT_isAssociativityAssoc(PT_Associativity arg){
   /* checking for: assoc */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun17) {
     return ATtrue;
@@ -2778,7 +2778,7 @@ inline ATbool PT_isAssociativityAssoc(PT_Associativity arg){
  * \param[in] arg input PT_Associativity
  * \return ATtrue if #arg corresponds to the signature of a non-assoc, or ATfalse otherwise
  */
-inline ATbool PT_isAssociativityNonAssoc(PT_Associativity arg){
+ATbool PT_isAssociativityNonAssoc(PT_Associativity arg){
   /* checking for: non-assoc */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun18) {
     return ATtrue;
@@ -2866,7 +2866,7 @@ ATbool PT_isValidSymbol(PT_Symbol arg) {
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a lit, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolLit(PT_Symbol arg){
+ATbool PT_isSymbolLit(PT_Symbol arg){
   /* checking for: lit */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun19) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2882,7 +2882,7 @@ inline ATbool PT_isSymbolLit(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a cilit, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolCilit(PT_Symbol arg){
+ATbool PT_isSymbolCilit(PT_Symbol arg){
   /* checking for: cilit */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun20) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2898,7 +2898,7 @@ inline ATbool PT_isSymbolCilit(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a cf, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolCf(PT_Symbol arg){
+ATbool PT_isSymbolCf(PT_Symbol arg){
   /* checking for: cf */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun21) {
     return ATtrue;
@@ -2911,7 +2911,7 @@ inline ATbool PT_isSymbolCf(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a lex, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolLex(PT_Symbol arg){
+ATbool PT_isSymbolLex(PT_Symbol arg){
   /* checking for: lex */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun22) {
     return ATtrue;
@@ -2924,7 +2924,7 @@ inline ATbool PT_isSymbolLex(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolEmpty(PT_Symbol arg){
+ATbool PT_isSymbolEmpty(PT_Symbol arg){
   /* checking for: empty */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun23) {
     return ATtrue;
@@ -2937,7 +2937,7 @@ inline ATbool PT_isSymbolEmpty(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a seq, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolSeq(PT_Symbol arg){
+ATbool PT_isSymbolSeq(PT_Symbol arg){
   /* checking for: seq */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun24) {
     return ATtrue;
@@ -2950,7 +2950,7 @@ inline ATbool PT_isSymbolSeq(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a opt, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolOpt(PT_Symbol arg){
+ATbool PT_isSymbolOpt(PT_Symbol arg){
   /* checking for: opt */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun25) {
     return ATtrue;
@@ -2963,7 +2963,7 @@ inline ATbool PT_isSymbolOpt(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a alt, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolAlt(PT_Symbol arg){
+ATbool PT_isSymbolAlt(PT_Symbol arg){
   /* checking for: alt */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun26) {
     return ATtrue;
@@ -2976,7 +2976,7 @@ inline ATbool PT_isSymbolAlt(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a tuple, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolTuple(PT_Symbol arg){
+ATbool PT_isSymbolTuple(PT_Symbol arg){
   /* checking for: tuple */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun27) {
     return ATtrue;
@@ -2989,7 +2989,7 @@ inline ATbool PT_isSymbolTuple(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a sort, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolSort(PT_Symbol arg){
+ATbool PT_isSymbolSort(PT_Symbol arg){
   /* checking for: sort */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun28) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3005,7 +3005,7 @@ inline ATbool PT_isSymbolSort(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a iter-plus, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolIterPlus(PT_Symbol arg){
+ATbool PT_isSymbolIterPlus(PT_Symbol arg){
   /* checking for: iter */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun29) {
     return ATtrue;
@@ -3018,7 +3018,7 @@ inline ATbool PT_isSymbolIterPlus(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a iter-star, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolIterStar(PT_Symbol arg){
+ATbool PT_isSymbolIterStar(PT_Symbol arg){
   /* checking for: iter-star */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun30) {
     return ATtrue;
@@ -3031,7 +3031,7 @@ inline ATbool PT_isSymbolIterStar(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a iter-plus-sep, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolIterPlusSep(PT_Symbol arg){
+ATbool PT_isSymbolIterPlusSep(PT_Symbol arg){
   /* checking for: iter-sep */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun31) {
     return ATtrue;
@@ -3044,7 +3044,7 @@ inline ATbool PT_isSymbolIterPlusSep(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a iter-star-sep, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolIterStarSep(PT_Symbol arg){
+ATbool PT_isSymbolIterStarSep(PT_Symbol arg){
   /* checking for: iter-star-sep */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun32) {
     return ATtrue;
@@ -3057,7 +3057,7 @@ inline ATbool PT_isSymbolIterStarSep(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a iter-n, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolIterN(PT_Symbol arg){
+ATbool PT_isSymbolIterN(PT_Symbol arg){
   /* checking for: iter-n */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun33) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -3073,7 +3073,7 @@ inline ATbool PT_isSymbolIterN(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a iter-sep-n, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolIterSepN(PT_Symbol arg){
+ATbool PT_isSymbolIterSepN(PT_Symbol arg){
   /* checking for: iter-sep-n */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun34) {
     ATerm arg_arg2 = ATgetArgument(arg, 2);
@@ -3089,7 +3089,7 @@ inline ATbool PT_isSymbolIterSepN(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a func, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolFunc(PT_Symbol arg){
+ATbool PT_isSymbolFunc(PT_Symbol arg){
   /* checking for: func */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun35) {
     return ATtrue;
@@ -3102,7 +3102,7 @@ inline ATbool PT_isSymbolFunc(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a parameterized-sort, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolParameterizedSort(PT_Symbol arg){
+ATbool PT_isSymbolParameterizedSort(PT_Symbol arg){
   /* checking for: parameterized-sort */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun36) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3118,7 +3118,7 @@ inline ATbool PT_isSymbolParameterizedSort(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a strategy, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolStrategy(PT_Symbol arg){
+ATbool PT_isSymbolStrategy(PT_Symbol arg){
   /* checking for: strategy */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun37) {
     return ATtrue;
@@ -3131,7 +3131,7 @@ inline ATbool PT_isSymbolStrategy(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a var-sym, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolVarSym(PT_Symbol arg){
+ATbool PT_isSymbolVarSym(PT_Symbol arg){
   /* checking for: varsym */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun38) {
     return ATtrue;
@@ -3144,7 +3144,7 @@ inline ATbool PT_isSymbolVarSym(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a layout, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolLayout(PT_Symbol arg){
+ATbool PT_isSymbolLayout(PT_Symbol arg){
   /* checking for: layout */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun39) {
     return ATtrue;
@@ -3157,7 +3157,7 @@ inline ATbool PT_isSymbolLayout(PT_Symbol arg){
  * \param[in] arg input PT_Symbol
  * \return ATtrue if #arg corresponds to the signature of a char-class, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolCharClass(PT_Symbol arg){
+ATbool PT_isSymbolCharClass(PT_Symbol arg){
   /* checking for: char-class */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun40) {
     return ATtrue;
@@ -3166,7 +3166,7 @@ inline ATbool PT_isSymbolCharClass(PT_Symbol arg){
 }
 
 /**
- * Assert whether a PT_Symbol has a string. 
+ * Assert whether a PT_Symbol has a string.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a string, or ATfalse otherwise
  */
@@ -3184,7 +3184,7 @@ ATbool PT_hasSymbolString(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a symbol. 
+ * Assert whether a PT_Symbol has a symbol.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a symbol, or ATfalse otherwise
  */
@@ -3226,7 +3226,7 @@ ATbool PT_hasSymbolSymbol(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a symbols. 
+ * Assert whether a PT_Symbol has a symbols.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a symbols, or ATfalse otherwise
  */
@@ -3241,7 +3241,7 @@ ATbool PT_hasSymbolSymbols(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a lhs. 
+ * Assert whether a PT_Symbol has a lhs.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a lhs, or ATfalse otherwise
  */
@@ -3256,7 +3256,7 @@ ATbool PT_hasSymbolLhs(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a rhs. 
+ * Assert whether a PT_Symbol has a rhs.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a rhs, or ATfalse otherwise
  */
@@ -3271,7 +3271,7 @@ ATbool PT_hasSymbolRhs(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a head. 
+ * Assert whether a PT_Symbol has a head.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a head, or ATfalse otherwise
  */
@@ -3283,7 +3283,7 @@ ATbool PT_hasSymbolHead(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a rest. 
+ * Assert whether a PT_Symbol has a rest.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a rest, or ATfalse otherwise
  */
@@ -3295,7 +3295,7 @@ ATbool PT_hasSymbolRest(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a separator. 
+ * Assert whether a PT_Symbol has a separator.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a separator, or ATfalse otherwise
  */
@@ -3313,7 +3313,7 @@ ATbool PT_hasSymbolSeparator(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a number. 
+ * Assert whether a PT_Symbol has a number.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a number, or ATfalse otherwise
  */
@@ -3328,7 +3328,7 @@ ATbool PT_hasSymbolNumber(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a sort. 
+ * Assert whether a PT_Symbol has a sort.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a sort, or ATfalse otherwise
  */
@@ -3340,7 +3340,7 @@ ATbool PT_hasSymbolSort(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a parameters. 
+ * Assert whether a PT_Symbol has a parameters.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a parameters, or ATfalse otherwise
  */
@@ -3352,7 +3352,7 @@ ATbool PT_hasSymbolParameters(PT_Symbol arg) {
 }
 
 /**
- * Assert whether a PT_Symbol has a ranges. 
+ * Assert whether a PT_Symbol has a ranges.
  * \param[in] arg input PT_Symbol
  * \return ATtrue if the PT_Symbol had a ranges, or ATfalse otherwise
  */
@@ -3375,7 +3375,7 @@ char* PT_getSymbolString(PT_Symbol arg) {
   else if (PT_isSymbolCilit(arg)) {
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
   }
-  else 
+  else
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -3415,7 +3415,7 @@ PT_Symbol PT_getSymbolSymbol(PT_Symbol arg) {
   else if (PT_isSymbolFunc(arg)) {
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 1);
   }
-  else 
+  else
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3428,7 +3428,7 @@ PT_Symbols PT_getSymbolSymbols(PT_Symbol arg) {
   if (PT_isSymbolSeq(arg)) {
     return (PT_Symbols)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (PT_Symbols)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3441,7 +3441,7 @@ PT_Symbol PT_getSymbolLhs(PT_Symbol arg) {
   if (PT_isSymbolAlt(arg)) {
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3454,7 +3454,7 @@ PT_Symbol PT_getSymbolRhs(PT_Symbol arg) {
   if (PT_isSymbolAlt(arg)) {
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 1);
   }
-  else 
+  else
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3464,7 +3464,7 @@ PT_Symbol PT_getSymbolRhs(PT_Symbol arg) {
  * \return the head of #arg, if it exist or an undefined value if it does not
  */
 PT_Symbol PT_getSymbolHead(PT_Symbol arg) {
-  
+
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3474,7 +3474,7 @@ PT_Symbol PT_getSymbolHead(PT_Symbol arg) {
  * \return the rest of #arg, if it exist or an undefined value if it does not
  */
 PT_Symbols PT_getSymbolRest(PT_Symbol arg) {
-  
+
     return (PT_Symbols)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3490,7 +3490,7 @@ PT_Symbol PT_getSymbolSeparator(PT_Symbol arg) {
   else if (PT_isSymbolIterStarSep(arg)) {
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 1);
   }
-  else 
+  else
     return (PT_Symbol)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3503,7 +3503,7 @@ int PT_getSymbolNumber(PT_Symbol arg) {
   if (PT_isSymbolIterN(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 2));
 }
 
@@ -3513,7 +3513,7 @@ int PT_getSymbolNumber(PT_Symbol arg) {
  * \return the sort of #arg, if it exist or an undefined value if it does not
  */
 char* PT_getSymbolSort(PT_Symbol arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -3523,7 +3523,7 @@ char* PT_getSymbolSort(PT_Symbol arg) {
  * \return the parameters of #arg, if it exist or an undefined value if it does not
  */
 PT_Symbols PT_getSymbolParameters(PT_Symbol arg) {
-  
+
     return (PT_Symbols)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3533,7 +3533,7 @@ PT_Symbols PT_getSymbolParameters(PT_Symbol arg) {
  * \return the ranges of #arg, if it exist or an undefined value if it does not
  */
 PT_CharRanges PT_getSymbolRanges(PT_Symbol arg) {
-  
+
     return (PT_CharRanges)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3794,7 +3794,7 @@ ATbool PT_isValidSymbols(PT_Symbols arg) {
  * \param[in] arg input PT_Symbols
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolsEmpty(PT_Symbols arg){
+ATbool PT_isSymbolsEmpty(PT_Symbols arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3806,7 +3806,7 @@ inline ATbool PT_isSymbolsEmpty(PT_Symbols arg){
  * \param[in] arg input PT_Symbols
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolsSingle(PT_Symbols arg){
+ATbool PT_isSymbolsSingle(PT_Symbols arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3822,7 +3822,7 @@ inline ATbool PT_isSymbolsSingle(PT_Symbols arg){
  * \param[in] arg input PT_Symbols
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PT_isSymbolsMany(PT_Symbols arg){
+ATbool PT_isSymbolsMany(PT_Symbols arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3830,7 +3830,7 @@ inline ATbool PT_isSymbolsMany(PT_Symbols arg){
 }
 
 /**
- * Assert whether a PT_Symbols has a head. 
+ * Assert whether a PT_Symbols has a head.
  * \param[in] arg input PT_Symbols
  * \return ATtrue if the PT_Symbols had a head, or ATfalse otherwise
  */
@@ -3845,7 +3845,7 @@ ATbool PT_hasSymbolsHead(PT_Symbols arg) {
 }
 
 /**
- * Assert whether a PT_Symbols has a tail. 
+ * Assert whether a PT_Symbols has a tail.
  * \param[in] arg input PT_Symbols
  * \return ATtrue if the PT_Symbols had a tail, or ATfalse otherwise
  */
@@ -3865,7 +3865,7 @@ PT_Symbol PT_getSymbolsHead(PT_Symbols arg) {
   if (PT_isSymbolsSingle(arg)) {
     return (PT_Symbol)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PT_Symbol)ATgetFirst((ATermList)arg);
 }
 
@@ -3875,7 +3875,7 @@ PT_Symbol PT_getSymbolsHead(PT_Symbols arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PT_Symbols PT_getSymbolsTail(PT_Symbols arg) {
-  
+
     return (PT_Symbols)ATgetNext((ATermList)arg);
 }
 
@@ -3932,7 +3932,7 @@ ATbool PT_isValidCharRange(PT_CharRange arg) {
  * \param[in] arg input PT_CharRange
  * \return ATtrue if #arg corresponds to the signature of a character, or ATfalse otherwise
  */
-inline ATbool PT_isCharRangeCharacter(PT_CharRange arg){
+ATbool PT_isCharRangeCharacter(PT_CharRange arg){
   if (ATgetType((ATerm)arg) == AT_INT) {
     return ATtrue;
   }
@@ -3944,7 +3944,7 @@ inline ATbool PT_isCharRangeCharacter(PT_CharRange arg){
  * \param[in] arg input PT_CharRange
  * \return ATtrue if #arg corresponds to the signature of a range, or ATfalse otherwise
  */
-inline ATbool PT_isCharRangeRange(PT_CharRange arg){
+ATbool PT_isCharRangeRange(PT_CharRange arg){
   /* checking for: range */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PT_afun41) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3959,7 +3959,7 @@ inline ATbool PT_isCharRangeRange(PT_CharRange arg){
 }
 
 /**
- * Assert whether a PT_CharRange has a start. 
+ * Assert whether a PT_CharRange has a start.
  * \param[in] arg input PT_CharRange
  * \return ATtrue if the PT_CharRange had a start, or ATfalse otherwise
  */
@@ -3974,7 +3974,7 @@ ATbool PT_hasCharRangeStart(PT_CharRange arg) {
 }
 
 /**
- * Assert whether a PT_CharRange has a end. 
+ * Assert whether a PT_CharRange has a end.
  * \param[in] arg input PT_CharRange
  * \return ATtrue if the PT_CharRange had a end, or ATfalse otherwise
  */
@@ -3994,7 +3994,7 @@ int PT_getCharRangeStart(PT_CharRange arg) {
   if (PT_isCharRangeCharacter(arg)) {
     return (int)ATgetInt((ATermInt) arg);
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -4004,7 +4004,7 @@ int PT_getCharRangeStart(PT_CharRange arg) {
  * \return the end of #arg, if it exist or an undefined value if it does not
  */
 int PT_getCharRangeEnd(PT_CharRange arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4064,7 +4064,7 @@ ATbool PT_isValidCharRanges(PT_CharRanges arg) {
  * \param[in] arg input PT_CharRanges
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PT_isCharRangesEmpty(PT_CharRanges arg){
+ATbool PT_isCharRangesEmpty(PT_CharRanges arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -4076,7 +4076,7 @@ inline ATbool PT_isCharRangesEmpty(PT_CharRanges arg){
  * \param[in] arg input PT_CharRanges
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PT_isCharRangesSingle(PT_CharRanges arg){
+ATbool PT_isCharRangesSingle(PT_CharRanges arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -4092,7 +4092,7 @@ inline ATbool PT_isCharRangesSingle(PT_CharRanges arg){
  * \param[in] arg input PT_CharRanges
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PT_isCharRangesMany(PT_CharRanges arg){
+ATbool PT_isCharRangesMany(PT_CharRanges arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -4100,7 +4100,7 @@ inline ATbool PT_isCharRangesMany(PT_CharRanges arg){
 }
 
 /**
- * Assert whether a PT_CharRanges has a head. 
+ * Assert whether a PT_CharRanges has a head.
  * \param[in] arg input PT_CharRanges
  * \return ATtrue if the PT_CharRanges had a head, or ATfalse otherwise
  */
@@ -4115,7 +4115,7 @@ ATbool PT_hasCharRangesHead(PT_CharRanges arg) {
 }
 
 /**
- * Assert whether a PT_CharRanges has a tail. 
+ * Assert whether a PT_CharRanges has a tail.
  * \param[in] arg input PT_CharRanges
  * \return ATtrue if the PT_CharRanges had a tail, or ATfalse otherwise
  */
@@ -4135,7 +4135,7 @@ PT_CharRange PT_getCharRangesHead(PT_CharRanges arg) {
   if (PT_isCharRangesSingle(arg)) {
     return (PT_CharRange)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PT_CharRange)ATgetFirst((ATermList)arg);
 }
 
@@ -4145,7 +4145,7 @@ PT_CharRange PT_getCharRangesHead(PT_CharRanges arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PT_CharRanges PT_getCharRangesTail(PT_CharRanges arg) {
-  
+
     return (PT_CharRanges)ATgetNext((ATermList)arg);
 }
 
@@ -4183,7 +4183,7 @@ PT_CharRanges PT_setCharRangesTail(PT_CharRanges arg, PT_CharRanges tail) {
 }
 
 /**
- * Apply functions to the children of a PT_ParseTree. 
+ * Apply functions to the children of a PT_ParseTree.
  * \return A new PT_ParseTree with new children where the argument functions might have applied
  */
 PT_ParseTree PT_visitParseTree(PT_ParseTree arg, PT_Tree (*acceptTop)(PT_Tree), int (*acceptAmbCnt)(int)) {
@@ -4196,7 +4196,7 @@ PT_ParseTree PT_visitParseTree(PT_ParseTree arg, PT_Tree (*acceptTop)(PT_Tree), 
   return (PT_ParseTree)NULL;
 }
 /**
- * Apply functions to the children of a PT_Tree. 
+ * Apply functions to the children of a PT_Tree.
  * \return A new PT_Tree with new children where the argument functions might have applied
  */
 PT_Tree PT_visitTree(PT_Tree arg, PT_Production (*acceptProd)(PT_Production), PT_Args (*acceptArgs)(PT_Args), PT_Symbol (*acceptSymbol)(PT_Symbol), int (*acceptCycleLength)(int), int (*acceptCharacter)(int)) {
@@ -4222,7 +4222,7 @@ PT_Tree PT_visitTree(PT_Tree arg, PT_Production (*acceptProd)(PT_Production), PT
   return (PT_Tree)NULL;
 }
 /**
- * Apply functions to the children of a PT_Args. 
+ * Apply functions to the children of a PT_Args.
  * \return A new PT_Args with new children where the argument functions might have applied
  */
 PT_Args PT_visitArgs(PT_Args arg, PT_Tree (*acceptHead)(PT_Tree)) {
@@ -4242,7 +4242,7 @@ PT_Args PT_visitArgs(PT_Args arg, PT_Tree (*acceptHead)(PT_Tree)) {
   return (PT_Args)NULL;
 }
 /**
- * Apply functions to the children of a PT_Production. 
+ * Apply functions to the children of a PT_Production.
  * \return A new PT_Production with new children where the argument functions might have applied
  */
 PT_Production PT_visitProduction(PT_Production arg, PT_Symbols (*acceptLhs)(PT_Symbols), PT_Symbol (*acceptRhs)(PT_Symbol), PT_Attributes (*acceptAttributes)(PT_Attributes)) {
@@ -4260,7 +4260,7 @@ PT_Production PT_visitProduction(PT_Production arg, PT_Symbols (*acceptLhs)(PT_S
   return (PT_Production)NULL;
 }
 /**
- * Apply functions to the children of a PT_Attributes. 
+ * Apply functions to the children of a PT_Attributes.
  * \return A new PT_Attributes with new children where the argument functions might have applied
  */
 PT_Attributes PT_visitAttributes(PT_Attributes arg, PT_Attrs (*acceptAttrs)(PT_Attrs)) {
@@ -4275,7 +4275,7 @@ PT_Attributes PT_visitAttributes(PT_Attributes arg, PT_Attrs (*acceptAttrs)(PT_A
   return (PT_Attributes)NULL;
 }
 /**
- * Apply functions to the children of a PT_Attrs. 
+ * Apply functions to the children of a PT_Attrs.
  * \return A new PT_Attrs with new children where the argument functions might have applied
  */
 PT_Attrs PT_visitAttrs(PT_Attrs arg, PT_Attr (*acceptHead)(PT_Attr)) {
@@ -4295,7 +4295,7 @@ PT_Attrs PT_visitAttrs(PT_Attrs arg, PT_Attr (*acceptHead)(PT_Attr)) {
   return (PT_Attrs)NULL;
 }
 /**
- * Apply functions to the children of a PT_Attr. 
+ * Apply functions to the children of a PT_Attr.
  * \return A new PT_Attr with new children where the argument functions might have applied
  */
 PT_Attr PT_visitAttr(PT_Attr arg, PT_Associativity (*acceptAssoc)(PT_Associativity), ATerm (*acceptValue)(ATerm), char* (*acceptModuleName)(char*)) {
@@ -4327,7 +4327,7 @@ PT_Attr PT_visitAttr(PT_Attr arg, PT_Associativity (*acceptAssoc)(PT_Associativi
   return (PT_Attr)NULL;
 }
 /**
- * Apply functions to the children of a PT_Associativity. 
+ * Apply functions to the children of a PT_Associativity.
  * \return A new PT_Associativity with new children where the argument functions might have applied
  */
 PT_Associativity PT_visitAssociativity(PT_Associativity arg) {
@@ -4347,7 +4347,7 @@ PT_Associativity PT_visitAssociativity(PT_Associativity arg) {
   return (PT_Associativity)NULL;
 }
 /**
- * Apply functions to the children of a PT_Symbol. 
+ * Apply functions to the children of a PT_Symbol.
  * \return A new PT_Symbol with new children where the argument functions might have applied
  */
 PT_Symbol PT_visitSymbol(PT_Symbol arg, char* (*acceptString)(char*), PT_Symbols (*acceptSymbols)(PT_Symbols), PT_Symbols (*acceptRest)(PT_Symbols), int (*acceptNumber)(int), char* (*acceptSort)(char*), PT_Symbols (*acceptParameters)(PT_Symbols), PT_CharRanges (*acceptRanges)(PT_CharRanges)) {
@@ -4451,7 +4451,7 @@ PT_Symbol PT_visitSymbol(PT_Symbol arg, char* (*acceptString)(char*), PT_Symbols
   return (PT_Symbol)NULL;
 }
 /**
- * Apply functions to the children of a PT_Symbols. 
+ * Apply functions to the children of a PT_Symbols.
  * \return A new PT_Symbols with new children where the argument functions might have applied
  */
 PT_Symbols PT_visitSymbols(PT_Symbols arg, PT_Symbol (*acceptHead)(PT_Symbol)) {
@@ -4471,7 +4471,7 @@ PT_Symbols PT_visitSymbols(PT_Symbols arg, PT_Symbol (*acceptHead)(PT_Symbol)) {
   return (PT_Symbols)NULL;
 }
 /**
- * Apply functions to the children of a PT_CharRange. 
+ * Apply functions to the children of a PT_CharRange.
  * \return A new PT_CharRange with new children where the argument functions might have applied
  */
 PT_CharRange PT_visitCharRange(PT_CharRange arg, int (*acceptStart)(int), int (*acceptEnd)(int)) {
@@ -4488,7 +4488,7 @@ PT_CharRange PT_visitCharRange(PT_CharRange arg, int (*acceptStart)(int), int (*
   return (PT_CharRange)NULL;
 }
 /**
- * Apply functions to the children of a PT_CharRanges. 
+ * Apply functions to the children of a PT_CharRanges.
  * \return A new PT_CharRanges with new children where the argument functions might have applied
  */
 PT_CharRanges PT_visitCharRanges(PT_CharRanges arg, PT_CharRange (*acceptHead)(PT_CharRange)) {

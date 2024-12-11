@@ -1,6 +1,6 @@
 #ifndef MEPT_START
 #define MEPT_START
-#include <MEPT.h>
+#include "MEPT.h"
 
 PT_ParseTree PT_makeValidParseTreeFromTree(PT_Tree tree);
 PT_ParseTree PT_makeParseTreeTree(PT_Symbols lhs, PT_Tree wsBefore,

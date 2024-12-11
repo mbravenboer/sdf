@@ -1,5 +1,5 @@
-#include <MEPT.h>
-#include <MEPT-tree.h>
+#include "MEPT.h"
+#include "MEPT-tree.h"
 
 /**
  * \file
@@ -29,25 +29,25 @@ PT_Args PT_removeArgsLiterals(PT_Args args)
   return PT_reverseArgs(new);
 }
 
-/** 
+/**
  * Removes the given tree from the given list of arguments.
- * 
+ *
  * \param args the arguments to remove the element from.
  * \param tree the tree to remove from the arguments.
- * 
+ *
  * \return the new list of arguments without the given tree.
  */
 PT_Args PT_removeArgsTree(PT_Args args, PT_Tree tree) {
   return (PT_Args) ATremoveElement((ATermList) args, (ATerm) tree);
 }
 
-/** 
+/**
  * Returns the index of the given tree in the list of arguments given.
- * 
+ *
  * \param args the list of arguments to search through.
  * \param tree the tree to search for in the list of arguments.
- * 
- * \return the index of the first occurence of #tree in #args; or -1 if #tree 
+ *
+ * \return the index of the first occurence of #tree in #args; or -1 if #tree
  * is not in #args.
  */
 int PT_indexOfTreeInArgs(PT_Args args, PT_Tree tree) {

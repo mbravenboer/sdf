@@ -1,6 +1,6 @@
 #ifndef MEPT_VISITORS
 #define MEPT_VISITORS
-#include <MEPT.h>
+#include "MEPT.h"
 
 typedef void *PT_TreeVisitorData;
 typedef PT_Tree(*PT_TreeVisitor) (PT_Tree tree, PT_TreeVisitorData data);

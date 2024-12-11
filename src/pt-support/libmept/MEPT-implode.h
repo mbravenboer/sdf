@@ -1,7 +1,7 @@
 #ifndef MEPT_IMPLODE
 #define MEPT_IMPLODE
 #include <aterm2.h>
-#include <MEPT.h>
+#include "MEPT.h"
 
 ATerm PT_implodeParseTree(PT_ParseTree tree,
 			  ATbool _interpret_cons,

@@ -1,7 +1,7 @@
 #ifndef PTMEPT_UTILS_H
 #define PTMEPT_UTILS_H
 
-#include <PTMEPT.h>
+#include "PTMEPT.h"
 #include <MEPT.h>
 
 PTPT_ParseTree PTPT_liftParseTree(PT_ParseTree pt);

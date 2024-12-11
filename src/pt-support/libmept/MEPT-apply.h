@@ -1,6 +1,6 @@
 #ifndef MEPT_APPLY
 #define MEPT_APPLY
-#include <MEPT.h>
+#include "MEPT.h"
 
 PT_Tree PT_applyFunctionToArgs(const char *function, const char *sort,
 			       PT_Args args);

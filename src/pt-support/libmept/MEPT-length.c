@@ -1,14 +1,14 @@
-/** 
+/**
  * \file
  * Deals with the length annotation, a length annotation for a tree
  * contains the exact number of characters that a node would yield.
  */
-#include <MEPT-length.h>
-#include <MEPT-annotations.h>
+#include "MEPT-length.h"
+#include "MEPT-annotations.h"
 #include <assert.h>
-#define ANNO_LENGTH "length"  
+#define ANNO_LENGTH "length"
 
- 
+
 static PT_Tree annotateTreeWithLength(PT_Tree tree, int *length);
 
 static PT_Args annotateAmbArgsWithLength(PT_Args args, int *length)
@@ -16,15 +16,15 @@ static PT_Args annotateAmbArgsWithLength(PT_Args args, int *length)
   PT_Tree head;
   PT_Args tail;
   int head_length, tail_length;
- 
+
   if (PT_isArgsEmpty(args)) {
     *length = 0;
     return args;
   }
- 
+
   head = PT_getArgsHead(args);
   tail = PT_getArgsTail(args);
- 
+
   head = annotateTreeWithLength(head, &head_length);
   tail = annotateAmbArgsWithLength(tail, &tail_length);
 
@@ -77,7 +77,7 @@ static PT_Tree annotateTreeWithLength(PT_Tree tree, int *length)
                                 ATmake("<int>", *length));
   }
   else {
-    ATabort("annotateTreeWithLength: unknown tree type: %t\n", 
+    ATabort("annotateTreeWithLength: unknown tree type: %t\n",
             PT_TreeToTerm(tree));
   }
   return tree;
@@ -133,7 +133,7 @@ int PT_getTreeLengthAnno(PT_Tree tree)
 {
   if (PT_isTreeChar(tree)) {
     return 1;
-  } 
+  }
   else {
     ATerm anno = PT_getTreeAnnotation(tree, ATparse(ANNO_LENGTH));
     assert(anno);

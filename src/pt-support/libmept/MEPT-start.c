@@ -1,6 +1,6 @@
-#include <MEPT-start.h>
-#include <MEPT-layout.h>
-#include <MEPT-symbols.h>
+#include "MEPT-start.h"
+#include "MEPT-layout.h"
+#include "MEPT-symbols.h"
 
 /**
  * \file
@@ -34,7 +34,7 @@ PT_ParseTree PT_makeValidParseTreeFromTree(PT_Tree tree)
 }
 
 
-PT_ParseTree PT_makeParseTreeTree(PT_Symbols lhs, PT_Tree wsBefore, 
+PT_ParseTree PT_makeParseTreeTree(PT_Symbols lhs, PT_Tree wsBefore,
 				  PT_Tree tree, PT_Tree wsAfter, int ambs)
 {
   PT_Production prod;
@@ -45,7 +45,7 @@ PT_ParseTree PT_makeParseTreeTree(PT_Symbols lhs, PT_Tree wsBefore,
   rhs = PT_makeSymbolSort("<START>");
   prod = PT_makeProductionDefault(lhs, rhs, PT_makeAttributesNoAttrs());
 
-  args = PT_makeArgsMany(wsBefore, 
+  args = PT_makeArgsMany(wsBefore,
 			 PT_makeArgsMany(tree,
 					 PT_makeArgsSingle(wsAfter)));
 
@@ -59,9 +59,9 @@ PT_Tree PT_getParseTreeTree(PT_ParseTree parsetree)
 {
   PT_Tree top;
   PT_Args args;
-  
+
   top = PT_getParseTreeTop(parsetree);
-  
+
   if (PT_isTreeAmb(top)) {
     return top;
   }

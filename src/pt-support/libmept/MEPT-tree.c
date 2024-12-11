@@ -1,6 +1,6 @@
-#include <MEPT-tree.h>
-#include <MEPT-layout.h>
-#include <MEPT-productions.h>
+#include "MEPT-tree.h"
+#include "MEPT-layout.h"
+#include "MEPT-productions.h"
 #include <assert.h>
 
 /*@{ manipulations */
@@ -50,7 +50,7 @@ PT_Tree PT_findTreeParentRecursive(PT_Tree needle, PT_Tree haystack)
   return NULL;
 }
 
-PT_Tree PT_findTreeParent(PT_Tree needle, PT_Tree haystack) 
+PT_Tree PT_findTreeParent(PT_Tree needle, PT_Tree haystack)
 {
 	PT_Tree result;
 	if (findParentCache == NULL) {
@@ -188,7 +188,7 @@ ATbool PT_isTreeCilit(PT_Tree tree)
 
 
 
-ATbool PT_isTreeVar(PT_Tree tree) 
+ATbool PT_isTreeVar(PT_Tree tree)
 {
   if (PT_isTreeAppl(tree)) {
     PT_Production prod = PT_getTreeProd(tree);
@@ -208,9 +208,9 @@ ATbool PT_isTreeVarList(PT_Tree tree)
       PT_Symbol rhssym = PT_getProductionRhs(prod);
       if (PT_isSymbolCf(rhssym) || PT_isSymbolLex(rhssym)) {
         PT_Symbol sym = PT_getSymbolSymbol(rhssym);
-        return PT_isSymbolIterPlus(sym) 
+        return PT_isSymbolIterPlus(sym)
                || PT_isSymbolIterStar(sym)
-               || PT_isSymbolIterPlusSep(sym) 
+               || PT_isSymbolIterPlusSep(sym)
                || PT_isSymbolIterStarSep(sym);
       }
     }
@@ -235,7 +235,7 @@ ATbool PT_isTreeVarListStar(PT_Tree tree)
     }
   }
   return ATfalse;
-}              
+}
 
 
 ATbool PT_isTreeVarListPlus(PT_Tree tree)
@@ -246,7 +246,7 @@ ATbool PT_isTreeVarListPlus(PT_Tree tree)
       PT_Symbol rhssym = PT_getProductionRhs(prod);
       if (PT_isSymbolCf(rhssym) || PT_isSymbolLex(rhssym)) {
         PT_Symbol sym = PT_getSymbolSymbol(rhssym);
-        return PT_isSymbolIterPlus(sym) 
+        return PT_isSymbolIterPlus(sym)
                || PT_isSymbolIterPlusSep(sym);
       }
     }
@@ -354,17 +354,17 @@ PT_Tree PT_makeTreeCilit(const char* string)
     args = PT_makeArgsMany(arg, args);
 
     if (string[i] >= 'A' && string[i] <= 'Z') {
-      PT_CharRanges range1 =  PT_makeCharRangesSingle(              
+      PT_CharRanges range1 =  PT_makeCharRangesSingle(
 	                         PT_makeCharRangeCharacter(string[i]));
-      PT_CharRanges range2 =  PT_makeCharRangesSingle(              
+      PT_CharRanges range2 =  PT_makeCharRangesSingle(
 	                         PT_makeCharRangeCharacter(string[i]+
 							   ('a' - 'A')));
       symbol = PT_makeSymbolCharClass(PT_concatCharRanges(range1,range2));
     }
     else if (string[i] >= 'a' && string[i] <= 'z') {
-      PT_CharRanges range1 =  PT_makeCharRangesSingle(              
+      PT_CharRanges range1 =  PT_makeCharRangesSingle(
 	                         PT_makeCharRangeCharacter(string[i]));
-      PT_CharRanges range2 =  PT_makeCharRangesSingle(              
+      PT_CharRanges range2 =  PT_makeCharRangesSingle(
 	                         PT_makeCharRangeCharacter(string[i]-
 							   ('a' - 'A')));
       symbol = PT_makeSymbolCharClass(PT_concatCharRanges(range2,range1));

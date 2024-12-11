@@ -3,9 +3,9 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h> 
+#include <assert.h>
 
-#include <MEPT-yield.h>
+#include "MEPT-yield.h"
 
 #define INITIAL_BUFFER_SIZE 4*1024
 
@@ -156,7 +156,7 @@ void PT_yieldParseTreeToFile(PT_ParseTree pt, FILE *f, ATbool yieldAllAmbiguitie
 
 void PT_yieldAnyToFile(ATerm t, FILE *f, ATbool yieldAllAmbiguities)
 {
-  if (ATmatch(t,"appl(<term>,<term>)", NULL, NULL) 
+  if (ATmatch(t,"appl(<term>,<term>)", NULL, NULL)
         || ATmatch(t,"amb(<term>)", NULL)
         || ATmatch(t,"<int>", NULL)) {
     PT_yieldTreeToFile(PT_TreeFromTerm(t), f, yieldAllAmbiguities);
@@ -249,18 +249,18 @@ char *PT_yieldParseTreeToString(PT_ParseTree pt, ATbool yieldAllAmbiguities)
 
 char *PT_yieldAnyToString(ATerm t, ATbool yieldAllAmbiguities)
 {
-  if (ATmatch(t,"appl(<term>,<term>)", NULL, NULL) 
+  if (ATmatch(t,"appl(<term>,<term>)", NULL, NULL)
         || ATmatch(t,"amb(<term>)", NULL)
         || ATmatch(t,"<int>", NULL)) {
-    return PT_yieldTreeToString(PT_TreeFromTerm(t), 
+    return PT_yieldTreeToString(PT_TreeFromTerm(t),
 				yieldAllAmbiguities);
   }
   else if (ATgetType(t) == AT_LIST) {
-    return PT_yieldArgsToString(PT_ArgsFromTerm(t), 
+    return PT_yieldArgsToString(PT_ArgsFromTerm(t),
 				yieldAllAmbiguities);
   }
   else if (PT_isParseTreeTop(PT_ParseTreeFromTerm(t))) {
-    return PT_yieldParseTreeToString(PT_ParseTreeFromTerm(t), 
+    return PT_yieldParseTreeToString(PT_ParseTreeFromTerm(t),
 				     yieldAllAmbiguities);
   }
   else {

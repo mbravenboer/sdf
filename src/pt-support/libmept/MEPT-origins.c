@@ -1,8 +1,8 @@
 
 #include <stdio.h>
 #include <assert.h>
-#include <MEPT-origins.h>
-#include <MEPT-posinfo.h>
+#include "MEPT-origins.h"
+#include "MEPT-posinfo.h"
 
 #define ORIGIN ATparse("origin")
 

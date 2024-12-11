@@ -1,12 +1,12 @@
-#include <MEPT.h>
+#include "MEPT.h"
 
 /*@{ predicates */
 
 ATbool PT_isIterSepSymbol(PT_Symbol symbol)
 {
-  /* This implements: 
+  /* This implements:
    * "cf(iter-star-sep(<term>,lit(<str>)))" and
-   * "cf(iter-sep(<term>,lit(<str>)))" 
+   * "cf(iter-sep(<term>,lit(<str>)))"
    */
   if (PT_isSymbolCf(symbol) || PT_isSymbolLex(symbol)) {
     PT_Symbol listsym = PT_getSymbolSymbol(symbol);
@@ -26,7 +26,7 @@ PT_Symbol PT_getIterSepSeparator(PT_Symbol symbol)
 
 ATbool PT_isIterSymbol(PT_Symbol symbol)
 {
-  /* This implements: 
+  /* This implements:
    * "cf(iter-star(<term>))"
    * "cf(iter(<term>))"
    */
@@ -70,6 +70,6 @@ PT_Symbol makeSymbolAllChars()
 
   return PT_makeSymbolIterStar(
            PT_makeSymbolCharClass(ranges));
-}  
+}
 
 /*@}*/

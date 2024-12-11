@@ -1,6 +1,6 @@
 #ifndef MEPT_RENAMING
 #define MEPT_RENAMING
-#include <MEPT.h>
+#include "MEPT.h"
 
 PT_Tree PT_renameInTree(PT_Tree tree, PT_Symbol formalParam,
 			PT_Symbol actualParam);

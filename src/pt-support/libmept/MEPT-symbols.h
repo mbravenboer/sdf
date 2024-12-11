@@ -1,6 +1,6 @@
 #ifndef MEPT_SYMBOLS
 #define MEPT_SYMBOLS
-#include <MEPT.h>
+#include "MEPT.h"
 
 ATbool PT_isIterSepSymbol(PT_Symbol sym);
 ATbool PT_isIterSymbol(PT_Symbol sym);

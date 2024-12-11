@@ -1,4 +1,4 @@
-#include <MEPT-visitors.h>
+#include "MEPT-visitors.h"
 
 
 PT_Symbols PT_foreachSymbolInSymbols(PT_Symbols symbols,
@@ -75,7 +75,7 @@ PT_Attrs PT_foreachAttrInAttrs(PT_Attrs attrs, PT_AttrVisitor visitor,
     else {
       break;
     }
-  }        
+  }
 
   if (ATisEmpty(store)) {
     ATabort("PT_foreachAttrInAttrs: plus list contains no elements");

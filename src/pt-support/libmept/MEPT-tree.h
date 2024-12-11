@@ -1,6 +1,6 @@
 #ifndef MEPT_TREE
 #define MEPT_TREE
-#include <MEPT.h>
+#include "MEPT.h"
 #include <aterm2.h>
 
 PT_Tree PT_getTreeBracketTree(PT_Tree tree);

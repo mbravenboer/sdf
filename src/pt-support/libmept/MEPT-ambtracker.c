@@ -2,11 +2,11 @@
 #include <string.h>
 #include <assert.h>
 
-#include <Error.h>
+#include "error-support/lib/Error.h"
 #include <aterm2.h>
-#include <MEPT.h>
-#include <MEPT-yield.h>
-#include <MEPT-yieldprod.h>
+#include "MEPT.h"
+#include "MEPT-yield.h"
+#include "MEPT-yieldprod.h"
 
 /**
  * \file
@@ -28,7 +28,7 @@ typedef struct PT_Amb_Position_Tag {
 static ATermTable visited = NULL;
 
 static ATerm makeKey(int offset, PT_Tree tree) {
-  return (ATerm) ATmakeAppl2(ATmakeAFun("key",2,ATfalse), PT_TreeToTerm(tree), 
+  return (ATerm) ATmakeAppl2(ATmakeAFun("key",2,ATfalse), PT_TreeToTerm(tree),
 			     (ATerm) ATmakeInt(offset));
 }
 
@@ -67,7 +67,7 @@ static ERR_Location makeLocation(PT_Amb_Position from, PT_Amb_Position to,
 }
 
 static ERR_ErrorList getAmbiguities(const char *path,
-                                      PT_Tree tree, 
+                                      PT_Tree tree,
 				      int depth,
                                       PT_Amb_Position *current) {
   ERR_ErrorList ambErrors = ERR_makeErrorListEmpty();
@@ -119,7 +119,7 @@ static ERR_ErrorList getAmbiguities(const char *path,
   }
   else if (PT_isTreeAmb(tree)) {
 
-    PT_Args args = PT_getTreeArgs(tree); 
+    PT_Args args = PT_getTreeArgs(tree);
     PT_Args ambs = args;
     PT_Tree amb;
     const char *ambString;
@@ -135,7 +135,7 @@ static ERR_ErrorList getAmbiguities(const char *path,
       ambErrors = ERR_concatErrorList(getAmbiguities(path,
 						     PT_getArgsHead(args),
 						     depth + 1,
-						     current), 
+						     current),
 				      ambErrors);
     }
 
@@ -159,7 +159,7 @@ static ERR_ErrorList getAmbiguities(const char *path,
     ambError = ERR_makeErrorWarning("ambiguity", ambSubjects);
     ambErrors = ERR_makeErrorListMany(ambError, ambErrors);
 
-  } 
+  }
 
   {
     /* TODO: serious bug here cause line numbers not to increase! */
@@ -170,7 +170,7 @@ static ERR_ErrorList getAmbiguities(const char *path,
 }
 
 ATerm PT_reportTreeAmbiguities(const char *path, PT_Tree tree) {
-  PT_Amb_Position pos = {1, 0, 0}; 
+  PT_Amb_Position pos = {1, 0, 0};
   ERR_ErrorList ambs;
   ERR_Summary result;
   initCache();

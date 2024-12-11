@@ -1,6 +1,6 @@
 #ifndef MEPT_ANNOTATIONS_H
 #define MEPT_ANNOTATIONS_H
-#include <MEPT.h>
+#include "MEPT.h"
 #include <aterm2.h>
 
 ATerm PT_getTreeAnnotations(PT_Tree tree);

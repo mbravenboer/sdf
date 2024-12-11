@@ -1,6 +1,6 @@
-#include <MEPT-productions.h>
-#include <MEPT-symbols.h>
-#include <MEPT-visitors.h>
+#include "MEPT-productions.h"
+#include "MEPT-symbols.h"
+#include "MEPT-visitors.h"
 
 /*@{ predicates */
 
@@ -177,9 +177,9 @@ ATbool PT_isLexicalInjectionProd(PT_Production prod)
 
 ATbool PT_prodHasIterSepAsRhs(PT_Production prod)
 {
-  /* This implements: 
+  /* This implements:
    * "prod([<list>],cf(iter-star-sep(<term>,lit(<str>))),<term>)" and
-   * "prod([<list>],cf(iter-sep(<term>,lit(<str>))),<term>)" 
+   * "prod([<list>],cf(iter-sep(<term>,lit(<str>))),<term>)"
    */
   if (PT_isProductionDefault(prod)) {
     PT_Symbol rhs = PT_getProductionRhs(prod);
@@ -192,7 +192,7 @@ ATbool PT_prodHasIterSepAsRhs(PT_Production prod)
 
 ATbool PT_prodHasIterAsRhs(PT_Production prod)
 {
-  /* This implements: 
+  /* This implements:
    * "prod([<list>],cf(iter-star(<term>,lit(<str>))),<term>)"
    * "prod([<list>],cf(iter(<term>,lit(<str>))),<term>)"
    */
@@ -207,7 +207,7 @@ ATbool PT_prodHasIterAsRhs(PT_Production prod)
 
 ATbool PT_prodHasSTARTAsRhs(PT_Production prod)
 {
-  /* This implements: 
+  /* This implements:
    * "prod([<list>],sort(\"<START>\"),no-attrs)"
    */
   if (PT_isProductionDefault(prod)) {
@@ -284,7 +284,7 @@ ATbool PT_hasProductionTraversalAttribute(PT_Production prod)
     attr = PT_makeAttrTerm(ATparse("traversal"));
     PT_protectAttr(&attr);
   }
-  return PT_hasProductionCertainAttr(prod, 
+  return PT_hasProductionCertainAttr(prod,
 				     attr);
 }
 
@@ -297,20 +297,20 @@ ATbool PT_hasProductionLexicalConstructorAttr(PT_Production prod)
     attr = PT_makeAttrTerm(ATparse("lexical-constructor"));
     PT_protectAttr(&attr);
   }
-  return PT_hasProductionCertainAttr(prod, 
+  return PT_hasProductionCertainAttr(prod,
 				     attr);
 }
 
 
 ATbool PT_hasProductionConstructorAttr(PT_Production prod)
-{  
+{
   static PT_Attr attr = NULL;
 
   if (attr == NULL) {
     attr = PT_makeAttrTerm(ATparse("constructor"));
     PT_protectAttr(&attr);
   }
-  return PT_hasProductionCertainAttr(prod, 
+  return PT_hasProductionCertainAttr(prod,
 				     attr);
 }
 

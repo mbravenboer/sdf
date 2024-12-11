@@ -1,6 +1,6 @@
-#include <MEPT.h>
+#include "MEPT.h"
 
-/** 
+/**
  * \file
  * Functions that manipulate generic ATerm annotations on parse trees.
  */
@@ -28,7 +28,7 @@ PT_Tree PT_removeTreeAnnotations(PT_Tree arg)
   return PT_TreeFromTerm(atArg);
 }
 
-PT_Tree PT_removeTreeAnnotationsMemo(PT_Tree arg) 
+PT_Tree PT_removeTreeAnnotationsMemo(PT_Tree arg)
 {
   static ATermTable cache = NULL;
   PT_Tree result = NULL;

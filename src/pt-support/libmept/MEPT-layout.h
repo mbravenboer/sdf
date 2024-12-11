@@ -1,6 +1,6 @@
 #ifndef MEPT_LAYOUT
 #define MEPT_LAYOUT
-#include <MEPT.h>
+#include "MEPT.h"
 
 PT_ParseTree PT_replaceParseTreeLayout(PT_ParseTree tree, PT_Tree layout);
 PT_Tree PT_replaceTreeLayout(PT_Tree tree, PT_Tree layout);

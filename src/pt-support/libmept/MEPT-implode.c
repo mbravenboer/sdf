@@ -8,7 +8,7 @@
  * is thrown away, and which is kept. This implementation is originally
  * a mirror of the tool implode-asfix from the StrategoXT toolkit.
  *
- * The decision to copy this implementation was to eventually remove the need 
+ * The decision to copy this implementation was to eventually remove the need
  * for the implode-asfix tool. This effectively shields of other systems
  * that use imploded ATerms from evolution of the parse tree formalism.
  *
@@ -21,12 +21,12 @@
 #include <string.h>
 #include <assert.h>
 
-#include <MEPT-layout.h>
-#include <MEPT-symbols.h>
-#include <MEPT-productions.h>
-#include <MEPT-annotations.h>
-#include <MEPT-yield.h>
-#include <MEPT-tree.h>
+#include "MEPT-layout.h"
+#include "MEPT-symbols.h"
+#include "MEPT-productions.h"
+#include "MEPT-annotations.h"
+#include "MEPT-yield.h"
+#include "MEPT-tree.h"
 
 static ATbool interpret_cons = ATfalse;
 static ATbool remove_layout = ATfalse;
@@ -80,7 +80,7 @@ static PT_Production removeLayoutFromProd(PT_Production prod)
         newSymbols = PT_appendSymbols(newSymbols,symbol);
       }
     }
-  
+
     return PT_setProductionLhs(prod, newSymbols);
   }
 
@@ -101,7 +101,7 @@ static PT_Production removeLiteralsFromProd(PT_Production prod)
         newSymbols = PT_appendSymbols(newSymbols,symbol);
       }
     }
-  
+
     return PT_setProductionLhs(prod, newSymbols);
   }
 
@@ -113,7 +113,7 @@ static ATerm implodeProd(PT_Production prod, ATermList args)
 {
   if (interpret_cons) {
     PT_Attributes attrs = PT_getProductionAttributes(prod);
-    
+
     if (!PT_isAttributesNoAttrs(attrs)) {
       PT_Attrs attrList = PT_getAttributesAttrs(attrs);
 
@@ -148,7 +148,7 @@ static ATerm implodeProd(PT_Production prod, ATermList args)
     return ATgetFirst(args);
   }
 
-  return ATmake("appl(<term>,[<list>])", 
+  return ATmake("appl(<term>,[<list>])",
 		PT_ProductionToTerm(prod), args);
 }
 
@@ -183,7 +183,7 @@ static ATerm implodeFlatList(PT_Tree tree)
 {
   PT_Args args = PT_getTreeArgs(tree);
   ATermList newList = implodeArgs(args);
-  
+
   return ATmake("<term>", newList);
 }
 
@@ -268,8 +268,8 @@ static ATerm implodeSeqRecursive(PT_Args args)
   if (rhs == NULL) {
     rhs = ATparse("TNil");
   }
-    
-  return ATmake("TCons(<term>,<term>)", 
+
+  return ATmake("TCons(<term>,<term>)",
 		implodeTerm(PT_getArgsHead(args)),
 		implodeSeqRecursive(PT_getArgsTail(args)));
 }
@@ -355,16 +355,16 @@ static ATerm implodeTerm(PT_Tree tree)
   else if (PT_isTreeLexicalInjection(tree)) {
     result = implodeLexical(tree);
   }
-  else if (PT_isTreeLit(tree)) { 
+  else if (PT_isTreeLit(tree)) {
     result = implodeLiteral(tree);
-  }                        
+  }
   else if (interpret_alt && PT_isTreeAlt(tree)) {
     result = implodeAlt(tree);
   }
   else if (interpret_seq && PT_isTreeSeq(tree)) {
     result = implodeSeq(tree);
   }
-  else if (interpret_opt && PT_isTreeOpt(tree) && 
+  else if (interpret_opt && PT_isTreeOpt(tree) &&
 	   (remove_layout == ATfalse || !PT_isTreeLayout(tree))) {
     result = implodeOpt(tree);
   }
@@ -390,7 +390,7 @@ static ATerm implodeTerm(PT_Tree tree)
 /**
  * Maps a parse tree to an ATerm, leaving out arbitrary information,
  * and replacing applications of productions by direct ATerms. The
- * 'cons' attribute of productions is used to construct AFun names of 
+ * 'cons' attribute of productions is used to construct AFun names of
  * new AST nodes.
  *
  * \param tree input tree

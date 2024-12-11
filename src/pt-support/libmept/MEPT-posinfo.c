@@ -12,16 +12,16 @@
  * The drawback of this distribution of location information is that it
  * makes each node unique: effectively killing the maximal sharing of parse
  * tree nodes. Note that it does NOT have an effect on the sharing of the
- * (redundant) representation of productions and symbols. 
+ * (redundant) representation of productions and symbols.
  */
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
 
-#include <MEPT-posinfo.h>
-#include <MEPT-layout.h>
-#include <MEPT-visitors.h>
-#include <MEPT-yield.h>
+#include "MEPT-posinfo.h"
+#include "MEPT-layout.h"
+#include "MEPT-visitors.h"
+#include "MEPT-yield.h"
 
 #define POS_INFO_ANNO "pos-info"
 #define UNLIMITED_DEPTH -1
@@ -36,11 +36,11 @@ static ATermTable cache = NULL;
 
 static ATerm makeKey(int offset, PT_Tree tree)
 {
-	return (ATerm) ATmakeAppl2(ATmakeAFun("key",2,ATfalse), PT_TreeToTerm(tree), 
+	return (ATerm) ATmakeAppl2(ATmakeAFun("key",2,ATfalse), PT_TreeToTerm(tree),
 			(ATerm) ATmakeInt(offset));
 }
 
-static void initCache() 
+static void initCache()
 {
 	cache = ATtableCreate(1024, 75);
 }
@@ -60,7 +60,7 @@ static PT_Tree getCachedTree(int offset, PT_Tree tree)
 	return PT_TreeFromTerm(ATtableGet(cache, makeKey(offset, tree)));
 }
 
-	
+
 
 typedef struct PT_Position_Tag {
   const char* path;
@@ -122,7 +122,7 @@ ATbool PT_getTreePosInfo(PT_Tree tree, char **path,  int *start_line, int *start
 }
 
 
-static ATerm PT_makePosInfo(const char *path, int line1, int col1, 
+static ATerm PT_makePosInfo(const char *path, int line1, int col1,
                                               int line2, int col2,
                                               int offset, int length)
 {
@@ -133,16 +133,16 @@ static ATerm PT_makePosInfo(const char *path, int line1, int col1,
 }
 
 
-static PT_Tree PT_setTreePosInfo(PT_Tree tree, const char *path, 
-			  int start_line, int start_col, 
+static PT_Tree PT_setTreePosInfo(PT_Tree tree, const char *path,
+			  int start_line, int start_col,
                           int to_line, int to_col,
                           int offset, int length)
 {
   ATerm t = PT_TreeToTerm(tree);
 
-  t = ATsetAnnotation(t, ATparse(POS_INFO_ANNO), 
-		      PT_makePosInfo(path, start_line, start_col, 
-                                           to_line, to_col, 
+  t = ATsetAnnotation(t, ATparse(POS_INFO_ANNO),
+		      PT_makePosInfo(path, start_line, start_col,
+                                           to_line, to_col,
                                            offset, length));
 
   return PT_TreeFromTerm(t);
@@ -173,12 +173,12 @@ static void PT_calcTreePosInfo(PT_Tree tree, int *lines, int *cols, int *offset)
   }
 }
 
-/* The volatile attribute fixes a bug (#674) on Darwin; but we do not know 
+/* The volatile attribute fixes a bug (#674) on Darwin; but we do not know
  * why. The bug dissappears when instruction scheduling optimizations are
- * turned off, which inspired us to try volatile. 
+ * turned off, which inspired us to try volatile.
  * The volatile was removed now, since apigen generates casts via a union
- * that fixes problems with type punned aliasing. 
- */ 
+ * that fixes problems with type punned aliasing.
+ */
 static PT_Tree PT_addTreePosInfo(/*volatile*/ PT_Tree tree, PT_Position* current)
 {
   PT_Tree input = tree;
@@ -223,7 +223,7 @@ static PT_Tree PT_addTreePosInfo(/*volatile*/ PT_Tree tree, PT_Position* current
       outermost_layout = ATtrue;
     }
 
-    args = PT_foreachTreeInArgs(args, (PT_TreeVisitor) PT_addTreePosInfo, 
+    args = PT_foreachTreeInArgs(args, (PT_TreeVisitor) PT_addTreePosInfo,
 				(PT_TreeVisitorData) current);
 
     (current->curDepth)--;
@@ -290,7 +290,7 @@ static PT_Tree PT_addTreePosInfo(/*volatile*/ PT_Tree tree, PT_Position* current
   }
 
   result = PT_setTreePosInfo(tree, current->path, start_line, start_col,
-			   current->line, current->col, 
+			   current->line, current->col,
                             start_offset, (current->offset - start_offset));
 
   assert(PT_getTreeLocation(result) != NULL);
@@ -302,7 +302,7 @@ static PT_Tree PT_addTreePosInfo(/*volatile*/ PT_Tree tree, PT_Position* current
 
 PT_ParseTree PT_addParseTreePosInfoToDepth(const char* path,
 					   PT_ParseTree parseTree,
-					   int maxDepth) 
+					   int maxDepth)
 {
   PT_Tree tree;
   PT_Position current;
@@ -330,11 +330,11 @@ PT_ParseTree PT_addParseTreePosInfoToDepth(const char* path,
 
 
 PT_Tree PT_addTreePosInfoToDepth(const char* path, PT_Tree tree,
-				 int maxDepth, int start_line, int start_col) 
+				 int maxDepth, int start_line, int start_col)
 {
   PT_Position current;
   PT_Tree result;
- 
+
   assert(maxDepth >= 0 || maxDepth == UNLIMITED_DEPTH);
 
   initCache();
@@ -362,7 +362,7 @@ PT_Tree PT_addTreePosInfoSome(const char *path, PT_Tree tree,
   label_literals = literals;
 
   result = PT_addTreePosInfoToDepth(path, tree, depth, start_line, start_col);
-  
+
   label_layout = ATfalse;
   label_literals = ATfalse;
 
@@ -378,8 +378,8 @@ PT_ParseTree PT_addParseTreePosInfo(const char* path, PT_ParseTree parsetree)
 
 PT_ParseTree PT_addParseTreePosInfoSome(const char *path,
 					PT_ParseTree parsetree,
-					int depth, 
-					ATbool layout, 
+					int depth,
+					ATbool layout,
 					ATbool literals)
 {
   PT_ParseTree result = NULL;
@@ -387,7 +387,7 @@ PT_ParseTree PT_addParseTreePosInfoSome(const char *path,
   label_literals = literals;
 
   result = PT_addParseTreePosInfoToDepth(path,parsetree,depth);
-  
+
   label_layout = ATfalse;
   label_literals = ATfalse;
 
@@ -471,7 +471,7 @@ PT_Tree PT_findTreeAtOffset(PT_Tree tree, int offset)
   PT_PosInFile pos;
 
   pos.offset = offset;
-  
+
   return PT_findTreeAtPosition(tree, PT_containsAreaOffset, pos);
 }
 
@@ -482,7 +482,7 @@ PT_Tree PT_findTreeAtLineColumn(PT_Tree tree, int line, int col)
 
   pos.line = line;
   pos.col = col;
-  
+
   return PT_findTreeAtPosition(tree, PT_containsAreaLineColumn, pos);
 }
 

@@ -1,8 +1,8 @@
 #include <assert.h>
-#include <MEPT-ordering.h>
-#include <MEPT-layout.h>
+#include "MEPT-ordering.h"
+#include "MEPT-layout.h"
 
-/** 
+/**
  * \file
  * Contains the implementation of a generic full ordering on parse trees.
  * Also, this file contains a function to order the elements of ambiguity
@@ -19,7 +19,7 @@ static int PT_compareArgs(PT_Args args1, PT_Args args2)
   PT_Tree arg2;
   int result = 0;
 
-  while (result == 0 && 
+  while (result == 0 &&
 	 !PT_isArgsEmpty(args1) &&
 	 !PT_isArgsEmpty(args2)) {
     arg1 = PT_getArgsHead(args1);
@@ -77,7 +77,7 @@ static int PT_compareProduction(PT_Production prod1, PT_Production prod2)
 
     return result;
   }
-  
+
   return 0;
 }
 
@@ -168,12 +168,12 @@ static int PT_compareTreeRec(PT_Tree tree1, PT_Tree tree2)
 
      prod1 = PT_getTreeProd(tree1);
      prod2 = PT_getTreeProd(tree2);
-     
+
      return PT_compareProduction(prod1, prod2);
 
    }
    else if (PT_isTreeChar(tree1)) {
-     return ATcompare(ATremoveAnnotations(PT_TreeToTerm(tree1)), 
+     return ATcompare(ATremoveAnnotations(PT_TreeToTerm(tree1)),
 		      ATremoveAnnotations(PT_TreeToTerm(tree2)));
 
    }
@@ -185,7 +185,7 @@ static int PT_compareTreeRec(PT_Tree tree1, PT_Tree tree2)
 
 /**
  * Compares two trees according to an arbitrary ordering on parse trees.
- * The algorithm is equivalent to a lexicographic ordering on the prefix 
+ * The algorithm is equivalent to a lexicographic ordering on the prefix
  * representation of the tree, with an arbitrary order on the four types of
  * tree nodes. Depending on the arguments the ordering is either partial
  * or full.
@@ -195,12 +195,12 @@ static int PT_compareTreeRec(PT_Tree tree1, PT_Tree tree2)
  * \param modLayout ignore layout during the comparision (results in partial order)
  * \returns 0 if trees are equal, -1 of tree1 < tree2, 1 if tree1 > tree2
  */
-int PT_compareTree(PT_Tree tree1, PT_Tree tree2, ATbool modLayout) 
+int PT_compareTree(PT_Tree tree1, PT_Tree tree2, ATbool modLayout)
 {
   moduloLayout = modLayout;
 
-  assert(PT_isTreeAmb(tree1) 
-	 || PT_isTreeAmb(tree2) 
+  assert(PT_isTreeAmb(tree1)
+	 || PT_isTreeAmb(tree2)
 	 || PT_isEqualSymbol(PT_getProductionRhs(PT_getTreeProd(tree1)),
 			  PT_getProductionRhs(PT_getTreeProd(tree2))));
 
@@ -268,11 +268,11 @@ static PT_Tree PT_orderAmbiguitiesRec(PT_Tree input, ATermTable cache)
 }
 
 /**
- * Orders the alternatives of all ambiguity clusters in a tree in a 
+ * Orders the alternatives of all ambiguity clusters in a tree in a
  * canonical way. This function may be used to compare trees that are
  * produced by different versions of sglr, or different parse tables.
  */
-PT_Tree PT_orderAmbiguities(PT_Tree input) 
+PT_Tree PT_orderAmbiguities(PT_Tree input)
 {
   ATermTable cache = ATtableCreate(1024, 75);
   PT_Tree result;
