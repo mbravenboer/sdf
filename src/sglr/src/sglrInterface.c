@@ -14,23 +14,23 @@
 #include <Error-manager.h>
 #include <rsrc-usage.h>
 #include <options.h>
-#include <filterOptions.h>
+#include "parseForest/filterOptions.h"
 
 #include "sglrInterface.h"
 
-#include "mem-alloc.h"
-#include "parser.h"
-#include "parseTableBuilder.h"
-#include "parseTableDB.h"
-#include "filters.h"
-#include "ambi-tables.h"
+#include "utils/mem-alloc.h"
+#include "parser/parser.h"
+#include "parseTable/parseTableBuilder.h"
+#include "parseTable/parseTableDB.h"
+#include "parseForest/filters.h"
+#include "parseForest/ambi-tables.h"
 #include "inputString-api.h"
 #include "inputStringBuilder.h" /* only used to get time taken */
 
 #include "mainOptions.h"
-#include "parserOptions.h"
+#include "parser/parserOptions.h"
 #include "sglr-termstore.h"
-#include "parserStatistics.h"
+#include "parser/parserStatistics.h"
 
 static ATbool initialized = ATfalse;
 static double timeTakenToParse = 0.0;
@@ -38,11 +38,11 @@ static double timeTakenToFilter = 0.0;
 static double timeTakenToFlatten = 0.0;
 
 void SGLR_initialize() {
-  
+
   if (!initialized) {
     initErrorApi();
     SGLR_PTBL_initErrorList();
-    ERR_cleanupErrorManager();  
+    ERR_cleanupErrorManager();
     ERR_initErrorManager("parser", "sglr");
 
     PT_initMEPTApi();
@@ -64,7 +64,7 @@ ATbool SGLR_isInitialized() {
   return initialized;
 }
 
-/** Convert an ATerm parse table to the internal format and cache it using the 
+/** Convert an ATerm parse table to the internal format and cache it using the
  * \a parseTableName.
  * \param parseTableName name to use for the new parse table
  * \param parseTable the parse table to cache
@@ -90,13 +90,13 @@ int SGLR_loadParseTable(const char *parseTableName, PTBL_ParseTable parseTable) 
 {
   if (ERR_isErrorError(error)) {
     return ERR_getSubjectListLength(ERR_getErrorList(error));
-  } 
+  }
 
   return 0;
 }*/
 
 ATbool SGLR_isParseTableLoaded(const char *parseTableName) {
-  return SG_LookupParseTable(parseTableName) ? ATtrue : ATfalse;  
+  return SG_LookupParseTable(parseTableName) ? ATtrue : ATfalse;
 }
 
 /** \todo Where is the internal representation of the parse forest freed? */
@@ -104,19 +104,19 @@ ATbool SGLR_isParseTableLoaded(const char *parseTableName) {
 PT_ParseTree SGLR_parse(InputString inputString, const char *parseTableName) {
   PT_Tree t;
   PT_ParseTree parseTree = NULL;
-    
-  assert(ATisInitialized() && 
+
+  assert(ATisInitialized() &&
       "ATerm library has not been initialized to be used by SGLR");
 
-  SGLR_STATS_setCount(SGLR_STATS_parseTableFilename, parseTableName); 
-  SGLR_STATS_setCount(SGLR_STATS_inputStringFilename, IS_getPath(inputString)); 
+  SGLR_STATS_setCount(SGLR_STATS_parseTableFilename, parseTableName);
+  SGLR_STATS_setCount(SGLR_STATS_inputStringFilename, IS_getPath(inputString));
 
-  ParseTable *parseTable = SG_LookupParseTable(parseTableName);  
+  ParseTable *parseTable = SG_LookupParseTable(parseTableName);
 
   assert(parseTable != NULL);
 
-  if (MAIN_getStatsFlag) { 
-    SGLR_STATS_initializeHistograms(SGLR_PTBL_getMaxProductionLength(parseTable), IS_getLength(inputString)); 
+  if (MAIN_getStatsFlag) {
+    SGLR_STATS_initializeHistograms(SGLR_PTBL_getMaxProductionLength(parseTable), IS_getLength(inputString));
   }
 
   STATS_Timer();
@@ -145,14 +145,14 @@ PT_ParseTree SGLR_parse(InputString inputString, const char *parseTableName) {
       if (PARSER_getVerboseFlag) {
         ATwarning("sglr: flattening\n");
       }
-      
+
       STATS_Timer();
       parseTree = flattenPT(parseTree);
       timeTakenToFlatten = STATS_Timer();
       SGLR_STATS_setCount(SGLR_STATS_flatteningTime, timeTakenToFlatten);
     }
   }
-  
+
   if (MAIN_getStatsFlag) {
     SGLR_STATS_print();
     SGLR_STATS_destroyHistograms();
@@ -184,10 +184,10 @@ static ERR_Error createAmbiguityError(int numberOfAmbiguities, ATerm ambtrack) {
   ATerm result;
 
   t = (tree) ATmakeAppl2(SG_ParseTree_AFun,
-			 (ATerm) t, 
+			 (ATerm) t,
                          (ATerm) SG_GetATint(nrOfAmbs, 0));
 
-  result = (ATerm) ATmakeAppl2(SG_AmbiguousTree_AFun, 
+  result = (ATerm) ATmakeAppl2(SG_AmbiguousTree_AFun,
 			       (ATerm) t,
 			       ERR_ErrorToTerm(ambiguities));*/
   return ambiguities;
@@ -198,7 +198,7 @@ static PT_ParseTree ambiguityDetection(PT_ParseTree parseTree, ParseTable *parse
   if (parseTree != NULL) {
     ambtrak = PT_reportParseTreeAmbiguities(IS_getPath(inputString),parseTree);
     if (ambtrak) {
-      if (PARSER_getAmbiguityErrorFlag()) {  
+      if (PARSER_getAmbiguityErrorFlag()) {
 	//parseTree = NULL;
       }
       /** \todo write error to parse tree */

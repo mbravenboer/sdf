@@ -5,7 +5,7 @@
 #include "ptable.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm PTBL_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm PTBL_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -805,7 +805,7 @@ ATerm _PTBL_PriorityToTerm(PTBL_Priority arg) {
 }
 
 /**
- * Retrieve the length of a PTBL_Labels. 
+ * Retrieve the length of a PTBL_Labels.
  * \param[in] arg input PTBL_Labels
  * \return The number of elements in the PTBL_Labels
  */
@@ -814,7 +814,7 @@ int _PTBL_getLabelsLength(PTBL_Labels arg) {
 }
 
 /**
- * Reverse a PTBL_Labels. 
+ * Reverse a PTBL_Labels.
  * \param[in] arg PTBL_Labels to be reversed
  * \return a reversed #arg
  */
@@ -823,7 +823,7 @@ PTBL_Labels _PTBL_reverseLabels(PTBL_Labels arg) {
 }
 
 /**
- * Append a PTBL_Label to the end of a PTBL_Labels. 
+ * Append a PTBL_Label to the end of a PTBL_Labels.
  * \param[in] arg PTBL_Labels to append the PTBL_Label to
  * \param[in] elem PTBL_Label to be appended
  * \return new PTBL_Labels with #elem appended
@@ -833,7 +833,7 @@ PTBL_Labels _PTBL_appendLabels(PTBL_Labels arg, PTBL_Label elem) {
 }
 
 /**
- * Concatenate two PTBL_Labelss. 
+ * Concatenate two PTBL_Labelss.
  * \param[in] arg0 first PTBL_Labels
  * \param[in] arg1 second PTBL_Labels
  * \return PTBL_Labels with the elements of #arg0 before the elements of #arg1
@@ -843,7 +843,7 @@ PTBL_Labels _PTBL_concatLabels(PTBL_Labels arg0, PTBL_Labels arg1) {
 }
 
 /**
- * Extract a sublist from a PTBL_Labels. 
+ * Extract a sublist from a PTBL_Labels.
  * \param[in] arg PTBL_Labels to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -854,7 +854,7 @@ PTBL_Labels _PTBL_sliceLabels(PTBL_Labels arg, int start, int end) {
 }
 
 /**
- * Retrieve the PTBL_Label at #index from a PTBL_Labels. 
+ * Retrieve the PTBL_Label at #index from a PTBL_Labels.
  * \param[in] arg PTBL_Labels to retrieve the PTBL_Label from
  * \param[in] index index to use to point in the PTBL_Labels
  * \return PTBL_Label at position #index in #arg
@@ -864,7 +864,7 @@ PTBL_Label _PTBL_getLabelsLabelAt(PTBL_Labels arg, int index) {
 }
 
 /**
- * Replace the PTBL_Label at #index from a PTBL_Labels by a new one. 
+ * Replace the PTBL_Label at #index from a PTBL_Labels by a new one.
  * \param[in] arg PTBL_Labels to retrieve the PTBL_Label from
  * \param[in] elem new PTBL_Label to replace another
  * \param[in] index index to use to point in the PTBL_Labels
@@ -875,7 +875,7 @@ PTBL_Labels _PTBL_replaceLabelsLabelAt(PTBL_Labels arg, PTBL_Label elem, int ind
 }
 
 /**
- * Builds a PTBL_Labels of 2 consecutive elements. 
+ * Builds a PTBL_Labels of 2 consecutive elements.
  * \param[in] elem1 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem2 One PTBL_Label element of the new PTBL_Labels
  * \return A new PTBL_Labels consisting of 2 PTBL_Labels
@@ -885,7 +885,7 @@ PTBL_Labels _PTBL_makeLabels2(PTBL_Label elem1, PTBL_Label elem2) {
 }
 
 /**
- * Builds a PTBL_Labels of 3 consecutive elements. 
+ * Builds a PTBL_Labels of 3 consecutive elements.
  * \param[in] elem1 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem2 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem3 One PTBL_Label element of the new PTBL_Labels
@@ -896,7 +896,7 @@ PTBL_Labels _PTBL_makeLabels3(PTBL_Label elem1, PTBL_Label elem2, PTBL_Label ele
 }
 
 /**
- * Builds a PTBL_Labels of 4 consecutive elements. 
+ * Builds a PTBL_Labels of 4 consecutive elements.
  * \param[in] elem1 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem2 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem3 One PTBL_Label element of the new PTBL_Labels
@@ -908,7 +908,7 @@ PTBL_Labels _PTBL_makeLabels4(PTBL_Label elem1, PTBL_Label elem2, PTBL_Label ele
 }
 
 /**
- * Builds a PTBL_Labels of 5 consecutive elements. 
+ * Builds a PTBL_Labels of 5 consecutive elements.
  * \param[in] elem1 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem2 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem3 One PTBL_Label element of the new PTBL_Labels
@@ -921,7 +921,7 @@ PTBL_Labels _PTBL_makeLabels5(PTBL_Label elem1, PTBL_Label elem2, PTBL_Label ele
 }
 
 /**
- * Builds a PTBL_Labels of 6 consecutive elements. 
+ * Builds a PTBL_Labels of 6 consecutive elements.
  * \param[in] elem1 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem2 One PTBL_Label element of the new PTBL_Labels
  * \param[in] elem3 One PTBL_Label element of the new PTBL_Labels
@@ -935,7 +935,7 @@ PTBL_Labels _PTBL_makeLabels6(PTBL_Label elem1, PTBL_Label elem2, PTBL_Label ele
 }
 
 /**
- * Retrieve the length of a PTBL_States. 
+ * Retrieve the length of a PTBL_States.
  * \param[in] arg input PTBL_States
  * \return The number of elements in the PTBL_States
  */
@@ -944,7 +944,7 @@ int _PTBL_getStatesLength(PTBL_States arg) {
 }
 
 /**
- * Reverse a PTBL_States. 
+ * Reverse a PTBL_States.
  * \param[in] arg PTBL_States to be reversed
  * \return a reversed #arg
  */
@@ -953,7 +953,7 @@ PTBL_States _PTBL_reverseStates(PTBL_States arg) {
 }
 
 /**
- * Append a PTBL_State to the end of a PTBL_States. 
+ * Append a PTBL_State to the end of a PTBL_States.
  * \param[in] arg PTBL_States to append the PTBL_State to
  * \param[in] elem PTBL_State to be appended
  * \return new PTBL_States with #elem appended
@@ -963,7 +963,7 @@ PTBL_States _PTBL_appendStates(PTBL_States arg, PTBL_State elem) {
 }
 
 /**
- * Concatenate two PTBL_Statess. 
+ * Concatenate two PTBL_Statess.
  * \param[in] arg0 first PTBL_States
  * \param[in] arg1 second PTBL_States
  * \return PTBL_States with the elements of #arg0 before the elements of #arg1
@@ -973,7 +973,7 @@ PTBL_States _PTBL_concatStates(PTBL_States arg0, PTBL_States arg1) {
 }
 
 /**
- * Extract a sublist from a PTBL_States. 
+ * Extract a sublist from a PTBL_States.
  * \param[in] arg PTBL_States to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -984,7 +984,7 @@ PTBL_States _PTBL_sliceStates(PTBL_States arg, int start, int end) {
 }
 
 /**
- * Retrieve the PTBL_State at #index from a PTBL_States. 
+ * Retrieve the PTBL_State at #index from a PTBL_States.
  * \param[in] arg PTBL_States to retrieve the PTBL_State from
  * \param[in] index index to use to point in the PTBL_States
  * \return PTBL_State at position #index in #arg
@@ -994,7 +994,7 @@ PTBL_State _PTBL_getStatesStateAt(PTBL_States arg, int index) {
 }
 
 /**
- * Replace the PTBL_State at #index from a PTBL_States by a new one. 
+ * Replace the PTBL_State at #index from a PTBL_States by a new one.
  * \param[in] arg PTBL_States to retrieve the PTBL_State from
  * \param[in] elem new PTBL_State to replace another
  * \param[in] index index to use to point in the PTBL_States
@@ -1005,7 +1005,7 @@ PTBL_States _PTBL_replaceStatesStateAt(PTBL_States arg, PTBL_State elem, int ind
 }
 
 /**
- * Builds a PTBL_States of 2 consecutive elements. 
+ * Builds a PTBL_States of 2 consecutive elements.
  * \param[in] elem1 One PTBL_State element of the new PTBL_States
  * \param[in] elem2 One PTBL_State element of the new PTBL_States
  * \return A new PTBL_States consisting of 2 PTBL_States
@@ -1015,7 +1015,7 @@ PTBL_States _PTBL_makeStates2(PTBL_State elem1, PTBL_State elem2) {
 }
 
 /**
- * Builds a PTBL_States of 3 consecutive elements. 
+ * Builds a PTBL_States of 3 consecutive elements.
  * \param[in] elem1 One PTBL_State element of the new PTBL_States
  * \param[in] elem2 One PTBL_State element of the new PTBL_States
  * \param[in] elem3 One PTBL_State element of the new PTBL_States
@@ -1026,7 +1026,7 @@ PTBL_States _PTBL_makeStates3(PTBL_State elem1, PTBL_State elem2, PTBL_State ele
 }
 
 /**
- * Builds a PTBL_States of 4 consecutive elements. 
+ * Builds a PTBL_States of 4 consecutive elements.
  * \param[in] elem1 One PTBL_State element of the new PTBL_States
  * \param[in] elem2 One PTBL_State element of the new PTBL_States
  * \param[in] elem3 One PTBL_State element of the new PTBL_States
@@ -1038,7 +1038,7 @@ PTBL_States _PTBL_makeStates4(PTBL_State elem1, PTBL_State elem2, PTBL_State ele
 }
 
 /**
- * Builds a PTBL_States of 5 consecutive elements. 
+ * Builds a PTBL_States of 5 consecutive elements.
  * \param[in] elem1 One PTBL_State element of the new PTBL_States
  * \param[in] elem2 One PTBL_State element of the new PTBL_States
  * \param[in] elem3 One PTBL_State element of the new PTBL_States
@@ -1051,7 +1051,7 @@ PTBL_States _PTBL_makeStates5(PTBL_State elem1, PTBL_State elem2, PTBL_State ele
 }
 
 /**
- * Builds a PTBL_States of 6 consecutive elements. 
+ * Builds a PTBL_States of 6 consecutive elements.
  * \param[in] elem1 One PTBL_State element of the new PTBL_States
  * \param[in] elem2 One PTBL_State element of the new PTBL_States
  * \param[in] elem3 One PTBL_State element of the new PTBL_States
@@ -1065,7 +1065,7 @@ PTBL_States _PTBL_makeStates6(PTBL_State elem1, PTBL_State elem2, PTBL_State ele
 }
 
 /**
- * Retrieve the length of a PTBL_Gotos. 
+ * Retrieve the length of a PTBL_Gotos.
  * \param[in] arg input PTBL_Gotos
  * \return The number of elements in the PTBL_Gotos
  */
@@ -1074,7 +1074,7 @@ int _PTBL_getGotosLength(PTBL_Gotos arg) {
 }
 
 /**
- * Reverse a PTBL_Gotos. 
+ * Reverse a PTBL_Gotos.
  * \param[in] arg PTBL_Gotos to be reversed
  * \return a reversed #arg
  */
@@ -1083,7 +1083,7 @@ PTBL_Gotos _PTBL_reverseGotos(PTBL_Gotos arg) {
 }
 
 /**
- * Append a PTBL_Goto to the end of a PTBL_Gotos. 
+ * Append a PTBL_Goto to the end of a PTBL_Gotos.
  * \param[in] arg PTBL_Gotos to append the PTBL_Goto to
  * \param[in] elem PTBL_Goto to be appended
  * \return new PTBL_Gotos with #elem appended
@@ -1093,7 +1093,7 @@ PTBL_Gotos _PTBL_appendGotos(PTBL_Gotos arg, PTBL_Goto elem) {
 }
 
 /**
- * Concatenate two PTBL_Gotoss. 
+ * Concatenate two PTBL_Gotoss.
  * \param[in] arg0 first PTBL_Gotos
  * \param[in] arg1 second PTBL_Gotos
  * \return PTBL_Gotos with the elements of #arg0 before the elements of #arg1
@@ -1103,7 +1103,7 @@ PTBL_Gotos _PTBL_concatGotos(PTBL_Gotos arg0, PTBL_Gotos arg1) {
 }
 
 /**
- * Extract a sublist from a PTBL_Gotos. 
+ * Extract a sublist from a PTBL_Gotos.
  * \param[in] arg PTBL_Gotos to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1114,7 +1114,7 @@ PTBL_Gotos _PTBL_sliceGotos(PTBL_Gotos arg, int start, int end) {
 }
 
 /**
- * Retrieve the PTBL_Goto at #index from a PTBL_Gotos. 
+ * Retrieve the PTBL_Goto at #index from a PTBL_Gotos.
  * \param[in] arg PTBL_Gotos to retrieve the PTBL_Goto from
  * \param[in] index index to use to point in the PTBL_Gotos
  * \return PTBL_Goto at position #index in #arg
@@ -1124,7 +1124,7 @@ PTBL_Goto _PTBL_getGotosGotoAt(PTBL_Gotos arg, int index) {
 }
 
 /**
- * Replace the PTBL_Goto at #index from a PTBL_Gotos by a new one. 
+ * Replace the PTBL_Goto at #index from a PTBL_Gotos by a new one.
  * \param[in] arg PTBL_Gotos to retrieve the PTBL_Goto from
  * \param[in] elem new PTBL_Goto to replace another
  * \param[in] index index to use to point in the PTBL_Gotos
@@ -1135,7 +1135,7 @@ PTBL_Gotos _PTBL_replaceGotosGotoAt(PTBL_Gotos arg, PTBL_Goto elem, int index) {
 }
 
 /**
- * Builds a PTBL_Gotos of 2 consecutive elements. 
+ * Builds a PTBL_Gotos of 2 consecutive elements.
  * \param[in] elem1 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem2 One PTBL_Goto element of the new PTBL_Gotos
  * \return A new PTBL_Gotos consisting of 2 PTBL_Gotos
@@ -1145,7 +1145,7 @@ PTBL_Gotos _PTBL_makeGotos2(PTBL_Goto elem1, PTBL_Goto elem2) {
 }
 
 /**
- * Builds a PTBL_Gotos of 3 consecutive elements. 
+ * Builds a PTBL_Gotos of 3 consecutive elements.
  * \param[in] elem1 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem2 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem3 One PTBL_Goto element of the new PTBL_Gotos
@@ -1156,7 +1156,7 @@ PTBL_Gotos _PTBL_makeGotos3(PTBL_Goto elem1, PTBL_Goto elem2, PTBL_Goto elem3) {
 }
 
 /**
- * Builds a PTBL_Gotos of 4 consecutive elements. 
+ * Builds a PTBL_Gotos of 4 consecutive elements.
  * \param[in] elem1 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem2 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem3 One PTBL_Goto element of the new PTBL_Gotos
@@ -1168,7 +1168,7 @@ PTBL_Gotos _PTBL_makeGotos4(PTBL_Goto elem1, PTBL_Goto elem2, PTBL_Goto elem3, P
 }
 
 /**
- * Builds a PTBL_Gotos of 5 consecutive elements. 
+ * Builds a PTBL_Gotos of 5 consecutive elements.
  * \param[in] elem1 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem2 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem3 One PTBL_Goto element of the new PTBL_Gotos
@@ -1181,7 +1181,7 @@ PTBL_Gotos _PTBL_makeGotos5(PTBL_Goto elem1, PTBL_Goto elem2, PTBL_Goto elem3, P
 }
 
 /**
- * Builds a PTBL_Gotos of 6 consecutive elements. 
+ * Builds a PTBL_Gotos of 6 consecutive elements.
  * \param[in] elem1 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem2 One PTBL_Goto element of the new PTBL_Gotos
  * \param[in] elem3 One PTBL_Goto element of the new PTBL_Gotos
@@ -1195,7 +1195,7 @@ PTBL_Gotos _PTBL_makeGotos6(PTBL_Goto elem1, PTBL_Goto elem2, PTBL_Goto elem3, P
 }
 
 /**
- * Retrieve the length of a PTBL_Choices. 
+ * Retrieve the length of a PTBL_Choices.
  * \param[in] arg input PTBL_Choices
  * \return The number of elements in the PTBL_Choices
  */
@@ -1204,7 +1204,7 @@ int _PTBL_getChoicesLength(PTBL_Choices arg) {
 }
 
 /**
- * Reverse a PTBL_Choices. 
+ * Reverse a PTBL_Choices.
  * \param[in] arg PTBL_Choices to be reversed
  * \return a reversed #arg
  */
@@ -1213,7 +1213,7 @@ PTBL_Choices _PTBL_reverseChoices(PTBL_Choices arg) {
 }
 
 /**
- * Append a PTBL_Choice to the end of a PTBL_Choices. 
+ * Append a PTBL_Choice to the end of a PTBL_Choices.
  * \param[in] arg PTBL_Choices to append the PTBL_Choice to
  * \param[in] elem PTBL_Choice to be appended
  * \return new PTBL_Choices with #elem appended
@@ -1223,7 +1223,7 @@ PTBL_Choices _PTBL_appendChoices(PTBL_Choices arg, PTBL_Choice elem) {
 }
 
 /**
- * Concatenate two PTBL_Choicess. 
+ * Concatenate two PTBL_Choicess.
  * \param[in] arg0 first PTBL_Choices
  * \param[in] arg1 second PTBL_Choices
  * \return PTBL_Choices with the elements of #arg0 before the elements of #arg1
@@ -1233,7 +1233,7 @@ PTBL_Choices _PTBL_concatChoices(PTBL_Choices arg0, PTBL_Choices arg1) {
 }
 
 /**
- * Extract a sublist from a PTBL_Choices. 
+ * Extract a sublist from a PTBL_Choices.
  * \param[in] arg PTBL_Choices to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1244,7 +1244,7 @@ PTBL_Choices _PTBL_sliceChoices(PTBL_Choices arg, int start, int end) {
 }
 
 /**
- * Retrieve the PTBL_Choice at #index from a PTBL_Choices. 
+ * Retrieve the PTBL_Choice at #index from a PTBL_Choices.
  * \param[in] arg PTBL_Choices to retrieve the PTBL_Choice from
  * \param[in] index index to use to point in the PTBL_Choices
  * \return PTBL_Choice at position #index in #arg
@@ -1254,7 +1254,7 @@ PTBL_Choice _PTBL_getChoicesChoiceAt(PTBL_Choices arg, int index) {
 }
 
 /**
- * Replace the PTBL_Choice at #index from a PTBL_Choices by a new one. 
+ * Replace the PTBL_Choice at #index from a PTBL_Choices by a new one.
  * \param[in] arg PTBL_Choices to retrieve the PTBL_Choice from
  * \param[in] elem new PTBL_Choice to replace another
  * \param[in] index index to use to point in the PTBL_Choices
@@ -1265,7 +1265,7 @@ PTBL_Choices _PTBL_replaceChoicesChoiceAt(PTBL_Choices arg, PTBL_Choice elem, in
 }
 
 /**
- * Builds a PTBL_Choices of 2 consecutive elements. 
+ * Builds a PTBL_Choices of 2 consecutive elements.
  * \param[in] elem1 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem2 One PTBL_Choice element of the new PTBL_Choices
  * \return A new PTBL_Choices consisting of 2 PTBL_Choices
@@ -1275,7 +1275,7 @@ PTBL_Choices _PTBL_makeChoices2(PTBL_Choice elem1, PTBL_Choice elem2) {
 }
 
 /**
- * Builds a PTBL_Choices of 3 consecutive elements. 
+ * Builds a PTBL_Choices of 3 consecutive elements.
  * \param[in] elem1 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem2 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem3 One PTBL_Choice element of the new PTBL_Choices
@@ -1286,7 +1286,7 @@ PTBL_Choices _PTBL_makeChoices3(PTBL_Choice elem1, PTBL_Choice elem2, PTBL_Choic
 }
 
 /**
- * Builds a PTBL_Choices of 4 consecutive elements. 
+ * Builds a PTBL_Choices of 4 consecutive elements.
  * \param[in] elem1 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem2 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem3 One PTBL_Choice element of the new PTBL_Choices
@@ -1298,7 +1298,7 @@ PTBL_Choices _PTBL_makeChoices4(PTBL_Choice elem1, PTBL_Choice elem2, PTBL_Choic
 }
 
 /**
- * Builds a PTBL_Choices of 5 consecutive elements. 
+ * Builds a PTBL_Choices of 5 consecutive elements.
  * \param[in] elem1 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem2 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem3 One PTBL_Choice element of the new PTBL_Choices
@@ -1311,7 +1311,7 @@ PTBL_Choices _PTBL_makeChoices5(PTBL_Choice elem1, PTBL_Choice elem2, PTBL_Choic
 }
 
 /**
- * Builds a PTBL_Choices of 6 consecutive elements. 
+ * Builds a PTBL_Choices of 6 consecutive elements.
  * \param[in] elem1 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem2 One PTBL_Choice element of the new PTBL_Choices
  * \param[in] elem3 One PTBL_Choice element of the new PTBL_Choices
@@ -1325,7 +1325,7 @@ PTBL_Choices _PTBL_makeChoices6(PTBL_Choice elem1, PTBL_Choice elem2, PTBL_Choic
 }
 
 /**
- * Retrieve the length of a PTBL_Actions. 
+ * Retrieve the length of a PTBL_Actions.
  * \param[in] arg input PTBL_Actions
  * \return The number of elements in the PTBL_Actions
  */
@@ -1334,7 +1334,7 @@ int _PTBL_getActionsLength(PTBL_Actions arg) {
 }
 
 /**
- * Reverse a PTBL_Actions. 
+ * Reverse a PTBL_Actions.
  * \param[in] arg PTBL_Actions to be reversed
  * \return a reversed #arg
  */
@@ -1343,7 +1343,7 @@ PTBL_Actions _PTBL_reverseActions(PTBL_Actions arg) {
 }
 
 /**
- * Append a PTBL_Action to the end of a PTBL_Actions. 
+ * Append a PTBL_Action to the end of a PTBL_Actions.
  * \param[in] arg PTBL_Actions to append the PTBL_Action to
  * \param[in] elem PTBL_Action to be appended
  * \return new PTBL_Actions with #elem appended
@@ -1353,7 +1353,7 @@ PTBL_Actions _PTBL_appendActions(PTBL_Actions arg, PTBL_Action elem) {
 }
 
 /**
- * Concatenate two PTBL_Actionss. 
+ * Concatenate two PTBL_Actionss.
  * \param[in] arg0 first PTBL_Actions
  * \param[in] arg1 second PTBL_Actions
  * \return PTBL_Actions with the elements of #arg0 before the elements of #arg1
@@ -1363,7 +1363,7 @@ PTBL_Actions _PTBL_concatActions(PTBL_Actions arg0, PTBL_Actions arg1) {
 }
 
 /**
- * Extract a sublist from a PTBL_Actions. 
+ * Extract a sublist from a PTBL_Actions.
  * \param[in] arg PTBL_Actions to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1374,7 +1374,7 @@ PTBL_Actions _PTBL_sliceActions(PTBL_Actions arg, int start, int end) {
 }
 
 /**
- * Retrieve the PTBL_Action at #index from a PTBL_Actions. 
+ * Retrieve the PTBL_Action at #index from a PTBL_Actions.
  * \param[in] arg PTBL_Actions to retrieve the PTBL_Action from
  * \param[in] index index to use to point in the PTBL_Actions
  * \return PTBL_Action at position #index in #arg
@@ -1384,7 +1384,7 @@ PTBL_Action _PTBL_getActionsActionAt(PTBL_Actions arg, int index) {
 }
 
 /**
- * Replace the PTBL_Action at #index from a PTBL_Actions by a new one. 
+ * Replace the PTBL_Action at #index from a PTBL_Actions by a new one.
  * \param[in] arg PTBL_Actions to retrieve the PTBL_Action from
  * \param[in] elem new PTBL_Action to replace another
  * \param[in] index index to use to point in the PTBL_Actions
@@ -1395,7 +1395,7 @@ PTBL_Actions _PTBL_replaceActionsActionAt(PTBL_Actions arg, PTBL_Action elem, in
 }
 
 /**
- * Builds a PTBL_Actions of 2 consecutive elements. 
+ * Builds a PTBL_Actions of 2 consecutive elements.
  * \param[in] elem1 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem2 One PTBL_Action element of the new PTBL_Actions
  * \return A new PTBL_Actions consisting of 2 PTBL_Actions
@@ -1405,7 +1405,7 @@ PTBL_Actions _PTBL_makeActions2(PTBL_Action elem1, PTBL_Action elem2) {
 }
 
 /**
- * Builds a PTBL_Actions of 3 consecutive elements. 
+ * Builds a PTBL_Actions of 3 consecutive elements.
  * \param[in] elem1 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem2 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem3 One PTBL_Action element of the new PTBL_Actions
@@ -1416,7 +1416,7 @@ PTBL_Actions _PTBL_makeActions3(PTBL_Action elem1, PTBL_Action elem2, PTBL_Actio
 }
 
 /**
- * Builds a PTBL_Actions of 4 consecutive elements. 
+ * Builds a PTBL_Actions of 4 consecutive elements.
  * \param[in] elem1 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem2 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem3 One PTBL_Action element of the new PTBL_Actions
@@ -1428,7 +1428,7 @@ PTBL_Actions _PTBL_makeActions4(PTBL_Action elem1, PTBL_Action elem2, PTBL_Actio
 }
 
 /**
- * Builds a PTBL_Actions of 5 consecutive elements. 
+ * Builds a PTBL_Actions of 5 consecutive elements.
  * \param[in] elem1 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem2 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem3 One PTBL_Action element of the new PTBL_Actions
@@ -1441,7 +1441,7 @@ PTBL_Actions _PTBL_makeActions5(PTBL_Action elem1, PTBL_Action elem2, PTBL_Actio
 }
 
 /**
- * Builds a PTBL_Actions of 6 consecutive elements. 
+ * Builds a PTBL_Actions of 6 consecutive elements.
  * \param[in] elem1 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem2 One PTBL_Action element of the new PTBL_Actions
  * \param[in] elem3 One PTBL_Action element of the new PTBL_Actions
@@ -1455,7 +1455,7 @@ PTBL_Actions _PTBL_makeActions6(PTBL_Action elem1, PTBL_Action elem2, PTBL_Actio
 }
 
 /**
- * Retrieve the length of a PTBL_Restrictions. 
+ * Retrieve the length of a PTBL_Restrictions.
  * \param[in] arg input PTBL_Restrictions
  * \return The number of elements in the PTBL_Restrictions
  */
@@ -1464,7 +1464,7 @@ int _PTBL_getRestrictionsLength(PTBL_Restrictions arg) {
 }
 
 /**
- * Reverse a PTBL_Restrictions. 
+ * Reverse a PTBL_Restrictions.
  * \param[in] arg PTBL_Restrictions to be reversed
  * \return a reversed #arg
  */
@@ -1473,7 +1473,7 @@ PTBL_Restrictions _PTBL_reverseRestrictions(PTBL_Restrictions arg) {
 }
 
 /**
- * Append a PTBL_Restriction to the end of a PTBL_Restrictions. 
+ * Append a PTBL_Restriction to the end of a PTBL_Restrictions.
  * \param[in] arg PTBL_Restrictions to append the PTBL_Restriction to
  * \param[in] elem PTBL_Restriction to be appended
  * \return new PTBL_Restrictions with #elem appended
@@ -1483,7 +1483,7 @@ PTBL_Restrictions _PTBL_appendRestrictions(PTBL_Restrictions arg, PTBL_Restricti
 }
 
 /**
- * Concatenate two PTBL_Restrictionss. 
+ * Concatenate two PTBL_Restrictionss.
  * \param[in] arg0 first PTBL_Restrictions
  * \param[in] arg1 second PTBL_Restrictions
  * \return PTBL_Restrictions with the elements of #arg0 before the elements of #arg1
@@ -1493,7 +1493,7 @@ PTBL_Restrictions _PTBL_concatRestrictions(PTBL_Restrictions arg0, PTBL_Restrict
 }
 
 /**
- * Extract a sublist from a PTBL_Restrictions. 
+ * Extract a sublist from a PTBL_Restrictions.
  * \param[in] arg PTBL_Restrictions to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1504,7 +1504,7 @@ PTBL_Restrictions _PTBL_sliceRestrictions(PTBL_Restrictions arg, int start, int 
 }
 
 /**
- * Retrieve the PTBL_Restriction at #index from a PTBL_Restrictions. 
+ * Retrieve the PTBL_Restriction at #index from a PTBL_Restrictions.
  * \param[in] arg PTBL_Restrictions to retrieve the PTBL_Restriction from
  * \param[in] index index to use to point in the PTBL_Restrictions
  * \return PTBL_Restriction at position #index in #arg
@@ -1514,7 +1514,7 @@ PTBL_Restriction _PTBL_getRestrictionsRestrictionAt(PTBL_Restrictions arg, int i
 }
 
 /**
- * Replace the PTBL_Restriction at #index from a PTBL_Restrictions by a new one. 
+ * Replace the PTBL_Restriction at #index from a PTBL_Restrictions by a new one.
  * \param[in] arg PTBL_Restrictions to retrieve the PTBL_Restriction from
  * \param[in] elem new PTBL_Restriction to replace another
  * \param[in] index index to use to point in the PTBL_Restrictions
@@ -1525,7 +1525,7 @@ PTBL_Restrictions _PTBL_replaceRestrictionsRestrictionAt(PTBL_Restrictions arg, 
 }
 
 /**
- * Builds a PTBL_Restrictions of 2 consecutive elements. 
+ * Builds a PTBL_Restrictions of 2 consecutive elements.
  * \param[in] elem1 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem2 One PTBL_Restriction element of the new PTBL_Restrictions
  * \return A new PTBL_Restrictions consisting of 2 PTBL_Restrictions
@@ -1535,7 +1535,7 @@ PTBL_Restrictions _PTBL_makeRestrictions2(PTBL_Restriction elem1, PTBL_Restricti
 }
 
 /**
- * Builds a PTBL_Restrictions of 3 consecutive elements. 
+ * Builds a PTBL_Restrictions of 3 consecutive elements.
  * \param[in] elem1 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem2 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem3 One PTBL_Restriction element of the new PTBL_Restrictions
@@ -1546,7 +1546,7 @@ PTBL_Restrictions _PTBL_makeRestrictions3(PTBL_Restriction elem1, PTBL_Restricti
 }
 
 /**
- * Builds a PTBL_Restrictions of 4 consecutive elements. 
+ * Builds a PTBL_Restrictions of 4 consecutive elements.
  * \param[in] elem1 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem2 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem3 One PTBL_Restriction element of the new PTBL_Restrictions
@@ -1558,7 +1558,7 @@ PTBL_Restrictions _PTBL_makeRestrictions4(PTBL_Restriction elem1, PTBL_Restricti
 }
 
 /**
- * Builds a PTBL_Restrictions of 5 consecutive elements. 
+ * Builds a PTBL_Restrictions of 5 consecutive elements.
  * \param[in] elem1 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem2 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem3 One PTBL_Restriction element of the new PTBL_Restrictions
@@ -1571,7 +1571,7 @@ PTBL_Restrictions _PTBL_makeRestrictions5(PTBL_Restriction elem1, PTBL_Restricti
 }
 
 /**
- * Builds a PTBL_Restrictions of 6 consecutive elements. 
+ * Builds a PTBL_Restrictions of 6 consecutive elements.
  * \param[in] elem1 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem2 One PTBL_Restriction element of the new PTBL_Restrictions
  * \param[in] elem3 One PTBL_Restriction element of the new PTBL_Restrictions
@@ -1585,7 +1585,7 @@ PTBL_Restrictions _PTBL_makeRestrictions6(PTBL_Restriction elem1, PTBL_Restricti
 }
 
 /**
- * Retrieve the length of a PTBL_CharClasses. 
+ * Retrieve the length of a PTBL_CharClasses.
  * \param[in] arg input PTBL_CharClasses
  * \return The number of elements in the PTBL_CharClasses
  */
@@ -1594,7 +1594,7 @@ int _PTBL_getCharClassesLength(PTBL_CharClasses arg) {
 }
 
 /**
- * Reverse a PTBL_CharClasses. 
+ * Reverse a PTBL_CharClasses.
  * \param[in] arg PTBL_CharClasses to be reversed
  * \return a reversed #arg
  */
@@ -1603,7 +1603,7 @@ PTBL_CharClasses _PTBL_reverseCharClasses(PTBL_CharClasses arg) {
 }
 
 /**
- * Append a PTBL_CharClass to the end of a PTBL_CharClasses. 
+ * Append a PTBL_CharClass to the end of a PTBL_CharClasses.
  * \param[in] arg PTBL_CharClasses to append the PTBL_CharClass to
  * \param[in] elem PTBL_CharClass to be appended
  * \return new PTBL_CharClasses with #elem appended
@@ -1613,7 +1613,7 @@ PTBL_CharClasses _PTBL_appendCharClasses(PTBL_CharClasses arg, PTBL_CharClass el
 }
 
 /**
- * Concatenate two PTBL_CharClassess. 
+ * Concatenate two PTBL_CharClassess.
  * \param[in] arg0 first PTBL_CharClasses
  * \param[in] arg1 second PTBL_CharClasses
  * \return PTBL_CharClasses with the elements of #arg0 before the elements of #arg1
@@ -1623,7 +1623,7 @@ PTBL_CharClasses _PTBL_concatCharClasses(PTBL_CharClasses arg0, PTBL_CharClasses
 }
 
 /**
- * Extract a sublist from a PTBL_CharClasses. 
+ * Extract a sublist from a PTBL_CharClasses.
  * \param[in] arg PTBL_CharClasses to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1634,7 +1634,7 @@ PTBL_CharClasses _PTBL_sliceCharClasses(PTBL_CharClasses arg, int start, int end
 }
 
 /**
- * Retrieve the PTBL_CharClass at #index from a PTBL_CharClasses. 
+ * Retrieve the PTBL_CharClass at #index from a PTBL_CharClasses.
  * \param[in] arg PTBL_CharClasses to retrieve the PTBL_CharClass from
  * \param[in] index index to use to point in the PTBL_CharClasses
  * \return PTBL_CharClass at position #index in #arg
@@ -1644,7 +1644,7 @@ PTBL_CharClass _PTBL_getCharClassesCharClassAt(PTBL_CharClasses arg, int index) 
 }
 
 /**
- * Replace the PTBL_CharClass at #index from a PTBL_CharClasses by a new one. 
+ * Replace the PTBL_CharClass at #index from a PTBL_CharClasses by a new one.
  * \param[in] arg PTBL_CharClasses to retrieve the PTBL_CharClass from
  * \param[in] elem new PTBL_CharClass to replace another
  * \param[in] index index to use to point in the PTBL_CharClasses
@@ -1655,7 +1655,7 @@ PTBL_CharClasses _PTBL_replaceCharClassesCharClassAt(PTBL_CharClasses arg, PTBL_
 }
 
 /**
- * Builds a PTBL_CharClasses of 2 consecutive elements. 
+ * Builds a PTBL_CharClasses of 2 consecutive elements.
  * \param[in] elem1 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem2 One PTBL_CharClass element of the new PTBL_CharClasses
  * \return A new PTBL_CharClasses consisting of 2 PTBL_CharClasss
@@ -1665,7 +1665,7 @@ PTBL_CharClasses _PTBL_makeCharClasses2(PTBL_CharClass elem1, PTBL_CharClass ele
 }
 
 /**
- * Builds a PTBL_CharClasses of 3 consecutive elements. 
+ * Builds a PTBL_CharClasses of 3 consecutive elements.
  * \param[in] elem1 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem2 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem3 One PTBL_CharClass element of the new PTBL_CharClasses
@@ -1676,7 +1676,7 @@ PTBL_CharClasses _PTBL_makeCharClasses3(PTBL_CharClass elem1, PTBL_CharClass ele
 }
 
 /**
- * Builds a PTBL_CharClasses of 4 consecutive elements. 
+ * Builds a PTBL_CharClasses of 4 consecutive elements.
  * \param[in] elem1 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem2 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem3 One PTBL_CharClass element of the new PTBL_CharClasses
@@ -1688,7 +1688,7 @@ PTBL_CharClasses _PTBL_makeCharClasses4(PTBL_CharClass elem1, PTBL_CharClass ele
 }
 
 /**
- * Builds a PTBL_CharClasses of 5 consecutive elements. 
+ * Builds a PTBL_CharClasses of 5 consecutive elements.
  * \param[in] elem1 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem2 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem3 One PTBL_CharClass element of the new PTBL_CharClasses
@@ -1701,7 +1701,7 @@ PTBL_CharClasses _PTBL_makeCharClasses5(PTBL_CharClass elem1, PTBL_CharClass ele
 }
 
 /**
- * Builds a PTBL_CharClasses of 6 consecutive elements. 
+ * Builds a PTBL_CharClasses of 6 consecutive elements.
  * \param[in] elem1 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem2 One PTBL_CharClass element of the new PTBL_CharClasses
  * \param[in] elem3 One PTBL_CharClass element of the new PTBL_CharClasses
@@ -1715,7 +1715,7 @@ PTBL_CharClasses _PTBL_makeCharClasses6(PTBL_CharClass elem1, PTBL_CharClass ele
 }
 
 /**
- * Retrieve the length of a PTBL_Priorities. 
+ * Retrieve the length of a PTBL_Priorities.
  * \param[in] arg input PTBL_Priorities
  * \return The number of elements in the PTBL_Priorities
  */
@@ -1724,7 +1724,7 @@ int _PTBL_getPrioritiesLength(PTBL_Priorities arg) {
 }
 
 /**
- * Reverse a PTBL_Priorities. 
+ * Reverse a PTBL_Priorities.
  * \param[in] arg PTBL_Priorities to be reversed
  * \return a reversed #arg
  */
@@ -1733,7 +1733,7 @@ PTBL_Priorities _PTBL_reversePriorities(PTBL_Priorities arg) {
 }
 
 /**
- * Append a PTBL_Priority to the end of a PTBL_Priorities. 
+ * Append a PTBL_Priority to the end of a PTBL_Priorities.
  * \param[in] arg PTBL_Priorities to append the PTBL_Priority to
  * \param[in] elem PTBL_Priority to be appended
  * \return new PTBL_Priorities with #elem appended
@@ -1743,7 +1743,7 @@ PTBL_Priorities _PTBL_appendPriorities(PTBL_Priorities arg, PTBL_Priority elem) 
 }
 
 /**
- * Concatenate two PTBL_Prioritiess. 
+ * Concatenate two PTBL_Prioritiess.
  * \param[in] arg0 first PTBL_Priorities
  * \param[in] arg1 second PTBL_Priorities
  * \return PTBL_Priorities with the elements of #arg0 before the elements of #arg1
@@ -1753,7 +1753,7 @@ PTBL_Priorities _PTBL_concatPriorities(PTBL_Priorities arg0, PTBL_Priorities arg
 }
 
 /**
- * Extract a sublist from a PTBL_Priorities. 
+ * Extract a sublist from a PTBL_Priorities.
  * \param[in] arg PTBL_Priorities to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1764,7 +1764,7 @@ PTBL_Priorities _PTBL_slicePriorities(PTBL_Priorities arg, int start, int end) {
 }
 
 /**
- * Retrieve the PTBL_Priority at #index from a PTBL_Priorities. 
+ * Retrieve the PTBL_Priority at #index from a PTBL_Priorities.
  * \param[in] arg PTBL_Priorities to retrieve the PTBL_Priority from
  * \param[in] index index to use to point in the PTBL_Priorities
  * \return PTBL_Priority at position #index in #arg
@@ -1774,7 +1774,7 @@ PTBL_Priority _PTBL_getPrioritiesPriorityAt(PTBL_Priorities arg, int index) {
 }
 
 /**
- * Replace the PTBL_Priority at #index from a PTBL_Priorities by a new one. 
+ * Replace the PTBL_Priority at #index from a PTBL_Priorities by a new one.
  * \param[in] arg PTBL_Priorities to retrieve the PTBL_Priority from
  * \param[in] elem new PTBL_Priority to replace another
  * \param[in] index index to use to point in the PTBL_Priorities
@@ -1785,7 +1785,7 @@ PTBL_Priorities _PTBL_replacePrioritiesPriorityAt(PTBL_Priorities arg, PTBL_Prio
 }
 
 /**
- * Builds a PTBL_Priorities of 2 consecutive elements. 
+ * Builds a PTBL_Priorities of 2 consecutive elements.
  * \param[in] elem1 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem2 One PTBL_Priority element of the new PTBL_Priorities
  * \return A new PTBL_Priorities consisting of 2 PTBL_Prioritys
@@ -1795,7 +1795,7 @@ PTBL_Priorities _PTBL_makePriorities2(PTBL_Priority elem1, PTBL_Priority elem2) 
 }
 
 /**
- * Builds a PTBL_Priorities of 3 consecutive elements. 
+ * Builds a PTBL_Priorities of 3 consecutive elements.
  * \param[in] elem1 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem2 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem3 One PTBL_Priority element of the new PTBL_Priorities
@@ -1806,7 +1806,7 @@ PTBL_Priorities _PTBL_makePriorities3(PTBL_Priority elem1, PTBL_Priority elem2, 
 }
 
 /**
- * Builds a PTBL_Priorities of 4 consecutive elements. 
+ * Builds a PTBL_Priorities of 4 consecutive elements.
  * \param[in] elem1 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem2 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem3 One PTBL_Priority element of the new PTBL_Priorities
@@ -1818,7 +1818,7 @@ PTBL_Priorities _PTBL_makePriorities4(PTBL_Priority elem1, PTBL_Priority elem2, 
 }
 
 /**
- * Builds a PTBL_Priorities of 5 consecutive elements. 
+ * Builds a PTBL_Priorities of 5 consecutive elements.
  * \param[in] elem1 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem2 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem3 One PTBL_Priority element of the new PTBL_Priorities
@@ -1831,7 +1831,7 @@ PTBL_Priorities _PTBL_makePriorities5(PTBL_Priority elem1, PTBL_Priority elem2, 
 }
 
 /**
- * Builds a PTBL_Priorities of 6 consecutive elements. 
+ * Builds a PTBL_Priorities of 6 consecutive elements.
  * \param[in] elem1 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem2 One PTBL_Priority element of the new PTBL_Priorities
  * \param[in] elem3 One PTBL_Priority element of the new PTBL_Priorities
@@ -2435,7 +2435,7 @@ ATbool PTBL_isValidProduction(PTBL_Production arg) {
  * \param[in] arg input PTBL_Production
  * \return ATtrue if #arg corresponds to the signature of a external, or ATfalse otherwise
  */
-inline ATbool PTBL_isProductionExternal(PTBL_Production arg){
+ATbool PTBL_isProductionExternal(PTBL_Production arg){
   if (arg != NULL) {
     return ATtrue;
   }
@@ -2443,7 +2443,7 @@ inline ATbool PTBL_isProductionExternal(PTBL_Production arg){
 }
 
 /**
- * Assert whether a PTBL_Production has a prod. 
+ * Assert whether a PTBL_Production has a prod.
  * \param[in] arg input PTBL_Production
  * \return ATtrue if the PTBL_Production had a prod, or ATfalse otherwise
  */
@@ -2460,7 +2460,7 @@ ATbool PTBL_hasProductionProd(PTBL_Production arg) {
  * \return the prod of #arg, if it exist or an undefined value if it does not
  */
 ATerm PTBL_getProductionProd(PTBL_Production arg) {
-  
+
     return (ATerm)arg;
 }
 
@@ -2496,7 +2496,7 @@ ATbool PTBL_isValidCharClass(PTBL_CharClass arg) {
  * \param[in] arg input PTBL_CharClass
  * \return ATtrue if #arg corresponds to the signature of a external, or ATfalse otherwise
  */
-inline ATbool PTBL_isCharClassExternal(PTBL_CharClass arg){
+ATbool PTBL_isCharClassExternal(PTBL_CharClass arg){
   if (arg != NULL) {
     return ATtrue;
   }
@@ -2504,7 +2504,7 @@ inline ATbool PTBL_isCharClassExternal(PTBL_CharClass arg){
 }
 
 /**
- * Assert whether a PTBL_CharClass has a char-class. 
+ * Assert whether a PTBL_CharClass has a char-class.
  * \param[in] arg input PTBL_CharClass
  * \return ATtrue if the PTBL_CharClass had a char-class, or ATfalse otherwise
  */
@@ -2521,7 +2521,7 @@ ATbool PTBL_hasCharClassCharClass(PTBL_CharClass arg) {
  * \return the char-class of #arg, if it exist or an undefined value if it does not
  */
 ATerm PTBL_getCharClassCharClass(PTBL_CharClass arg) {
-  
+
     return (ATerm)arg;
 }
 
@@ -2557,7 +2557,7 @@ ATbool PTBL_isValidCharRanges(PTBL_CharRanges arg) {
  * \param[in] arg input PTBL_CharRanges
  * \return ATtrue if #arg corresponds to the signature of a external, or ATfalse otherwise
  */
-inline ATbool PTBL_isCharRangesExternal(PTBL_CharRanges arg){
+ATbool PTBL_isCharRangesExternal(PTBL_CharRanges arg){
   if (arg != NULL) {
     return ATtrue;
   }
@@ -2565,7 +2565,7 @@ inline ATbool PTBL_isCharRangesExternal(PTBL_CharRanges arg){
 }
 
 /**
- * Assert whether a PTBL_CharRanges has a ranges. 
+ * Assert whether a PTBL_CharRanges has a ranges.
  * \param[in] arg input PTBL_CharRanges
  * \return ATtrue if the PTBL_CharRanges had a ranges, or ATfalse otherwise
  */
@@ -2582,7 +2582,7 @@ ATbool PTBL_hasCharRangesRanges(PTBL_CharRanges arg) {
  * \return the ranges of #arg, if it exist or an undefined value if it does not
  */
 ATerm PTBL_getCharRangesRanges(PTBL_CharRanges arg) {
-  
+
     return (ATerm)arg;
 }
 
@@ -2618,7 +2618,7 @@ ATbool PTBL_isValidVersion(PTBL_Version arg) {
  * \param[in] arg input PTBL_Version
  * \return ATtrue if #arg corresponds to the signature of a Default, or ATfalse otherwise
  */
-inline ATbool PTBL_isVersionDefault(PTBL_Version arg){
+ATbool PTBL_isVersionDefault(PTBL_Version arg){
   if (ATgetInt((ATermInt)arg) == 6) {
 
     return ATtrue;
@@ -2643,7 +2643,7 @@ ATbool PTBL_isValidParseTable(PTBL_ParseTable arg) {
  * \param[in] arg input PTBL_ParseTable
  * \return ATtrue if #arg corresponds to the signature of a parse-table, or ATfalse otherwise
  */
-inline ATbool PTBL_isParseTableParseTable(PTBL_ParseTable arg){
+ATbool PTBL_isParseTableParseTable(PTBL_ParseTable arg){
   /* checking for: parse-table */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun0) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -2663,7 +2663,7 @@ inline ATbool PTBL_isParseTableParseTable(PTBL_ParseTable arg){
 }
 
 /**
- * Assert whether a PTBL_ParseTable has a version. 
+ * Assert whether a PTBL_ParseTable has a version.
  * \param[in] arg input PTBL_ParseTable
  * \return ATtrue if the PTBL_ParseTable had a version, or ATfalse otherwise
  */
@@ -2675,7 +2675,7 @@ ATbool PTBL_hasParseTableVersion(PTBL_ParseTable arg) {
 }
 
 /**
- * Assert whether a PTBL_ParseTable has a initial-state. 
+ * Assert whether a PTBL_ParseTable has a initial-state.
  * \param[in] arg input PTBL_ParseTable
  * \return ATtrue if the PTBL_ParseTable had a initial-state, or ATfalse otherwise
  */
@@ -2687,7 +2687,7 @@ ATbool PTBL_hasParseTableInitialState(PTBL_ParseTable arg) {
 }
 
 /**
- * Assert whether a PTBL_ParseTable has a labels. 
+ * Assert whether a PTBL_ParseTable has a labels.
  * \param[in] arg input PTBL_ParseTable
  * \return ATtrue if the PTBL_ParseTable had a labels, or ATfalse otherwise
  */
@@ -2699,7 +2699,7 @@ ATbool PTBL_hasParseTableLabels(PTBL_ParseTable arg) {
 }
 
 /**
- * Assert whether a PTBL_ParseTable has a states. 
+ * Assert whether a PTBL_ParseTable has a states.
  * \param[in] arg input PTBL_ParseTable
  * \return ATtrue if the PTBL_ParseTable had a states, or ATfalse otherwise
  */
@@ -2711,7 +2711,7 @@ ATbool PTBL_hasParseTableStates(PTBL_ParseTable arg) {
 }
 
 /**
- * Assert whether a PTBL_ParseTable has a priorities. 
+ * Assert whether a PTBL_ParseTable has a priorities.
  * \param[in] arg input PTBL_ParseTable
  * \return ATtrue if the PTBL_ParseTable had a priorities, or ATfalse otherwise
  */
@@ -2728,7 +2728,7 @@ ATbool PTBL_hasParseTablePriorities(PTBL_ParseTable arg) {
  * \return the version of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Version PTBL_getParseTableVersion(PTBL_ParseTable arg) {
-  
+
     return (PTBL_Version)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2738,7 +2738,7 @@ PTBL_Version PTBL_getParseTableVersion(PTBL_ParseTable arg) {
  * \return the initial-state of #arg, if it exist or an undefined value if it does not
  */
 int PTBL_getParseTableInitialState(PTBL_ParseTable arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -2748,7 +2748,7 @@ int PTBL_getParseTableInitialState(PTBL_ParseTable arg) {
  * \return the labels of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Labels PTBL_getParseTableLabels(PTBL_ParseTable arg) {
-  
+
     return (PTBL_Labels)ATgetArgument((ATermAppl)arg, 2);
 }
 
@@ -2758,7 +2758,7 @@ PTBL_Labels PTBL_getParseTableLabels(PTBL_ParseTable arg) {
  * \return the states of #arg, if it exist or an undefined value if it does not
  */
 PTBL_States PTBL_getParseTableStates(PTBL_ParseTable arg) {
-  
+
     return (PTBL_States)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 3), 0);
 }
 
@@ -2768,7 +2768,7 @@ PTBL_States PTBL_getParseTableStates(PTBL_ParseTable arg) {
  * \return the priorities of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Priorities PTBL_getParseTablePriorities(PTBL_ParseTable arg) {
-  
+
     return (PTBL_Priorities)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 4), 0);
 }
 
@@ -2870,7 +2870,7 @@ ATbool PTBL_isValidLabels(PTBL_Labels arg) {
  * \param[in] arg input PTBL_Labels
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isLabelsEmpty(PTBL_Labels arg){
+ATbool PTBL_isLabelsEmpty(PTBL_Labels arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2882,7 +2882,7 @@ inline ATbool PTBL_isLabelsEmpty(PTBL_Labels arg){
  * \param[in] arg input PTBL_Labels
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isLabelsSingle(PTBL_Labels arg){
+ATbool PTBL_isLabelsSingle(PTBL_Labels arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2898,7 +2898,7 @@ inline ATbool PTBL_isLabelsSingle(PTBL_Labels arg){
  * \param[in] arg input PTBL_Labels
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isLabelsMany(PTBL_Labels arg){
+ATbool PTBL_isLabelsMany(PTBL_Labels arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2906,7 +2906,7 @@ inline ATbool PTBL_isLabelsMany(PTBL_Labels arg){
 }
 
 /**
- * Assert whether a PTBL_Labels has a head. 
+ * Assert whether a PTBL_Labels has a head.
  * \param[in] arg input PTBL_Labels
  * \return ATtrue if the PTBL_Labels had a head, or ATfalse otherwise
  */
@@ -2921,7 +2921,7 @@ ATbool PTBL_hasLabelsHead(PTBL_Labels arg) {
 }
 
 /**
- * Assert whether a PTBL_Labels has a tail. 
+ * Assert whether a PTBL_Labels has a tail.
  * \param[in] arg input PTBL_Labels
  * \return ATtrue if the PTBL_Labels had a tail, or ATfalse otherwise
  */
@@ -2941,7 +2941,7 @@ PTBL_Label PTBL_getLabelsHead(PTBL_Labels arg) {
   if (PTBL_isLabelsSingle(arg)) {
     return (PTBL_Label)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_Label)ATgetFirst((ATermList)arg);
 }
 
@@ -2951,7 +2951,7 @@ PTBL_Label PTBL_getLabelsHead(PTBL_Labels arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Labels PTBL_getLabelsTail(PTBL_Labels arg) {
-  
+
     return (PTBL_Labels)ATgetNext((ATermList)arg);
 }
 
@@ -3005,7 +3005,7 @@ ATbool PTBL_isValidLabel(PTBL_Label arg) {
  * \param[in] arg input PTBL_Label
  * \return ATtrue if #arg corresponds to the signature of a Default, or ATfalse otherwise
  */
-inline ATbool PTBL_isLabelDefault(PTBL_Label arg){
+ATbool PTBL_isLabelDefault(PTBL_Label arg){
   /* checking for: label */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun3) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -3017,7 +3017,7 @@ inline ATbool PTBL_isLabelDefault(PTBL_Label arg){
 }
 
 /**
- * Assert whether a PTBL_Label has a production. 
+ * Assert whether a PTBL_Label has a production.
  * \param[in] arg input PTBL_Label
  * \return ATtrue if the PTBL_Label had a production, or ATfalse otherwise
  */
@@ -3029,7 +3029,7 @@ ATbool PTBL_hasLabelProduction(PTBL_Label arg) {
 }
 
 /**
- * Assert whether a PTBL_Label has a number. 
+ * Assert whether a PTBL_Label has a number.
  * \param[in] arg input PTBL_Label
  * \return ATtrue if the PTBL_Label had a number, or ATfalse otherwise
  */
@@ -3046,7 +3046,7 @@ ATbool PTBL_hasLabelNumber(PTBL_Label arg) {
  * \return the production of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Production PTBL_getLabelProduction(PTBL_Label arg) {
-  
+
     return (PTBL_Production)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3056,7 +3056,7 @@ PTBL_Production PTBL_getLabelProduction(PTBL_Label arg) {
  * \return the number of #arg, if it exist or an undefined value if it does not
  */
 int PTBL_getLabelNumber(PTBL_Label arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -3113,7 +3113,7 @@ ATbool PTBL_isValidStates(PTBL_States arg) {
  * \param[in] arg input PTBL_States
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isStatesEmpty(PTBL_States arg){
+ATbool PTBL_isStatesEmpty(PTBL_States arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3125,7 +3125,7 @@ inline ATbool PTBL_isStatesEmpty(PTBL_States arg){
  * \param[in] arg input PTBL_States
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isStatesSingle(PTBL_States arg){
+ATbool PTBL_isStatesSingle(PTBL_States arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3141,7 +3141,7 @@ inline ATbool PTBL_isStatesSingle(PTBL_States arg){
  * \param[in] arg input PTBL_States
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isStatesMany(PTBL_States arg){
+ATbool PTBL_isStatesMany(PTBL_States arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3149,7 +3149,7 @@ inline ATbool PTBL_isStatesMany(PTBL_States arg){
 }
 
 /**
- * Assert whether a PTBL_States has a head. 
+ * Assert whether a PTBL_States has a head.
  * \param[in] arg input PTBL_States
  * \return ATtrue if the PTBL_States had a head, or ATfalse otherwise
  */
@@ -3164,7 +3164,7 @@ ATbool PTBL_hasStatesHead(PTBL_States arg) {
 }
 
 /**
- * Assert whether a PTBL_States has a tail. 
+ * Assert whether a PTBL_States has a tail.
  * \param[in] arg input PTBL_States
  * \return ATtrue if the PTBL_States had a tail, or ATfalse otherwise
  */
@@ -3184,7 +3184,7 @@ PTBL_State PTBL_getStatesHead(PTBL_States arg) {
   if (PTBL_isStatesSingle(arg)) {
     return (PTBL_State)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_State)ATgetFirst((ATermList)arg);
 }
 
@@ -3194,7 +3194,7 @@ PTBL_State PTBL_getStatesHead(PTBL_States arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_States PTBL_getStatesTail(PTBL_States arg) {
-  
+
     return (PTBL_States)ATgetNext((ATermList)arg);
 }
 
@@ -3248,7 +3248,7 @@ ATbool PTBL_isValidState(PTBL_State arg) {
  * \param[in] arg input PTBL_State
  * \return ATtrue if #arg corresponds to the signature of a Default, or ATfalse otherwise
  */
-inline ATbool PTBL_isStateDefault(PTBL_State arg){
+ATbool PTBL_isStateDefault(PTBL_State arg){
   /* checking for: state-rec */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun4) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3260,7 +3260,7 @@ inline ATbool PTBL_isStateDefault(PTBL_State arg){
 }
 
 /**
- * Assert whether a PTBL_State has a number. 
+ * Assert whether a PTBL_State has a number.
  * \param[in] arg input PTBL_State
  * \return ATtrue if the PTBL_State had a number, or ATfalse otherwise
  */
@@ -3272,7 +3272,7 @@ ATbool PTBL_hasStateNumber(PTBL_State arg) {
 }
 
 /**
- * Assert whether a PTBL_State has a gotos. 
+ * Assert whether a PTBL_State has a gotos.
  * \param[in] arg input PTBL_State
  * \return ATtrue if the PTBL_State had a gotos, or ATfalse otherwise
  */
@@ -3284,7 +3284,7 @@ ATbool PTBL_hasStateGotos(PTBL_State arg) {
 }
 
 /**
- * Assert whether a PTBL_State has a choices. 
+ * Assert whether a PTBL_State has a choices.
  * \param[in] arg input PTBL_State
  * \return ATtrue if the PTBL_State had a choices, or ATfalse otherwise
  */
@@ -3301,7 +3301,7 @@ ATbool PTBL_hasStateChoices(PTBL_State arg) {
  * \return the number of #arg, if it exist or an undefined value if it does not
  */
 int PTBL_getStateNumber(PTBL_State arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -3311,7 +3311,7 @@ int PTBL_getStateNumber(PTBL_State arg) {
  * \return the gotos of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Gotos PTBL_getStateGotos(PTBL_State arg) {
-  
+
     return (PTBL_Gotos)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3321,7 +3321,7 @@ PTBL_Gotos PTBL_getStateGotos(PTBL_State arg) {
  * \return the choices of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Choices PTBL_getStateChoices(PTBL_State arg) {
-  
+
     return (PTBL_Choices)ATgetArgument((ATermAppl)arg, 2);
 }
 
@@ -3393,7 +3393,7 @@ ATbool PTBL_isValidGotos(PTBL_Gotos arg) {
  * \param[in] arg input PTBL_Gotos
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isGotosEmpty(PTBL_Gotos arg){
+ATbool PTBL_isGotosEmpty(PTBL_Gotos arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3405,7 +3405,7 @@ inline ATbool PTBL_isGotosEmpty(PTBL_Gotos arg){
  * \param[in] arg input PTBL_Gotos
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isGotosSingle(PTBL_Gotos arg){
+ATbool PTBL_isGotosSingle(PTBL_Gotos arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3421,7 +3421,7 @@ inline ATbool PTBL_isGotosSingle(PTBL_Gotos arg){
  * \param[in] arg input PTBL_Gotos
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isGotosMany(PTBL_Gotos arg){
+ATbool PTBL_isGotosMany(PTBL_Gotos arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3429,7 +3429,7 @@ inline ATbool PTBL_isGotosMany(PTBL_Gotos arg){
 }
 
 /**
- * Assert whether a PTBL_Gotos has a head. 
+ * Assert whether a PTBL_Gotos has a head.
  * \param[in] arg input PTBL_Gotos
  * \return ATtrue if the PTBL_Gotos had a head, or ATfalse otherwise
  */
@@ -3444,7 +3444,7 @@ ATbool PTBL_hasGotosHead(PTBL_Gotos arg) {
 }
 
 /**
- * Assert whether a PTBL_Gotos has a tail. 
+ * Assert whether a PTBL_Gotos has a tail.
  * \param[in] arg input PTBL_Gotos
  * \return ATtrue if the PTBL_Gotos had a tail, or ATfalse otherwise
  */
@@ -3464,7 +3464,7 @@ PTBL_Goto PTBL_getGotosHead(PTBL_Gotos arg) {
   if (PTBL_isGotosSingle(arg)) {
     return (PTBL_Goto)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_Goto)ATgetFirst((ATermList)arg);
 }
 
@@ -3474,7 +3474,7 @@ PTBL_Goto PTBL_getGotosHead(PTBL_Gotos arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Gotos PTBL_getGotosTail(PTBL_Gotos arg) {
-  
+
     return (PTBL_Gotos)ATgetNext((ATermList)arg);
 }
 
@@ -3528,7 +3528,7 @@ ATbool PTBL_isValidGoto(PTBL_Goto arg) {
  * \param[in] arg input PTBL_Goto
  * \return ATtrue if #arg corresponds to the signature of a Default, or ATfalse otherwise
  */
-inline ATbool PTBL_isGotoDefault(PTBL_Goto arg){
+ATbool PTBL_isGotoDefault(PTBL_Goto arg){
   /* checking for: goto */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun5) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -3540,7 +3540,7 @@ inline ATbool PTBL_isGotoDefault(PTBL_Goto arg){
 }
 
 /**
- * Assert whether a PTBL_Goto has a ranges. 
+ * Assert whether a PTBL_Goto has a ranges.
  * \param[in] arg input PTBL_Goto
  * \return ATtrue if the PTBL_Goto had a ranges, or ATfalse otherwise
  */
@@ -3552,7 +3552,7 @@ ATbool PTBL_hasGotoRanges(PTBL_Goto arg) {
 }
 
 /**
- * Assert whether a PTBL_Goto has a state-number. 
+ * Assert whether a PTBL_Goto has a state-number.
  * \param[in] arg input PTBL_Goto
  * \return ATtrue if the PTBL_Goto had a state-number, or ATfalse otherwise
  */
@@ -3569,7 +3569,7 @@ ATbool PTBL_hasGotoStateNumber(PTBL_Goto arg) {
  * \return the ranges of #arg, if it exist or an undefined value if it does not
  */
 PTBL_CharRanges PTBL_getGotoRanges(PTBL_Goto arg) {
-  
+
     return (PTBL_CharRanges)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3579,7 +3579,7 @@ PTBL_CharRanges PTBL_getGotoRanges(PTBL_Goto arg) {
  * \return the state-number of #arg, if it exist or an undefined value if it does not
  */
 int PTBL_getGotoStateNumber(PTBL_Goto arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -3636,7 +3636,7 @@ ATbool PTBL_isValidChoices(PTBL_Choices arg) {
  * \param[in] arg input PTBL_Choices
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isChoicesEmpty(PTBL_Choices arg){
+ATbool PTBL_isChoicesEmpty(PTBL_Choices arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3648,7 +3648,7 @@ inline ATbool PTBL_isChoicesEmpty(PTBL_Choices arg){
  * \param[in] arg input PTBL_Choices
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isChoicesSingle(PTBL_Choices arg){
+ATbool PTBL_isChoicesSingle(PTBL_Choices arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3664,7 +3664,7 @@ inline ATbool PTBL_isChoicesSingle(PTBL_Choices arg){
  * \param[in] arg input PTBL_Choices
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isChoicesMany(PTBL_Choices arg){
+ATbool PTBL_isChoicesMany(PTBL_Choices arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3672,7 +3672,7 @@ inline ATbool PTBL_isChoicesMany(PTBL_Choices arg){
 }
 
 /**
- * Assert whether a PTBL_Choices has a head. 
+ * Assert whether a PTBL_Choices has a head.
  * \param[in] arg input PTBL_Choices
  * \return ATtrue if the PTBL_Choices had a head, or ATfalse otherwise
  */
@@ -3687,7 +3687,7 @@ ATbool PTBL_hasChoicesHead(PTBL_Choices arg) {
 }
 
 /**
- * Assert whether a PTBL_Choices has a tail. 
+ * Assert whether a PTBL_Choices has a tail.
  * \param[in] arg input PTBL_Choices
  * \return ATtrue if the PTBL_Choices had a tail, or ATfalse otherwise
  */
@@ -3707,7 +3707,7 @@ PTBL_Choice PTBL_getChoicesHead(PTBL_Choices arg) {
   if (PTBL_isChoicesSingle(arg)) {
     return (PTBL_Choice)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_Choice)ATgetFirst((ATermList)arg);
 }
 
@@ -3717,7 +3717,7 @@ PTBL_Choice PTBL_getChoicesHead(PTBL_Choices arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Choices PTBL_getChoicesTail(PTBL_Choices arg) {
-  
+
     return (PTBL_Choices)ATgetNext((ATermList)arg);
 }
 
@@ -3771,7 +3771,7 @@ ATbool PTBL_isValidChoice(PTBL_Choice arg) {
  * \param[in] arg input PTBL_Choice
  * \return ATtrue if #arg corresponds to the signature of a Default, or ATfalse otherwise
  */
-inline ATbool PTBL_isChoiceDefault(PTBL_Choice arg){
+ATbool PTBL_isChoiceDefault(PTBL_Choice arg){
   /* checking for: action */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun6) {
     return ATtrue;
@@ -3780,7 +3780,7 @@ inline ATbool PTBL_isChoiceDefault(PTBL_Choice arg){
 }
 
 /**
- * Assert whether a PTBL_Choice has a ranges. 
+ * Assert whether a PTBL_Choice has a ranges.
  * \param[in] arg input PTBL_Choice
  * \return ATtrue if the PTBL_Choice had a ranges, or ATfalse otherwise
  */
@@ -3792,7 +3792,7 @@ ATbool PTBL_hasChoiceRanges(PTBL_Choice arg) {
 }
 
 /**
- * Assert whether a PTBL_Choice has a actions. 
+ * Assert whether a PTBL_Choice has a actions.
  * \param[in] arg input PTBL_Choice
  * \return ATtrue if the PTBL_Choice had a actions, or ATfalse otherwise
  */
@@ -3809,7 +3809,7 @@ ATbool PTBL_hasChoiceActions(PTBL_Choice arg) {
  * \return the ranges of #arg, if it exist or an undefined value if it does not
  */
 PTBL_CharRanges PTBL_getChoiceRanges(PTBL_Choice arg) {
-  
+
     return (PTBL_CharRanges)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3819,7 +3819,7 @@ PTBL_CharRanges PTBL_getChoiceRanges(PTBL_Choice arg) {
  * \return the actions of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Actions PTBL_getChoiceActions(PTBL_Choice arg) {
-  
+
     return (PTBL_Actions)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3876,7 +3876,7 @@ ATbool PTBL_isValidActions(PTBL_Actions arg) {
  * \param[in] arg input PTBL_Actions
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionsEmpty(PTBL_Actions arg){
+ATbool PTBL_isActionsEmpty(PTBL_Actions arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3888,7 +3888,7 @@ inline ATbool PTBL_isActionsEmpty(PTBL_Actions arg){
  * \param[in] arg input PTBL_Actions
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionsSingle(PTBL_Actions arg){
+ATbool PTBL_isActionsSingle(PTBL_Actions arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3904,7 +3904,7 @@ inline ATbool PTBL_isActionsSingle(PTBL_Actions arg){
  * \param[in] arg input PTBL_Actions
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionsMany(PTBL_Actions arg){
+ATbool PTBL_isActionsMany(PTBL_Actions arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3912,7 +3912,7 @@ inline ATbool PTBL_isActionsMany(PTBL_Actions arg){
 }
 
 /**
- * Assert whether a PTBL_Actions has a head. 
+ * Assert whether a PTBL_Actions has a head.
  * \param[in] arg input PTBL_Actions
  * \return ATtrue if the PTBL_Actions had a head, or ATfalse otherwise
  */
@@ -3927,7 +3927,7 @@ ATbool PTBL_hasActionsHead(PTBL_Actions arg) {
 }
 
 /**
- * Assert whether a PTBL_Actions has a tail. 
+ * Assert whether a PTBL_Actions has a tail.
  * \param[in] arg input PTBL_Actions
  * \return ATtrue if the PTBL_Actions had a tail, or ATfalse otherwise
  */
@@ -3947,7 +3947,7 @@ PTBL_Action PTBL_getActionsHead(PTBL_Actions arg) {
   if (PTBL_isActionsSingle(arg)) {
     return (PTBL_Action)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_Action)ATgetFirst((ATermList)arg);
 }
 
@@ -3957,7 +3957,7 @@ PTBL_Action PTBL_getActionsHead(PTBL_Actions arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Actions PTBL_getActionsTail(PTBL_Actions arg) {
-  
+
     return (PTBL_Actions)ATgetNext((ATermList)arg);
 }
 
@@ -4020,7 +4020,7 @@ ATbool PTBL_isValidAction(PTBL_Action arg) {
  * \param[in] arg input PTBL_Action
  * \return ATtrue if #arg corresponds to the signature of a reduce, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionReduce(PTBL_Action arg){
+ATbool PTBL_isActionReduce(PTBL_Action arg){
   /* checking for: reduce */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun7) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4039,7 +4039,7 @@ inline ATbool PTBL_isActionReduce(PTBL_Action arg){
  * \param[in] arg input PTBL_Action
  * \return ATtrue if #arg corresponds to the signature of a lookahead-reduce, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionLookaheadReduce(PTBL_Action arg){
+ATbool PTBL_isActionLookaheadReduce(PTBL_Action arg){
   /* checking for: reduce */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun8) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4058,7 +4058,7 @@ inline ATbool PTBL_isActionLookaheadReduce(PTBL_Action arg){
  * \param[in] arg input PTBL_Action
  * \return ATtrue if #arg corresponds to the signature of a shift, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionShift(PTBL_Action arg){
+ATbool PTBL_isActionShift(PTBL_Action arg){
   /* checking for: shift */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun9) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4074,7 +4074,7 @@ inline ATbool PTBL_isActionShift(PTBL_Action arg){
  * \param[in] arg input PTBL_Action
  * \return ATtrue if #arg corresponds to the signature of a accept, or ATfalse otherwise
  */
-inline ATbool PTBL_isActionAccept(PTBL_Action arg){
+ATbool PTBL_isActionAccept(PTBL_Action arg){
   /* checking for: accept */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun10) {
     return ATtrue;
@@ -4083,7 +4083,7 @@ inline ATbool PTBL_isActionAccept(PTBL_Action arg){
 }
 
 /**
- * Assert whether a PTBL_Action has a length. 
+ * Assert whether a PTBL_Action has a length.
  * \param[in] arg input PTBL_Action
  * \return ATtrue if the PTBL_Action had a length, or ATfalse otherwise
  */
@@ -4098,7 +4098,7 @@ ATbool PTBL_hasActionLength(PTBL_Action arg) {
 }
 
 /**
- * Assert whether a PTBL_Action has a label. 
+ * Assert whether a PTBL_Action has a label.
  * \param[in] arg input PTBL_Action
  * \return ATtrue if the PTBL_Action had a label, or ATfalse otherwise
  */
@@ -4113,7 +4113,7 @@ ATbool PTBL_hasActionLabel(PTBL_Action arg) {
 }
 
 /**
- * Assert whether a PTBL_Action has a special-attr. 
+ * Assert whether a PTBL_Action has a special-attr.
  * \param[in] arg input PTBL_Action
  * \return ATtrue if the PTBL_Action had a special-attr, or ATfalse otherwise
  */
@@ -4128,7 +4128,7 @@ ATbool PTBL_hasActionSpecialAttr(PTBL_Action arg) {
 }
 
 /**
- * Assert whether a PTBL_Action has a restrictions. 
+ * Assert whether a PTBL_Action has a restrictions.
  * \param[in] arg input PTBL_Action
  * \return ATtrue if the PTBL_Action had a restrictions, or ATfalse otherwise
  */
@@ -4140,7 +4140,7 @@ ATbool PTBL_hasActionRestrictions(PTBL_Action arg) {
 }
 
 /**
- * Assert whether a PTBL_Action has a state-number. 
+ * Assert whether a PTBL_Action has a state-number.
  * \param[in] arg input PTBL_Action
  * \return ATtrue if the PTBL_Action had a state-number, or ATfalse otherwise
  */
@@ -4160,7 +4160,7 @@ int PTBL_getActionLength(PTBL_Action arg) {
   if (PTBL_isActionReduce(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -4173,7 +4173,7 @@ int PTBL_getActionLabel(PTBL_Action arg) {
   if (PTBL_isActionReduce(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4186,7 +4186,7 @@ PTBL_SpecialAttr PTBL_getActionSpecialAttr(PTBL_Action arg) {
   if (PTBL_isActionReduce(arg)) {
     return (PTBL_SpecialAttr)ATgetArgument((ATermAppl)arg, 2);
   }
-  else 
+  else
     return (PTBL_SpecialAttr)ATgetArgument((ATermAppl)arg, 2);
 }
 
@@ -4196,7 +4196,7 @@ PTBL_SpecialAttr PTBL_getActionSpecialAttr(PTBL_Action arg) {
  * \return the restrictions of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Restrictions PTBL_getActionRestrictions(PTBL_Action arg) {
-  
+
     return (PTBL_Restrictions)ATgetArgument((ATermAppl)arg, 3);
 }
 
@@ -4206,7 +4206,7 @@ PTBL_Restrictions PTBL_getActionRestrictions(PTBL_Action arg) {
  * \return the state-number of #arg, if it exist or an undefined value if it does not
  */
 int PTBL_getActionStateNumber(PTBL_Action arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -4320,7 +4320,7 @@ ATbool PTBL_isValidSpecialAttr(PTBL_SpecialAttr arg) {
  * \param[in] arg input PTBL_SpecialAttr
  * \return ATtrue if #arg corresponds to the signature of a none, or ATfalse otherwise
  */
-inline ATbool PTBL_isSpecialAttrNone(PTBL_SpecialAttr arg){
+ATbool PTBL_isSpecialAttrNone(PTBL_SpecialAttr arg){
   if (ATgetInt((ATermInt)arg) == 0) {
 
     return ATtrue;
@@ -4333,7 +4333,7 @@ inline ATbool PTBL_isSpecialAttrNone(PTBL_SpecialAttr arg){
  * \param[in] arg input PTBL_SpecialAttr
  * \return ATtrue if #arg corresponds to the signature of a reject, or ATfalse otherwise
  */
-inline ATbool PTBL_isSpecialAttrReject(PTBL_SpecialAttr arg){
+ATbool PTBL_isSpecialAttrReject(PTBL_SpecialAttr arg){
   if (ATgetInt((ATermInt)arg) == 1) {
 
     return ATtrue;
@@ -4346,7 +4346,7 @@ inline ATbool PTBL_isSpecialAttrReject(PTBL_SpecialAttr arg){
  * \param[in] arg input PTBL_SpecialAttr
  * \return ATtrue if #arg corresponds to the signature of a prefer, or ATfalse otherwise
  */
-inline ATbool PTBL_isSpecialAttrPrefer(PTBL_SpecialAttr arg){
+ATbool PTBL_isSpecialAttrPrefer(PTBL_SpecialAttr arg){
   if (ATgetInt((ATermInt)arg) == 2) {
 
     return ATtrue;
@@ -4359,7 +4359,7 @@ inline ATbool PTBL_isSpecialAttrPrefer(PTBL_SpecialAttr arg){
  * \param[in] arg input PTBL_SpecialAttr
  * \return ATtrue if #arg corresponds to the signature of a avoid, or ATfalse otherwise
  */
-inline ATbool PTBL_isSpecialAttrAvoid(PTBL_SpecialAttr arg){
+ATbool PTBL_isSpecialAttrAvoid(PTBL_SpecialAttr arg){
   if (ATgetInt((ATermInt)arg) == 4) {
 
     return ATtrue;
@@ -4390,7 +4390,7 @@ ATbool PTBL_isValidRestrictions(PTBL_Restrictions arg) {
  * \param[in] arg input PTBL_Restrictions
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isRestrictionsEmpty(PTBL_Restrictions arg){
+ATbool PTBL_isRestrictionsEmpty(PTBL_Restrictions arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -4402,7 +4402,7 @@ inline ATbool PTBL_isRestrictionsEmpty(PTBL_Restrictions arg){
  * \param[in] arg input PTBL_Restrictions
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isRestrictionsSingle(PTBL_Restrictions arg){
+ATbool PTBL_isRestrictionsSingle(PTBL_Restrictions arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -4418,7 +4418,7 @@ inline ATbool PTBL_isRestrictionsSingle(PTBL_Restrictions arg){
  * \param[in] arg input PTBL_Restrictions
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isRestrictionsMany(PTBL_Restrictions arg){
+ATbool PTBL_isRestrictionsMany(PTBL_Restrictions arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -4426,7 +4426,7 @@ inline ATbool PTBL_isRestrictionsMany(PTBL_Restrictions arg){
 }
 
 /**
- * Assert whether a PTBL_Restrictions has a head. 
+ * Assert whether a PTBL_Restrictions has a head.
  * \param[in] arg input PTBL_Restrictions
  * \return ATtrue if the PTBL_Restrictions had a head, or ATfalse otherwise
  */
@@ -4441,7 +4441,7 @@ ATbool PTBL_hasRestrictionsHead(PTBL_Restrictions arg) {
 }
 
 /**
- * Assert whether a PTBL_Restrictions has a tail. 
+ * Assert whether a PTBL_Restrictions has a tail.
  * \param[in] arg input PTBL_Restrictions
  * \return ATtrue if the PTBL_Restrictions had a tail, or ATfalse otherwise
  */
@@ -4461,7 +4461,7 @@ PTBL_Restriction PTBL_getRestrictionsHead(PTBL_Restrictions arg) {
   if (PTBL_isRestrictionsSingle(arg)) {
     return (PTBL_Restriction)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_Restriction)ATgetFirst((ATermList)arg);
 }
 
@@ -4471,7 +4471,7 @@ PTBL_Restriction PTBL_getRestrictionsHead(PTBL_Restrictions arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Restrictions PTBL_getRestrictionsTail(PTBL_Restrictions arg) {
-  
+
     return (PTBL_Restrictions)ATgetNext((ATermList)arg);
 }
 
@@ -4525,7 +4525,7 @@ ATbool PTBL_isValidRestriction(PTBL_Restriction arg) {
  * \param[in] arg input PTBL_Restriction
  * \return ATtrue if #arg corresponds to the signature of a follow, or ATfalse otherwise
  */
-inline ATbool PTBL_isRestrictionFollow(PTBL_Restriction arg){
+ATbool PTBL_isRestrictionFollow(PTBL_Restriction arg){
   /* checking for: follow-restriction */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun11) {
     return ATtrue;
@@ -4534,7 +4534,7 @@ inline ATbool PTBL_isRestrictionFollow(PTBL_Restriction arg){
 }
 
 /**
- * Assert whether a PTBL_Restriction has a char-classes. 
+ * Assert whether a PTBL_Restriction has a char-classes.
  * \param[in] arg input PTBL_Restriction
  * \return ATtrue if the PTBL_Restriction had a char-classes, or ATfalse otherwise
  */
@@ -4551,7 +4551,7 @@ ATbool PTBL_hasRestrictionCharClasses(PTBL_Restriction arg) {
  * \return the char-classes of #arg, if it exist or an undefined value if it does not
  */
 PTBL_CharClasses PTBL_getRestrictionCharClasses(PTBL_Restriction arg) {
-  
+
     return (PTBL_CharClasses)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -4593,7 +4593,7 @@ ATbool PTBL_isValidCharClasses(PTBL_CharClasses arg) {
  * \param[in] arg input PTBL_CharClasses
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isCharClassesEmpty(PTBL_CharClasses arg){
+ATbool PTBL_isCharClassesEmpty(PTBL_CharClasses arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -4605,7 +4605,7 @@ inline ATbool PTBL_isCharClassesEmpty(PTBL_CharClasses arg){
  * \param[in] arg input PTBL_CharClasses
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isCharClassesSingle(PTBL_CharClasses arg){
+ATbool PTBL_isCharClassesSingle(PTBL_CharClasses arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -4621,7 +4621,7 @@ inline ATbool PTBL_isCharClassesSingle(PTBL_CharClasses arg){
  * \param[in] arg input PTBL_CharClasses
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isCharClassesMany(PTBL_CharClasses arg){
+ATbool PTBL_isCharClassesMany(PTBL_CharClasses arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -4629,7 +4629,7 @@ inline ATbool PTBL_isCharClassesMany(PTBL_CharClasses arg){
 }
 
 /**
- * Assert whether a PTBL_CharClasses has a head. 
+ * Assert whether a PTBL_CharClasses has a head.
  * \param[in] arg input PTBL_CharClasses
  * \return ATtrue if the PTBL_CharClasses had a head, or ATfalse otherwise
  */
@@ -4644,7 +4644,7 @@ ATbool PTBL_hasCharClassesHead(PTBL_CharClasses arg) {
 }
 
 /**
- * Assert whether a PTBL_CharClasses has a tail. 
+ * Assert whether a PTBL_CharClasses has a tail.
  * \param[in] arg input PTBL_CharClasses
  * \return ATtrue if the PTBL_CharClasses had a tail, or ATfalse otherwise
  */
@@ -4664,7 +4664,7 @@ PTBL_CharClass PTBL_getCharClassesHead(PTBL_CharClasses arg) {
   if (PTBL_isCharClassesSingle(arg)) {
     return (PTBL_CharClass)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_CharClass)ATgetFirst((ATermList)arg);
 }
 
@@ -4674,7 +4674,7 @@ PTBL_CharClass PTBL_getCharClassesHead(PTBL_CharClasses arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_CharClasses PTBL_getCharClassesTail(PTBL_CharClasses arg) {
-  
+
     return (PTBL_CharClasses)ATgetNext((ATermList)arg);
 }
 
@@ -4734,7 +4734,7 @@ ATbool PTBL_isValidPriorities(PTBL_Priorities arg) {
  * \param[in] arg input PTBL_Priorities
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PTBL_isPrioritiesEmpty(PTBL_Priorities arg){
+ATbool PTBL_isPrioritiesEmpty(PTBL_Priorities arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -4746,7 +4746,7 @@ inline ATbool PTBL_isPrioritiesEmpty(PTBL_Priorities arg){
  * \param[in] arg input PTBL_Priorities
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PTBL_isPrioritiesSingle(PTBL_Priorities arg){
+ATbool PTBL_isPrioritiesSingle(PTBL_Priorities arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -4762,7 +4762,7 @@ inline ATbool PTBL_isPrioritiesSingle(PTBL_Priorities arg){
  * \param[in] arg input PTBL_Priorities
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PTBL_isPrioritiesMany(PTBL_Priorities arg){
+ATbool PTBL_isPrioritiesMany(PTBL_Priorities arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -4770,7 +4770,7 @@ inline ATbool PTBL_isPrioritiesMany(PTBL_Priorities arg){
 }
 
 /**
- * Assert whether a PTBL_Priorities has a head. 
+ * Assert whether a PTBL_Priorities has a head.
  * \param[in] arg input PTBL_Priorities
  * \return ATtrue if the PTBL_Priorities had a head, or ATfalse otherwise
  */
@@ -4785,7 +4785,7 @@ ATbool PTBL_hasPrioritiesHead(PTBL_Priorities arg) {
 }
 
 /**
- * Assert whether a PTBL_Priorities has a tail. 
+ * Assert whether a PTBL_Priorities has a tail.
  * \param[in] arg input PTBL_Priorities
  * \return ATtrue if the PTBL_Priorities had a tail, or ATfalse otherwise
  */
@@ -4805,7 +4805,7 @@ PTBL_Priority PTBL_getPrioritiesHead(PTBL_Priorities arg) {
   if (PTBL_isPrioritiesSingle(arg)) {
     return (PTBL_Priority)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PTBL_Priority)ATgetFirst((ATermList)arg);
 }
 
@@ -4815,7 +4815,7 @@ PTBL_Priority PTBL_getPrioritiesHead(PTBL_Priorities arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PTBL_Priorities PTBL_getPrioritiesTail(PTBL_Priorities arg) {
-  
+
     return (PTBL_Priorities)ATgetNext((ATermList)arg);
 }
 
@@ -4872,7 +4872,7 @@ ATbool PTBL_isValidPriority(PTBL_Priority arg) {
  * \param[in] arg input PTBL_Priority
  * \return ATtrue if #arg corresponds to the signature of a greater, or ATfalse otherwise
  */
-inline ATbool PTBL_isPriorityGreater(PTBL_Priority arg){
+ATbool PTBL_isPriorityGreater(PTBL_Priority arg){
   /* checking for: gtr-prio */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun12) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4891,7 +4891,7 @@ inline ATbool PTBL_isPriorityGreater(PTBL_Priority arg){
  * \param[in] arg input PTBL_Priority
  * \return ATtrue if #arg corresponds to the signature of a arg-greater, or ATfalse otherwise
  */
-inline ATbool PTBL_isPriorityArgGreater(PTBL_Priority arg){
+ATbool PTBL_isPriorityArgGreater(PTBL_Priority arg){
   /* checking for: arg-gtr-prio */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PTBL_afun13) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4909,7 +4909,7 @@ inline ATbool PTBL_isPriorityArgGreater(PTBL_Priority arg){
 }
 
 /**
- * Assert whether a PTBL_Priority has a label1. 
+ * Assert whether a PTBL_Priority has a label1.
  * \param[in] arg input PTBL_Priority
  * \return ATtrue if the PTBL_Priority had a label1, or ATfalse otherwise
  */
@@ -4924,7 +4924,7 @@ ATbool PTBL_hasPriorityLabel1(PTBL_Priority arg) {
 }
 
 /**
- * Assert whether a PTBL_Priority has a label2. 
+ * Assert whether a PTBL_Priority has a label2.
  * \param[in] arg input PTBL_Priority
  * \return ATtrue if the PTBL_Priority had a label2, or ATfalse otherwise
  */
@@ -4939,7 +4939,7 @@ ATbool PTBL_hasPriorityLabel2(PTBL_Priority arg) {
 }
 
 /**
- * Assert whether a PTBL_Priority has a argument-number. 
+ * Assert whether a PTBL_Priority has a argument-number.
  * \param[in] arg input PTBL_Priority
  * \return ATtrue if the PTBL_Priority had a argument-number, or ATfalse otherwise
  */
@@ -4959,7 +4959,7 @@ int PTBL_getPriorityLabel1(PTBL_Priority arg) {
   if (PTBL_isPriorityGreater(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -4972,7 +4972,7 @@ int PTBL_getPriorityLabel2(PTBL_Priority arg) {
   if (PTBL_isPriorityGreater(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 2));
 }
 
@@ -4982,7 +4982,7 @@ int PTBL_getPriorityLabel2(PTBL_Priority arg) {
  * \return the argument-number of #arg, if it exist or an undefined value if it does not
  */
 int PTBL_getPriorityArgumentNumber(PTBL_Priority arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -5038,7 +5038,7 @@ PTBL_Priority PTBL_setPriorityArgumentNumber(PTBL_Priority arg, int argumentNumb
 }
 
 /**
- * Apply functions to the children of a PTBL_Production. 
+ * Apply functions to the children of a PTBL_Production.
  * \return A new PTBL_Production with new children where the argument functions might have applied
  */
 PTBL_Production PTBL_visitProduction(PTBL_Production arg, ATerm (*acceptProd)(ATerm)) {
@@ -5050,7 +5050,7 @@ PTBL_Production PTBL_visitProduction(PTBL_Production arg, ATerm (*acceptProd)(AT
   return (PTBL_Production)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_CharClass. 
+ * Apply functions to the children of a PTBL_CharClass.
  * \return A new PTBL_CharClass with new children where the argument functions might have applied
  */
 PTBL_CharClass PTBL_visitCharClass(PTBL_CharClass arg, ATerm (*acceptCharClass)(ATerm)) {
@@ -5062,7 +5062,7 @@ PTBL_CharClass PTBL_visitCharClass(PTBL_CharClass arg, ATerm (*acceptCharClass)(
   return (PTBL_CharClass)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_CharRanges. 
+ * Apply functions to the children of a PTBL_CharRanges.
  * \return A new PTBL_CharRanges with new children where the argument functions might have applied
  */
 PTBL_CharRanges PTBL_visitCharRanges(PTBL_CharRanges arg, ATerm (*acceptRanges)(ATerm)) {
@@ -5074,7 +5074,7 @@ PTBL_CharRanges PTBL_visitCharRanges(PTBL_CharRanges arg, ATerm (*acceptRanges)(
   return (PTBL_CharRanges)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Version. 
+ * Apply functions to the children of a PTBL_Version.
  * \return A new PTBL_Version with new children where the argument functions might have applied
  */
 PTBL_Version PTBL_visitVersion(PTBL_Version arg) {
@@ -5085,7 +5085,7 @@ PTBL_Version PTBL_visitVersion(PTBL_Version arg) {
   return (PTBL_Version)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_ParseTable. 
+ * Apply functions to the children of a PTBL_ParseTable.
  * \return A new PTBL_ParseTable with new children where the argument functions might have applied
  */
 PTBL_ParseTable PTBL_visitParseTable(PTBL_ParseTable arg, PTBL_Version (*acceptVersion)(PTBL_Version), int (*acceptInitialState)(int), PTBL_Labels (*acceptLabels)(PTBL_Labels), PTBL_States (*acceptStates)(PTBL_States), PTBL_Priorities (*acceptPriorities)(PTBL_Priorities)) {
@@ -5101,7 +5101,7 @@ PTBL_ParseTable PTBL_visitParseTable(PTBL_ParseTable arg, PTBL_Version (*acceptV
   return (PTBL_ParseTable)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Labels. 
+ * Apply functions to the children of a PTBL_Labels.
  * \return A new PTBL_Labels with new children where the argument functions might have applied
  */
 PTBL_Labels PTBL_visitLabels(PTBL_Labels arg, PTBL_Label (*acceptHead)(PTBL_Label)) {
@@ -5121,7 +5121,7 @@ PTBL_Labels PTBL_visitLabels(PTBL_Labels arg, PTBL_Label (*acceptHead)(PTBL_Labe
   return (PTBL_Labels)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Label. 
+ * Apply functions to the children of a PTBL_Label.
  * \return A new PTBL_Label with new children where the argument functions might have applied
  */
 PTBL_Label PTBL_visitLabel(PTBL_Label arg, PTBL_Production (*acceptProduction)(PTBL_Production), int (*acceptNumber)(int)) {
@@ -5134,7 +5134,7 @@ PTBL_Label PTBL_visitLabel(PTBL_Label arg, PTBL_Production (*acceptProduction)(P
   return (PTBL_Label)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_States. 
+ * Apply functions to the children of a PTBL_States.
  * \return A new PTBL_States with new children where the argument functions might have applied
  */
 PTBL_States PTBL_visitStates(PTBL_States arg, PTBL_State (*acceptHead)(PTBL_State)) {
@@ -5154,7 +5154,7 @@ PTBL_States PTBL_visitStates(PTBL_States arg, PTBL_State (*acceptHead)(PTBL_Stat
   return (PTBL_States)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_State. 
+ * Apply functions to the children of a PTBL_State.
  * \return A new PTBL_State with new children where the argument functions might have applied
  */
 PTBL_State PTBL_visitState(PTBL_State arg, int (*acceptNumber)(int), PTBL_Gotos (*acceptGotos)(PTBL_Gotos), PTBL_Choices (*acceptChoices)(PTBL_Choices)) {
@@ -5168,7 +5168,7 @@ PTBL_State PTBL_visitState(PTBL_State arg, int (*acceptNumber)(int), PTBL_Gotos 
   return (PTBL_State)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Gotos. 
+ * Apply functions to the children of a PTBL_Gotos.
  * \return A new PTBL_Gotos with new children where the argument functions might have applied
  */
 PTBL_Gotos PTBL_visitGotos(PTBL_Gotos arg, PTBL_Goto (*acceptHead)(PTBL_Goto)) {
@@ -5188,7 +5188,7 @@ PTBL_Gotos PTBL_visitGotos(PTBL_Gotos arg, PTBL_Goto (*acceptHead)(PTBL_Goto)) {
   return (PTBL_Gotos)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Goto. 
+ * Apply functions to the children of a PTBL_Goto.
  * \return A new PTBL_Goto with new children where the argument functions might have applied
  */
 PTBL_Goto PTBL_visitGoto(PTBL_Goto arg, PTBL_CharRanges (*acceptRanges)(PTBL_CharRanges), int (*acceptStateNumber)(int)) {
@@ -5201,7 +5201,7 @@ PTBL_Goto PTBL_visitGoto(PTBL_Goto arg, PTBL_CharRanges (*acceptRanges)(PTBL_Cha
   return (PTBL_Goto)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Choices. 
+ * Apply functions to the children of a PTBL_Choices.
  * \return A new PTBL_Choices with new children where the argument functions might have applied
  */
 PTBL_Choices PTBL_visitChoices(PTBL_Choices arg, PTBL_Choice (*acceptHead)(PTBL_Choice)) {
@@ -5221,7 +5221,7 @@ PTBL_Choices PTBL_visitChoices(PTBL_Choices arg, PTBL_Choice (*acceptHead)(PTBL_
   return (PTBL_Choices)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Choice. 
+ * Apply functions to the children of a PTBL_Choice.
  * \return A new PTBL_Choice with new children where the argument functions might have applied
  */
 PTBL_Choice PTBL_visitChoice(PTBL_Choice arg, PTBL_CharRanges (*acceptRanges)(PTBL_CharRanges), PTBL_Actions (*acceptActions)(PTBL_Actions)) {
@@ -5234,7 +5234,7 @@ PTBL_Choice PTBL_visitChoice(PTBL_Choice arg, PTBL_CharRanges (*acceptRanges)(PT
   return (PTBL_Choice)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Actions. 
+ * Apply functions to the children of a PTBL_Actions.
  * \return A new PTBL_Actions with new children where the argument functions might have applied
  */
 PTBL_Actions PTBL_visitActions(PTBL_Actions arg, PTBL_Action (*acceptHead)(PTBL_Action)) {
@@ -5254,7 +5254,7 @@ PTBL_Actions PTBL_visitActions(PTBL_Actions arg, PTBL_Action (*acceptHead)(PTBL_
   return (PTBL_Actions)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Action. 
+ * Apply functions to the children of a PTBL_Action.
  * \return A new PTBL_Action with new children where the argument functions might have applied
  */
 PTBL_Action PTBL_visitAction(PTBL_Action arg, int (*acceptLength)(int), int (*acceptLabel)(int), PTBL_SpecialAttr (*acceptSpecialAttr)(PTBL_SpecialAttr), PTBL_Restrictions (*acceptRestrictions)(PTBL_Restrictions), int (*acceptStateNumber)(int)) {
@@ -5282,7 +5282,7 @@ PTBL_Action PTBL_visitAction(PTBL_Action arg, int (*acceptLength)(int), int (*ac
   return (PTBL_Action)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_SpecialAttr. 
+ * Apply functions to the children of a PTBL_SpecialAttr.
  * \return A new PTBL_SpecialAttr with new children where the argument functions might have applied
  */
 PTBL_SpecialAttr PTBL_visitSpecialAttr(PTBL_SpecialAttr arg) {
@@ -5302,7 +5302,7 @@ PTBL_SpecialAttr PTBL_visitSpecialAttr(PTBL_SpecialAttr arg) {
   return (PTBL_SpecialAttr)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Restrictions. 
+ * Apply functions to the children of a PTBL_Restrictions.
  * \return A new PTBL_Restrictions with new children where the argument functions might have applied
  */
 PTBL_Restrictions PTBL_visitRestrictions(PTBL_Restrictions arg, PTBL_Restriction (*acceptHead)(PTBL_Restriction)) {
@@ -5322,7 +5322,7 @@ PTBL_Restrictions PTBL_visitRestrictions(PTBL_Restrictions arg, PTBL_Restriction
   return (PTBL_Restrictions)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Restriction. 
+ * Apply functions to the children of a PTBL_Restriction.
  * \return A new PTBL_Restriction with new children where the argument functions might have applied
  */
 PTBL_Restriction PTBL_visitRestriction(PTBL_Restriction arg, PTBL_CharClasses (*acceptCharClasses)(PTBL_CharClasses)) {
@@ -5334,7 +5334,7 @@ PTBL_Restriction PTBL_visitRestriction(PTBL_Restriction arg, PTBL_CharClasses (*
   return (PTBL_Restriction)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_CharClasses. 
+ * Apply functions to the children of a PTBL_CharClasses.
  * \return A new PTBL_CharClasses with new children where the argument functions might have applied
  */
 PTBL_CharClasses PTBL_visitCharClasses(PTBL_CharClasses arg, PTBL_CharClass (*acceptHead)(PTBL_CharClass)) {
@@ -5354,7 +5354,7 @@ PTBL_CharClasses PTBL_visitCharClasses(PTBL_CharClasses arg, PTBL_CharClass (*ac
   return (PTBL_CharClasses)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Priorities. 
+ * Apply functions to the children of a PTBL_Priorities.
  * \return A new PTBL_Priorities with new children where the argument functions might have applied
  */
 PTBL_Priorities PTBL_visitPriorities(PTBL_Priorities arg, PTBL_Priority (*acceptHead)(PTBL_Priority)) {
@@ -5374,7 +5374,7 @@ PTBL_Priorities PTBL_visitPriorities(PTBL_Priorities arg, PTBL_Priority (*accept
   return (PTBL_Priorities)NULL;
 }
 /**
- * Apply functions to the children of a PTBL_Priority. 
+ * Apply functions to the children of a PTBL_Priority.
  * \return A new PTBL_Priority with new children where the argument functions might have applied
  */
 PTBL_Priority PTBL_visitPriority(PTBL_Priority arg, int (*acceptLabel1)(int), int (*acceptLabel2)(int), int (*acceptArgumentNumber)(int)) {

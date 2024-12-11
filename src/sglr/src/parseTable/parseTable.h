@@ -41,10 +41,10 @@ ATbool    SGLR_PTBL_isPriorityGreater(ParseTable *pt, int argNumber, PT_Producti
 
 
 size_t SGLR_PTBL_countGotos(register PTBL_Gotos goto_lst);
-size_t SGLR_PTBL_countChoices(register PTBL_Choices choices); 
+size_t SGLR_PTBL_countChoices(register PTBL_Choices choices);
 
 ParseTable *SGLR_PTBL_initializeParseTable(int startState, size_t numstates, size_t numprods, size_t action_entries, size_t goto_entries, const char *path);
-  
+
 void SGLR_PTBL_fillParseTable(ParseTable *pt, PTBL_States states);
 void SGLR_PTBL_processProductions(ParseTable *pt, PTBL_Labels prods);
 void SGLR_PTBL_processPriorities(ParseTable *pt, register PTBL_Priorities prios);

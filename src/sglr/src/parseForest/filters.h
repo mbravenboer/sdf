@@ -2,7 +2,7 @@
 
 /** \file
  * \ingroup parseForest
- * 
+ *
  *  The parser maintains a compact representation of a set of parse trees
  * in the form of a parse forest. We use the generic terms to represent
  * these.
@@ -16,7 +16,7 @@
 #ifndef _FILTERS_H_
 #define _FILTERS_H_
 
-#include "parseTable.h"
+#include "parseTable/parseTable.h"
 #include "inputString-data.h"
 #include <MEPT.h>
 

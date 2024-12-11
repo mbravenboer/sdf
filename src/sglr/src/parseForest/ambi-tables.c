@@ -26,18 +26,18 @@
 
 #include "ambi-tables.h"
 #include "mainOptions.h"
-#include "parserStatistics.h"
+#include "parser/parserStatistics.h"
 
-static ATermTable cluster_table = NULL;  
-static ATermTable index_table = NULL;  
+static ATermTable cluster_table = NULL;
+static ATermTable index_table = NULL;
 
-/** 
+/**
  * Used to store the positions in the string that are derived in more than one
  * way ie., the positions that are ambiguous.
  */
 static Bitmap InputAmbiMap;
 static int ambiguityClustersCreated = 0;
- 
+
 void SG_CreateInputAmbiMap(int length) {
   InputAmbiMap = BitmapCreate(length+1);
 }
@@ -46,13 +46,13 @@ void SG_DestroyInputAmbiMap() {
   BitmapDestroy(InputAmbiMap);
 }
 
-/** 
- * Determines if there is an ambiguity at the given position in the input 
- * string. This is used as an efficient way to see if there is an ambiguity 
+/**
+ * Determines if there is an ambiguity at the given position in the input
+ * string. This is used as an efficient way to see if there is an ambiguity
  * before accessing the ambiTable.
- * 
+ *
  * \param index the position in the input string
- * 
+ *
  * \return 1 if there is an ambiguity in the given position; 0 otherwise
  */
 int SG_InputAmbiMapIsSet(int index) {
@@ -70,7 +70,7 @@ ATerm SG_CreateAmbiArgsKey(PT_Args key, size_t pos) {
 
 ATerm SG_CreateAmbiTreeKey(PT_Tree key, size_t pos) {
   return (ATerm) ATmakeList2((ATerm) key, (ATerm) ATmakeInt(pos));
-}  
+}
 
 void SG_AmbiTablesDestroy() {
   if (cluster_table) {
@@ -89,7 +89,7 @@ static void SG_AmbiTablesCreate() {
   }
   cluster_table = ATtableCreate(4096, 75);
   index_table = ATtableCreate(4096, 75);
-} 
+}
 
 static ATerm SG_IndexTableGet(PT_Tree key, size_t pos) {
   ATerm idx = NULL;
@@ -115,15 +115,15 @@ static PT_Args SG_ClusterTableGet(ATerm idx) {
   }
 }
 
-/** 
+/**
  * Returns the children of an ambiguity node. The first child created is used to
- * index into the table. The list of children returned may include the child 
+ * index into the table. The list of children returned may include the child
  * that was used in the key if it was not already filtered.
- * 
- * \param key 
- * \param pos 
- * 
- * \return 
+ *
+ * \param key
+ * \param pos
+ *
+ * \return
  */
 PT_Args SG_AmbiTablesGetCluster(PT_Tree key, size_t pos) {
   ATerm idx = SG_IndexTableGet(key, pos);
@@ -155,16 +155,16 @@ void SG_AmbiTablesUpdateCluster(ATerm idx, PT_Args cluster) {
 }
 
 /**
- * Maintains the ambiguity table, needed for the mapping from terms to 
- * ambiguity clusters.  On a new ambiguity, it makes a new entry. The #pos 
- * is needed to differentiate between nodes that are labelled by the same 
+ * Maintains the ambiguity table, needed for the mapping from terms to
+ * ambiguity clusters.  On a new ambiguity, it makes a new entry. The #pos
+ * is needed to differentiate between nodes that are labelled by the same
  * production, but are used in different derivations.
- * 
+ *
  * \param existing the existing parse tree node (may already be an ambiguity)
- * \param new the new parse tree node that may be added to the ambiguity node 
+ * \param new the new parse tree node that may be added to the ambiguity node
  * if it is not already there
- * \param pos the start position of the sub-string in the input string that the 
- * new node derives 
+ * \param pos the start position of the sub-string in the input string that the
+ * new node derives
  */
 void SG_CreateAmbCluster(PT_Tree existing, PT_Tree new, size_t pos) {
   PT_Args newambs;
@@ -173,9 +173,9 @@ void SG_CreateAmbCluster(PT_Tree existing, PT_Tree new, size_t pos) {
   if (!new) {
     return;
   }
-  
+
   ambidx = SG_AmbiTablesGetIndex(existing, pos);
-  if (!ambidx) { 
+  if (!ambidx) {
     /* New ambiguity */
     ambidx = (ATerm) ATmakeInt(ambiguityClustersCreated++);
     SGLR_STATS_incrementCount(SGLR_STATS_ambiguityClustersCreated);
@@ -233,7 +233,7 @@ void SG_collectAmbiTableStats(void) {
     }
   }
 }
-#else 
+#else
 void SG_collectAmbiTableStats(void) {
 ;
 }

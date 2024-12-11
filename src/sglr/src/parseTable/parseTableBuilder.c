@@ -1,27 +1,27 @@
 /*$Id$*/
 
-/** \file 
+/** \file
  * \ingroup parseTable
  */
 
-#include "parseTableBuilder.h"
+#include "parseTable/parseTableBuilder.h"
 #include "ptable.h"
-#include "parserOptions.h"
+#include "parser/parserOptions.h"
 #include "mainOptions.h"
-#include "parserStatistics.h"
+#include "parser/parserStatistics.h"
 
 #include <rsrc-usage.h>
 #include <Error-manager.h>
 
-/** 
- * Translate ATerm representation of parse table into internal parse table 
+/**
+ * Translate ATerm representation of parse table into internal parse table
  * data structure.
  */
 ParseTable *SG_BuildParseTable(PTBL_ParseTable extParseTable, const char *path) {
   PTBL_Labels          prods;
   PTBL_States          states;
   register PTBL_Priorities prios;
-  register PTBL_States sts; 
+  register PTBL_States sts;
   int                startState;
   PTBL_Version       version;
   ParseTable         *pt = NULL;
@@ -32,7 +32,7 @@ ParseTable *SG_BuildParseTable(PTBL_ParseTable extParseTable, const char *path) 
   static char subjectDescription[1024];
   static char errorDescription[1024];
 
-  if (!PTBL_isValidParseTable(extParseTable)) { 
+  if (!PTBL_isValidParseTable(extParseTable)) {
     if (PARSER_getVerboseFlag) {
       ATwarning("Parse table format error\n");
     }
@@ -111,12 +111,12 @@ ParseTable *SG_BuildParseTable(PTBL_ParseTable extParseTable, const char *path) 
     }
 
     SGLR_STATS_setCount(SGLR_STATS_beforeParseTableCreationMRSS, STATS_ResidentSetSize());
-  
-    pt = SGLR_PTBL_initializeParseTable(startState, 
-        PTBL_getStatesLength(states), 
-        PTBL_getLabelsLength(prods), 
-        action_entries, 
-        goto_entries, 
+
+    pt = SGLR_PTBL_initializeParseTable(startState,
+        PTBL_getStatesLength(states),
+        PTBL_getLabelsLength(prods),
+        action_entries,
+        goto_entries,
         path);
 
     SGLR_STATS_setCount(SGLR_STATS_emptyParseTableMemAllocated, STATS_Allocated());
@@ -126,7 +126,7 @@ ParseTable *SG_BuildParseTable(PTBL_ParseTable extParseTable, const char *path) 
     states = NULL;
     SGLR_PTBL_processProductions(pt, prods);
     prods = NULL;
-  
+
     if (!PTBL_isPrioritiesEmpty(prios)) {
       SGLR_PTBL_processPriorities(pt, prios);
       prios = NULL;

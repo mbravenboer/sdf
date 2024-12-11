@@ -1,14 +1,14 @@
 /*$Id$*/
 
-/** \file 
+/** \file
  * \ingroup parseTable
  */
 
-#include "parseTableDB.h"
-#include "parseTableBuilder.h"
-#include "parserOptions.h"
+#include "parseTable/parseTableDB.h"
+#include "parseTable/parseTableBuilder.h"
+#include "parser/parserOptions.h"
 #include "mainOptions.h"
-#include "parserStatistics.h"
+#include "parser/parserStatistics.h"
 
 #include <aterm2.h>
 #include <Error-manager.h>
@@ -57,20 +57,20 @@ ParseTable *SG_AddParseTable(const char *filename) {
     fclose(inputFile);
   }
 
-  if (intParseTable != NULL) { 
+  if (intParseTable != NULL) {
     SG_CacheParseTable(filename, intParseTable);
   }
 
   return intParseTable;
 }
 
-/* Store parse table in parse table database; if the parse table database is 
+/* Store parse table in parse table database; if the parse table database is
  * full, ditch its first entry to make room.
  */
 void SG_CacheParseTable(const char *parseTableName, ParseTable *pt) {
   if (cachedTable.table) {
     free(cachedTable.name);
-    
+
     SGLR_PTBL_discardParseTable(cachedTable.table);
   }
   cachedTable.name  = strdup(parseTableName);
@@ -95,7 +95,7 @@ ParseTable *SG_LookupParseTable(const char *parseTableName) {
     return cachedTable.table;
   }
 
-  /*sprintf(contentDescription, "Table for %s not stored", 
+  /*sprintf(contentDescription, "Table for %s not stored",
 	  parseTableName ? "XXX" : "[undefined]");*/
 
   /*  SG_addParseTableErrorError(inFile, contentDescription); */

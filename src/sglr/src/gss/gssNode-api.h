@@ -1,7 +1,7 @@
 /*$Id$*/
 
-/** \file 
- * \ingroup gss 
+/** \file
+ * \ingroup gss
  */
 
 #ifndef __GSSNODE_API_
@@ -12,7 +12,7 @@
 #include "gssEdgeList.h"
 #include "gssNode-data.h"
 #include "gssEdge-data.h"
-#include "parseTable.h"
+#include "parseTable/parseTable.h"
 
 GSSNode     GSSNode_createNode(int stateNum, ATbool isShift);
 void        GSSNode_deleteGSSNode(GSSNode gssNode);

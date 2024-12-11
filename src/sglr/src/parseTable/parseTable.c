@@ -2,21 +2,21 @@
 
 /** \file
  * \ingroup parseTable
- * Implementation of the internal representation of parse tables: creation, 
+ * Implementation of the internal representation of parse tables: creation,
  * lookup, maintenance.
  *
  * \section tables Implementation of parse tables
  *
  * The action table contains the shift and reduce actions.
- * The goto table contains the goto actions that get queried after a reduce has 
+ * The goto table contains the goto actions that get queried after a reduce has
  * been done. The standard goto table can be thought of a two-dimensional table
  * indexed by (state number, non-terminal). However, due to the priorities in
  * SDF2, pgen uses productions instead of non-terminals to index into the table.
  * The goto table tends to be quite sparse.
  *
  *
- * Parsing is done token by token (a token is a character in SGLR).  When 
- * looking up matching actions (or states), we have to return all actions 
+ * Parsing is done token by token (a token is a character in SGLR).  When
+ * looking up matching actions (or states), we have to return all actions
  * (states) belonging to all character classes containing the token.
  *
  * This is fairly difficult when the lookup tables for actions and gotos
@@ -37,36 +37,36 @@
  *
  * \subsection actionTable The action table
  *
- * The data structure used to implement the action table is a one dimensional 
- * array of PTBL_Actions. The indexing function into the table is relatively 
- * straight forward. Because we only parse strings of ASCII characters, the 
- * maximum number of entries in a state is 257: 0-255 + the end-of-string 
- * character. The memory allocated for the action table is the 
- * (number of states * 257). The indexing function into the table is done by 
- * (state*MaxNumOfStates+inputSymbol). 
+ * The data structure used to implement the action table is a one dimensional
+ * array of PTBL_Actions. The indexing function into the table is relatively
+ * straight forward. Because we only parse strings of ASCII characters, the
+ * maximum number of entries in a state is 257: 0-255 + the end-of-string
+ * character. The memory allocated for the action table is the
+ * (number of states * 257). The indexing function into the table is done by
+ * (state*MaxNumOfStates+inputSymbol).
  *
  * \subsection gotoTable The goto table
  *
- * The goto table is used by the parser to find the state to move to after a 
- * reduction has been done. Each entry in the goto table consists of the 
+ * The goto table is used by the parser to find the state to move to after a
+ * reduction has been done. Each entry in the goto table consists of the
  * source state, the production number and the target state and is indexed on
  * the source state and the production number.
  *
  * A hash table is used to implement the goto table. It is a two-dimensional
- * array. The size of the first dimension is dependant on the number of goto 
+ * array. The size of the first dimension is dependant on the number of goto
  * entries.
  *
- * The memory used for the goto table is allocated in 8MB chuncks. Once the 
- * first chunk is filled, a second chunck is allocated, and so on. The 
+ * The memory used for the goto table is allocated in 8MB chuncks. Once the
+ * first chunk is filled, a second chunck is allocated, and so on. The
  * regression tests allocate at most 4 chuncks.
  */
 
-#include "parseTable.h"
+#include "parseTable/parseTable.h"
 #include "tokens.h"
-#include "mem-alloc.h"
-#include "mainOptions.h" 
+#include "utils/mem-alloc.h"
+#include "mainOptions.h"
 #include "ptable.h"
-#include "parserStatistics.h"
+#include "parser/parserStatistics.h"
 
 #include <MEPT-utils.h>
 #include <assert.h>
@@ -114,9 +114,9 @@ struct _ParseTable {
 };
 
 /* The pool size of the free hash buckets in both action and goto tables. */
-#define SGLR_PTBL_POOLCHUNK 8192 /**< The amount of memory to allocate for the 
+#define SGLR_PTBL_POOLCHUNK 8192 /**< The amount of memory to allocate for the
                                       goto table. */
-#define SGLR_PTBL_HASH_PRIME 677 /**< The prime number used to generate the 
+#define SGLR_PTBL_HASH_PRIME 677 /**< The prime number used to generate the
                                       hash key. */
 
 #define SGLR_PTBL_STATE_SIZE 257 /**< The columns in the action table. */
@@ -131,105 +131,105 @@ enum SGLR_PTBL_PRIORITIES { P_IGNORE, P_ARGGTR, P_GTR };
 
 /* Parse table accessors. */
 
-/** 
+/**
 * Returns the start state of the parse table.
-* 
+*
 * \param pt the parse table.
-* 
+*
 * \return the start state of the parse table.
 */
-int SGLR_PTBL_getStartState(ParseTable *pt) {         
+int SGLR_PTBL_getStartState(ParseTable *pt) {
   return pt->startState;
 }
-      
-/** 
+
+/**
 * Returns the number of states in the parse table.
-* 
+*
 * \param pt the parse table.
-* 
+*
 * \return the number of states in the parse table.
 */
 size_t SGLR_PTBL_getNumberOfStates(ParseTable *pt) {
   return pt->numstates;
 }
 
-/** 
+/**
 * Returns the number of productions in the parse table.
-* 
+*
 * \param pt the parse table.
-* 
+*
 * \return the number of productions in the parse table.
 */
 size_t SGLR_PTBL_getNumberOfProductions(ParseTable *pt) {
   return pt->numprods;
 }
 
-/** 
+/**
 * Returns the length of the longest production.
-* 
-* \return 
+*
+* \return
 */
 int SGLR_PTBL_getMaxProductionLength(ParseTable *pt) {
   return pt->maxProductionLength;
 }
 
-/** 
-* Returns the number of 
-* 
-* \param pt 
-* 
-* \return 
+/**
+* Returns the number of
+*
+* \param pt
+*
+* \return
 */
 gototable SGLR_PTBL_getNumberOfGotos(ParseTable *pt) {
   return pt->gotos;
 }
 
-/** 
-* Returns the table containig the grammar's productions, which is indexed on 
+/**
+* Returns the table containig the grammar's productions, which is indexed on
 * production numbers.
-* 
+*
 * \param pt the parse table.
-* 
+*
 * \return returns the table of productions.
 */
 productiontable SGLR_PTBL_getProductions(ParseTable *pt) {
   return pt->productions;
 }
 
-/** 
+/**
 * Returns the table containing whether or not the productions are injections.
 * Again it is indexed on production numbers.
 *
 * \param pt the parse table.
-* 
+*
 * \return returns the table of injections.
 */
 injectiontable SGLR_PTBL_getInjections(ParseTable *pt) {
   return pt->injections;
 }
- 
-productionset SGLR_PTBL_getPriorities(ParseTable *pt) {  
+
+productionset SGLR_PTBL_getPriorities(ParseTable *pt) {
   return pt->production_has_priorities;
 }
- 
+
 prioritytable SGLR_PTBL_getGreaterPriorities(ParseTable *pt) {
   return pt->gtr_priorities;
 }
- 
+
 argprioritytable SGLR_PTBL_getArgumentGreaterPriorities(ParseTable *pt) {
  return pt->arg_gtr_priorities;
 }
- 
+
 prioritytable SGLR_PTBL_getAssociativities(ParseTable *pt) {
   return pt->associativities;
 }
- 
+
 ATbool SGLR_PTBL_hasPriorities(ParseTable *pt) {
   return pt->has_priorities;
 }
- 
-ATbool SGLR_PTBL_hasRejects(ParseTable *pt) { 
-  return pt->has_rejects; 
+
+ATbool SGLR_PTBL_hasRejects(ParseTable *pt) {
+  return pt->has_rejects;
 }
 
 ATbool SGLR_PTBL_hasPrefers(ParseTable *pt) {
@@ -239,18 +239,18 @@ ATbool SGLR_PTBL_hasPrefers(ParseTable *pt) {
 ATbool SGLR_PTBL_hasAvoids(ParseTable *pt) {
  return pt->has_avoids;
 }
- 
+
 ATbool SGLR_PTBL_hasPreferences(ParseTable *pt) {
   return (SGLR_PTBL_hasRejects(pt)||SGLR_PTBL_hasPrefers(pt)||SGLR_PTBL_hasAvoids(pt));
 }
 
 
-/** 
-* Returns a typedef enum that represents the type of action given. This is to 
+/**
+* Returns a typedef enum that represents the type of action given. This is to
 * optimize the parser.
-* 
+*
 * \param action the action.
-* 
+*
 * \return an typedef enum representing the type of action given.
 */
 ActionKind SGLR_PTBL_actionKind(PTBL_Action action) {
@@ -271,13 +271,13 @@ ActionKind SGLR_PTBL_actionKind(PTBL_Action action) {
 
 
 
-/** 
+/**
 * Computes the hash key used by the goto table. This is not a perfect hash.
-* 
+*
 * \param pt the parse table.
 * \param stateNum the source state number of the goto.
 * \param prodNum the goto's production.
-* 
+*
 * \return the hash key for the goto entry.
 */
 static hashkey computeGotoHashKey(ParseTable *pt, int stateNum, int prodNum) {
@@ -289,40 +289,40 @@ static hashkey computeGotoHashKey(ParseTable *pt, int stateNum, int prodNum) {
 }
 
 /* Parse Table Lookup */
-/** 
+/**
 * Returns the index into the action table for the given state number and token.
-* 
+*
 * \param s the state number to access
 * \param c the token
-* 
-* \return Returns the index into the actions table for the given state number 
+*
+* \return Returns the index into the actions table for the given state number
 * and token.
 */
 static int actionIndex(int s, Token c) {
   return s*SGLR_PTBL_STATE_SIZE + c;
 }
 
-/** 
+/**
 * Returns the actions in the given parse table for the given state and token.
-* 
+*
 * \param pt the parse table.
 * \param s the state.
 * \param c the token.
-* 
+*
 * \return Returns the parse table actions in the given parse table.
 */
 PTBL_Actions SGLR_PTBL_lookupAction(ParseTable *pt, int s, Token c) {
   return pt->actiontable[actionIndex(s,c)];
 }
 
-/** 
+/**
 * Finds the goto state for the given state number and production number.
-* 
+*
 * \param pt the parse table.
 * \param stateNum the current state number.
 * \param prodNum the production number the reduce was done for.
-* 
-* \return the state number 
+*
+* \return the state number
 */
 int SGLR_PTBL_lookupGoto(ParseTable *pt, int stateNum, int prodNum) {
   register gotobucket *b;
@@ -338,7 +338,7 @@ int SGLR_PTBL_lookupGoto(ParseTable *pt, int stateNum, int prodNum) {
       return b->to;
     }
   }
-  
+
   assert("Error in SGLR_PTBL_lookupGoto() -- the goto state was not found!");
   return -1;
 }
@@ -379,7 +379,7 @@ ATbool SGLR_PTBL_hasProductionPriority(ParseTable *pt, PT_Production p) {
   }
   else {
     return ATtrue;
-  } 
+  }
 }
 
 ATermList SGLR_PTBL_lookupGtrPriority(ParseTable *pt, PT_Production p) {
@@ -401,7 +401,7 @@ static void addGtrPriority(ParseTable *pt, PT_Production p1, PT_Production p2) {
 
 ATermList lookupArgGtrPriority(ParseTable *pt, PT_Production p, ATermInt argNumber) {
   ATerm key = (ATerm)ATmakeList2((ATerm)p, (ATerm)argNumber);
-  
+
   return (ATermList)ATtableGet(SGLR_PTBL_getArgumentGreaterPriorities(pt), key);
 }
 
@@ -417,15 +417,15 @@ static void addArgGtrPriority(ParseTable *pt, PT_Production p1, ATermInt argNumb
   }
 }
 
-/** 
+/**
  * Determines which of the two given productions has a greater priority.
- *  
+ *
  * \param pt the parse table.
  * \param argNumber ?
  * \param p0 the first production to compare.
  * \param p1 the second production to compare.
- * 
- * \return \c true if the first production has a greater priority than the 
+ *
+ * \return \c true if the first production has a greater priority than the
  * second.
  */
 ATbool SGLR_PTBL_isPriorityGreater(ParseTable *pt, int argNumber, PT_Production p0, PT_Production p1) {
@@ -500,13 +500,13 @@ ATbool SGLR_PTBL_prodIsUserDefinedInjection(ParseTable *pt, PT_Production p) {
 
 
 
-/** 
- * Checks to see if the given actions contain preferece attributes and marks 
- * the parse table as containing preferences accordingly. 
- * 
- * \todo This should probably be removed and added directly from the parse 
+/**
+ * Checks to see if the given actions contain preferece attributes and marks
+ * the parse table as containing preferences accordingly.
+ *
+ * \todo This should probably be removed and added directly from the parse
  * table.
- * 
+ *
  * \param pt the parse table.
  * \param actions the actions to check.
  */
@@ -529,9 +529,9 @@ static void findPreferences(ParseTable *pt, PTBL_Actions actions) {
   }
 }
 
-/** 
+/**
 * Adds the given actions to the parse table for the given character and state.
-* 
+*
 * \param pt the parse table.
 * \param s the state to add the actions to.
 * \param c the input symbol to add to the actions to.
@@ -546,15 +546,15 @@ static void addActionsToActionTable(ParseTable *pt, int s, Token c, PTBL_Actions
   }
 }
 
-/** 
-* Expands the character ranges extracted from the given actions and adds them 
-* to the parse table. Because of the way the action table is implemented, 
-* character classes have to be expanded and each action added for every 
+/**
+* Expands the character ranges extracted from the given actions and adds them
+* to the parse table. Because of the way the action table is implemented,
+* character classes have to be expanded and each action added for every
 * character in the given state.
 *
 * This function is effectively duplicated for the char ranges used in the goto
 * table.
-* 
+*
 * \param pt the parse table.
 * \param s the state to add the actions to.
 * \param ranges the character ranges to expand.
@@ -584,9 +584,9 @@ static void expandActionCharRanges(ParseTable *pt, int s, PT_CharRanges ranges, 
   }
 }
 
-/** 
+/**
 * Processes the choices extracted from the parse table for the given state.
-* 
+*
 * \param pt the parse table.
 * \param s the state.
 * \param choices the choices.
@@ -605,8 +605,8 @@ static void processChoices(ParseTable *pt, int s, PTBL_Choices choices) {
 
       for(; !pt->has_rejects && !PTBL_isActionsEmpty(t); t = PTBL_getActionsTail(t)) {
         PTBL_Action action = PTBL_getActionsHead(t);
-        
-        if (PTBL_hasActionSpecialAttr(action)) { 
+
+        if (PTBL_hasActionSpecialAttr(action)) {
           PTBL_SpecialAttr attr = PTBL_getActionSpecialAttr(action);
 
           if(PTBL_isSpecialAttrReject(attr)) {
@@ -620,11 +620,11 @@ static void processChoices(ParseTable *pt, int s, PTBL_Choices choices) {
   }
 }
 
-/** 
+/**
 * Adds a goto for the given source state, production number and target state.
-* The parse table construction guarantees that only one goto exists for each 
+* The parse table construction guarantees that only one goto exists for each
 * source state and production pair.
-* 
+*
 * \param pt the parse table.
 * \param from the source state number.
 * \param prodNum the production number.
@@ -663,19 +663,19 @@ void addGotoToGotoTable(ParseTable *pt, int from, int prodNum, int to) {
   pt->gotos.table[h] = gb;
 }
 
-/** 
+/**
 * Expands the given character ranges and uses them when creating the goto table.
 * In this instance the char ranges encode production numbers and not characters.
-* Actually they do include characters as well, but I believe they can be 
-* ignored. They shouldn't be necessary. 
+* Actually they do include characters as well, but I believe they can be
+* ignored. They shouldn't be necessary.
 *
 * This function is effectively duplicated for the char ranges used in the action
 * table.
-* 
+*
 * \param pt the parse table.
-* \param from 
-* \param ranges 
-* \param to 
+* \param from
+* \param ranges
+* \param to
 *
 * \see expandActionCharRanges()
 */
@@ -702,9 +702,9 @@ static void expandGotoCharRanges(ParseTable *pt, int from, PT_CharRanges ranges,
   }
 }
 
-/** 
+/**
 * Processes the gotos extracted from the parse table for the given state.
-* 
+*
 * \param pt the parse table.
 * \param s the state.
 * \param gotos the gotos.
@@ -725,9 +725,9 @@ static void processGotos(ParseTable *pt, int s, PTBL_Gotos gotos) {
   }
 }
 
-/** 
+/**
 * Fills the parse table's goto and action tables.
-* 
+*
 * \param pt the parse table.
 * \param states the states in the parse table.
 */
@@ -740,7 +740,7 @@ void SGLR_PTBL_fillParseTable(ParseTable *pt, PTBL_States states) {
       PTBL_Gotos gotos = PTBL_getStateGotos(curstate);
       PTBL_Choices choices = PTBL_getStateChoices(curstate);
 
-      SGLR_STATS_addToCount(SGLR_STATS_gotos, PTBL_getGotosLength(gotos)); 
+      SGLR_STATS_addToCount(SGLR_STATS_gotos, PTBL_getGotosLength(gotos));
       SGLR_STATS_addToCount(SGLR_STATS_actions, PTBL_getChoicesLength(choices));
 
       processGotos(pt, s, gotos);
@@ -773,12 +773,12 @@ static void addProduction(ParseTable *pt, int lbl, PT_Production prod) {
   }
 }
 
-/** 
- * Add the literal ATerm for a production to the production table. The label 
- * is the pointer in the table. It is used in reduce actions to refer to the 
+/**
+ * Add the literal ATerm for a production to the production table. The label
+ * is the pointer in the table. It is used in reduce actions to refer to the
  * production.
- * 
- * \param pt the parse table. 
+ *
+ * \param pt the parse table.
  * \param prods the list of production labels in the grammar.
  */
 void SGLR_PTBL_processProductions(ParseTable *pt, PTBL_Labels prods) {
@@ -806,18 +806,18 @@ void SGLR_PTBL_processProductions(ParseTable *pt, PTBL_Labels prods) {
                 prodNum, SGLR_PTBL_PROD_START, SGLR_PTBL_PROD_START+SGLR_PTBL_getNumberOfProductions(pt)-1);
       }
       addProduction(pt, prodNum, prod);
-    } 
+    }
     else {
       ATerror("SGLR_PTBL_processProductions: bad production %t\n", prodLabel);
     }
   }
 }
 
-/** 
-* 
-* 
-* \param pt 
-* \param prios 
+/**
+*
+*
+* \param pt
+* \param prios
 */
 void SGLR_PTBL_processPriorities(ParseTable *pt, register PTBL_Priorities prios) {
   PTBL_Priority prio;
@@ -862,17 +862,17 @@ void SGLR_PTBL_processPriorities(ParseTable *pt, register PTBL_Priorities prios)
   }
 }
 
-/** 
+/**
 * Allocates the memory required for the parse table.
 *
 * \param startState the start state of the parse table.
 * \param numstates the number of states in the parse table.
-* \param numprods the number of production in the normalised grammar (used as 
+* \param numprods the number of production in the normalised grammar (used as
 * the index into the goto table).
 * \param action_entries the number of actions in the parse table.
 * \param goto_entries the number of gotos in the parse table.
 * \param path the path to the parse table file.
-* 
+*
 * \return an empty parse table.
 */
 ParseTable *SGLR_PTBL_initializeParseTable(int startState, size_t numstates, size_t numprods, size_t action_entries, size_t goto_entries, const char *path) {
@@ -888,7 +888,7 @@ ParseTable *SGLR_PTBL_initializeParseTable(int startState, size_t numstates, siz
   pt->startState   = startState;
   pt->numstates    = numstates;
   pt->numprods     = numprods;
-  pt->path = (char *)path;  
+  pt->path = (char *)path;
   pt->noInjection = ATparse("no-injection");
   ATprotect(&(pt->noInjection));
   pt->userDefinedInjection = ATparse("user-defined-injection");
@@ -978,15 +978,15 @@ size_t SGLR_PTBL_countChoices(register PTBL_Choices choices) {
   return numchoices;
 }
 
-/** 
- * 
+/**
  *
- * \note This function is the same as countClassesInActionTable with different 
+ *
+ * \note This function is the same as countClassesInActionTable with different
  * types.
  *
- * \param ranges 
- * 
- * \return 
+ * \param ranges
+ *
+ * \return
  */
 static size_t countElementsInRanges(register PT_CharRanges ranges) {
   PT_CharRange firstTerm;
@@ -1012,12 +1012,12 @@ static size_t countElementsInRanges(register PT_CharRanges ranges) {
   return numgotos;
 }
 
-/** 
-* Counts the number of gotos in the given list. It is used to count the number 
+/**
+* Counts the number of gotos in the given list. It is used to count the number
 * of gotos in the parse table to pick a good size for the goto hash table.
-* 
+*
 * \param gotos a list of gotos.
-* 
+*
 * \return the number of gotos in the given list.
 */
 size_t SGLR_PTBL_countGotos(register PTBL_Gotos gotos) {
@@ -1081,9 +1081,9 @@ static void discardPriorities(ParseTable *pt) {
 }
 
 void SGLR_PTBL_discardParseTable(ParseTable *pt) {
-  ATunprotect(&(pt->noInjection)); 
-  ATunprotect(&(pt->userDefinedInjection)); 
-  ATunprotect(&(pt->kernelInjection)); 
+  ATunprotect(&(pt->noInjection));
+  ATunprotect(&(pt->userDefinedInjection));
+  ATunprotect(&(pt->kernelInjection));
 
   discardActions(pt);
   discardGotos(pt);

@@ -9,7 +9,7 @@
 
 #include <aterm2.h>
 #include <MEPT.h>
-#include "bitmap.h"
+#include "utils/bitmap.h"
 
 ATerm     SG_CreateAmbiTreeKey(PT_Tree key, size_t pos);
 ATerm     SG_CreateAmbiArgsKey(PT_Args key, size_t pos);

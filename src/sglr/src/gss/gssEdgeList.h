@@ -7,7 +7,7 @@
 #ifndef _GSSLIST_H_
 #define _GSSLIST_H_
 
-#include "list.h"
+#include "utils/list.h"
 #include "gssEdge-data.h"
 
 typedef List GSSEdgeList;

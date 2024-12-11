@@ -1,6 +1,6 @@
 /* $Id$ */
 
-/** \file 
+/** \file
  * \ingroup parser
  */
 
@@ -8,7 +8,7 @@
 #define _PARSER_H_
 
 #include <MEPT.h>
-#include "parseTable.h"
+#include "parseTable/parseTable.h"
 #include "inputString-data.h"
 
 PT_Tree SG_parse(ParseTable *parseTable, InputString string);

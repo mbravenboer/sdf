@@ -10,7 +10,7 @@
 #include <aterm1.h>
 #include <aterm2.h>
 #include <MEPT.h>
-#include <parserOptions.h>
+#include "parser/parserOptions.h"
 #include <Error.h>
 
 #include "ptable.h"

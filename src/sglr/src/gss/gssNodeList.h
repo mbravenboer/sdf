@@ -1,6 +1,6 @@
 /*$Id$*/
 
-/** \file 
+/** \file
  * \ingroup gss
  */
 
@@ -8,10 +8,10 @@
 #define _GSSNODELIST_H_
 
 #include <aterm2.h>
-#include "list.h"
+#include "utils/list.h"
 #include "gssNode-data.h"
 #include "gssNode-api.h"
-#include "parseTable.h"
+#include "parseTable/parseTable.h"
 
 typedef List GSSNodeList;
 
