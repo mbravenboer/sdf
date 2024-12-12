@@ -132,7 +132,13 @@ libsglr_pgen_sources = files(
     'sdf-support/lib/prod.c',
     'sdf-support/lib/restrict.c',
     'sdf-support/lib/import-operations.c',
-    'sdf-support/lib/sort.c')
+    'sdf-support/lib/sort.c',
+    'rstore-support/lib/RStore.c',
+    'rstore-support/lib/RStore_dict.c',
+    'rstore-support/lib/ParsedRStore.c',
+    'rstore-support/lib/ParsedRStore_dict.c',
+    'rstore-support/lib/lower.c',
+    'rstore-support/lib/lift.c')
 
 sglr_pgen_library = library(
   'sglr-parser-generator',
