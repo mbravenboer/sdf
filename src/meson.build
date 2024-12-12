@@ -1,3 +1,5 @@
+# Parser
+# ============================================================================
 
 libsglr_sources = files(
     'c-library/logging/logging.c',
@@ -111,3 +113,40 @@ sglr_exe = executable('sglr', [
     install: true,
     # TODO
     install_rpath : '/opt/stratego/lib/x86_64-linux-gnu/')
+
+# Parser generator
+# ============================================================================
+
+libsglr_pgen_sources = files(
+	  'asf-support/lib/ASFME.c',
+    'asf-support/lib/ASFME_dict.c',
+    'asf-support/lib/ASFME-utils.c',
+    'asf-support/lib/lift.c',
+    'asf-support/lib/lower.c',
+    'sdf-support/lib/SDFME.c',
+    'sdf-support/lib/SDFME_dict.c',
+    'sdf-support/lib/SDFME-utils.c',
+    'sdf-support/lib/get-module-name.c',
+    'sdf-support/lib/grammar.c',
+    'sdf-support/lib/prio.c',
+    'sdf-support/lib/prod.c',
+    'sdf-support/lib/restrict.c',
+    'sdf-support/lib/import-operations.c',
+    'sdf-support/lib/sort.c')
+
+sglr_pgen_library = library(
+  'sglr-parser-generator',
+  libsglr_pgen_sources,
+  include_directories : [
+    'pt-support/libmept',
+    'pt-support/libptmept',
+    # 'config-support/lib',
+    # 'toolbuslib/src',
+    # 'error-support/lib',
+    # 'c-library/statistics',
+    # 'sglr/src'
+    ],
+  link_args : ['-Wl,-no-undefined'],
+  dependencies : [aterm],
+  link_with : [sglr_library],
+  install: true)
