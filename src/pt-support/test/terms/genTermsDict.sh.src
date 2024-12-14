@@ -3,11 +3,11 @@
 echo '[afuns([]),'
 echo ' terms(['
 
-for i in $*; do 
+for i in $1/*.pt; do
   echo "["
   basename $i .pt
   echo ","
-  __ATERM__/bin/baffle -i $i -wt
+  $BAFFLE -i $i -wt
   echo "]"
   echo ","
 done

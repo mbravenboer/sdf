@@ -271,13 +271,42 @@ error_diff_exe = executable(
   link_with : [sglr_library])
 
 
+aterm_bindir = aterm.get_pkgconfig_variable('prefix') + '/bin'
+atdiff = aterm_bindir + '/atdiff'
+dicttoc = aterm_bindir + '/dicttoc'
+baffle = aterm_bindir + '/baffle'
+
+# Tests for pt-support
+# ============================================================================
+
+terms_dict = custom_target(
+  output : ['terms.dict'],
+  command : ['pt-support/test/terms/genTermsDict.sh.src',
+    meson.current_source_dir() + '/pt-support/test/terms'],
+  env: ['BAFFLE=' + baffle],
+  capture : true)
+
+# TODO these paths seem to conflict with other generators. Move to subdir?
+terms_dict_h = custom_target('terms_dict.h',
+  input: terms_dict,
+  output : ['terms_dict.h', 'terms_dict.c'],
+  command : [dicttoc, '-dict', '@INPUT@', '-path-h', '@OUTPUT0@', '-path-c', '@OUTPUT1@'])
+
+test('MEPT test',
+  executable(
+    'mept-test.c',
+    ['pt-support/test/mept-test.c', terms_dict_h],
+    include_directories : ['pt-support/libmept', 'toolbuslib/src'],
+    dependencies : [aterm],
+    link_with : [sglr_library]))
+
 # Tests for SGLR
 # ============================================================================
 
 test_env = [
     'SGLR=' + sglr_exe.full_path(),
     'SDF2TABLE=' + sdf2table_exe.full_path(),
-    'ATCOMPARE=' + aterm.get_pkgconfig_variable('prefix') +'/bin/atdiff',
+    'ATCOMPARE=' + atdiff,
     'COMPARE=' + comparePT_exe.full_path(),
     'ORDER=' + orderPT_exe.full_path(),
     'ERRORCOMPARE=' + error_diff_exe.full_path()]
