@@ -14,8 +14,8 @@ Netherlands. The original repositories can be found here:
 - https://github.com/cwi-swat/meta-environment
 - https://github.com/cwi-swat/rscript-meta/
 
-The main changes so far are a simplified build system (removing autotools) and updates for
-modern C compilers.
+You can find the revision history in these repositories. The main changes so far are a
+simplified build system (removing autotools) and updates for modern C compilers.
 
 The SGLR C implementation was abandoned because the main developers and users moved to
 Java-based systems, which you may prefer to explore:
