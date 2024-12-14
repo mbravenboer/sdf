@@ -237,3 +237,52 @@ sglr_pgen_exe = executable('sdf2table', [
 
 
 # TODO test-chars pgen
+
+# Utils
+# ============================================================================
+
+# TODO simplify this
+flattenPT_exe = executable(
+  'flattenPT',
+  ['pt-support/utils/flattenPT-main.c'],
+  include_directories : ['pt-support/libmept', 'toolbuslib/src'],
+  dependencies : [aterm],
+  link_with : [sglr_library])
+
+comparePT_exe = executable(
+  'comparePT',
+  ['pt-support/utils/comparePT-main.c'],
+  include_directories : ['pt-support/libmept', 'toolbuslib/src'],
+  dependencies : [aterm],
+  link_with : [sglr_library])
+
+orderPT_exe = executable(
+  'orderPT',
+  ['pt-support/utils/orderPT-main.c'],
+  include_directories : ['pt-support/libmept', 'toolbuslib/src'],
+  dependencies : [aterm],
+  link_with : [sglr_library])
+
+error_diff_exe = executable(
+  'error-diff',
+  ['error-support/utils/error-diff/error-diff.c'],
+  include_directories : ['pt-support/libmept', 'toolbuslib/src', 'error-support/lib'],
+  dependencies : [aterm],
+  link_with : [sglr_library])
+
+
+# Tests for SGLR
+# ============================================================================
+
+test('envvar test',
+  files('sglr/test/regressionTests.sh.src'),
+  env : [
+    'SGLR=' + sglr_exe.full_path(),
+    'ATCOMPARE=' + aterm.get_pkgconfig_variable('prefix') +'/bin/atdiff',
+    'COMPARE=' + comparePT_exe.full_path(),
+    'ERRORCOMPARE=' + error_diff_exe.full_path(),
+    'TESTDIR=' + meson.current_source_dir() + '/sglr/test'])
+
+
+# Tests for SDF parser generator
+# ============================================================================
