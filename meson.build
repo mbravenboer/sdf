@@ -5,6 +5,10 @@ project('sglr', 'c',
 
 aterm = dependency('aterm')
 
+libdir = join_paths(
+  get_option('prefix'),
+  get_option('libdir'))
+
 subdir('src')
 
 pkg_mod = import('pkgconfig')

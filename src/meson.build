@@ -256,6 +256,15 @@ comparePT_exe = executable(
   dependencies : [aterm],
   link_with : [sglr_library])
 
+implodePT_exe = executable(
+  'implodePT',
+  ['pt-support/utils/implodePT/implodePT-main.c'],
+  include_directories : ['pt-support/libmept', 'toolbuslib/src'],
+  dependencies : [aterm],
+  link_with : [sglr_library],
+  install: true,
+  install_rpath: libdir)
+
 orderPT_exe = executable(
   'orderPT',
   ['pt-support/utils/orderPT-main.c'],
