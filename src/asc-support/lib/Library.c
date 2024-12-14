@@ -5,7 +5,7 @@
 #include "Library.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm CO_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm CO_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -1120,7 +1120,7 @@ ATerm _CO_BooleanToTerm(CO_Boolean arg) {
 }
 
 /**
- * Retrieve the length of a CO_LexLayoutList. 
+ * Retrieve the length of a CO_LexLayoutList.
  * \param[in] arg input CO_LexLayoutList
  * \return The number of elements in the CO_LexLayoutList
  */
@@ -1129,7 +1129,7 @@ int _CO_getLexLayoutListLength(CO_LexLayoutList arg) {
 }
 
 /**
- * Reverse a CO_LexLayoutList. 
+ * Reverse a CO_LexLayoutList.
  * \param[in] arg CO_LexLayoutList to be reversed
  * \return a reversed #arg
  */
@@ -1138,7 +1138,7 @@ CO_LexLayoutList _CO_reverseLexLayoutList(CO_LexLayoutList arg) {
 }
 
 /**
- * Append a CO_LexLayout to the end of a CO_LexLayoutList. 
+ * Append a CO_LexLayout to the end of a CO_LexLayoutList.
  * \param[in] arg CO_LexLayoutList to append the CO_LexLayout to
  * \param[in] elem CO_LexLayout to be appended
  * \return new CO_LexLayoutList with #elem appended
@@ -1148,7 +1148,7 @@ CO_LexLayoutList _CO_appendLexLayoutList(CO_LexLayoutList arg, CO_LexLayout elem
 }
 
 /**
- * Concatenate two CO_LexLayoutLists. 
+ * Concatenate two CO_LexLayoutLists.
  * \param[in] arg0 first CO_LexLayoutList
  * \param[in] arg1 second CO_LexLayoutList
  * \return CO_LexLayoutList with the elements of #arg0 before the elements of #arg1
@@ -1158,7 +1158,7 @@ CO_LexLayoutList _CO_concatLexLayoutList(CO_LexLayoutList arg0, CO_LexLayoutList
 }
 
 /**
- * Extract a sublist from a CO_LexLayoutList. 
+ * Extract a sublist from a CO_LexLayoutList.
  * \param[in] arg CO_LexLayoutList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1169,7 +1169,7 @@ CO_LexLayoutList _CO_sliceLexLayoutList(CO_LexLayoutList arg, int start, int end
 }
 
 /**
- * Retrieve the CO_LexLayout at #index from a CO_LexLayoutList. 
+ * Retrieve the CO_LexLayout at #index from a CO_LexLayoutList.
  * \param[in] arg CO_LexLayoutList to retrieve the CO_LexLayout from
  * \param[in] index index to use to point in the CO_LexLayoutList
  * \return CO_LexLayout at position #index in #arg
@@ -1179,7 +1179,7 @@ CO_LexLayout _CO_getLexLayoutListLexLayoutAt(CO_LexLayoutList arg, int index) {
 }
 
 /**
- * Replace the CO_LexLayout at #index from a CO_LexLayoutList by a new one. 
+ * Replace the CO_LexLayout at #index from a CO_LexLayoutList by a new one.
  * \param[in] arg CO_LexLayoutList to retrieve the CO_LexLayout from
  * \param[in] elem new CO_LexLayout to replace another
  * \param[in] index index to use to point in the CO_LexLayoutList
@@ -1190,7 +1190,7 @@ CO_LexLayoutList _CO_replaceLexLayoutListLexLayoutAt(CO_LexLayoutList arg, CO_Le
 }
 
 /**
- * Builds a CO_LexLayoutList of 2 consecutive elements. 
+ * Builds a CO_LexLayoutList of 2 consecutive elements.
  * \param[in] elem1 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem2 One CO_LexLayout element of the new CO_LexLayoutList
  * \return A new CO_LexLayoutList consisting of 2 CO_LexLayouts
@@ -1200,7 +1200,7 @@ CO_LexLayoutList _CO_makeLexLayoutList2(CO_LexLayout elem1, CO_LexLayout elem2) 
 }
 
 /**
- * Builds a CO_LexLayoutList of 3 consecutive elements. 
+ * Builds a CO_LexLayoutList of 3 consecutive elements.
  * \param[in] elem1 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem2 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem3 One CO_LexLayout element of the new CO_LexLayoutList
@@ -1211,7 +1211,7 @@ CO_LexLayoutList _CO_makeLexLayoutList3(CO_LexLayout elem1, CO_LexLayout elem2, 
 }
 
 /**
- * Builds a CO_LexLayoutList of 4 consecutive elements. 
+ * Builds a CO_LexLayoutList of 4 consecutive elements.
  * \param[in] elem1 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem2 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem3 One CO_LexLayout element of the new CO_LexLayoutList
@@ -1223,7 +1223,7 @@ CO_LexLayoutList _CO_makeLexLayoutList4(CO_LexLayout elem1, CO_LexLayout elem2, 
 }
 
 /**
- * Builds a CO_LexLayoutList of 5 consecutive elements. 
+ * Builds a CO_LexLayoutList of 5 consecutive elements.
  * \param[in] elem1 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem2 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem3 One CO_LexLayout element of the new CO_LexLayoutList
@@ -1236,7 +1236,7 @@ CO_LexLayoutList _CO_makeLexLayoutList5(CO_LexLayout elem1, CO_LexLayout elem2, 
 }
 
 /**
- * Builds a CO_LexLayoutList of 6 consecutive elements. 
+ * Builds a CO_LexLayoutList of 6 consecutive elements.
  * \param[in] elem1 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem2 One CO_LexLayout element of the new CO_LexLayoutList
  * \param[in] elem3 One CO_LexLayout element of the new CO_LexLayoutList
@@ -1250,7 +1250,7 @@ CO_LexLayoutList _CO_makeLexLayoutList6(CO_LexLayout elem1, CO_LexLayout elem2, 
 }
 
 /**
- * Retrieve the length of a CO_LexStrCharChars. 
+ * Retrieve the length of a CO_LexStrCharChars.
  * \param[in] arg input CO_LexStrCharChars
  * \return The number of elements in the CO_LexStrCharChars
  */
@@ -1259,7 +1259,7 @@ int _CO_getLexStrCharCharsLength(CO_LexStrCharChars arg) {
 }
 
 /**
- * Reverse a CO_LexStrCharChars. 
+ * Reverse a CO_LexStrCharChars.
  * \param[in] arg CO_LexStrCharChars to be reversed
  * \return a reversed #arg
  */
@@ -1268,7 +1268,7 @@ CO_LexStrCharChars _CO_reverseLexStrCharChars(CO_LexStrCharChars arg) {
 }
 
 /**
- * Append a CO_LexStrChar to the end of a CO_LexStrCharChars. 
+ * Append a CO_LexStrChar to the end of a CO_LexStrCharChars.
  * \param[in] arg CO_LexStrCharChars to append the CO_LexStrChar to
  * \param[in] elem CO_LexStrChar to be appended
  * \return new CO_LexStrCharChars with #elem appended
@@ -1278,7 +1278,7 @@ CO_LexStrCharChars _CO_appendLexStrCharChars(CO_LexStrCharChars arg, CO_LexStrCh
 }
 
 /**
- * Concatenate two CO_LexStrCharCharss. 
+ * Concatenate two CO_LexStrCharCharss.
  * \param[in] arg0 first CO_LexStrCharChars
  * \param[in] arg1 second CO_LexStrCharChars
  * \return CO_LexStrCharChars with the elements of #arg0 before the elements of #arg1
@@ -1288,7 +1288,7 @@ CO_LexStrCharChars _CO_concatLexStrCharChars(CO_LexStrCharChars arg0, CO_LexStrC
 }
 
 /**
- * Extract a sublist from a CO_LexStrCharChars. 
+ * Extract a sublist from a CO_LexStrCharChars.
  * \param[in] arg CO_LexStrCharChars to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1299,7 +1299,7 @@ CO_LexStrCharChars _CO_sliceLexStrCharChars(CO_LexStrCharChars arg, int start, i
 }
 
 /**
- * Retrieve the CO_LexStrChar at #index from a CO_LexStrCharChars. 
+ * Retrieve the CO_LexStrChar at #index from a CO_LexStrCharChars.
  * \param[in] arg CO_LexStrCharChars to retrieve the CO_LexStrChar from
  * \param[in] index index to use to point in the CO_LexStrCharChars
  * \return CO_LexStrChar at position #index in #arg
@@ -1309,7 +1309,7 @@ CO_LexStrChar _CO_getLexStrCharCharsLexStrCharAt(CO_LexStrCharChars arg, int ind
 }
 
 /**
- * Replace the CO_LexStrChar at #index from a CO_LexStrCharChars by a new one. 
+ * Replace the CO_LexStrChar at #index from a CO_LexStrCharChars by a new one.
  * \param[in] arg CO_LexStrCharChars to retrieve the CO_LexStrChar from
  * \param[in] elem new CO_LexStrChar to replace another
  * \param[in] index index to use to point in the CO_LexStrCharChars
@@ -1320,7 +1320,7 @@ CO_LexStrCharChars _CO_replaceLexStrCharCharsLexStrCharAt(CO_LexStrCharChars arg
 }
 
 /**
- * Builds a CO_LexStrCharChars of 2 consecutive elements. 
+ * Builds a CO_LexStrCharChars of 2 consecutive elements.
  * \param[in] elem1 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem2 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \return A new CO_LexStrCharChars consisting of 2 CO_LexStrChars
@@ -1330,7 +1330,7 @@ CO_LexStrCharChars _CO_makeLexStrCharChars2(CO_LexStrChar elem1, CO_LexStrChar e
 }
 
 /**
- * Builds a CO_LexStrCharChars of 3 consecutive elements. 
+ * Builds a CO_LexStrCharChars of 3 consecutive elements.
  * \param[in] elem1 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem2 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem3 One CO_LexStrChar element of the new CO_LexStrCharChars
@@ -1341,7 +1341,7 @@ CO_LexStrCharChars _CO_makeLexStrCharChars3(CO_LexStrChar elem1, CO_LexStrChar e
 }
 
 /**
- * Builds a CO_LexStrCharChars of 4 consecutive elements. 
+ * Builds a CO_LexStrCharChars of 4 consecutive elements.
  * \param[in] elem1 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem2 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem3 One CO_LexStrChar element of the new CO_LexStrCharChars
@@ -1353,7 +1353,7 @@ CO_LexStrCharChars _CO_makeLexStrCharChars4(CO_LexStrChar elem1, CO_LexStrChar e
 }
 
 /**
- * Builds a CO_LexStrCharChars of 5 consecutive elements. 
+ * Builds a CO_LexStrCharChars of 5 consecutive elements.
  * \param[in] elem1 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem2 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem3 One CO_LexStrChar element of the new CO_LexStrCharChars
@@ -1366,7 +1366,7 @@ CO_LexStrCharChars _CO_makeLexStrCharChars5(CO_LexStrChar elem1, CO_LexStrChar e
 }
 
 /**
- * Builds a CO_LexStrCharChars of 6 consecutive elements. 
+ * Builds a CO_LexStrCharChars of 6 consecutive elements.
  * \param[in] elem1 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem2 One CO_LexStrChar element of the new CO_LexStrCharChars
  * \param[in] elem3 One CO_LexStrChar element of the new CO_LexStrCharChars
@@ -1380,7 +1380,7 @@ CO_LexStrCharChars _CO_makeLexStrCharChars6(CO_LexStrChar elem1, CO_LexStrChar e
 }
 
 /**
- * Retrieve the length of a CO_LexByteList. 
+ * Retrieve the length of a CO_LexByteList.
  * \param[in] arg input CO_LexByteList
  * \return The number of elements in the CO_LexByteList
  */
@@ -1389,7 +1389,7 @@ int _CO_getLexByteListLength(CO_LexByteList arg) {
 }
 
 /**
- * Reverse a CO_LexByteList. 
+ * Reverse a CO_LexByteList.
  * \param[in] arg CO_LexByteList to be reversed
  * \return a reversed #arg
  */
@@ -1398,7 +1398,7 @@ CO_LexByteList _CO_reverseLexByteList(CO_LexByteList arg) {
 }
 
 /**
- * Append a CO_LexByte to the end of a CO_LexByteList. 
+ * Append a CO_LexByte to the end of a CO_LexByteList.
  * \param[in] arg CO_LexByteList to append the CO_LexByte to
  * \param[in] elem CO_LexByte to be appended
  * \return new CO_LexByteList with #elem appended
@@ -1408,7 +1408,7 @@ CO_LexByteList _CO_appendLexByteList(CO_LexByteList arg, CO_LexByte elem) {
 }
 
 /**
- * Concatenate two CO_LexByteLists. 
+ * Concatenate two CO_LexByteLists.
  * \param[in] arg0 first CO_LexByteList
  * \param[in] arg1 second CO_LexByteList
  * \return CO_LexByteList with the elements of #arg0 before the elements of #arg1
@@ -1418,7 +1418,7 @@ CO_LexByteList _CO_concatLexByteList(CO_LexByteList arg0, CO_LexByteList arg1) {
 }
 
 /**
- * Extract a sublist from a CO_LexByteList. 
+ * Extract a sublist from a CO_LexByteList.
  * \param[in] arg CO_LexByteList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1429,7 +1429,7 @@ CO_LexByteList _CO_sliceLexByteList(CO_LexByteList arg, int start, int end) {
 }
 
 /**
- * Retrieve the CO_LexByte at #index from a CO_LexByteList. 
+ * Retrieve the CO_LexByte at #index from a CO_LexByteList.
  * \param[in] arg CO_LexByteList to retrieve the CO_LexByte from
  * \param[in] index index to use to point in the CO_LexByteList
  * \return CO_LexByte at position #index in #arg
@@ -1439,7 +1439,7 @@ CO_LexByte _CO_getLexByteListLexByteAt(CO_LexByteList arg, int index) {
 }
 
 /**
- * Replace the CO_LexByte at #index from a CO_LexByteList by a new one. 
+ * Replace the CO_LexByte at #index from a CO_LexByteList by a new one.
  * \param[in] arg CO_LexByteList to retrieve the CO_LexByte from
  * \param[in] elem new CO_LexByte to replace another
  * \param[in] index index to use to point in the CO_LexByteList
@@ -1450,7 +1450,7 @@ CO_LexByteList _CO_replaceLexByteListLexByteAt(CO_LexByteList arg, CO_LexByte el
 }
 
 /**
- * Builds a CO_LexByteList of 2 consecutive elements. 
+ * Builds a CO_LexByteList of 2 consecutive elements.
  * \param[in] elem1 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem2 One CO_LexByte element of the new CO_LexByteList
  * \return A new CO_LexByteList consisting of 2 CO_LexBytes
@@ -1460,7 +1460,7 @@ CO_LexByteList _CO_makeLexByteList2(CO_LexByte elem1, CO_LexByte elem2) {
 }
 
 /**
- * Builds a CO_LexByteList of 3 consecutive elements. 
+ * Builds a CO_LexByteList of 3 consecutive elements.
  * \param[in] elem1 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem2 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem3 One CO_LexByte element of the new CO_LexByteList
@@ -1471,7 +1471,7 @@ CO_LexByteList _CO_makeLexByteList3(CO_LexByte elem1, CO_LexByte elem2, CO_LexBy
 }
 
 /**
- * Builds a CO_LexByteList of 4 consecutive elements. 
+ * Builds a CO_LexByteList of 4 consecutive elements.
  * \param[in] elem1 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem2 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem3 One CO_LexByte element of the new CO_LexByteList
@@ -1483,7 +1483,7 @@ CO_LexByteList _CO_makeLexByteList4(CO_LexByte elem1, CO_LexByte elem2, CO_LexBy
 }
 
 /**
- * Builds a CO_LexByteList of 5 consecutive elements. 
+ * Builds a CO_LexByteList of 5 consecutive elements.
  * \param[in] elem1 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem2 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem3 One CO_LexByte element of the new CO_LexByteList
@@ -1496,7 +1496,7 @@ CO_LexByteList _CO_makeLexByteList5(CO_LexByte elem1, CO_LexByte elem2, CO_LexBy
 }
 
 /**
- * Builds a CO_LexByteList of 6 consecutive elements. 
+ * Builds a CO_LexByteList of 6 consecutive elements.
  * \param[in] elem1 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem2 One CO_LexByte element of the new CO_LexByteList
  * \param[in] elem3 One CO_LexByte element of the new CO_LexByteList
@@ -1510,7 +1510,7 @@ CO_LexByteList _CO_makeLexByteList6(CO_LexByte elem1, CO_LexByte elem2, CO_LexBy
 }
 
 /**
- * Retrieve the number of elements in a CO_SubjectList. 
+ * Retrieve the number of elements in a CO_SubjectList.
  * \param[in] arg input CO_SubjectList
  * \return The number of elements in #arg, excluding any separators
  */
@@ -1570,7 +1570,7 @@ CO_SubjectList CO_reverseSubjectList(CO_SubjectList arg) {
 }
 
 /**
- * Append a CO_Subject to the end of a CO_SubjectList. 
+ * Append a CO_Subject to the end of a CO_SubjectList.
  * \param[in] arg CO_SubjectList to append the CO_Subject to
  * \param[in] elem CO_Subject to be appended
  * \return new CO_SubjectList with #elem appended after the separators
@@ -1580,7 +1580,7 @@ CO_SubjectList CO_appendSubjectList(CO_SubjectList arg0, CO_OptLayout wsAfterHea
 }
 
 /**
- * Concatenate two CO_SubjectLists. 
+ * Concatenate two CO_SubjectLists.
  * \param[in] arg0 first CO_SubjectList
  * \param[in] arg1 second CO_SubjectList
  * \return CO_SubjectList with the elements of #arg0 before the elements of #arg1, with the separators in between.
@@ -1595,7 +1595,7 @@ CO_SubjectList CO_concatSubjectList(CO_SubjectList arg0, CO_OptLayout wsAfterHea
 }
 
 /**
- * Extract a sublist from a CO_SubjectList. 
+ * Extract a sublist from a CO_SubjectList.
  * \param[in] arg CO_SubjectList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1606,7 +1606,7 @@ CO_SubjectList _CO_sliceSubjectList(CO_SubjectList arg, int start, int end) {
 }
 
 /**
- * Retrieve the CO_Subject at #index from a CO_SubjectList. 
+ * Retrieve the CO_Subject at #index from a CO_SubjectList.
  * \param[in] arg CO_SubjectList to retrieve the CO_Subject from
  * \param[in] index index to use to point in the CO_SubjectList
  * \return CO_Subject at position #index in #arg
@@ -1616,7 +1616,7 @@ CO_Subject _CO_getSubjectListSubjectAt(CO_SubjectList arg, int index) {
 }
 
 /**
- * Replace the CO_Subject at #index from a CO_SubjectList by a new one. 
+ * Replace the CO_Subject at #index from a CO_SubjectList by a new one.
  * \param[in] arg CO_SubjectList to retrieve the CO_Subject from
  * \param[in] elem new CO_Subject to replace another
  * \param[in] index index to use to point in the CO_SubjectList
@@ -1687,7 +1687,7 @@ CO_SubjectList CO_makeSubjectList6(CO_OptLayout wsAfterHead, CO_OptLayout wsAfte
 }
 
 /**
- * Retrieve the number of elements in a CO_ErrorList. 
+ * Retrieve the number of elements in a CO_ErrorList.
  * \param[in] arg input CO_ErrorList
  * \return The number of elements in #arg, excluding any separators
  */
@@ -1747,7 +1747,7 @@ CO_ErrorList CO_reverseErrorList(CO_ErrorList arg) {
 }
 
 /**
- * Append a CO_Error to the end of a CO_ErrorList. 
+ * Append a CO_Error to the end of a CO_ErrorList.
  * \param[in] arg CO_ErrorList to append the CO_Error to
  * \param[in] elem CO_Error to be appended
  * \return new CO_ErrorList with #elem appended after the separators
@@ -1757,7 +1757,7 @@ CO_ErrorList CO_appendErrorList(CO_ErrorList arg0, CO_OptLayout wsAfterHead, CO_
 }
 
 /**
- * Concatenate two CO_ErrorLists. 
+ * Concatenate two CO_ErrorLists.
  * \param[in] arg0 first CO_ErrorList
  * \param[in] arg1 second CO_ErrorList
  * \return CO_ErrorList with the elements of #arg0 before the elements of #arg1, with the separators in between.
@@ -1772,7 +1772,7 @@ CO_ErrorList CO_concatErrorList(CO_ErrorList arg0, CO_OptLayout wsAfterHead, CO_
 }
 
 /**
- * Extract a sublist from a CO_ErrorList. 
+ * Extract a sublist from a CO_ErrorList.
  * \param[in] arg CO_ErrorList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1783,7 +1783,7 @@ CO_ErrorList _CO_sliceErrorList(CO_ErrorList arg, int start, int end) {
 }
 
 /**
- * Retrieve the CO_Error at #index from a CO_ErrorList. 
+ * Retrieve the CO_Error at #index from a CO_ErrorList.
  * \param[in] arg CO_ErrorList to retrieve the CO_Error from
  * \param[in] index index to use to point in the CO_ErrorList
  * \return CO_Error at position #index in #arg
@@ -1793,7 +1793,7 @@ CO_Error _CO_getErrorListErrorAt(CO_ErrorList arg, int index) {
 }
 
 /**
- * Replace the CO_Error at #index from a CO_ErrorList by a new one. 
+ * Replace the CO_Error at #index from a CO_ErrorList by a new one.
  * \param[in] arg CO_ErrorList to retrieve the CO_Error from
  * \param[in] elem new CO_Error to replace another
  * \param[in] index index to use to point in the CO_ErrorList
@@ -2835,7 +2835,7 @@ ATbool CO_isValidOptLayout(CO_OptLayout arg) {
  * \param[in] arg input CO_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Absent, or ATfalse otherwise
  */
-inline ATbool CO_isOptLayoutAbsent(CO_OptLayout arg){
+ATbool CO_isOptLayoutAbsent(CO_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2874,7 +2874,7 @@ inline ATbool CO_isOptLayoutAbsent(CO_OptLayout arg){
  * \param[in] arg input CO_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Present, or ATfalse otherwise
  */
-inline ATbool CO_isOptLayoutPresent(CO_OptLayout arg){
+ATbool CO_isOptLayoutPresent(CO_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2926,7 +2926,7 @@ inline ATbool CO_isOptLayoutPresent(CO_OptLayout arg){
 }
 
 /**
- * Assert whether a CO_OptLayout has a layout. 
+ * Assert whether a CO_OptLayout has a layout.
  * \param[in] arg input CO_OptLayout
  * \return ATtrue if the CO_OptLayout had a layout, or ATfalse otherwise
  */
@@ -2943,7 +2943,7 @@ ATbool CO_hasOptLayoutLayout(CO_OptLayout arg) {
  * \return the layout of #arg, if it exist or an undefined value if it does not
  */
 CO_Layout CO_getOptLayoutLayout(CO_OptLayout arg) {
-  
+
     return (CO_Layout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -2979,7 +2979,7 @@ ATbool CO_isValidLayout(CO_Layout arg) {
  * \param[in] arg input CO_Layout
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool CO_isLayoutLexToCf(CO_Layout arg){
+ATbool CO_isLayoutLexToCf(CO_Layout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3052,7 +3052,7 @@ inline ATbool CO_isLayoutLexToCf(CO_Layout arg){
 }
 
 /**
- * Assert whether a CO_Layout has a list. 
+ * Assert whether a CO_Layout has a list.
  * \param[in] arg input CO_Layout
  * \return ATtrue if the CO_Layout had a list, or ATfalse otherwise
  */
@@ -3069,7 +3069,7 @@ ATbool CO_hasLayoutList(CO_Layout arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 CO_LexLayoutList CO_getLayoutList(CO_Layout arg) {
-  
+
     return (CO_LexLayoutList)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1);
 }
 
@@ -3111,7 +3111,7 @@ ATbool CO_isValidLexLayoutList(CO_LexLayoutList arg) {
  * \param[in] arg input CO_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CO_isLexLayoutListEmpty(CO_LexLayoutList arg){
+ATbool CO_isLexLayoutListEmpty(CO_LexLayoutList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -3123,7 +3123,7 @@ inline ATbool CO_isLexLayoutListEmpty(CO_LexLayoutList arg){
  * \param[in] arg input CO_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CO_isLexLayoutListSingle(CO_LexLayoutList arg){
+ATbool CO_isLexLayoutListSingle(CO_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -3139,7 +3139,7 @@ inline ATbool CO_isLexLayoutListSingle(CO_LexLayoutList arg){
  * \param[in] arg input CO_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CO_isLexLayoutListMany(CO_LexLayoutList arg){
+ATbool CO_isLexLayoutListMany(CO_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -3147,7 +3147,7 @@ inline ATbool CO_isLexLayoutListMany(CO_LexLayoutList arg){
 }
 
 /**
- * Assert whether a CO_LexLayoutList has a head. 
+ * Assert whether a CO_LexLayoutList has a head.
  * \param[in] arg input CO_LexLayoutList
  * \return ATtrue if the CO_LexLayoutList had a head, or ATfalse otherwise
  */
@@ -3162,7 +3162,7 @@ ATbool CO_hasLexLayoutListHead(CO_LexLayoutList arg) {
 }
 
 /**
- * Assert whether a CO_LexLayoutList has a tail. 
+ * Assert whether a CO_LexLayoutList has a tail.
  * \param[in] arg input CO_LexLayoutList
  * \return ATtrue if the CO_LexLayoutList had a tail, or ATfalse otherwise
  */
@@ -3182,7 +3182,7 @@ CO_LexLayout CO_getLexLayoutListHead(CO_LexLayoutList arg) {
   if (CO_isLexLayoutListSingle(arg)) {
     return (CO_LexLayout)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (CO_LexLayout)ATgetFirst((ATermList)arg);
 }
 
@@ -3192,7 +3192,7 @@ CO_LexLayout CO_getLexLayoutListHead(CO_LexLayoutList arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 CO_LexLayoutList CO_getLexLayoutListTail(CO_LexLayoutList arg) {
-  
+
     return (CO_LexLayoutList)ATgetNext((ATermList)arg);
 }
 
@@ -3246,7 +3246,7 @@ ATbool CO_isValidLexLayout(CO_LexLayout arg) {
  * \param[in] arg input CO_LexLayout
  * \return ATtrue if #arg corresponds to the signature of a whitespace, or ATfalse otherwise
  */
-inline ATbool CO_isLexLayoutWhitespace(CO_LexLayout arg){
+ATbool CO_isLexLayoutWhitespace(CO_LexLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3348,7 +3348,7 @@ inline ATbool CO_isLexLayoutWhitespace(CO_LexLayout arg){
 }
 
 /**
- * Assert whether a CO_LexLayout has a ch. 
+ * Assert whether a CO_LexLayout has a ch.
  * \param[in] arg input CO_LexLayout
  * \return ATtrue if the CO_LexLayout had a ch, or ATfalse otherwise
  */
@@ -3365,7 +3365,7 @@ ATbool CO_hasLexLayoutCh(CO_LexLayout arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char CO_getLexLayoutCh(CO_LexLayout arg) {
-  
+
     return (char)CO_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -3413,7 +3413,7 @@ ATbool CO_isValidStart(CO_Start arg) {
  * \param[in] arg input CO_Start
  * \return ATtrue if #arg corresponds to the signature of a StrCon, or ATfalse otherwise
  */
-inline ATbool CO_isStartStrCon(CO_Start arg){
+ATbool CO_isStartStrCon(CO_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun15) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3512,7 +3512,7 @@ inline ATbool CO_isStartStrCon(CO_Start arg){
  * \param[in] arg input CO_Start
  * \return ATtrue if #arg corresponds to the signature of a BoolCon, or ATfalse otherwise
  */
-inline ATbool CO_isStartBoolCon(CO_Start arg){
+ATbool CO_isStartBoolCon(CO_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun15) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3611,7 +3611,7 @@ inline ATbool CO_isStartBoolCon(CO_Start arg){
  * \param[in] arg input CO_Start
  * \return ATtrue if #arg corresponds to the signature of a Summary, or ATfalse otherwise
  */
-inline ATbool CO_isStartSummary(CO_Start arg){
+ATbool CO_isStartSummary(CO_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun15) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3710,7 +3710,7 @@ inline ATbool CO_isStartSummary(CO_Start arg){
  * \param[in] arg input CO_Start
  * \return ATtrue if #arg corresponds to the signature of a Error, or ATfalse otherwise
  */
-inline ATbool CO_isStartError(CO_Start arg){
+ATbool CO_isStartError(CO_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun15) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3809,7 +3809,7 @@ inline ATbool CO_isStartError(CO_Start arg){
  * \param[in] arg input CO_Start
  * \return ATtrue if #arg corresponds to the signature of a Boolean, or ATfalse otherwise
  */
-inline ATbool CO_isStartBoolean(CO_Start arg){
+ATbool CO_isStartBoolean(CO_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun15) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3904,7 +3904,7 @@ inline ATbool CO_isStartBoolean(CO_Start arg){
 }
 
 /**
- * Assert whether a CO_Start has a ws-before. 
+ * Assert whether a CO_Start has a ws-before.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a ws-before, or ATfalse otherwise
  */
@@ -3928,7 +3928,7 @@ ATbool CO_hasStartWsBefore(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a top-StrCon. 
+ * Assert whether a CO_Start has a top-StrCon.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a top-StrCon, or ATfalse otherwise
  */
@@ -3940,7 +3940,7 @@ ATbool CO_hasStartTopStrCon(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a ws-after. 
+ * Assert whether a CO_Start has a ws-after.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a ws-after, or ATfalse otherwise
  */
@@ -3964,7 +3964,7 @@ ATbool CO_hasStartWsAfter(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a amb-cnt. 
+ * Assert whether a CO_Start has a amb-cnt.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a amb-cnt, or ATfalse otherwise
  */
@@ -3988,7 +3988,7 @@ ATbool CO_hasStartAmbCnt(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a top-BoolCon. 
+ * Assert whether a CO_Start has a top-BoolCon.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a top-BoolCon, or ATfalse otherwise
  */
@@ -4000,7 +4000,7 @@ ATbool CO_hasStartTopBoolCon(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a top-Summary. 
+ * Assert whether a CO_Start has a top-Summary.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a top-Summary, or ATfalse otherwise
  */
@@ -4012,7 +4012,7 @@ ATbool CO_hasStartTopSummary(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a top-Error. 
+ * Assert whether a CO_Start has a top-Error.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a top-Error, or ATfalse otherwise
  */
@@ -4024,7 +4024,7 @@ ATbool CO_hasStartTopError(CO_Start arg) {
 }
 
 /**
- * Assert whether a CO_Start has a top-Boolean. 
+ * Assert whether a CO_Start has a top-Boolean.
  * \param[in] arg input CO_Start
  * \return ATtrue if the CO_Start had a top-Boolean, or ATfalse otherwise
  */
@@ -4053,7 +4053,7 @@ CO_OptLayout CO_getStartWsBefore(CO_Start arg) {
   else if (CO_isStartError(arg)) {
     return (CO_OptLayout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1));
   }
-  else 
+  else
     return (CO_OptLayout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1));
 }
 
@@ -4063,7 +4063,7 @@ CO_OptLayout CO_getStartWsBefore(CO_Start arg) {
  * \return the top-StrCon of #arg, if it exist or an undefined value if it does not
  */
 CO_StrCon CO_getStartTopStrCon(CO_Start arg) {
-  
+
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -4085,7 +4085,7 @@ CO_OptLayout CO_getStartWsAfter(CO_Start arg) {
   else if (CO_isStartError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 2);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 2);
 }
 
@@ -4107,7 +4107,7 @@ int CO_getStartAmbCnt(CO_Start arg) {
   else if (CO_isStartError(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4117,7 +4117,7 @@ int CO_getStartAmbCnt(CO_Start arg) {
  * \return the top-BoolCon of #arg, if it exist or an undefined value if it does not
  */
 CO_BoolCon CO_getStartTopBoolCon(CO_Start arg) {
-  
+
     return (CO_BoolCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -4127,7 +4127,7 @@ CO_BoolCon CO_getStartTopBoolCon(CO_Start arg) {
  * \return the top-Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_Summary CO_getStartTopSummary(CO_Start arg) {
-  
+
     return (CO_Summary)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -4137,7 +4137,7 @@ CO_Summary CO_getStartTopSummary(CO_Start arg) {
  * \return the top-Error of #arg, if it exist or an undefined value if it does not
  */
 CO_Error CO_getStartTopError(CO_Start arg) {
-  
+
     return (CO_Error)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -4147,7 +4147,7 @@ CO_Error CO_getStartTopError(CO_Start arg) {
  * \return the top-Boolean of #arg, if it exist or an undefined value if it does not
  */
 CO_Boolean CO_getStartTopBoolean(CO_Start arg) {
-  
+
     return (CO_Boolean)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -4339,7 +4339,7 @@ ATbool CO_isValidLexStrChar(CO_LexStrChar arg) {
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a newline, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharNewline(CO_LexStrChar arg){
+ATbool CO_isLexStrCharNewline(CO_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4498,7 +4498,7 @@ inline ATbool CO_isLexStrCharNewline(CO_LexStrChar arg){
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a tab, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharTab(CO_LexStrChar arg){
+ATbool CO_isLexStrCharTab(CO_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4657,7 +4657,7 @@ inline ATbool CO_isLexStrCharTab(CO_LexStrChar arg){
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a quote, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharQuote(CO_LexStrChar arg){
+ATbool CO_isLexStrCharQuote(CO_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4816,7 +4816,7 @@ inline ATbool CO_isLexStrCharQuote(CO_LexStrChar arg){
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a backslash, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharBackslash(CO_LexStrChar arg){
+ATbool CO_isLexStrCharBackslash(CO_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4975,7 +4975,7 @@ inline ATbool CO_isLexStrCharBackslash(CO_LexStrChar arg){
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a decimal, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharDecimal(CO_LexStrChar arg){
+ATbool CO_isLexStrCharDecimal(CO_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5207,7 +5207,7 @@ inline ATbool CO_isLexStrCharDecimal(CO_LexStrChar arg){
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a normal, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharNormal(CO_LexStrChar arg){
+ATbool CO_isLexStrCharNormal(CO_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5329,7 +5329,7 @@ inline ATbool CO_isLexStrCharNormal(CO_LexStrChar arg){
 }
 
 /**
- * Assert whether a CO_LexStrChar has a a. 
+ * Assert whether a CO_LexStrChar has a a.
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if the CO_LexStrChar had a a, or ATfalse otherwise
  */
@@ -5341,7 +5341,7 @@ ATbool CO_hasLexStrCharA(CO_LexStrChar arg) {
 }
 
 /**
- * Assert whether a CO_LexStrChar has a b. 
+ * Assert whether a CO_LexStrChar has a b.
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if the CO_LexStrChar had a b, or ATfalse otherwise
  */
@@ -5353,7 +5353,7 @@ ATbool CO_hasLexStrCharB(CO_LexStrChar arg) {
 }
 
 /**
- * Assert whether a CO_LexStrChar has a c. 
+ * Assert whether a CO_LexStrChar has a c.
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if the CO_LexStrChar had a c, or ATfalse otherwise
  */
@@ -5365,7 +5365,7 @@ ATbool CO_hasLexStrCharC(CO_LexStrChar arg) {
 }
 
 /**
- * Assert whether a CO_LexStrChar has a ch. 
+ * Assert whether a CO_LexStrChar has a ch.
  * \param[in] arg input CO_LexStrChar
  * \return ATtrue if the CO_LexStrChar had a ch, or ATfalse otherwise
  */
@@ -5382,7 +5382,7 @@ ATbool CO_hasLexStrCharCh(CO_LexStrChar arg) {
  * \return the a of #arg, if it exist or an undefined value if it does not
  */
 char CO_getLexStrCharA(CO_LexStrChar arg) {
-  
+
     return (char)CO_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1));
 }
 
@@ -5392,7 +5392,7 @@ char CO_getLexStrCharA(CO_LexStrChar arg) {
  * \return the b of #arg, if it exist or an undefined value if it does not
  */
 char CO_getLexStrCharB(CO_LexStrChar arg) {
-  
+
     return (char)CO_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2));
 }
 
@@ -5402,7 +5402,7 @@ char CO_getLexStrCharB(CO_LexStrChar arg) {
  * \return the c of #arg, if it exist or an undefined value if it does not
  */
 char CO_getLexStrCharC(CO_LexStrChar arg) {
-  
+
     return (char)CO_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3));
 }
 
@@ -5412,7 +5412,7 @@ char CO_getLexStrCharC(CO_LexStrChar arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char CO_getLexStrCharCh(CO_LexStrChar arg) {
-  
+
     return (char)CO_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -5493,7 +5493,7 @@ ATbool CO_isValidStrChar(CO_StrChar arg) {
  * \param[in] arg input CO_StrChar
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool CO_isStrCharLexToCf(CO_StrChar arg){
+ATbool CO_isStrCharLexToCf(CO_StrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5549,7 +5549,7 @@ inline ATbool CO_isStrCharLexToCf(CO_StrChar arg){
 }
 
 /**
- * Assert whether a CO_StrChar has a StrChar. 
+ * Assert whether a CO_StrChar has a StrChar.
  * \param[in] arg input CO_StrChar
  * \return ATtrue if the CO_StrChar had a StrChar, or ATfalse otherwise
  */
@@ -5566,7 +5566,7 @@ ATbool CO_hasStrCharStrChar(CO_StrChar arg) {
  * \return the StrChar of #arg, if it exist or an undefined value if it does not
  */
 CO_LexStrChar CO_getStrCharStrChar(CO_StrChar arg) {
-  
+
     return (CO_LexStrChar)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -5602,7 +5602,7 @@ ATbool CO_isValidLexStrCon(CO_LexStrCon arg) {
  * \param[in] arg input CO_LexStrCon
  * \return ATtrue if #arg corresponds to the signature of a default, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrConDefault(CO_LexStrCon arg){
+ATbool CO_isLexStrConDefault(CO_LexStrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5759,7 +5759,7 @@ inline ATbool CO_isLexStrConDefault(CO_LexStrCon arg){
 }
 
 /**
- * Assert whether a CO_LexStrCon has a chars. 
+ * Assert whether a CO_LexStrCon has a chars.
  * \param[in] arg input CO_LexStrCon
  * \return ATtrue if the CO_LexStrCon had a chars, or ATfalse otherwise
  */
@@ -5776,7 +5776,7 @@ ATbool CO_hasLexStrConChars(CO_LexStrCon arg) {
  * \return the chars of #arg, if it exist or an undefined value if it does not
  */
 CO_LexStrCharChars CO_getLexStrConChars(CO_LexStrCon arg) {
-  
+
     return (CO_LexStrCharChars)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1), 1);
 }
 
@@ -5812,7 +5812,7 @@ ATbool CO_isValidStrCon(CO_StrCon arg) {
  * \param[in] arg input CO_StrCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool CO_isStrConLexToCf(CO_StrCon arg){
+ATbool CO_isStrConLexToCf(CO_StrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5868,7 +5868,7 @@ inline ATbool CO_isStrConLexToCf(CO_StrCon arg){
 }
 
 /**
- * Assert whether a CO_StrCon has a StrCon. 
+ * Assert whether a CO_StrCon has a StrCon.
  * \param[in] arg input CO_StrCon
  * \return ATtrue if the CO_StrCon had a StrCon, or ATfalse otherwise
  */
@@ -5885,7 +5885,7 @@ ATbool CO_hasStrConStrCon(CO_StrCon arg) {
  * \return the StrCon of #arg, if it exist or an undefined value if it does not
  */
 CO_LexStrCon CO_getStrConStrCon(CO_StrCon arg) {
-  
+
     return (CO_LexStrCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -5927,7 +5927,7 @@ ATbool CO_isValidLexStrCharChars(CO_LexStrCharChars arg) {
  * \param[in] arg input CO_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharCharsEmpty(CO_LexStrCharChars arg){
+ATbool CO_isLexStrCharCharsEmpty(CO_LexStrCharChars arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -5939,7 +5939,7 @@ inline ATbool CO_isLexStrCharCharsEmpty(CO_LexStrCharChars arg){
  * \param[in] arg input CO_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharCharsSingle(CO_LexStrCharChars arg){
+ATbool CO_isLexStrCharCharsSingle(CO_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -5955,7 +5955,7 @@ inline ATbool CO_isLexStrCharCharsSingle(CO_LexStrCharChars arg){
  * \param[in] arg input CO_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CO_isLexStrCharCharsMany(CO_LexStrCharChars arg){
+ATbool CO_isLexStrCharCharsMany(CO_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -5963,7 +5963,7 @@ inline ATbool CO_isLexStrCharCharsMany(CO_LexStrCharChars arg){
 }
 
 /**
- * Assert whether a CO_LexStrCharChars has a head. 
+ * Assert whether a CO_LexStrCharChars has a head.
  * \param[in] arg input CO_LexStrCharChars
  * \return ATtrue if the CO_LexStrCharChars had a head, or ATfalse otherwise
  */
@@ -5978,7 +5978,7 @@ ATbool CO_hasLexStrCharCharsHead(CO_LexStrCharChars arg) {
 }
 
 /**
- * Assert whether a CO_LexStrCharChars has a tail. 
+ * Assert whether a CO_LexStrCharChars has a tail.
  * \param[in] arg input CO_LexStrCharChars
  * \return ATtrue if the CO_LexStrCharChars had a tail, or ATfalse otherwise
  */
@@ -5998,7 +5998,7 @@ CO_LexStrChar CO_getLexStrCharCharsHead(CO_LexStrCharChars arg) {
   if (CO_isLexStrCharCharsSingle(arg)) {
     return (CO_LexStrChar)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (CO_LexStrChar)ATgetFirst((ATermList)arg);
 }
 
@@ -6008,7 +6008,7 @@ CO_LexStrChar CO_getLexStrCharCharsHead(CO_LexStrCharChars arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 CO_LexStrCharChars CO_getLexStrCharCharsTail(CO_LexStrCharChars arg) {
-  
+
     return (CO_LexStrCharChars)ATgetNext((ATermList)arg);
 }
 
@@ -6065,7 +6065,7 @@ ATbool CO_isValidBoolCon(CO_BoolCon arg) {
  * \param[in] arg input CO_BoolCon
  * \return ATtrue if #arg corresponds to the signature of a true, or ATfalse otherwise
  */
-inline ATbool CO_isBoolConTrue(CO_BoolCon arg){
+ATbool CO_isBoolConTrue(CO_BoolCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6276,7 +6276,7 @@ inline ATbool CO_isBoolConTrue(CO_BoolCon arg){
  * \param[in] arg input CO_BoolCon
  * \return ATtrue if #arg corresponds to the signature of a false, or ATfalse otherwise
  */
-inline ATbool CO_isBoolConFalse(CO_BoolCon arg){
+ATbool CO_isBoolConFalse(CO_BoolCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6525,7 +6525,7 @@ ATbool CO_isValidLexNatCon(CO_LexNatCon arg) {
  * \param[in] arg input CO_LexNatCon
  * \return ATtrue if #arg corresponds to the signature of a digits, or ATfalse otherwise
  */
-inline ATbool CO_isLexNatConDigits(CO_LexNatCon arg){
+ATbool CO_isLexNatConDigits(CO_LexNatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6665,7 +6665,7 @@ inline ATbool CO_isLexNatConDigits(CO_LexNatCon arg){
 }
 
 /**
- * Assert whether a CO_LexNatCon has a list. 
+ * Assert whether a CO_LexNatCon has a list.
  * \param[in] arg input CO_LexNatCon
  * \return ATtrue if the CO_LexNatCon had a list, or ATfalse otherwise
  */
@@ -6682,7 +6682,7 @@ ATbool CO_hasLexNatConList(CO_LexNatCon arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 char* CO_getLexNatConList(CO_LexNatCon arg) {
-  
+
     return (char*)CO_charsToString((ATerm)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1));
 }
 
@@ -6718,7 +6718,7 @@ ATbool CO_isValidNatCon(CO_NatCon arg) {
  * \param[in] arg input CO_NatCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool CO_isNatConLexToCf(CO_NatCon arg){
+ATbool CO_isNatConLexToCf(CO_NatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6774,7 +6774,7 @@ inline ATbool CO_isNatConLexToCf(CO_NatCon arg){
 }
 
 /**
- * Assert whether a CO_NatCon has a NatCon. 
+ * Assert whether a CO_NatCon has a NatCon.
  * \param[in] arg input CO_NatCon
  * \return ATtrue if the CO_NatCon had a NatCon, or ATfalse otherwise
  */
@@ -6791,7 +6791,7 @@ ATbool CO_hasNatConNatCon(CO_NatCon arg) {
  * \return the NatCon of #arg, if it exist or an undefined value if it does not
  */
 CO_LexNatCon CO_getNatConNatCon(CO_NatCon arg) {
-  
+
     return (CO_LexNatCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -6827,7 +6827,7 @@ ATbool CO_isValidLexByte(CO_LexByte arg) {
  * \param[in] arg input CO_LexByte
  * \return ATtrue if #arg corresponds to the signature of a byte, or ATfalse otherwise
  */
-inline ATbool CO_isLexByteByte(CO_LexByte arg){
+ATbool CO_isLexByteByte(CO_LexByte arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6919,7 +6919,7 @@ inline ATbool CO_isLexByteByte(CO_LexByte arg){
 }
 
 /**
- * Assert whether a CO_LexByte has a ch. 
+ * Assert whether a CO_LexByte has a ch.
  * \param[in] arg input CO_LexByte
  * \return ATtrue if the CO_LexByte had a ch, or ATfalse otherwise
  */
@@ -6936,7 +6936,7 @@ ATbool CO_hasLexByteCh(CO_LexByte arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char CO_getLexByteCh(CO_LexByte arg) {
-  
+
     return (char)CO_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -6972,7 +6972,7 @@ ATbool CO_isValidByte(CO_Byte arg) {
  * \param[in] arg input CO_Byte
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool CO_isByteLexToCf(CO_Byte arg){
+ATbool CO_isByteLexToCf(CO_Byte arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7028,7 +7028,7 @@ inline ATbool CO_isByteLexToCf(CO_Byte arg){
 }
 
 /**
- * Assert whether a CO_Byte has a Byte. 
+ * Assert whether a CO_Byte has a Byte.
  * \param[in] arg input CO_Byte
  * \return ATtrue if the CO_Byte had a Byte, or ATfalse otherwise
  */
@@ -7045,7 +7045,7 @@ ATbool CO_hasByteByte(CO_Byte arg) {
  * \return the Byte of #arg, if it exist or an undefined value if it does not
  */
 CO_LexByte CO_getByteByte(CO_Byte arg) {
-  
+
     return (CO_LexByte)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -7081,7 +7081,7 @@ ATbool CO_isValidLexBytes(CO_LexBytes arg) {
  * \param[in] arg input CO_LexBytes
  * \return ATtrue if #arg corresponds to the signature of a bytes, or ATfalse otherwise
  */
-inline ATbool CO_isLexBytesBytes(CO_LexBytes arg){
+ATbool CO_isLexBytesBytes(CO_LexBytes arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7186,7 +7186,7 @@ inline ATbool CO_isLexBytesBytes(CO_LexBytes arg){
 }
 
 /**
- * Assert whether a CO_LexBytes has a list. 
+ * Assert whether a CO_LexBytes has a list.
  * \param[in] arg input CO_LexBytes
  * \return ATtrue if the CO_LexBytes had a list, or ATfalse otherwise
  */
@@ -7203,7 +7203,7 @@ ATbool CO_hasLexBytesList(CO_LexBytes arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 CO_LexByteList CO_getLexBytesList(CO_LexBytes arg) {
-  
+
     return (CO_LexByteList)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1);
 }
 
@@ -7239,7 +7239,7 @@ ATbool CO_isValidBytes(CO_Bytes arg) {
  * \param[in] arg input CO_Bytes
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool CO_isBytesLexToCf(CO_Bytes arg){
+ATbool CO_isBytesLexToCf(CO_Bytes arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7295,7 +7295,7 @@ inline ATbool CO_isBytesLexToCf(CO_Bytes arg){
 }
 
 /**
- * Assert whether a CO_Bytes has a Bytes. 
+ * Assert whether a CO_Bytes has a Bytes.
  * \param[in] arg input CO_Bytes
  * \return ATtrue if the CO_Bytes had a Bytes, or ATfalse otherwise
  */
@@ -7312,7 +7312,7 @@ ATbool CO_hasBytesBytes(CO_Bytes arg) {
  * \return the Bytes of #arg, if it exist or an undefined value if it does not
  */
 CO_LexBytes CO_getBytesBytes(CO_Bytes arg) {
-  
+
     return (CO_LexBytes)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -7354,7 +7354,7 @@ ATbool CO_isValidLexByteList(CO_LexByteList arg) {
  * \param[in] arg input CO_LexByteList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CO_isLexByteListEmpty(CO_LexByteList arg){
+ATbool CO_isLexByteListEmpty(CO_LexByteList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -7366,7 +7366,7 @@ inline ATbool CO_isLexByteListEmpty(CO_LexByteList arg){
  * \param[in] arg input CO_LexByteList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CO_isLexByteListSingle(CO_LexByteList arg){
+ATbool CO_isLexByteListSingle(CO_LexByteList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -7382,7 +7382,7 @@ inline ATbool CO_isLexByteListSingle(CO_LexByteList arg){
  * \param[in] arg input CO_LexByteList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CO_isLexByteListMany(CO_LexByteList arg){
+ATbool CO_isLexByteListMany(CO_LexByteList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -7390,7 +7390,7 @@ inline ATbool CO_isLexByteListMany(CO_LexByteList arg){
 }
 
 /**
- * Assert whether a CO_LexByteList has a head. 
+ * Assert whether a CO_LexByteList has a head.
  * \param[in] arg input CO_LexByteList
  * \return ATtrue if the CO_LexByteList had a head, or ATfalse otherwise
  */
@@ -7405,7 +7405,7 @@ ATbool CO_hasLexByteListHead(CO_LexByteList arg) {
 }
 
 /**
- * Assert whether a CO_LexByteList has a tail. 
+ * Assert whether a CO_LexByteList has a tail.
  * \param[in] arg input CO_LexByteList
  * \return ATtrue if the CO_LexByteList had a tail, or ATfalse otherwise
  */
@@ -7425,7 +7425,7 @@ CO_LexByte CO_getLexByteListHead(CO_LexByteList arg) {
   if (CO_isLexByteListSingle(arg)) {
     return (CO_LexByte)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (CO_LexByte)ATgetFirst((ATermList)arg);
 }
 
@@ -7435,7 +7435,7 @@ CO_LexByte CO_getLexByteListHead(CO_LexByteList arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 CO_LexByteList CO_getLexByteListTail(CO_LexByteList arg) {
-  
+
     return (CO_LexByteList)ATgetNext((ATermList)arg);
 }
 
@@ -7492,7 +7492,7 @@ ATbool CO_isValidSubject(CO_Subject arg) {
  * \param[in] arg input CO_Subject
  * \return ATtrue if #arg corresponds to the signature of a subject, or ATfalse otherwise
  */
-inline ATbool CO_isSubjectSubject(CO_Subject arg){
+ATbool CO_isSubjectSubject(CO_Subject arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7993,7 +7993,7 @@ inline ATbool CO_isSubjectSubject(CO_Subject arg){
  * \param[in] arg input CO_Subject
  * \return ATtrue if #arg corresponds to the signature of a localized, or ATfalse otherwise
  */
-inline ATbool CO_isSubjectLocalized(CO_Subject arg){
+ATbool CO_isSubjectLocalized(CO_Subject arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -8666,7 +8666,7 @@ inline ATbool CO_isSubjectLocalized(CO_Subject arg){
 }
 
 /**
- * Assert whether a CO_Subject has a ws-after-subject. 
+ * Assert whether a CO_Subject has a ws-after-subject.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a ws-after-subject, or ATfalse otherwise
  */
@@ -8678,7 +8678,7 @@ ATbool CO_hasSubjectWsAfterSubject(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a ws-after-(. 
+ * Assert whether a CO_Subject has a ws-after-(.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a ws-after-(, or ATfalse otherwise
  */
@@ -8693,7 +8693,7 @@ ATbool CO_hasSubjectWsAfterParenOpen(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a description. 
+ * Assert whether a CO_Subject has a description.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a description, or ATfalse otherwise
  */
@@ -8708,7 +8708,7 @@ ATbool CO_hasSubjectDescription(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a ws-after-description. 
+ * Assert whether a CO_Subject has a ws-after-description.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a ws-after-description, or ATfalse otherwise
  */
@@ -8723,7 +8723,7 @@ ATbool CO_hasSubjectWsAfterDescription(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a ws-after-localized. 
+ * Assert whether a CO_Subject has a ws-after-localized.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a ws-after-localized, or ATfalse otherwise
  */
@@ -8735,7 +8735,7 @@ ATbool CO_hasSubjectWsAfterLocalized(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a ws-after-,. 
+ * Assert whether a CO_Subject has a ws-after-,.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a ws-after-,, or ATfalse otherwise
  */
@@ -8747,7 +8747,7 @@ ATbool CO_hasSubjectWsAfterComma(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a Location. 
+ * Assert whether a CO_Subject has a Location.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a Location, or ATfalse otherwise
  */
@@ -8759,7 +8759,7 @@ ATbool CO_hasSubjectLocation(CO_Subject arg) {
 }
 
 /**
- * Assert whether a CO_Subject has a ws-after-Location. 
+ * Assert whether a CO_Subject has a ws-after-Location.
  * \param[in] arg input CO_Subject
  * \return ATtrue if the CO_Subject had a ws-after-Location, or ATfalse otherwise
  */
@@ -8776,7 +8776,7 @@ ATbool CO_hasSubjectWsAfterLocation(CO_Subject arg) {
  * \return the ws-after-subject of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSubjectWsAfterSubject(CO_Subject arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -8789,7 +8789,7 @@ CO_OptLayout CO_getSubjectWsAfterParenOpen(CO_Subject arg) {
   if (CO_isSubjectSubject(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -8802,7 +8802,7 @@ CO_StrCon CO_getSubjectDescription(CO_Subject arg) {
   if (CO_isSubjectSubject(arg)) {
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -8815,7 +8815,7 @@ CO_OptLayout CO_getSubjectWsAfterDescription(CO_Subject arg) {
   if (CO_isSubjectSubject(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -8825,7 +8825,7 @@ CO_OptLayout CO_getSubjectWsAfterDescription(CO_Subject arg) {
  * \return the ws-after-localized of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSubjectWsAfterLocalized(CO_Subject arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -8835,7 +8835,7 @@ CO_OptLayout CO_getSubjectWsAfterLocalized(CO_Subject arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSubjectWsAfterComma(CO_Subject arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -8845,7 +8845,7 @@ CO_OptLayout CO_getSubjectWsAfterComma(CO_Subject arg) {
  * \return the Location of #arg, if it exist or an undefined value if it does not
  */
 CO_Location CO_getSubjectLocation(CO_Subject arg) {
-  
+
     return (CO_Location)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -8855,7 +8855,7 @@ CO_Location CO_getSubjectLocation(CO_Subject arg) {
  * \return the ws-after-Location of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSubjectWsAfterLocation(CO_Subject arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -9014,7 +9014,7 @@ ATbool CO_isValidError(CO_Error arg) {
  * \param[in] arg input CO_Error
  * \return ATtrue if #arg corresponds to the signature of a info, or ATfalse otherwise
  */
-inline ATbool CO_isErrorInfo(CO_Error arg){
+ATbool CO_isErrorInfo(CO_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -9781,7 +9781,7 @@ inline ATbool CO_isErrorInfo(CO_Error arg){
  * \param[in] arg input CO_Error
  * \return ATtrue if #arg corresponds to the signature of a warning, or ATfalse otherwise
  */
-inline ATbool CO_isErrorWarning(CO_Error arg){
+ATbool CO_isErrorWarning(CO_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -10626,7 +10626,7 @@ inline ATbool CO_isErrorWarning(CO_Error arg){
  * \param[in] arg input CO_Error
  * \return ATtrue if #arg corresponds to the signature of a error, or ATfalse otherwise
  */
-inline ATbool CO_isErrorError(CO_Error arg){
+ATbool CO_isErrorError(CO_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -11419,7 +11419,7 @@ inline ATbool CO_isErrorError(CO_Error arg){
  * \param[in] arg input CO_Error
  * \return ATtrue if #arg corresponds to the signature of a fatal, or ATfalse otherwise
  */
-inline ATbool CO_isErrorFatal(CO_Error arg){
+ATbool CO_isErrorFatal(CO_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -12208,7 +12208,7 @@ inline ATbool CO_isErrorFatal(CO_Error arg){
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-info. 
+ * Assert whether a CO_Error has a ws-after-info.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-info, or ATfalse otherwise
  */
@@ -12220,7 +12220,7 @@ ATbool CO_hasErrorWsAfterInfo(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-(. 
+ * Assert whether a CO_Error has a ws-after-(.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-(, or ATfalse otherwise
  */
@@ -12241,7 +12241,7 @@ ATbool CO_hasErrorWsAfterParenOpen(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a description. 
+ * Assert whether a CO_Error has a description.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a description, or ATfalse otherwise
  */
@@ -12262,7 +12262,7 @@ ATbool CO_hasErrorDescription(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-description. 
+ * Assert whether a CO_Error has a ws-after-description.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-description, or ATfalse otherwise
  */
@@ -12283,7 +12283,7 @@ ATbool CO_hasErrorWsAfterDescription(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-,. 
+ * Assert whether a CO_Error has a ws-after-,.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-,, or ATfalse otherwise
  */
@@ -12304,7 +12304,7 @@ ATbool CO_hasErrorWsAfterComma(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-[. 
+ * Assert whether a CO_Error has a ws-after-[.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-[, or ATfalse otherwise
  */
@@ -12325,7 +12325,7 @@ ATbool CO_hasErrorWsAfterBracketOpen(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a list. 
+ * Assert whether a CO_Error has a list.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a list, or ATfalse otherwise
  */
@@ -12346,7 +12346,7 @@ ATbool CO_hasErrorList(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-list. 
+ * Assert whether a CO_Error has a ws-after-list.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-list, or ATfalse otherwise
  */
@@ -12367,7 +12367,7 @@ ATbool CO_hasErrorWsAfterList(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-]. 
+ * Assert whether a CO_Error has a ws-after-].
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-], or ATfalse otherwise
  */
@@ -12388,7 +12388,7 @@ ATbool CO_hasErrorWsAfterBracketClose(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-warning. 
+ * Assert whether a CO_Error has a ws-after-warning.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-warning, or ATfalse otherwise
  */
@@ -12400,7 +12400,7 @@ ATbool CO_hasErrorWsAfterWarning(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-error. 
+ * Assert whether a CO_Error has a ws-after-error.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-error, or ATfalse otherwise
  */
@@ -12412,7 +12412,7 @@ ATbool CO_hasErrorWsAfterError(CO_Error arg) {
 }
 
 /**
- * Assert whether a CO_Error has a ws-after-fatal. 
+ * Assert whether a CO_Error has a ws-after-fatal.
  * \param[in] arg input CO_Error
  * \return ATtrue if the CO_Error had a ws-after-fatal, or ATfalse otherwise
  */
@@ -12429,7 +12429,7 @@ ATbool CO_hasErrorWsAfterFatal(CO_Error arg) {
  * \return the ws-after-info of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getErrorWsAfterInfo(CO_Error arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -12448,7 +12448,7 @@ CO_OptLayout CO_getErrorWsAfterParenOpen(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -12467,7 +12467,7 @@ CO_StrCon CO_getErrorDescription(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -12486,7 +12486,7 @@ CO_OptLayout CO_getErrorWsAfterDescription(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -12505,7 +12505,7 @@ CO_OptLayout CO_getErrorWsAfterComma(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -12524,7 +12524,7 @@ CO_OptLayout CO_getErrorWsAfterBracketOpen(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -12543,7 +12543,7 @@ CO_SubjectList CO_getErrorList(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_SubjectList)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 10), 1);
   }
-  else 
+  else
     return (CO_SubjectList)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 10), 1);
 }
 
@@ -12562,7 +12562,7 @@ CO_OptLayout CO_getErrorWsAfterList(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -12581,7 +12581,7 @@ CO_OptLayout CO_getErrorWsAfterBracketClose(CO_Error arg) {
   else if (CO_isErrorError(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -12591,7 +12591,7 @@ CO_OptLayout CO_getErrorWsAfterBracketClose(CO_Error arg) {
  * \return the ws-after-warning of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getErrorWsAfterWarning(CO_Error arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -12601,7 +12601,7 @@ CO_OptLayout CO_getErrorWsAfterWarning(CO_Error arg) {
  * \return the ws-after-error of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getErrorWsAfterError(CO_Error arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -12611,7 +12611,7 @@ CO_OptLayout CO_getErrorWsAfterError(CO_Error arg) {
  * \return the ws-after-fatal of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getErrorWsAfterFatal(CO_Error arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -12884,7 +12884,7 @@ ATbool CO_isValidSummary(CO_Summary arg) {
  * \param[in] arg input CO_Summary
  * \return ATtrue if #arg corresponds to the signature of a summary, or ATfalse otherwise
  */
-inline ATbool CO_isSummarySummary(CO_Summary arg){
+ATbool CO_isSummarySummary(CO_Summary arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13849,7 +13849,7 @@ inline ATbool CO_isSummarySummary(CO_Summary arg){
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-summary. 
+ * Assert whether a CO_Summary has a ws-after-summary.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-summary, or ATfalse otherwise
  */
@@ -13861,7 +13861,7 @@ ATbool CO_hasSummaryWsAfterSummary(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-(. 
+ * Assert whether a CO_Summary has a ws-after-(.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-(, or ATfalse otherwise
  */
@@ -13873,7 +13873,7 @@ ATbool CO_hasSummaryWsAfterParenOpen(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a producer. 
+ * Assert whether a CO_Summary has a producer.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a producer, or ATfalse otherwise
  */
@@ -13885,7 +13885,7 @@ ATbool CO_hasSummaryProducer(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-producer. 
+ * Assert whether a CO_Summary has a ws-after-producer.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-producer, or ATfalse otherwise
  */
@@ -13897,7 +13897,7 @@ ATbool CO_hasSummaryWsAfterProducer(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-,. 
+ * Assert whether a CO_Summary has a ws-after-,.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-,, or ATfalse otherwise
  */
@@ -13909,7 +13909,7 @@ ATbool CO_hasSummaryWsAfterComma(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a id. 
+ * Assert whether a CO_Summary has a id.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a id, or ATfalse otherwise
  */
@@ -13921,7 +13921,7 @@ ATbool CO_hasSummaryId(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-id. 
+ * Assert whether a CO_Summary has a ws-after-id.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-id, or ATfalse otherwise
  */
@@ -13933,7 +13933,7 @@ ATbool CO_hasSummaryWsAfterId(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-,-1. 
+ * Assert whether a CO_Summary has a ws-after-,-1.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-,-1, or ATfalse otherwise
  */
@@ -13945,7 +13945,7 @@ ATbool CO_hasSummaryWsAfterComma1(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-[. 
+ * Assert whether a CO_Summary has a ws-after-[.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-[, or ATfalse otherwise
  */
@@ -13957,7 +13957,7 @@ ATbool CO_hasSummaryWsAfterBracketOpen(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a list. 
+ * Assert whether a CO_Summary has a list.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a list, or ATfalse otherwise
  */
@@ -13969,7 +13969,7 @@ ATbool CO_hasSummaryList(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-list. 
+ * Assert whether a CO_Summary has a ws-after-list.
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-list, or ATfalse otherwise
  */
@@ -13981,7 +13981,7 @@ ATbool CO_hasSummaryWsAfterList(CO_Summary arg) {
 }
 
 /**
- * Assert whether a CO_Summary has a ws-after-]. 
+ * Assert whether a CO_Summary has a ws-after-].
  * \param[in] arg input CO_Summary
  * \return ATtrue if the CO_Summary had a ws-after-], or ATfalse otherwise
  */
@@ -13998,7 +13998,7 @@ ATbool CO_hasSummaryWsAfterBracketClose(CO_Summary arg) {
  * \return the ws-after-summary of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterSummary(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -14008,7 +14008,7 @@ CO_OptLayout CO_getSummaryWsAfterSummary(CO_Summary arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterParenOpen(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -14018,7 +14018,7 @@ CO_OptLayout CO_getSummaryWsAfterParenOpen(CO_Summary arg) {
  * \return the producer of #arg, if it exist or an undefined value if it does not
  */
 CO_StrCon CO_getSummaryProducer(CO_Summary arg) {
-  
+
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -14028,7 +14028,7 @@ CO_StrCon CO_getSummaryProducer(CO_Summary arg) {
  * \return the ws-after-producer of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterProducer(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -14038,7 +14038,7 @@ CO_OptLayout CO_getSummaryWsAfterProducer(CO_Summary arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterComma(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -14048,7 +14048,7 @@ CO_OptLayout CO_getSummaryWsAfterComma(CO_Summary arg) {
  * \return the id of #arg, if it exist or an undefined value if it does not
  */
 CO_StrCon CO_getSummaryId(CO_Summary arg) {
-  
+
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -14058,7 +14058,7 @@ CO_StrCon CO_getSummaryId(CO_Summary arg) {
  * \return the ws-after-id of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterId(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -14068,7 +14068,7 @@ CO_OptLayout CO_getSummaryWsAfterId(CO_Summary arg) {
  * \return the ws-after-,-1 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterComma1(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -14078,7 +14078,7 @@ CO_OptLayout CO_getSummaryWsAfterComma1(CO_Summary arg) {
  * \return the ws-after-[ of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterBracketOpen(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -14088,7 +14088,7 @@ CO_OptLayout CO_getSummaryWsAfterBracketOpen(CO_Summary arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 CO_ErrorList CO_getSummaryList(CO_Summary arg) {
-  
+
     return (CO_ErrorList)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 14), 1);
 }
 
@@ -14098,7 +14098,7 @@ CO_ErrorList CO_getSummaryList(CO_Summary arg) {
  * \return the ws-after-list of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterList(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 15);
 }
 
@@ -14108,7 +14108,7 @@ CO_OptLayout CO_getSummaryWsAfterList(CO_Summary arg) {
  * \return the ws-after-] of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSummaryWsAfterBracketClose(CO_Summary arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 17);
 }
 
@@ -14315,7 +14315,7 @@ ATbool CO_isValidSubjectList(CO_SubjectList arg) {
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CO_isSubjectListEmpty(CO_SubjectList arg){
+ATbool CO_isSubjectListEmpty(CO_SubjectList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -14327,7 +14327,7 @@ inline ATbool CO_isSubjectListEmpty(CO_SubjectList arg){
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CO_isSubjectListSingle(CO_SubjectList arg){
+ATbool CO_isSubjectListSingle(CO_SubjectList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -14343,7 +14343,7 @@ inline ATbool CO_isSubjectListSingle(CO_SubjectList arg){
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CO_isSubjectListMany(CO_SubjectList arg){
+ATbool CO_isSubjectListMany(CO_SubjectList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -14418,7 +14418,7 @@ inline ATbool CO_isSubjectListMany(CO_SubjectList arg){
 }
 
 /**
- * Assert whether a CO_SubjectList has a head. 
+ * Assert whether a CO_SubjectList has a head.
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if the CO_SubjectList had a head, or ATfalse otherwise
  */
@@ -14433,7 +14433,7 @@ ATbool CO_hasSubjectListHead(CO_SubjectList arg) {
 }
 
 /**
- * Assert whether a CO_SubjectList has a ws-after-head. 
+ * Assert whether a CO_SubjectList has a ws-after-head.
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if the CO_SubjectList had a ws-after-head, or ATfalse otherwise
  */
@@ -14445,7 +14445,7 @@ ATbool CO_hasSubjectListWsAfterHead(CO_SubjectList arg) {
 }
 
 /**
- * Assert whether a CO_SubjectList has a ws-after-sep. 
+ * Assert whether a CO_SubjectList has a ws-after-sep.
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if the CO_SubjectList had a ws-after-sep, or ATfalse otherwise
  */
@@ -14457,7 +14457,7 @@ ATbool CO_hasSubjectListWsAfterSep(CO_SubjectList arg) {
 }
 
 /**
- * Assert whether a CO_SubjectList has a tail. 
+ * Assert whether a CO_SubjectList has a tail.
  * \param[in] arg input CO_SubjectList
  * \return ATtrue if the CO_SubjectList had a tail, or ATfalse otherwise
  */
@@ -14469,7 +14469,7 @@ ATbool CO_hasSubjectListTail(CO_SubjectList arg) {
 }
 
 /**
- * Returns a list of all but the first element of a CO_SubjectList. 
+ * Returns a list of all but the first element of a CO_SubjectList.
  * \param[in] arg input CO_SubjectList
  * \return A new CO_SubjectList, without the first element and the separator(s) just after it.)
  */
@@ -14479,7 +14479,7 @@ CO_SubjectList CO_getSubjectListTail(CO_SubjectList arg) {
     return (CO_SubjectList) CO_makeSubjectListEmpty();
   }
   else {
-  
+
     return (CO_SubjectList)ATgetTail((ATermList)arg, 4);
   }
 }
@@ -14493,7 +14493,7 @@ CO_Subject CO_getSubjectListHead(CO_SubjectList arg) {
   if (CO_isSubjectListSingle(arg)) {
     return (CO_Subject)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (CO_Subject)ATgetFirst((ATermList)arg);
 }
 
@@ -14503,7 +14503,7 @@ CO_Subject CO_getSubjectListHead(CO_SubjectList arg) {
  * \return the ws-after-head of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSubjectListWsAfterHead(CO_SubjectList arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)arg, 1);
 }
 
@@ -14513,7 +14513,7 @@ CO_OptLayout CO_getSubjectListWsAfterHead(CO_SubjectList arg) {
  * \return the ws-after-sep of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getSubjectListWsAfterSep(CO_SubjectList arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)arg, 3);
 }
 
@@ -14603,7 +14603,7 @@ ATbool CO_isValidErrorList(CO_ErrorList arg) {
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CO_isErrorListEmpty(CO_ErrorList arg){
+ATbool CO_isErrorListEmpty(CO_ErrorList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -14615,7 +14615,7 @@ inline ATbool CO_isErrorListEmpty(CO_ErrorList arg){
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CO_isErrorListSingle(CO_ErrorList arg){
+ATbool CO_isErrorListSingle(CO_ErrorList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -14631,7 +14631,7 @@ inline ATbool CO_isErrorListSingle(CO_ErrorList arg){
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CO_isErrorListMany(CO_ErrorList arg){
+ATbool CO_isErrorListMany(CO_ErrorList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -14706,7 +14706,7 @@ inline ATbool CO_isErrorListMany(CO_ErrorList arg){
 }
 
 /**
- * Assert whether a CO_ErrorList has a head. 
+ * Assert whether a CO_ErrorList has a head.
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if the CO_ErrorList had a head, or ATfalse otherwise
  */
@@ -14721,7 +14721,7 @@ ATbool CO_hasErrorListHead(CO_ErrorList arg) {
 }
 
 /**
- * Assert whether a CO_ErrorList has a ws-after-head. 
+ * Assert whether a CO_ErrorList has a ws-after-head.
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if the CO_ErrorList had a ws-after-head, or ATfalse otherwise
  */
@@ -14733,7 +14733,7 @@ ATbool CO_hasErrorListWsAfterHead(CO_ErrorList arg) {
 }
 
 /**
- * Assert whether a CO_ErrorList has a ws-after-sep. 
+ * Assert whether a CO_ErrorList has a ws-after-sep.
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if the CO_ErrorList had a ws-after-sep, or ATfalse otherwise
  */
@@ -14745,7 +14745,7 @@ ATbool CO_hasErrorListWsAfterSep(CO_ErrorList arg) {
 }
 
 /**
- * Assert whether a CO_ErrorList has a tail. 
+ * Assert whether a CO_ErrorList has a tail.
  * \param[in] arg input CO_ErrorList
  * \return ATtrue if the CO_ErrorList had a tail, or ATfalse otherwise
  */
@@ -14757,7 +14757,7 @@ ATbool CO_hasErrorListTail(CO_ErrorList arg) {
 }
 
 /**
- * Returns a list of all but the first element of a CO_ErrorList. 
+ * Returns a list of all but the first element of a CO_ErrorList.
  * \param[in] arg input CO_ErrorList
  * \return A new CO_ErrorList, without the first element and the separator(s) just after it.)
  */
@@ -14767,7 +14767,7 @@ CO_ErrorList CO_getErrorListTail(CO_ErrorList arg) {
     return (CO_ErrorList) CO_makeErrorListEmpty();
   }
   else {
-  
+
     return (CO_ErrorList)ATgetTail((ATermList)arg, 4);
   }
 }
@@ -14781,7 +14781,7 @@ CO_Error CO_getErrorListHead(CO_ErrorList arg) {
   if (CO_isErrorListSingle(arg)) {
     return (CO_Error)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (CO_Error)ATgetFirst((ATermList)arg);
 }
 
@@ -14791,7 +14791,7 @@ CO_Error CO_getErrorListHead(CO_ErrorList arg) {
  * \return the ws-after-head of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getErrorListWsAfterHead(CO_ErrorList arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)arg, 1);
 }
 
@@ -14801,7 +14801,7 @@ CO_OptLayout CO_getErrorListWsAfterHead(CO_ErrorList arg) {
  * \return the ws-after-sep of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getErrorListWsAfterSep(CO_ErrorList arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)arg, 3);
 }
 
@@ -14891,7 +14891,7 @@ ATbool CO_isValidLocation(CO_Location arg) {
  * \param[in] arg input CO_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool CO_isLocationFile(CO_Location arg){
+ATbool CO_isLocationFile(CO_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -15314,7 +15314,7 @@ inline ATbool CO_isLocationFile(CO_Location arg){
  * \param[in] arg input CO_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool CO_isLocationArea(CO_Location arg){
+ATbool CO_isLocationArea(CO_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -15737,7 +15737,7 @@ inline ATbool CO_isLocationArea(CO_Location arg){
  * \param[in] arg input CO_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool CO_isLocationAreaInFile(CO_Location arg){
+ATbool CO_isLocationAreaInFile(CO_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -16488,7 +16488,7 @@ inline ATbool CO_isLocationAreaInFile(CO_Location arg){
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-file. 
+ * Assert whether a CO_Location has a ws-after-file.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-file, or ATfalse otherwise
  */
@@ -16500,7 +16500,7 @@ ATbool CO_hasLocationWsAfterFile(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-(. 
+ * Assert whether a CO_Location has a ws-after-(.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-(, or ATfalse otherwise
  */
@@ -16518,7 +16518,7 @@ ATbool CO_hasLocationWsAfterParenOpen(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a filename. 
+ * Assert whether a CO_Location has a filename.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a filename, or ATfalse otherwise
  */
@@ -16533,7 +16533,7 @@ ATbool CO_hasLocationFilename(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-filename. 
+ * Assert whether a CO_Location has a ws-after-filename.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-filename, or ATfalse otherwise
  */
@@ -16548,7 +16548,7 @@ ATbool CO_hasLocationWsAfterFilename(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-a. 
+ * Assert whether a CO_Location has a ws-after-a.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-a, or ATfalse otherwise
  */
@@ -16560,7 +16560,7 @@ ATbool CO_hasLocationWsAfterA(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a Area. 
+ * Assert whether a CO_Location has a Area.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a Area, or ATfalse otherwise
  */
@@ -16575,7 +16575,7 @@ ATbool CO_hasLocationArea(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-Area. 
+ * Assert whether a CO_Location has a ws-after-Area.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-Area, or ATfalse otherwise
  */
@@ -16590,7 +16590,7 @@ ATbool CO_hasLocationWsAfterArea(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-area-in-file. 
+ * Assert whether a CO_Location has a ws-after-area-in-file.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-area-in-file, or ATfalse otherwise
  */
@@ -16602,7 +16602,7 @@ ATbool CO_hasLocationWsAfterAreaInFile(CO_Location arg) {
 }
 
 /**
- * Assert whether a CO_Location has a ws-after-,. 
+ * Assert whether a CO_Location has a ws-after-,.
  * \param[in] arg input CO_Location
  * \return ATtrue if the CO_Location had a ws-after-,, or ATfalse otherwise
  */
@@ -16619,7 +16619,7 @@ ATbool CO_hasLocationWsAfterComma(CO_Location arg) {
  * \return the ws-after-file of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getLocationWsAfterFile(CO_Location arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -16635,7 +16635,7 @@ CO_OptLayout CO_getLocationWsAfterParenOpen(CO_Location arg) {
   else if (CO_isLocationArea(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -16648,7 +16648,7 @@ CO_StrCon CO_getLocationFilename(CO_Location arg) {
   if (CO_isLocationFile(arg)) {
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (CO_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -16661,7 +16661,7 @@ CO_OptLayout CO_getLocationWsAfterFilename(CO_Location arg) {
   if (CO_isLocationFile(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -16671,7 +16671,7 @@ CO_OptLayout CO_getLocationWsAfterFilename(CO_Location arg) {
  * \return the ws-after-a of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getLocationWsAfterA(CO_Location arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -16684,7 +16684,7 @@ CO_Area CO_getLocationArea(CO_Location arg) {
   if (CO_isLocationArea(arg)) {
     return (CO_Area)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (CO_Area)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -16697,7 +16697,7 @@ CO_OptLayout CO_getLocationWsAfterArea(CO_Location arg) {
   if (CO_isLocationArea(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -16707,7 +16707,7 @@ CO_OptLayout CO_getLocationWsAfterArea(CO_Location arg) {
  * \return the ws-after-area-in-file of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getLocationWsAfterAreaInFile(CO_Location arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -16717,7 +16717,7 @@ CO_OptLayout CO_getLocationWsAfterAreaInFile(CO_Location arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getLocationWsAfterComma(CO_Location arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -16891,7 +16891,7 @@ ATbool CO_isValidArea(CO_Area arg) {
  * \param[in] arg input CO_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool CO_isAreaArea(CO_Area arg){
+ATbool CO_isAreaArea(CO_Area arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -17930,7 +17930,7 @@ inline ATbool CO_isAreaArea(CO_Area arg){
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-area. 
+ * Assert whether a CO_Area has a ws-after-area.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-area, or ATfalse otherwise
  */
@@ -17942,7 +17942,7 @@ ATbool CO_hasAreaWsAfterArea(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-(. 
+ * Assert whether a CO_Area has a ws-after-(.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-(, or ATfalse otherwise
  */
@@ -17954,7 +17954,7 @@ ATbool CO_hasAreaWsAfterParenOpen(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a begin-line. 
+ * Assert whether a CO_Area has a begin-line.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a begin-line, or ATfalse otherwise
  */
@@ -17966,7 +17966,7 @@ ATbool CO_hasAreaBeginLine(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-begin-line. 
+ * Assert whether a CO_Area has a ws-after-begin-line.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-begin-line, or ATfalse otherwise
  */
@@ -17978,7 +17978,7 @@ ATbool CO_hasAreaWsAfterBeginLine(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-,. 
+ * Assert whether a CO_Area has a ws-after-,.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-,, or ATfalse otherwise
  */
@@ -17990,7 +17990,7 @@ ATbool CO_hasAreaWsAfterComma(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a begin-column. 
+ * Assert whether a CO_Area has a begin-column.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a begin-column, or ATfalse otherwise
  */
@@ -18002,7 +18002,7 @@ ATbool CO_hasAreaBeginColumn(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-begin-column. 
+ * Assert whether a CO_Area has a ws-after-begin-column.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-begin-column, or ATfalse otherwise
  */
@@ -18014,7 +18014,7 @@ ATbool CO_hasAreaWsAfterBeginColumn(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-,-1. 
+ * Assert whether a CO_Area has a ws-after-,-1.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-,-1, or ATfalse otherwise
  */
@@ -18026,7 +18026,7 @@ ATbool CO_hasAreaWsAfterComma1(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a end-line. 
+ * Assert whether a CO_Area has a end-line.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a end-line, or ATfalse otherwise
  */
@@ -18038,7 +18038,7 @@ ATbool CO_hasAreaEndLine(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-end-line. 
+ * Assert whether a CO_Area has a ws-after-end-line.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-end-line, or ATfalse otherwise
  */
@@ -18050,7 +18050,7 @@ ATbool CO_hasAreaWsAfterEndLine(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-,-2. 
+ * Assert whether a CO_Area has a ws-after-,-2.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-,-2, or ATfalse otherwise
  */
@@ -18062,7 +18062,7 @@ ATbool CO_hasAreaWsAfterComma2(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a end-column. 
+ * Assert whether a CO_Area has a end-column.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a end-column, or ATfalse otherwise
  */
@@ -18074,7 +18074,7 @@ ATbool CO_hasAreaEndColumn(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-end-column. 
+ * Assert whether a CO_Area has a ws-after-end-column.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-end-column, or ATfalse otherwise
  */
@@ -18086,7 +18086,7 @@ ATbool CO_hasAreaWsAfterEndColumn(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-,-3. 
+ * Assert whether a CO_Area has a ws-after-,-3.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-,-3, or ATfalse otherwise
  */
@@ -18098,7 +18098,7 @@ ATbool CO_hasAreaWsAfterComma3(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a offset. 
+ * Assert whether a CO_Area has a offset.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a offset, or ATfalse otherwise
  */
@@ -18110,7 +18110,7 @@ ATbool CO_hasAreaOffset(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-offset. 
+ * Assert whether a CO_Area has a ws-after-offset.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-offset, or ATfalse otherwise
  */
@@ -18122,7 +18122,7 @@ ATbool CO_hasAreaWsAfterOffset(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-,-4. 
+ * Assert whether a CO_Area has a ws-after-,-4.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-,-4, or ATfalse otherwise
  */
@@ -18134,7 +18134,7 @@ ATbool CO_hasAreaWsAfterComma4(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a length. 
+ * Assert whether a CO_Area has a length.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a length, or ATfalse otherwise
  */
@@ -18146,7 +18146,7 @@ ATbool CO_hasAreaLength(CO_Area arg) {
 }
 
 /**
- * Assert whether a CO_Area has a ws-after-length. 
+ * Assert whether a CO_Area has a ws-after-length.
  * \param[in] arg input CO_Area
  * \return ATtrue if the CO_Area had a ws-after-length, or ATfalse otherwise
  */
@@ -18163,7 +18163,7 @@ ATbool CO_hasAreaWsAfterLength(CO_Area arg) {
  * \return the ws-after-area of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterArea(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -18173,7 +18173,7 @@ CO_OptLayout CO_getAreaWsAfterArea(CO_Area arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterParenOpen(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -18183,7 +18183,7 @@ CO_OptLayout CO_getAreaWsAfterParenOpen(CO_Area arg) {
  * \return the begin-line of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getAreaBeginLine(CO_Area arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -18193,7 +18193,7 @@ CO_NatCon CO_getAreaBeginLine(CO_Area arg) {
  * \return the ws-after-begin-line of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterBeginLine(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -18203,7 +18203,7 @@ CO_OptLayout CO_getAreaWsAfterBeginLine(CO_Area arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterComma(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -18213,7 +18213,7 @@ CO_OptLayout CO_getAreaWsAfterComma(CO_Area arg) {
  * \return the begin-column of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getAreaBeginColumn(CO_Area arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -18223,7 +18223,7 @@ CO_NatCon CO_getAreaBeginColumn(CO_Area arg) {
  * \return the ws-after-begin-column of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterBeginColumn(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -18233,7 +18233,7 @@ CO_OptLayout CO_getAreaWsAfterBeginColumn(CO_Area arg) {
  * \return the ws-after-,-1 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterComma1(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -18243,7 +18243,7 @@ CO_OptLayout CO_getAreaWsAfterComma1(CO_Area arg) {
  * \return the end-line of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getAreaEndLine(CO_Area arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 12);
 }
 
@@ -18253,7 +18253,7 @@ CO_NatCon CO_getAreaEndLine(CO_Area arg) {
  * \return the ws-after-end-line of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterEndLine(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -18263,7 +18263,7 @@ CO_OptLayout CO_getAreaWsAfterEndLine(CO_Area arg) {
  * \return the ws-after-,-2 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterComma2(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 15);
 }
 
@@ -18273,7 +18273,7 @@ CO_OptLayout CO_getAreaWsAfterComma2(CO_Area arg) {
  * \return the end-column of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getAreaEndColumn(CO_Area arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 16);
 }
 
@@ -18283,7 +18283,7 @@ CO_NatCon CO_getAreaEndColumn(CO_Area arg) {
  * \return the ws-after-end-column of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterEndColumn(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 17);
 }
 
@@ -18293,7 +18293,7 @@ CO_OptLayout CO_getAreaWsAfterEndColumn(CO_Area arg) {
  * \return the ws-after-,-3 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterComma3(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 19);
 }
 
@@ -18303,7 +18303,7 @@ CO_OptLayout CO_getAreaWsAfterComma3(CO_Area arg) {
  * \return the offset of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getAreaOffset(CO_Area arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 20);
 }
 
@@ -18313,7 +18313,7 @@ CO_NatCon CO_getAreaOffset(CO_Area arg) {
  * \return the ws-after-offset of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterOffset(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 21);
 }
 
@@ -18323,7 +18323,7 @@ CO_OptLayout CO_getAreaWsAfterOffset(CO_Area arg) {
  * \return the ws-after-,-4 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterComma4(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 23);
 }
 
@@ -18333,7 +18333,7 @@ CO_OptLayout CO_getAreaWsAfterComma4(CO_Area arg) {
  * \return the length of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getAreaLength(CO_Area arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 24);
 }
 
@@ -18343,7 +18343,7 @@ CO_NatCon CO_getAreaLength(CO_Area arg) {
  * \return the ws-after-length of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getAreaWsAfterLength(CO_Area arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 25);
 }
 
@@ -18652,7 +18652,7 @@ ATbool CO_isValidRead(CO_Read arg) {
  * \param[in] arg input CO_Read
  * \return ATtrue if #arg corresponds to the signature of a success, or ATfalse otherwise
  */
-inline ATbool CO_isReadSuccess(CO_Read arg){
+ATbool CO_isReadSuccess(CO_Read arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -19075,7 +19075,7 @@ inline ATbool CO_isReadSuccess(CO_Read arg){
  * \param[in] arg input CO_Read
  * \return ATtrue if #arg corresponds to the signature of a failure, or ATfalse otherwise
  */
-inline ATbool CO_isReadFailure(CO_Read arg){
+ATbool CO_isReadFailure(CO_Read arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -19650,7 +19650,7 @@ inline ATbool CO_isReadFailure(CO_Read arg){
 }
 
 /**
- * Assert whether a CO_Read has a ws-after-read. 
+ * Assert whether a CO_Read has a ws-after-read.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a ws-after-read, or ATfalse otherwise
  */
@@ -19662,7 +19662,7 @@ ATbool CO_hasReadWsAfterRead(CO_Read arg) {
 }
 
 /**
- * Assert whether a CO_Read has a ws-after-(. 
+ * Assert whether a CO_Read has a ws-after-(.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a ws-after-(, or ATfalse otherwise
  */
@@ -19677,7 +19677,7 @@ ATbool CO_hasReadWsAfterParenOpen(CO_Read arg) {
 }
 
 /**
- * Assert whether a CO_Read has a value. 
+ * Assert whether a CO_Read has a value.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a value, or ATfalse otherwise
  */
@@ -19689,7 +19689,7 @@ ATbool CO_hasReadValue(CO_Read arg) {
 }
 
 /**
- * Assert whether a CO_Read has a ws-after-value. 
+ * Assert whether a CO_Read has a ws-after-value.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a ws-after-value, or ATfalse otherwise
  */
@@ -19701,7 +19701,7 @@ ATbool CO_hasReadWsAfterValue(CO_Read arg) {
 }
 
 /**
- * Assert whether a CO_Read has a ws-after-read-error. 
+ * Assert whether a CO_Read has a ws-after-read-error.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a ws-after-read-error, or ATfalse otherwise
  */
@@ -19713,7 +19713,7 @@ ATbool CO_hasReadWsAfterReadError(CO_Read arg) {
 }
 
 /**
- * Assert whether a CO_Read has a Summary. 
+ * Assert whether a CO_Read has a Summary.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a Summary, or ATfalse otherwise
  */
@@ -19725,7 +19725,7 @@ ATbool CO_hasReadSummary(CO_Read arg) {
 }
 
 /**
- * Assert whether a CO_Read has a ws-after-Summary. 
+ * Assert whether a CO_Read has a ws-after-Summary.
  * \param[in] arg input CO_Read
  * \return ATtrue if the CO_Read had a ws-after-Summary, or ATfalse otherwise
  */
@@ -19742,7 +19742,7 @@ ATbool CO_hasReadWsAfterSummary(CO_Read arg) {
  * \return the ws-after-read of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getReadWsAfterRead(CO_Read arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -19755,7 +19755,7 @@ CO_OptLayout CO_getReadWsAfterParenOpen(CO_Read arg) {
   if (CO_isReadSuccess(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -19765,7 +19765,7 @@ CO_OptLayout CO_getReadWsAfterParenOpen(CO_Read arg) {
  * \return the value of #arg, if it exist or an undefined value if it does not
  */
 CO_Bytes CO_getReadValue(CO_Read arg) {
-  
+
     return (CO_Bytes)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -19775,7 +19775,7 @@ CO_Bytes CO_getReadValue(CO_Read arg) {
  * \return the ws-after-value of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getReadWsAfterValue(CO_Read arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -19785,7 +19785,7 @@ CO_OptLayout CO_getReadWsAfterValue(CO_Read arg) {
  * \return the ws-after-read-error of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getReadWsAfterReadError(CO_Read arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -19795,7 +19795,7 @@ CO_OptLayout CO_getReadWsAfterReadError(CO_Read arg) {
  * \return the Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_Summary CO_getReadSummary(CO_Read arg) {
-  
+
     return (CO_Summary)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -19805,7 +19805,7 @@ CO_Summary CO_getReadSummary(CO_Read arg) {
  * \return the ws-after-Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getReadWsAfterSummary(CO_Read arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -19937,7 +19937,7 @@ ATbool CO_isValidWrite(CO_Write arg) {
  * \param[in] arg input CO_Write
  * \return ATtrue if #arg corresponds to the signature of a success, or ATfalse otherwise
  */
-inline ATbool CO_isWriteSuccess(CO_Write arg){
+ATbool CO_isWriteSuccess(CO_Write arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -20226,7 +20226,7 @@ inline ATbool CO_isWriteSuccess(CO_Write arg){
  * \param[in] arg input CO_Write
  * \return ATtrue if #arg corresponds to the signature of a failure, or ATfalse otherwise
  */
-inline ATbool CO_isWriteFailure(CO_Write arg){
+ATbool CO_isWriteFailure(CO_Write arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -20827,7 +20827,7 @@ inline ATbool CO_isWriteFailure(CO_Write arg){
 }
 
 /**
- * Assert whether a CO_Write has a ws-after-write-error. 
+ * Assert whether a CO_Write has a ws-after-write-error.
  * \param[in] arg input CO_Write
  * \return ATtrue if the CO_Write had a ws-after-write-error, or ATfalse otherwise
  */
@@ -20839,7 +20839,7 @@ ATbool CO_hasWriteWsAfterWriteError(CO_Write arg) {
 }
 
 /**
- * Assert whether a CO_Write has a ws-after-(. 
+ * Assert whether a CO_Write has a ws-after-(.
  * \param[in] arg input CO_Write
  * \return ATtrue if the CO_Write had a ws-after-(, or ATfalse otherwise
  */
@@ -20851,7 +20851,7 @@ ATbool CO_hasWriteWsAfterParenOpen(CO_Write arg) {
 }
 
 /**
- * Assert whether a CO_Write has a Summary. 
+ * Assert whether a CO_Write has a Summary.
  * \param[in] arg input CO_Write
  * \return ATtrue if the CO_Write had a Summary, or ATfalse otherwise
  */
@@ -20863,7 +20863,7 @@ ATbool CO_hasWriteSummary(CO_Write arg) {
 }
 
 /**
- * Assert whether a CO_Write has a ws-after-Summary. 
+ * Assert whether a CO_Write has a ws-after-Summary.
  * \param[in] arg input CO_Write
  * \return ATtrue if the CO_Write had a ws-after-Summary, or ATfalse otherwise
  */
@@ -20880,7 +20880,7 @@ ATbool CO_hasWriteWsAfterSummary(CO_Write arg) {
  * \return the ws-after-write-error of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getWriteWsAfterWriteError(CO_Write arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -20890,7 +20890,7 @@ CO_OptLayout CO_getWriteWsAfterWriteError(CO_Write arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getWriteWsAfterParenOpen(CO_Write arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -20900,7 +20900,7 @@ CO_OptLayout CO_getWriteWsAfterParenOpen(CO_Write arg) {
  * \return the Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_Summary CO_getWriteSummary(CO_Write arg) {
-  
+
     return (CO_Summary)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -20910,7 +20910,7 @@ CO_Summary CO_getWriteSummary(CO_Write arg) {
  * \return the ws-after-Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getWriteWsAfterSummary(CO_Write arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -20994,7 +20994,7 @@ ATbool CO_isValidParsetreeX(CO_ParsetreeX arg) {
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if #arg corresponds to the signature of a success, or ATfalse otherwise
  */
-inline ATbool CO_isParsetreeXSuccess(CO_ParsetreeX arg){
+ATbool CO_isParsetreeXSuccess(CO_ParsetreeX arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -21947,7 +21947,7 @@ inline ATbool CO_isParsetreeXSuccess(CO_ParsetreeX arg){
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if #arg corresponds to the signature of a failure, or ATfalse otherwise
  */
-inline ATbool CO_isParsetreeXFailure(CO_ParsetreeX arg){
+ATbool CO_isParsetreeXFailure(CO_ParsetreeX arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -22559,7 +22559,7 @@ inline ATbool CO_isParsetreeXFailure(CO_ParsetreeX arg){
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a type-of-tree. 
+ * Assert whether a CO_ParsetreeX has a type-of-tree.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a type-of-tree, or ATfalse otherwise
  */
@@ -22571,7 +22571,7 @@ ATbool CO_hasParsetreeXTypeOfTree(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a type-of-X. 
+ * Assert whether a CO_ParsetreeX has a type-of-X.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a type-of-X, or ATfalse otherwise
  */
@@ -22586,7 +22586,7 @@ ATbool CO_hasParsetreeXTypeOfX(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-parse-tree. 
+ * Assert whether a CO_ParsetreeX has a ws-after-parse-tree.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-parse-tree, or ATfalse otherwise
  */
@@ -22598,7 +22598,7 @@ ATbool CO_hasParsetreeXWsAfterParseTree(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-(. 
+ * Assert whether a CO_ParsetreeX has a ws-after-(.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-(, or ATfalse otherwise
  */
@@ -22613,7 +22613,7 @@ ATbool CO_hasParsetreeXWsAfterParenOpen(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a left-layout. 
+ * Assert whether a CO_ParsetreeX has a left-layout.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a left-layout, or ATfalse otherwise
  */
@@ -22625,7 +22625,7 @@ ATbool CO_hasParsetreeXLeftLayout(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-left-layout. 
+ * Assert whether a CO_ParsetreeX has a ws-after-left-layout.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-left-layout, or ATfalse otherwise
  */
@@ -22637,7 +22637,7 @@ ATbool CO_hasParsetreeXWsAfterLeftLayout(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-,. 
+ * Assert whether a CO_ParsetreeX has a ws-after-,.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-,, or ATfalse otherwise
  */
@@ -22649,7 +22649,7 @@ ATbool CO_hasParsetreeXWsAfterComma(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a tree. 
+ * Assert whether a CO_ParsetreeX has a tree.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a tree, or ATfalse otherwise
  */
@@ -22661,7 +22661,7 @@ ATbool CO_hasParsetreeXTree(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-tree. 
+ * Assert whether a CO_ParsetreeX has a ws-after-tree.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-tree, or ATfalse otherwise
  */
@@ -22673,7 +22673,7 @@ ATbool CO_hasParsetreeXWsAfterTree(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-,-1. 
+ * Assert whether a CO_ParsetreeX has a ws-after-,-1.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-,-1, or ATfalse otherwise
  */
@@ -22685,7 +22685,7 @@ ATbool CO_hasParsetreeXWsAfterComma1(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a right-layout. 
+ * Assert whether a CO_ParsetreeX has a right-layout.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a right-layout, or ATfalse otherwise
  */
@@ -22697,7 +22697,7 @@ ATbool CO_hasParsetreeXRightLayout(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-right-layout. 
+ * Assert whether a CO_ParsetreeX has a ws-after-right-layout.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-right-layout, or ATfalse otherwise
  */
@@ -22709,7 +22709,7 @@ ATbool CO_hasParsetreeXWsAfterRightLayout(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-,-2. 
+ * Assert whether a CO_ParsetreeX has a ws-after-,-2.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-,-2, or ATfalse otherwise
  */
@@ -22721,7 +22721,7 @@ ATbool CO_hasParsetreeXWsAfterComma2(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a amb-cnt. 
+ * Assert whether a CO_ParsetreeX has a amb-cnt.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a amb-cnt, or ATfalse otherwise
  */
@@ -22733,7 +22733,7 @@ ATbool CO_hasParsetreeXAmbCnt(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-amb-cnt. 
+ * Assert whether a CO_ParsetreeX has a ws-after-amb-cnt.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-amb-cnt, or ATfalse otherwise
  */
@@ -22745,7 +22745,7 @@ ATbool CO_hasParsetreeXWsAfterAmbCnt(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-parse-error. 
+ * Assert whether a CO_ParsetreeX has a ws-after-parse-error.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-parse-error, or ATfalse otherwise
  */
@@ -22757,7 +22757,7 @@ ATbool CO_hasParsetreeXWsAfterParseError(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a Summary. 
+ * Assert whether a CO_ParsetreeX has a Summary.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a Summary, or ATfalse otherwise
  */
@@ -22769,7 +22769,7 @@ ATbool CO_hasParsetreeXSummary(CO_ParsetreeX arg) {
 }
 
 /**
- * Assert whether a CO_ParsetreeX has a ws-after-Summary. 
+ * Assert whether a CO_ParsetreeX has a ws-after-Summary.
  * \param[in] arg input CO_ParsetreeX
  * \return ATtrue if the CO_ParsetreeX had a ws-after-Summary, or ATfalse otherwise
  */
@@ -22786,7 +22786,7 @@ ATbool CO_hasParsetreeXWsAfterSummary(CO_ParsetreeX arg) {
  * \return the type-of-tree of #arg, if it exist or an undefined value if it does not
  */
 ATerm CO_getParsetreeXTypeOfTree(CO_ParsetreeX arg) {
-  
+
     return (ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 0), 8);
 }
 
@@ -22799,7 +22799,7 @@ ATerm CO_getParsetreeXTypeOfX(CO_ParsetreeX arg) {
   if (CO_isParsetreeXSuccess(arg)) {
     return (ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 0), 1));
   }
-  else 
+  else
     return (ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 0), 1));
 }
 
@@ -22809,7 +22809,7 @@ ATerm CO_getParsetreeXTypeOfX(CO_ParsetreeX arg) {
  * \return the ws-after-parse-tree of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterParseTree(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -22822,7 +22822,7 @@ CO_OptLayout CO_getParsetreeXWsAfterParenOpen(CO_ParsetreeX arg) {
   if (CO_isParsetreeXSuccess(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -22832,7 +22832,7 @@ CO_OptLayout CO_getParsetreeXWsAfterParenOpen(CO_ParsetreeX arg) {
  * \return the left-layout of #arg, if it exist or an undefined value if it does not
  */
 CO_Bytes CO_getParsetreeXLeftLayout(CO_ParsetreeX arg) {
-  
+
     return (CO_Bytes)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -22842,7 +22842,7 @@ CO_Bytes CO_getParsetreeXLeftLayout(CO_ParsetreeX arg) {
  * \return the ws-after-left-layout of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterLeftLayout(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -22852,7 +22852,7 @@ CO_OptLayout CO_getParsetreeXWsAfterLeftLayout(CO_ParsetreeX arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterComma(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -22862,7 +22862,7 @@ CO_OptLayout CO_getParsetreeXWsAfterComma(CO_ParsetreeX arg) {
  * \return the tree of #arg, if it exist or an undefined value if it does not
  */
 CO_X CO_getParsetreeXTree(CO_ParsetreeX arg) {
-  
+
     return (CO_X)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -22872,7 +22872,7 @@ CO_X CO_getParsetreeXTree(CO_ParsetreeX arg) {
  * \return the ws-after-tree of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterTree(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -22882,7 +22882,7 @@ CO_OptLayout CO_getParsetreeXWsAfterTree(CO_ParsetreeX arg) {
  * \return the ws-after-,-1 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterComma1(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -22892,7 +22892,7 @@ CO_OptLayout CO_getParsetreeXWsAfterComma1(CO_ParsetreeX arg) {
  * \return the right-layout of #arg, if it exist or an undefined value if it does not
  */
 CO_Bytes CO_getParsetreeXRightLayout(CO_ParsetreeX arg) {
-  
+
     return (CO_Bytes)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 12);
 }
 
@@ -22902,7 +22902,7 @@ CO_Bytes CO_getParsetreeXRightLayout(CO_ParsetreeX arg) {
  * \return the ws-after-right-layout of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterRightLayout(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -22912,7 +22912,7 @@ CO_OptLayout CO_getParsetreeXWsAfterRightLayout(CO_ParsetreeX arg) {
  * \return the ws-after-,-2 of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterComma2(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 15);
 }
 
@@ -22922,7 +22922,7 @@ CO_OptLayout CO_getParsetreeXWsAfterComma2(CO_ParsetreeX arg) {
  * \return the amb-cnt of #arg, if it exist or an undefined value if it does not
  */
 CO_NatCon CO_getParsetreeXAmbCnt(CO_ParsetreeX arg) {
-  
+
     return (CO_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 16);
 }
 
@@ -22932,7 +22932,7 @@ CO_NatCon CO_getParsetreeXAmbCnt(CO_ParsetreeX arg) {
  * \return the ws-after-amb-cnt of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterAmbCnt(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 17);
 }
 
@@ -22942,7 +22942,7 @@ CO_OptLayout CO_getParsetreeXWsAfterAmbCnt(CO_ParsetreeX arg) {
  * \return the ws-after-parse-error of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterParseError(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -22952,7 +22952,7 @@ CO_OptLayout CO_getParsetreeXWsAfterParseError(CO_ParsetreeX arg) {
  * \return the Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_Summary CO_getParsetreeXSummary(CO_ParsetreeX arg) {
-  
+
     return (CO_Summary)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -22962,7 +22962,7 @@ CO_Summary CO_getParsetreeXSummary(CO_ParsetreeX arg) {
  * \return the ws-after-Summary of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getParsetreeXWsAfterSummary(CO_ParsetreeX arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -23259,7 +23259,7 @@ ATbool CO_isValidX(CO_X arg) {
  * \param[in] arg input CO_X
  * \return ATtrue if #arg corresponds to the signature of a cast, or ATfalse otherwise
  */
-inline ATbool CO_isXCast(CO_X arg){
+ATbool CO_isXCast(CO_X arg){
   if (arg != NULL) {
     return ATtrue;
   }
@@ -23267,7 +23267,7 @@ inline ATbool CO_isXCast(CO_X arg){
 }
 
 /**
- * Assert whether a CO_X has a X. 
+ * Assert whether a CO_X has a X.
  * \param[in] arg input CO_X
  * \return ATtrue if the CO_X had a X, or ATfalse otherwise
  */
@@ -23284,7 +23284,7 @@ ATbool CO_hasXX(CO_X arg) {
  * \return the X of #arg, if it exist or an undefined value if it does not
  */
 ATerm CO_getXX(CO_X arg) {
-  
+
     return (ATerm)arg;
 }
 
@@ -23332,7 +23332,7 @@ ATbool CO_isValidBoolean(CO_Boolean arg) {
  * \param[in] arg input CO_Boolean
  * \return ATtrue if #arg corresponds to the signature of a constant, or ATfalse otherwise
  */
-inline ATbool CO_isBooleanConstant(CO_Boolean arg){
+ATbool CO_isBooleanConstant(CO_Boolean arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -23412,7 +23412,7 @@ inline ATbool CO_isBooleanConstant(CO_Boolean arg){
  * \param[in] arg input CO_Boolean
  * \return ATtrue if #arg corresponds to the signature of a or, or ATfalse otherwise
  */
-inline ATbool CO_isBooleanOr(CO_Boolean arg){
+ATbool CO_isBooleanOr(CO_Boolean arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -23628,7 +23628,7 @@ inline ATbool CO_isBooleanOr(CO_Boolean arg){
  * \param[in] arg input CO_Boolean
  * \return ATtrue if #arg corresponds to the signature of a and, or ATfalse otherwise
  */
-inline ATbool CO_isBooleanAnd(CO_Boolean arg){
+ATbool CO_isBooleanAnd(CO_Boolean arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -23844,7 +23844,7 @@ inline ATbool CO_isBooleanAnd(CO_Boolean arg){
  * \param[in] arg input CO_Boolean
  * \return ATtrue if #arg corresponds to the signature of a not, or ATfalse otherwise
  */
-inline ATbool CO_isBooleanNot(CO_Boolean arg){
+ATbool CO_isBooleanNot(CO_Boolean arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -24241,7 +24241,7 @@ inline ATbool CO_isBooleanNot(CO_Boolean arg){
  * \param[in] arg input CO_Boolean
  * \return ATtrue if #arg corresponds to the signature of a bracket, or ATfalse otherwise
  */
-inline ATbool CO_isBooleanBracket(CO_Boolean arg){
+ATbool CO_isBooleanBracket(CO_Boolean arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CO_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -24501,7 +24501,7 @@ inline ATbool CO_isBooleanBracket(CO_Boolean arg){
 }
 
 /**
- * Assert whether a CO_Boolean has a BoolCon. 
+ * Assert whether a CO_Boolean has a BoolCon.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a BoolCon, or ATfalse otherwise
  */
@@ -24513,7 +24513,7 @@ ATbool CO_hasBooleanBoolCon(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a lhs. 
+ * Assert whether a CO_Boolean has a lhs.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a lhs, or ATfalse otherwise
  */
@@ -24528,7 +24528,7 @@ ATbool CO_hasBooleanLhs(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a ws-after-lhs. 
+ * Assert whether a CO_Boolean has a ws-after-lhs.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a ws-after-lhs, or ATfalse otherwise
  */
@@ -24543,7 +24543,7 @@ ATbool CO_hasBooleanWsAfterLhs(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a ws-after-|. 
+ * Assert whether a CO_Boolean has a ws-after-|.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a ws-after-|, or ATfalse otherwise
  */
@@ -24555,7 +24555,7 @@ ATbool CO_hasBooleanWsAfterBar(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a rhs. 
+ * Assert whether a CO_Boolean has a rhs.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a rhs, or ATfalse otherwise
  */
@@ -24570,7 +24570,7 @@ ATbool CO_hasBooleanRhs(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a ws-after-&. 
+ * Assert whether a CO_Boolean has a ws-after-&.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a ws-after-&, or ATfalse otherwise
  */
@@ -24582,7 +24582,7 @@ ATbool CO_hasBooleanWsAfterAmp(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a ws-after-not. 
+ * Assert whether a CO_Boolean has a ws-after-not.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a ws-after-not, or ATfalse otherwise
  */
@@ -24594,7 +24594,7 @@ ATbool CO_hasBooleanWsAfterNot(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a ws-after-(. 
+ * Assert whether a CO_Boolean has a ws-after-(.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a ws-after-(, or ATfalse otherwise
  */
@@ -24609,7 +24609,7 @@ ATbool CO_hasBooleanWsAfterParenOpen(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a Boolean. 
+ * Assert whether a CO_Boolean has a Boolean.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a Boolean, or ATfalse otherwise
  */
@@ -24624,7 +24624,7 @@ ATbool CO_hasBooleanBoolean(CO_Boolean arg) {
 }
 
 /**
- * Assert whether a CO_Boolean has a ws-after-Boolean. 
+ * Assert whether a CO_Boolean has a ws-after-Boolean.
  * \param[in] arg input CO_Boolean
  * \return ATtrue if the CO_Boolean had a ws-after-Boolean, or ATfalse otherwise
  */
@@ -24644,7 +24644,7 @@ ATbool CO_hasBooleanWsAfterBoolean(CO_Boolean arg) {
  * \return the BoolCon of #arg, if it exist or an undefined value if it does not
  */
 CO_BoolCon CO_getBooleanBoolCon(CO_Boolean arg) {
-  
+
     return (CO_BoolCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -24657,7 +24657,7 @@ CO_Boolean CO_getBooleanLhs(CO_Boolean arg) {
   if (CO_isBooleanOr(arg)) {
     return (CO_Boolean)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (CO_Boolean)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -24670,7 +24670,7 @@ CO_OptLayout CO_getBooleanWsAfterLhs(CO_Boolean arg) {
   if (CO_isBooleanOr(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -24680,7 +24680,7 @@ CO_OptLayout CO_getBooleanWsAfterLhs(CO_Boolean arg) {
  * \return the ws-after-| of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getBooleanWsAfterBar(CO_Boolean arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -24693,7 +24693,7 @@ CO_Boolean CO_getBooleanRhs(CO_Boolean arg) {
   if (CO_isBooleanOr(arg)) {
     return (CO_Boolean)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (CO_Boolean)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -24703,7 +24703,7 @@ CO_Boolean CO_getBooleanRhs(CO_Boolean arg) {
  * \return the ws-after-& of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getBooleanWsAfterAmp(CO_Boolean arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -24713,7 +24713,7 @@ CO_OptLayout CO_getBooleanWsAfterAmp(CO_Boolean arg) {
  * \return the ws-after-not of #arg, if it exist or an undefined value if it does not
  */
 CO_OptLayout CO_getBooleanWsAfterNot(CO_Boolean arg) {
-  
+
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -24726,7 +24726,7 @@ CO_OptLayout CO_getBooleanWsAfterParenOpen(CO_Boolean arg) {
   if (CO_isBooleanNot(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -24739,7 +24739,7 @@ CO_Boolean CO_getBooleanBoolean(CO_Boolean arg) {
   if (CO_isBooleanNot(arg)) {
     return (CO_Boolean)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (CO_Boolean)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2);
 }
 
@@ -24752,7 +24752,7 @@ CO_OptLayout CO_getBooleanWsAfterBoolean(CO_Boolean arg) {
   if (CO_isBooleanNot(arg)) {
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (CO_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -24925,7 +24925,7 @@ CO_Boolean CO_setBooleanWsAfterBoolean(CO_Boolean arg, CO_OptLayout wsAfterBoole
 }
 
 /**
- * Apply functions to the children of a CO_OptLayout. 
+ * Apply functions to the children of a CO_OptLayout.
  * \return A new CO_OptLayout with new children where the argument functions might have applied
  */
 CO_OptLayout CO_visitOptLayout(CO_OptLayout arg, CO_Layout (*acceptLayout)(CO_Layout)) {
@@ -24940,7 +24940,7 @@ CO_OptLayout CO_visitOptLayout(CO_OptLayout arg, CO_Layout (*acceptLayout)(CO_La
   return (CO_OptLayout)NULL;
 }
 /**
- * Apply functions to the children of a CO_Layout. 
+ * Apply functions to the children of a CO_Layout.
  * \return A new CO_Layout with new children where the argument functions might have applied
  */
 CO_Layout CO_visitLayout(CO_Layout arg, CO_LexLayoutList (*acceptList)(CO_LexLayoutList)) {
@@ -24952,7 +24952,7 @@ CO_Layout CO_visitLayout(CO_Layout arg, CO_LexLayoutList (*acceptList)(CO_LexLay
   return (CO_Layout)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexLayoutList. 
+ * Apply functions to the children of a CO_LexLayoutList.
  * \return A new CO_LexLayoutList with new children where the argument functions might have applied
  */
 CO_LexLayoutList CO_visitLexLayoutList(CO_LexLayoutList arg, CO_LexLayout (*acceptHead)(CO_LexLayout)) {
@@ -24972,7 +24972,7 @@ CO_LexLayoutList CO_visitLexLayoutList(CO_LexLayoutList arg, CO_LexLayout (*acce
   return (CO_LexLayoutList)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexLayout. 
+ * Apply functions to the children of a CO_LexLayout.
  * \return A new CO_LexLayout with new children where the argument functions might have applied
  */
 CO_LexLayout CO_visitLexLayout(CO_LexLayout arg, char (*acceptCh)(char)) {
@@ -24984,7 +24984,7 @@ CO_LexLayout CO_visitLexLayout(CO_LexLayout arg, char (*acceptCh)(char)) {
   return (CO_LexLayout)NULL;
 }
 /**
- * Apply functions to the children of a CO_Start. 
+ * Apply functions to the children of a CO_Start.
  * \return A new CO_Start with new children where the argument functions might have applied
  */
 CO_Start CO_visitStart(CO_Start arg, CO_OptLayout (*acceptWsBefore)(CO_OptLayout), CO_StrCon (*acceptTopStrCon)(CO_StrCon), CO_OptLayout (*acceptWsAfter)(CO_OptLayout), int (*acceptAmbCnt)(int), CO_BoolCon (*acceptTopBoolCon)(CO_BoolCon), CO_Summary (*acceptTopSummary)(CO_Summary), CO_Error (*acceptTopError)(CO_Error), CO_Boolean (*acceptTopBoolean)(CO_Boolean)) {
@@ -25027,7 +25027,7 @@ CO_Start CO_visitStart(CO_Start arg, CO_OptLayout (*acceptWsBefore)(CO_OptLayout
   return (CO_Start)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexStrChar. 
+ * Apply functions to the children of a CO_LexStrChar.
  * \return A new CO_LexStrChar with new children where the argument functions might have applied
  */
 CO_LexStrChar CO_visitLexStrChar(CO_LexStrChar arg, char (*acceptA)(char), char (*acceptB)(char), char (*acceptC)(char), char (*acceptCh)(char)) {
@@ -25057,7 +25057,7 @@ CO_LexStrChar CO_visitLexStrChar(CO_LexStrChar arg, char (*acceptA)(char), char 
   return (CO_LexStrChar)NULL;
 }
 /**
- * Apply functions to the children of a CO_StrChar. 
+ * Apply functions to the children of a CO_StrChar.
  * \return A new CO_StrChar with new children where the argument functions might have applied
  */
 CO_StrChar CO_visitStrChar(CO_StrChar arg, CO_LexStrChar (*acceptStrChar)(CO_LexStrChar)) {
@@ -25069,7 +25069,7 @@ CO_StrChar CO_visitStrChar(CO_StrChar arg, CO_LexStrChar (*acceptStrChar)(CO_Lex
   return (CO_StrChar)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexStrCon. 
+ * Apply functions to the children of a CO_LexStrCon.
  * \return A new CO_LexStrCon with new children where the argument functions might have applied
  */
 CO_LexStrCon CO_visitLexStrCon(CO_LexStrCon arg, CO_LexStrCharChars (*acceptChars)(CO_LexStrCharChars)) {
@@ -25081,7 +25081,7 @@ CO_LexStrCon CO_visitLexStrCon(CO_LexStrCon arg, CO_LexStrCharChars (*acceptChar
   return (CO_LexStrCon)NULL;
 }
 /**
- * Apply functions to the children of a CO_StrCon. 
+ * Apply functions to the children of a CO_StrCon.
  * \return A new CO_StrCon with new children where the argument functions might have applied
  */
 CO_StrCon CO_visitStrCon(CO_StrCon arg, CO_LexStrCon (*acceptStrCon)(CO_LexStrCon)) {
@@ -25093,7 +25093,7 @@ CO_StrCon CO_visitStrCon(CO_StrCon arg, CO_LexStrCon (*acceptStrCon)(CO_LexStrCo
   return (CO_StrCon)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexStrCharChars. 
+ * Apply functions to the children of a CO_LexStrCharChars.
  * \return A new CO_LexStrCharChars with new children where the argument functions might have applied
  */
 CO_LexStrCharChars CO_visitLexStrCharChars(CO_LexStrCharChars arg, CO_LexStrChar (*acceptHead)(CO_LexStrChar)) {
@@ -25113,7 +25113,7 @@ CO_LexStrCharChars CO_visitLexStrCharChars(CO_LexStrCharChars arg, CO_LexStrChar
   return (CO_LexStrCharChars)NULL;
 }
 /**
- * Apply functions to the children of a CO_BoolCon. 
+ * Apply functions to the children of a CO_BoolCon.
  * \return A new CO_BoolCon with new children where the argument functions might have applied
  */
 CO_BoolCon CO_visitBoolCon(CO_BoolCon arg) {
@@ -25127,7 +25127,7 @@ CO_BoolCon CO_visitBoolCon(CO_BoolCon arg) {
   return (CO_BoolCon)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexNatCon. 
+ * Apply functions to the children of a CO_LexNatCon.
  * \return A new CO_LexNatCon with new children where the argument functions might have applied
  */
 CO_LexNatCon CO_visitLexNatCon(CO_LexNatCon arg, char* (*acceptList)(char*)) {
@@ -25139,7 +25139,7 @@ CO_LexNatCon CO_visitLexNatCon(CO_LexNatCon arg, char* (*acceptList)(char*)) {
   return (CO_LexNatCon)NULL;
 }
 /**
- * Apply functions to the children of a CO_NatCon. 
+ * Apply functions to the children of a CO_NatCon.
  * \return A new CO_NatCon with new children where the argument functions might have applied
  */
 CO_NatCon CO_visitNatCon(CO_NatCon arg, CO_LexNatCon (*acceptNatCon)(CO_LexNatCon)) {
@@ -25151,7 +25151,7 @@ CO_NatCon CO_visitNatCon(CO_NatCon arg, CO_LexNatCon (*acceptNatCon)(CO_LexNatCo
   return (CO_NatCon)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexByte. 
+ * Apply functions to the children of a CO_LexByte.
  * \return A new CO_LexByte with new children where the argument functions might have applied
  */
 CO_LexByte CO_visitLexByte(CO_LexByte arg, char (*acceptCh)(char)) {
@@ -25163,7 +25163,7 @@ CO_LexByte CO_visitLexByte(CO_LexByte arg, char (*acceptCh)(char)) {
   return (CO_LexByte)NULL;
 }
 /**
- * Apply functions to the children of a CO_Byte. 
+ * Apply functions to the children of a CO_Byte.
  * \return A new CO_Byte with new children where the argument functions might have applied
  */
 CO_Byte CO_visitByte(CO_Byte arg, CO_LexByte (*acceptByte)(CO_LexByte)) {
@@ -25175,7 +25175,7 @@ CO_Byte CO_visitByte(CO_Byte arg, CO_LexByte (*acceptByte)(CO_LexByte)) {
   return (CO_Byte)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexBytes. 
+ * Apply functions to the children of a CO_LexBytes.
  * \return A new CO_LexBytes with new children where the argument functions might have applied
  */
 CO_LexBytes CO_visitLexBytes(CO_LexBytes arg, CO_LexByteList (*acceptList)(CO_LexByteList)) {
@@ -25187,7 +25187,7 @@ CO_LexBytes CO_visitLexBytes(CO_LexBytes arg, CO_LexByteList (*acceptList)(CO_Le
   return (CO_LexBytes)NULL;
 }
 /**
- * Apply functions to the children of a CO_Bytes. 
+ * Apply functions to the children of a CO_Bytes.
  * \return A new CO_Bytes with new children where the argument functions might have applied
  */
 CO_Bytes CO_visitBytes(CO_Bytes arg, CO_LexBytes (*acceptBytes)(CO_LexBytes)) {
@@ -25199,7 +25199,7 @@ CO_Bytes CO_visitBytes(CO_Bytes arg, CO_LexBytes (*acceptBytes)(CO_LexBytes)) {
   return (CO_Bytes)NULL;
 }
 /**
- * Apply functions to the children of a CO_LexByteList. 
+ * Apply functions to the children of a CO_LexByteList.
  * \return A new CO_LexByteList with new children where the argument functions might have applied
  */
 CO_LexByteList CO_visitLexByteList(CO_LexByteList arg, CO_LexByte (*acceptHead)(CO_LexByte)) {
@@ -25219,7 +25219,7 @@ CO_LexByteList CO_visitLexByteList(CO_LexByteList arg, CO_LexByte (*acceptHead)(
   return (CO_LexByteList)NULL;
 }
 /**
- * Apply functions to the children of a CO_Subject. 
+ * Apply functions to the children of a CO_Subject.
  * \return A new CO_Subject with new children where the argument functions might have applied
  */
 CO_Subject CO_visitSubject(CO_Subject arg, CO_OptLayout (*acceptWsAfterSubject)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_StrCon (*acceptDescription)(CO_StrCon), CO_OptLayout (*acceptWsAfterDescription)(CO_OptLayout), CO_OptLayout (*acceptWsAfterLocalized)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma)(CO_OptLayout), CO_Location (*acceptLocation)(CO_Location), CO_OptLayout (*acceptWsAfterLocation)(CO_OptLayout)) {
@@ -25244,7 +25244,7 @@ CO_Subject CO_visitSubject(CO_Subject arg, CO_OptLayout (*acceptWsAfterSubject)(
   return (CO_Subject)NULL;
 }
 /**
- * Apply functions to the children of a CO_Error. 
+ * Apply functions to the children of a CO_Error.
  * \return A new CO_Error with new children where the argument functions might have applied
  */
 CO_Error CO_visitError(CO_Error arg, CO_OptLayout (*acceptWsAfterInfo)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_StrCon (*acceptDescription)(CO_StrCon), CO_OptLayout (*acceptWsAfterDescription)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma)(CO_OptLayout), CO_OptLayout (*acceptWsAfterBracketOpen)(CO_OptLayout), CO_SubjectList (*acceptList)(CO_SubjectList), CO_OptLayout (*acceptWsAfterList)(CO_OptLayout), CO_OptLayout (*acceptWsAfterBracketClose)(CO_OptLayout), CO_OptLayout (*acceptWsAfterWarning)(CO_OptLayout), CO_OptLayout (*acceptWsAfterError)(CO_OptLayout), CO_OptLayout (*acceptWsAfterFatal)(CO_OptLayout)) {
@@ -25300,7 +25300,7 @@ CO_Error CO_visitError(CO_Error arg, CO_OptLayout (*acceptWsAfterInfo)(CO_OptLay
   return (CO_Error)NULL;
 }
 /**
- * Apply functions to the children of a CO_Summary. 
+ * Apply functions to the children of a CO_Summary.
  * \return A new CO_Summary with new children where the argument functions might have applied
  */
 CO_Summary CO_visitSummary(CO_Summary arg, CO_OptLayout (*acceptWsAfterSummary)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_StrCon (*acceptProducer)(CO_StrCon), CO_OptLayout (*acceptWsAfterProducer)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma)(CO_OptLayout), CO_StrCon (*acceptId)(CO_StrCon), CO_OptLayout (*acceptWsAfterId)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma1)(CO_OptLayout), CO_OptLayout (*acceptWsAfterBracketOpen)(CO_OptLayout), CO_ErrorList (*acceptList)(CO_ErrorList), CO_OptLayout (*acceptWsAfterList)(CO_OptLayout), CO_OptLayout (*acceptWsAfterBracketClose)(CO_OptLayout)) {
@@ -25323,7 +25323,7 @@ CO_Summary CO_visitSummary(CO_Summary arg, CO_OptLayout (*acceptWsAfterSummary)(
   return (CO_Summary)NULL;
 }
 /**
- * Apply functions to the children of a CO_SubjectList. 
+ * Apply functions to the children of a CO_SubjectList.
  * \return A new CO_SubjectList with new children where the argument functions might have applied
  */
 CO_SubjectList CO_visitSubjectList(CO_SubjectList arg, CO_Subject (*acceptHead)(CO_Subject), CO_OptLayout (*acceptWsAfterHead)(CO_OptLayout), CO_OptLayout (*acceptWsAfterSep)(CO_OptLayout)) {
@@ -25345,7 +25345,7 @@ CO_SubjectList CO_visitSubjectList(CO_SubjectList arg, CO_Subject (*acceptHead)(
   return (CO_SubjectList)NULL;
 }
 /**
- * Apply functions to the children of a CO_ErrorList. 
+ * Apply functions to the children of a CO_ErrorList.
  * \return A new CO_ErrorList with new children where the argument functions might have applied
  */
 CO_ErrorList CO_visitErrorList(CO_ErrorList arg, CO_Error (*acceptHead)(CO_Error), CO_OptLayout (*acceptWsAfterHead)(CO_OptLayout), CO_OptLayout (*acceptWsAfterSep)(CO_OptLayout)) {
@@ -25367,7 +25367,7 @@ CO_ErrorList CO_visitErrorList(CO_ErrorList arg, CO_Error (*acceptHead)(CO_Error
   return (CO_ErrorList)NULL;
 }
 /**
- * Apply functions to the children of a CO_Location. 
+ * Apply functions to the children of a CO_Location.
  * \return A new CO_Location with new children where the argument functions might have applied
  */
 CO_Location CO_visitLocation(CO_Location arg, CO_OptLayout (*acceptWsAfterFile)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_StrCon (*acceptFilename)(CO_StrCon), CO_OptLayout (*acceptWsAfterFilename)(CO_OptLayout), CO_OptLayout (*acceptWsAfterA)(CO_OptLayout), CO_Area (*acceptArea)(CO_Area), CO_OptLayout (*acceptWsAfterArea)(CO_OptLayout), CO_OptLayout (*acceptWsAfterAreaInFile)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma)(CO_OptLayout)) {
@@ -25399,7 +25399,7 @@ CO_Location CO_visitLocation(CO_Location arg, CO_OptLayout (*acceptWsAfterFile)(
   return (CO_Location)NULL;
 }
 /**
- * Apply functions to the children of a CO_Area. 
+ * Apply functions to the children of a CO_Area.
  * \return A new CO_Area with new children where the argument functions might have applied
  */
 CO_Area CO_visitArea(CO_Area arg, CO_OptLayout (*acceptWsAfterArea)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_NatCon (*acceptBeginLine)(CO_NatCon), CO_OptLayout (*acceptWsAfterBeginLine)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma)(CO_OptLayout), CO_NatCon (*acceptBeginColumn)(CO_NatCon), CO_OptLayout (*acceptWsAfterBeginColumn)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma1)(CO_OptLayout), CO_NatCon (*acceptEndLine)(CO_NatCon), CO_OptLayout (*acceptWsAfterEndLine)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma2)(CO_OptLayout), CO_NatCon (*acceptEndColumn)(CO_NatCon), CO_OptLayout (*acceptWsAfterEndColumn)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma3)(CO_OptLayout), CO_NatCon (*acceptOffset)(CO_NatCon), CO_OptLayout (*acceptWsAfterOffset)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma4)(CO_OptLayout), CO_NatCon (*acceptLength)(CO_NatCon), CO_OptLayout (*acceptWsAfterLength)(CO_OptLayout)) {
@@ -25429,7 +25429,7 @@ CO_Area CO_visitArea(CO_Area arg, CO_OptLayout (*acceptWsAfterArea)(CO_OptLayout
   return (CO_Area)NULL;
 }
 /**
- * Apply functions to the children of a CO_Read. 
+ * Apply functions to the children of a CO_Read.
  * \return A new CO_Read with new children where the argument functions might have applied
  */
 CO_Read CO_visitRead(CO_Read arg, CO_OptLayout (*acceptWsAfterRead)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_Bytes (*acceptValue)(CO_Bytes), CO_OptLayout (*acceptWsAfterValue)(CO_OptLayout), CO_OptLayout (*acceptWsAfterReadError)(CO_OptLayout), CO_Summary (*acceptSummary)(CO_Summary), CO_OptLayout (*acceptWsAfterSummary)(CO_OptLayout)) {
@@ -25451,7 +25451,7 @@ CO_Read CO_visitRead(CO_Read arg, CO_OptLayout (*acceptWsAfterRead)(CO_OptLayout
   return (CO_Read)NULL;
 }
 /**
- * Apply functions to the children of a CO_Write. 
+ * Apply functions to the children of a CO_Write.
  * \return A new CO_Write with new children where the argument functions might have applied
  */
 CO_Write CO_visitWrite(CO_Write arg, CO_OptLayout (*acceptWsAfterWriteError)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_Summary (*acceptSummary)(CO_Summary), CO_OptLayout (*acceptWsAfterSummary)(CO_OptLayout)) {
@@ -25469,7 +25469,7 @@ CO_Write CO_visitWrite(CO_Write arg, CO_OptLayout (*acceptWsAfterWriteError)(CO_
   return (CO_Write)NULL;
 }
 /**
- * Apply functions to the children of a CO_ParsetreeX. 
+ * Apply functions to the children of a CO_ParsetreeX.
  * \return A new CO_ParsetreeX with new children where the argument functions might have applied
  */
 CO_ParsetreeX CO_visitParsetreeX(CO_ParsetreeX arg, ATerm (*acceptTypeOfTree)(ATerm), ATerm (*acceptTypeOfX)(ATerm), CO_OptLayout (*acceptWsAfterParseTree)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_Bytes (*acceptLeftLayout)(CO_Bytes), CO_OptLayout (*acceptWsAfterLeftLayout)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma)(CO_OptLayout), CO_X (*acceptTree)(CO_X), CO_OptLayout (*acceptWsAfterTree)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma1)(CO_OptLayout), CO_Bytes (*acceptRightLayout)(CO_Bytes), CO_OptLayout (*acceptWsAfterRightLayout)(CO_OptLayout), CO_OptLayout (*acceptWsAfterComma2)(CO_OptLayout), CO_NatCon (*acceptAmbCnt)(CO_NatCon), CO_OptLayout (*acceptWsAfterAmbCnt)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParseError)(CO_OptLayout), CO_Summary (*acceptSummary)(CO_Summary), CO_OptLayout (*acceptWsAfterSummary)(CO_OptLayout)) {
@@ -25503,7 +25503,7 @@ CO_ParsetreeX CO_visitParsetreeX(CO_ParsetreeX arg, ATerm (*acceptTypeOfTree)(AT
   return (CO_ParsetreeX)NULL;
 }
 /**
- * Apply functions to the children of a CO_X. 
+ * Apply functions to the children of a CO_X.
  * \return A new CO_X with new children where the argument functions might have applied
  */
 CO_X CO_visitX(CO_X arg, ATerm (*acceptX)(ATerm)) {
@@ -25515,7 +25515,7 @@ CO_X CO_visitX(CO_X arg, ATerm (*acceptX)(ATerm)) {
   return (CO_X)NULL;
 }
 /**
- * Apply functions to the children of a CO_Boolean. 
+ * Apply functions to the children of a CO_Boolean.
  * \return A new CO_Boolean with new children where the argument functions might have applied
  */
 CO_Boolean CO_visitBoolean(CO_Boolean arg, CO_BoolCon (*acceptBoolCon)(CO_BoolCon), CO_OptLayout (*acceptWsAfterLhs)(CO_OptLayout), CO_OptLayout (*acceptWsAfterBar)(CO_OptLayout), CO_OptLayout (*acceptWsAfterAmp)(CO_OptLayout), CO_OptLayout (*acceptWsAfterNot)(CO_OptLayout), CO_OptLayout (*acceptWsAfterParenOpen)(CO_OptLayout), CO_OptLayout (*acceptWsAfterBoolean)(CO_OptLayout)) {

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include <asc-support2-me.h>
+#include "asc-support2-me.h"
 #include <MEPT-utils.h>
 #include <PTMEPT-utils.h>
 #include <Error-utils.h>
@@ -21,7 +21,7 @@ ATerm asf_toolbus_handler(int conn, ATerm term)
     return NULL;
   }
   else if (ATmatch(term, "rec-do(signature(<term>,<term>))", &in, &out)) {
-    return NULL; 
+    return NULL;
   }
   else if(ATmatch(term, "rec-eval(normalize(<term>))", &t0)) {
     /* simple normalization, no conversions */
@@ -32,7 +32,7 @@ ATerm asf_toolbus_handler(int conn, ATerm term)
       ATerm reduct = innermost(trm);
       PT_Tree result = toasfix(reduct);
       ATwriteToNamedTextFile((ATerm) result, "debug.metrics");
-      return ATmake("snd-value(normalform(<term>))", 
+      return ATmake("snd-value(normalform(<term>))",
 		    ATBpack((ATerm) PT_makeParseTreeTop(result, 0)));
     }
 
@@ -58,14 +58,14 @@ static ATerm convert(const char* name, PT_Tree tree)
   if (PT_isTreeAppl(tree)) {
     PT_Production prod = PT_getTreeProd(tree);
     PT_Symbol rhs = PT_getProductionRhs(prod);
-    PT_Symbol aterm = PT_makeSymbolSort("ATerm"); 
-    PT_Symbol summary = PT_makeSymbolSort("Summary"); 
+    PT_Symbol aterm = PT_makeSymbolSort("ATerm");
+    PT_Symbol summary = PT_makeSymbolSort("Summary");
     PT_Symbol strcon = PT_makeSymbolSort("StrCon");
-    PT_Symbol natcon = PT_makeSymbolSort("NatCon"); 
+    PT_Symbol natcon = PT_makeSymbolSort("NatCon");
     PT_Symbol rstore = PT_makeSymbolSort("RStore");
     ATerm result = NULL;
 
-    rhs = (PT_isSymbolCf(rhs) || PT_isSymbolLex(rhs)) ? 
+    rhs = (PT_isSymbolCf(rhs) || PT_isSymbolLex(rhs)) ?
       PT_getSymbolSymbol(rhs) : rhs;
 
     if (PT_isEqualSymbol(rhs, aterm)) {
@@ -93,12 +93,12 @@ static ATerm convert(const char* name, PT_Tree tree)
 
     return (ATerm) ATmakeAppl(ATmakeAFun(name, 1, ATfalse), result);
   }
-  
+
   ATwarning("warning: rewriting result is not convertible.");
   return ATparse("non-convertible-result");
 }
 
-static PT_Args kidsToArgs(ATermList kids) 
+static PT_Args kidsToArgs(ATermList kids)
 {
   PT_Args args = PT_makeArgsEmpty();
 
@@ -135,7 +135,7 @@ static PT_Args kidsToArgs(ATermList kids)
   return PT_reverseArgs(args);
 }
 
-static ATerm apply(ATerm input) 
+static ATerm apply(ATerm input)
 {
   if (ATgetType(input) == AT_APPL) {
     AFun fun = ATgetAFun((ATermAppl) input);
@@ -144,7 +144,7 @@ static ATerm apply(ATerm input)
     PT_Args args = kidsToArgs(kids);
     PT_Tree tempTree = PT_applyFunctionToArgs(name, "*bogus*", args);
     PT_Production prod = PT_getTreeProd(tempTree);
-    PT_Symbols lhs = PT_getProductionLhs(prod); 
+    PT_Symbols lhs = PT_getProductionLhs(prod);
     funcptr func = prefix_lookup_func(lhs);
     ATermList normalforms = ATempty;
 

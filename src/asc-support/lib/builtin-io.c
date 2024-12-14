@@ -4,9 +4,9 @@
 #include "builtin-common.h"
 #include <sglrInterface.h>
 #include <inputStringBuilder.h>
-#include <filterOptions.h>
-#include <asc-support-me.h>
-#include <Library.h>
+#include <parseForest/filterOptions.h>
+#include "asc-support-me.h"
+#include "Library.h"
 #include <sys/stat.h>
 #include <aterm2.h>
 #include <Error-utils.h>
@@ -75,13 +75,13 @@ static CO_Bytes make_bytes(const char *value) {
 
 
 static char* getSort(PT_Symbol type) {
-  /* return "Boolean" for 
+  /* return "Boolean" for
    * cf(parameterized-sort("ParseResult",[sort("Boolean")]))
    */
 
   if (PT_isSymbolCf(type)) {
     type = PT_getSymbolSymbol(type);
-    
+
     if (PT_isSymbolParameterizedSort(type)) {
       PT_Symbols args = PT_getSymbolParameters(type);
 
@@ -174,13 +174,13 @@ static PT_Tree parse_result(const char *sort, PT_ParseTree pt, PT_Tree posFile, 
         after = PT_getParseTreeLayoutAfterTree(pt);
 
         return (PT_Tree)
-          CO_makeParsetreeXSuccess((ATerm) PT_makeSymbolCf(type), 
+          CO_makeParsetreeXSuccess((ATerm) PT_makeSymbolCf(type),
               (ATerm) type,
               l, l,
               (CO_Bytes) unparse_to_bytes(before),
               l, l,
               CO_makeXCast((ATerm) tree),
-              l, l, 
+              l, l,
               (CO_Bytes) unparse_to_bytes(after),
               l, l,
               (CO_NatCon) make_natcon(ambs),
@@ -273,7 +273,7 @@ static PT_Tree parse_bytes(PT_Symbol type, PT_Tree bytes, PT_Tree file, ATbool p
     FLT_setSelectTopNonterminalFlag(ATtrue);
     FLT_setTopNonterminal(sort);
     SGLR_resetErrorSummary();
-  
+
     PT_ParseTree result = SGLR_parse(inputString, getParseTableID());
     return parse_result(sort, result, file, pos);
   }
@@ -369,7 +369,7 @@ static PT_Tree read_term_from_file(PT_Symbol type, PT_Tree file_arg) {
 
 
 PT_Tree ASFE_read_term_from_file(PT_Symbol symbol, PT_Tree file_arg) {
-  return read_term_from_file(symbol, file_arg); 
+  return read_term_from_file(symbol, file_arg);
 }
 
 
@@ -391,7 +391,7 @@ static PT_Tree write_term_to_file(PT_Tree file_arg, PT_Tree tree_arg) {
     return (PT_Tree) CO_makeWriteSuccess();
   }
   else {
-    return (PT_Tree) CO_makeWriteFailure(l,l, 
+    return (PT_Tree) CO_makeWriteFailure(l,l,
 					 makeGeneralError(strerror(errno)),l);
   }
 
@@ -418,17 +418,17 @@ static size_t getFileSize(const char *s) {
 }
 
 
-static char *readFileContents(char *fnam) { 
+static char *readFileContents(char *fnam) {
   char *buf = NULL;
-  FILE *fd; 
+  FILE *fd;
   unsigned int size;
-    
+
   size = getFileSize(fnam);
-    
+
   if((fd = fopen(fnam, "rb")) == NULL) {
     return NULL;
-  } 
-    
+  }
+
   if((buf = (char *)malloc(size + 1)) == NULL ) {
     fclose(fd);
     return NULL;
@@ -454,11 +454,11 @@ static PT_Tree read_bytes_from_file(PT_Tree input) {
   buf = readFileContents(filename);
 
   if (buf != NULL) {
-    return (PT_Tree) 
+    return (PT_Tree)
       CO_makeReadSuccess(l,l,(CO_Bytes) make_bytes(buf),l);
   }
 
-  return (PT_Tree) 
+  return (PT_Tree)
     CO_makeReadFailure(l,l,makeGeneralError(strerror(errno)), l);
 }
 
@@ -487,9 +487,9 @@ static PT_Tree write_bytes_to_file(PT_Tree input, PT_Tree bytes) {
     fclose(fp);
   }
   else {
-    return (PT_Tree) 
+    return (PT_Tree)
       CO_makeWriteFailure(l,l, makeGeneralError(strerror(errno)), l);
-  } 
+  }
 
   return (PT_Tree) CO_makeWriteSuccess();
 }
@@ -555,7 +555,7 @@ static char *checkBuffer(int minSize) {
   while (bufSize < minSize) {
     bufSize += INCR_BUF_SIZE;
   }
-    
+
   if (buffer == NULL) {
     buffer = (char*) calloc(bufSize, sizeof(char));
   }
@@ -581,7 +581,7 @@ static CO_Read read_from_command(PT_Tree command) {
   char *buffer = NULL;
 
   if (fp != NULL) {
-    do { 
+    do {
       buffer = checkBuffer(bytesRead + READ_BLOCK_SIZE);
       if (buffer == NULL) {
 	return CO_makeReadFailure(l,l,makeGeneralError("out of memory"),l);
@@ -590,7 +590,7 @@ static CO_Read read_from_command(PT_Tree command) {
       blockRead = fread(buffer+bytesRead, sizeof(char), READ_BLOCK_SIZE, fp);
       bytesRead += blockRead;
 
-    } while (blockRead == READ_BLOCK_SIZE); 
+    } while (blockRead == READ_BLOCK_SIZE);
 
     if (!feof(fp) || ferror(fp)) {
       result = CO_makeReadFailure(l,l,makeGeneralError(strerror(errno)), l);
@@ -614,7 +614,7 @@ static CO_Read read_from_command(PT_Tree command) {
 
 PT_Tree ASFE_read_from_command(PT_Symbol type, PT_Tree command) {
   return (PT_Tree) read_from_command(command);
-} 
+}
 
 
 PT_Tree ASC_read_from_command(ATerm type, ATerm command) {

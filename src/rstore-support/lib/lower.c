@@ -1,6 +1,7 @@
-#include <RStore.h>
-#include <ParsedRStore.h>
 #include <assert.h>
+
+#include "RStore.h"
+#include "ParsedRStore.h"
 
 /* BUFSIZ appears to be not large enough on Darwin */
 #define BUFFER_SIZE 8192
@@ -15,7 +16,7 @@ static void invalidTerm(const char* msg, ATerm erroneous)
 static RS_IdCon RS_lowerIdCon(PRS_IdCon in)
 {
   RS_IdCon result = NULL;
- 
+
   if (PRS_isValidIdCon(in))  {
     /* TODO: optimize memory usage here */
     PRS_LexIdCon lex = PRS_getIdConIdCon(in);
@@ -63,7 +64,7 @@ static RS_RTypeColumnTypes RS_lowerColumnTypes(PRS_RTypeColumnTypes in)
   return RS_reverseRTypeColumnTypes(types);
 }
 
-static RS_RType RS_lowerRType(PRS_RType in) 
+static RS_RType RS_lowerRType(PRS_RType in)
 {
   if (!PRS_isValidRType(in)) {
     invalidTerm("invalid rtype found, defaulting to bool", PRS_RTypeToTerm(in));
@@ -73,41 +74,41 @@ static RS_RType RS_lowerRType(PRS_RType in)
   if (PRS_isRTypeInt(in)) {
     return RS_makeRTypeInt();
   }
-  else if (PRS_isRTypeBool(in)) { 
+  else if (PRS_isRTypeBool(in)) {
     return RS_makeRTypeBool();
   }
-  else if (PRS_isRTypeStr(in)) { 
+  else if (PRS_isRTypeStr(in)) {
     return RS_makeRTypeStr();
   }
-  else if (PRS_isRTypeLoc(in)) { 
+  else if (PRS_isRTypeLoc(in)) {
     return RS_makeRTypeLoc();
   }
-  else if (PRS_isRTypeTuple(in)) { 
+  else if (PRS_isRTypeTuple(in)) {
     RS_RTypeColumnTypes types = RS_lowerColumnTypes(PRS_getRTypeColumnTypes(in));
     return RS_makeRTypeTuple(types);
   }
-  else if (PRS_isRTypeSet(in)) { 
+  else if (PRS_isRTypeSet(in)) {
     RS_RType type = RS_lowerRType(PRS_getRTypeElementType(in));
     return RS_makeRTypeSet(type);
   }
-  else if (PRS_isRTypeBag(in)) { 
+  else if (PRS_isRTypeBag(in)) {
     RS_RType type = RS_lowerRType(PRS_getRTypeElementType(in));
     return RS_makeRTypeSet(type);
   }
-  else if (PRS_isRTypeRelation(in)) { 
+  else if (PRS_isRTypeRelation(in)) {
     RS_RTypeColumnTypes types = RS_lowerColumnTypes(PRS_getRTypeColumnTypes(in));
     return RS_makeRTypeRelation(types);
   }
-  else if (PRS_isRTypeUserDefined(in)) { 
+  else if (PRS_isRTypeUserDefined(in)) {
     RS_IdCon id = RS_lowerIdCon(PRS_getRTypeTypeName(in));
     return RS_makeRTypeUserDefined(id);
   }
-  else if (PRS_isRTypeParameter(in)) { 
+  else if (PRS_isRTypeParameter(in)) {
     RS_IdCon name = RS_lowerIdCon(PRS_getRTypeParameterName(in));
     return RS_makeRTypeParameter(name);
   }
 
-  invalidTerm("Unknown rtype encountered, defaulting to bool", 
+  invalidTerm("Unknown rtype encountered, defaulting to bool",
 	      PRS_RTypeToTerm(in));
 
   return RS_makeRTypeBool();
@@ -129,7 +130,7 @@ static int RS_lowerNatCon(PRS_NatCon in)
 }
 
 static RS_Integer RS_lowerInteger(PRS_Integer in)
-{ 
+{
   if (PRS_isValidInteger(in)) {
     if (PRS_isIntegerNatCon(in)) {
       int nat = RS_lowerNatCon(PRS_getIntegerNatCon(in));
@@ -155,7 +156,7 @@ static RS_Integer RS_lowerInteger(PRS_Integer in)
 static const char *RS_lowerStrCon(PRS_StrCon pStr)
 {
   static char result[BUFFER_SIZE];
-  
+
   if (PRS_isValidStrCon(pStr)) {
     PRS_LexStrCon strcon = PRS_getStrConStrCon(pStr);
     PRS_LexStrCharChars list = PRS_getLexStrConChars(strcon);
@@ -199,11 +200,11 @@ static const char *RS_lowerStrCon(PRS_StrCon pStr)
       }
     }
 
-    result[len] = '\0'; 
+    result[len] = '\0';
     return result;
   }
   else {
-    invalidTerm("invalid StrCon encountered, defaulting to empty string\n", 
+    invalidTerm("invalid StrCon encountered, defaulting to empty string\n",
 		PRS_StrConToTerm(pStr));
     result[0] = '\0';
     return result;
@@ -221,7 +222,7 @@ static RS_BoolCon RS_lowerBoolCon(PRS_BoolCon in)
     }
   }
   else {
-    invalidTerm("invalid BoolCon encountered, defaulting to false\n", 
+    invalidTerm("invalid BoolCon encountered, defaulting to false\n",
 		PRS_BoolConToTerm(in));
     return RS_makeBoolConFalse();
   }
@@ -261,22 +262,22 @@ static RS_Location RS_lowerLocation(PRS_Location in)
     else {
       invalidTerm("invalid location found, defaulting to /dev/null",
 		  PRS_LocationToTerm(in));
-      return RS_makeLocationFile("/dev/null");  
+      return RS_makeLocationFile("/dev/null");
     }
   }
   else {
     invalidTerm("invalid location found, defaulting to /dev/null",
 		  PRS_LocationToTerm(in));
-    return RS_makeLocationFile("/dev/null");  
+    return RS_makeLocationFile("/dev/null");
   }
 }
 
 static RS_RElem RS_lowerRElem(PRS_RElem in);
 
-static RS_RElemElements RS_lowerRElemElements(PRS_RElemElements in) 
+static RS_RElemElements RS_lowerRElemElements(PRS_RElemElements in)
 {
   RS_RElemElements elems = RS_makeRElemElementsEmpty();
-  
+
   if (PRS_isValidRElemElements(in)) {
     for ( ; !PRS_isRElemElementsEmpty(in); in = PRS_getRElemElementsTail(in)) {
       RS_RElem elem = RS_lowerRElem(PRS_getRElemElementsHead(in));

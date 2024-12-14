@@ -5,7 +5,7 @@
 #include "ParsedRStore.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm PRS_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm PRS_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -945,7 +945,7 @@ ATerm _PRS_AreaToTerm(PRS_Area arg) {
 }
 
 /**
- * Retrieve the length of a PRS_LexLayoutList. 
+ * Retrieve the length of a PRS_LexLayoutList.
  * \param[in] arg input PRS_LexLayoutList
  * \return The number of elements in the PRS_LexLayoutList
  */
@@ -954,7 +954,7 @@ int _PRS_getLexLayoutListLength(PRS_LexLayoutList arg) {
 }
 
 /**
- * Reverse a PRS_LexLayoutList. 
+ * Reverse a PRS_LexLayoutList.
  * \param[in] arg PRS_LexLayoutList to be reversed
  * \return a reversed #arg
  */
@@ -963,7 +963,7 @@ PRS_LexLayoutList _PRS_reverseLexLayoutList(PRS_LexLayoutList arg) {
 }
 
 /**
- * Append a PRS_LexLayout to the end of a PRS_LexLayoutList. 
+ * Append a PRS_LexLayout to the end of a PRS_LexLayoutList.
  * \param[in] arg PRS_LexLayoutList to append the PRS_LexLayout to
  * \param[in] elem PRS_LexLayout to be appended
  * \return new PRS_LexLayoutList with #elem appended
@@ -973,7 +973,7 @@ PRS_LexLayoutList _PRS_appendLexLayoutList(PRS_LexLayoutList arg, PRS_LexLayout 
 }
 
 /**
- * Concatenate two PRS_LexLayoutLists. 
+ * Concatenate two PRS_LexLayoutLists.
  * \param[in] arg0 first PRS_LexLayoutList
  * \param[in] arg1 second PRS_LexLayoutList
  * \return PRS_LexLayoutList with the elements of #arg0 before the elements of #arg1
@@ -983,7 +983,7 @@ PRS_LexLayoutList _PRS_concatLexLayoutList(PRS_LexLayoutList arg0, PRS_LexLayout
 }
 
 /**
- * Extract a sublist from a PRS_LexLayoutList. 
+ * Extract a sublist from a PRS_LexLayoutList.
  * \param[in] arg PRS_LexLayoutList to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -994,7 +994,7 @@ PRS_LexLayoutList _PRS_sliceLexLayoutList(PRS_LexLayoutList arg, int start, int 
 }
 
 /**
- * Retrieve the PRS_LexLayout at #index from a PRS_LexLayoutList. 
+ * Retrieve the PRS_LexLayout at #index from a PRS_LexLayoutList.
  * \param[in] arg PRS_LexLayoutList to retrieve the PRS_LexLayout from
  * \param[in] index index to use to point in the PRS_LexLayoutList
  * \return PRS_LexLayout at position #index in #arg
@@ -1004,7 +1004,7 @@ PRS_LexLayout _PRS_getLexLayoutListLexLayoutAt(PRS_LexLayoutList arg, int index)
 }
 
 /**
- * Replace the PRS_LexLayout at #index from a PRS_LexLayoutList by a new one. 
+ * Replace the PRS_LexLayout at #index from a PRS_LexLayoutList by a new one.
  * \param[in] arg PRS_LexLayoutList to retrieve the PRS_LexLayout from
  * \param[in] elem new PRS_LexLayout to replace another
  * \param[in] index index to use to point in the PRS_LexLayoutList
@@ -1015,7 +1015,7 @@ PRS_LexLayoutList _PRS_replaceLexLayoutListLexLayoutAt(PRS_LexLayoutList arg, PR
 }
 
 /**
- * Builds a PRS_LexLayoutList of 2 consecutive elements. 
+ * Builds a PRS_LexLayoutList of 2 consecutive elements.
  * \param[in] elem1 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem2 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \return A new PRS_LexLayoutList consisting of 2 PRS_LexLayouts
@@ -1025,7 +1025,7 @@ PRS_LexLayoutList _PRS_makeLexLayoutList2(PRS_LexLayout elem1, PRS_LexLayout ele
 }
 
 /**
- * Builds a PRS_LexLayoutList of 3 consecutive elements. 
+ * Builds a PRS_LexLayoutList of 3 consecutive elements.
  * \param[in] elem1 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem2 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem3 One PRS_LexLayout element of the new PRS_LexLayoutList
@@ -1036,7 +1036,7 @@ PRS_LexLayoutList _PRS_makeLexLayoutList3(PRS_LexLayout elem1, PRS_LexLayout ele
 }
 
 /**
- * Builds a PRS_LexLayoutList of 4 consecutive elements. 
+ * Builds a PRS_LexLayoutList of 4 consecutive elements.
  * \param[in] elem1 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem2 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem3 One PRS_LexLayout element of the new PRS_LexLayoutList
@@ -1048,7 +1048,7 @@ PRS_LexLayoutList _PRS_makeLexLayoutList4(PRS_LexLayout elem1, PRS_LexLayout ele
 }
 
 /**
- * Builds a PRS_LexLayoutList of 5 consecutive elements. 
+ * Builds a PRS_LexLayoutList of 5 consecutive elements.
  * \param[in] elem1 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem2 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem3 One PRS_LexLayout element of the new PRS_LexLayoutList
@@ -1061,7 +1061,7 @@ PRS_LexLayoutList _PRS_makeLexLayoutList5(PRS_LexLayout elem1, PRS_LexLayout ele
 }
 
 /**
- * Builds a PRS_LexLayoutList of 6 consecutive elements. 
+ * Builds a PRS_LexLayoutList of 6 consecutive elements.
  * \param[in] elem1 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem2 One PRS_LexLayout element of the new PRS_LexLayoutList
  * \param[in] elem3 One PRS_LexLayout element of the new PRS_LexLayoutList
@@ -1075,7 +1075,7 @@ PRS_LexLayoutList _PRS_makeLexLayoutList6(PRS_LexLayout elem1, PRS_LexLayout ele
 }
 
 /**
- * Retrieve the number of elements in a PRS_RElemElements. 
+ * Retrieve the number of elements in a PRS_RElemElements.
  * \param[in] arg input PRS_RElemElements
  * \return The number of elements in #arg, excluding any separators
  */
@@ -1135,7 +1135,7 @@ PRS_RElemElements PRS_reverseRElemElements(PRS_RElemElements arg) {
 }
 
 /**
- * Append a PRS_RElem to the end of a PRS_RElemElements. 
+ * Append a PRS_RElem to the end of a PRS_RElemElements.
  * \param[in] arg PRS_RElemElements to append the PRS_RElem to
  * \param[in] elem PRS_RElem to be appended
  * \return new PRS_RElemElements with #elem appended after the separators
@@ -1145,7 +1145,7 @@ PRS_RElemElements PRS_appendRElemElements(PRS_RElemElements arg0, PRS_OptLayout 
 }
 
 /**
- * Concatenate two PRS_RElemElementss. 
+ * Concatenate two PRS_RElemElementss.
  * \param[in] arg0 first PRS_RElemElements
  * \param[in] arg1 second PRS_RElemElements
  * \return PRS_RElemElements with the elements of #arg0 before the elements of #arg1, with the separators in between.
@@ -1160,7 +1160,7 @@ PRS_RElemElements PRS_concatRElemElements(PRS_RElemElements arg0, PRS_OptLayout 
 }
 
 /**
- * Extract a sublist from a PRS_RElemElements. 
+ * Extract a sublist from a PRS_RElemElements.
  * \param[in] arg PRS_RElemElements to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1171,7 +1171,7 @@ PRS_RElemElements _PRS_sliceRElemElements(PRS_RElemElements arg, int start, int 
 }
 
 /**
- * Retrieve the PRS_RElem at #index from a PRS_RElemElements. 
+ * Retrieve the PRS_RElem at #index from a PRS_RElemElements.
  * \param[in] arg PRS_RElemElements to retrieve the PRS_RElem from
  * \param[in] index index to use to point in the PRS_RElemElements
  * \return PRS_RElem at position #index in #arg
@@ -1181,7 +1181,7 @@ PRS_RElem _PRS_getRElemElementsRElemAt(PRS_RElemElements arg, int index) {
 }
 
 /**
- * Replace the PRS_RElem at #index from a PRS_RElemElements by a new one. 
+ * Replace the PRS_RElem at #index from a PRS_RElemElements by a new one.
  * \param[in] arg PRS_RElemElements to retrieve the PRS_RElem from
  * \param[in] elem new PRS_RElem to replace another
  * \param[in] index index to use to point in the PRS_RElemElements
@@ -1252,7 +1252,7 @@ PRS_RElemElements PRS_makeRElemElements6(PRS_OptLayout wsAfterHead, PRS_OptLayou
 }
 
 /**
- * Retrieve the number of elements in a PRS_RTypeColumnTypes. 
+ * Retrieve the number of elements in a PRS_RTypeColumnTypes.
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return The number of elements in #arg, excluding any separators
  */
@@ -1312,7 +1312,7 @@ PRS_RTypeColumnTypes PRS_reverseRTypeColumnTypes(PRS_RTypeColumnTypes arg) {
 }
 
 /**
- * Append a PRS_RType to the end of a PRS_RTypeColumnTypes. 
+ * Append a PRS_RType to the end of a PRS_RTypeColumnTypes.
  * \param[in] arg PRS_RTypeColumnTypes to append the PRS_RType to
  * \param[in] elem PRS_RType to be appended
  * \return new PRS_RTypeColumnTypes with #elem appended after the separators
@@ -1322,7 +1322,7 @@ PRS_RTypeColumnTypes PRS_appendRTypeColumnTypes(PRS_RTypeColumnTypes arg0, PRS_O
 }
 
 /**
- * Concatenate two PRS_RTypeColumnTypess. 
+ * Concatenate two PRS_RTypeColumnTypess.
  * \param[in] arg0 first PRS_RTypeColumnTypes
  * \param[in] arg1 second PRS_RTypeColumnTypes
  * \return PRS_RTypeColumnTypes with the elements of #arg0 before the elements of #arg1, with the separators in between.
@@ -1337,7 +1337,7 @@ PRS_RTypeColumnTypes PRS_concatRTypeColumnTypes(PRS_RTypeColumnTypes arg0, PRS_O
 }
 
 /**
- * Extract a sublist from a PRS_RTypeColumnTypes. 
+ * Extract a sublist from a PRS_RTypeColumnTypes.
  * \param[in] arg PRS_RTypeColumnTypes to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1348,7 +1348,7 @@ PRS_RTypeColumnTypes _PRS_sliceRTypeColumnTypes(PRS_RTypeColumnTypes arg, int st
 }
 
 /**
- * Retrieve the PRS_RType at #index from a PRS_RTypeColumnTypes. 
+ * Retrieve the PRS_RType at #index from a PRS_RTypeColumnTypes.
  * \param[in] arg PRS_RTypeColumnTypes to retrieve the PRS_RType from
  * \param[in] index index to use to point in the PRS_RTypeColumnTypes
  * \return PRS_RType at position #index in #arg
@@ -1358,7 +1358,7 @@ PRS_RType _PRS_getRTypeColumnTypesRTypeAt(PRS_RTypeColumnTypes arg, int index) {
 }
 
 /**
- * Replace the PRS_RType at #index from a PRS_RTypeColumnTypes by a new one. 
+ * Replace the PRS_RType at #index from a PRS_RTypeColumnTypes by a new one.
  * \param[in] arg PRS_RTypeColumnTypes to retrieve the PRS_RType from
  * \param[in] elem new PRS_RType to replace another
  * \param[in] index index to use to point in the PRS_RTypeColumnTypes
@@ -1429,7 +1429,7 @@ PRS_RTypeColumnTypes PRS_makeRTypeColumnTypes6(PRS_OptLayout wsAfterHead, PRS_Op
 }
 
 /**
- * Retrieve the number of elements in a PRS_RTupleRtuples. 
+ * Retrieve the number of elements in a PRS_RTupleRtuples.
  * \param[in] arg input PRS_RTupleRtuples
  * \return The number of elements in #arg, excluding any separators
  */
@@ -1489,7 +1489,7 @@ PRS_RTupleRtuples PRS_reverseRTupleRtuples(PRS_RTupleRtuples arg) {
 }
 
 /**
- * Append a PRS_RTuple to the end of a PRS_RTupleRtuples. 
+ * Append a PRS_RTuple to the end of a PRS_RTupleRtuples.
  * \param[in] arg PRS_RTupleRtuples to append the PRS_RTuple to
  * \param[in] elem PRS_RTuple to be appended
  * \return new PRS_RTupleRtuples with #elem appended after the separators
@@ -1499,7 +1499,7 @@ PRS_RTupleRtuples PRS_appendRTupleRtuples(PRS_RTupleRtuples arg0, PRS_OptLayout 
 }
 
 /**
- * Concatenate two PRS_RTupleRtupless. 
+ * Concatenate two PRS_RTupleRtupless.
  * \param[in] arg0 first PRS_RTupleRtuples
  * \param[in] arg1 second PRS_RTupleRtuples
  * \return PRS_RTupleRtuples with the elements of #arg0 before the elements of #arg1, with the separators in between.
@@ -1514,7 +1514,7 @@ PRS_RTupleRtuples PRS_concatRTupleRtuples(PRS_RTupleRtuples arg0, PRS_OptLayout 
 }
 
 /**
- * Extract a sublist from a PRS_RTupleRtuples. 
+ * Extract a sublist from a PRS_RTupleRtuples.
  * \param[in] arg PRS_RTupleRtuples to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1525,7 +1525,7 @@ PRS_RTupleRtuples _PRS_sliceRTupleRtuples(PRS_RTupleRtuples arg, int start, int 
 }
 
 /**
- * Retrieve the PRS_RTuple at #index from a PRS_RTupleRtuples. 
+ * Retrieve the PRS_RTuple at #index from a PRS_RTupleRtuples.
  * \param[in] arg PRS_RTupleRtuples to retrieve the PRS_RTuple from
  * \param[in] index index to use to point in the PRS_RTupleRtuples
  * \return PRS_RTuple at position #index in #arg
@@ -1535,7 +1535,7 @@ PRS_RTuple _PRS_getRTupleRtuplesRTupleAt(PRS_RTupleRtuples arg, int index) {
 }
 
 /**
- * Replace the PRS_RTuple at #index from a PRS_RTupleRtuples by a new one. 
+ * Replace the PRS_RTuple at #index from a PRS_RTupleRtuples by a new one.
  * \param[in] arg PRS_RTupleRtuples to retrieve the PRS_RTuple from
  * \param[in] elem new PRS_RTuple to replace another
  * \param[in] index index to use to point in the PRS_RTupleRtuples
@@ -1606,7 +1606,7 @@ PRS_RTupleRtuples PRS_makeRTupleRtuples6(PRS_OptLayout wsAfterHead, PRS_OptLayou
 }
 
 /**
- * Retrieve the length of a PRS_LexStrCharChars. 
+ * Retrieve the length of a PRS_LexStrCharChars.
  * \param[in] arg input PRS_LexStrCharChars
  * \return The number of elements in the PRS_LexStrCharChars
  */
@@ -1615,7 +1615,7 @@ int _PRS_getLexStrCharCharsLength(PRS_LexStrCharChars arg) {
 }
 
 /**
- * Reverse a PRS_LexStrCharChars. 
+ * Reverse a PRS_LexStrCharChars.
  * \param[in] arg PRS_LexStrCharChars to be reversed
  * \return a reversed #arg
  */
@@ -1624,7 +1624,7 @@ PRS_LexStrCharChars _PRS_reverseLexStrCharChars(PRS_LexStrCharChars arg) {
 }
 
 /**
- * Append a PRS_LexStrChar to the end of a PRS_LexStrCharChars. 
+ * Append a PRS_LexStrChar to the end of a PRS_LexStrCharChars.
  * \param[in] arg PRS_LexStrCharChars to append the PRS_LexStrChar to
  * \param[in] elem PRS_LexStrChar to be appended
  * \return new PRS_LexStrCharChars with #elem appended
@@ -1634,7 +1634,7 @@ PRS_LexStrCharChars _PRS_appendLexStrCharChars(PRS_LexStrCharChars arg, PRS_LexS
 }
 
 /**
- * Concatenate two PRS_LexStrCharCharss. 
+ * Concatenate two PRS_LexStrCharCharss.
  * \param[in] arg0 first PRS_LexStrCharChars
  * \param[in] arg1 second PRS_LexStrCharChars
  * \return PRS_LexStrCharChars with the elements of #arg0 before the elements of #arg1
@@ -1644,7 +1644,7 @@ PRS_LexStrCharChars _PRS_concatLexStrCharChars(PRS_LexStrCharChars arg0, PRS_Lex
 }
 
 /**
- * Extract a sublist from a PRS_LexStrCharChars. 
+ * Extract a sublist from a PRS_LexStrCharChars.
  * \param[in] arg PRS_LexStrCharChars to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -1655,7 +1655,7 @@ PRS_LexStrCharChars _PRS_sliceLexStrCharChars(PRS_LexStrCharChars arg, int start
 }
 
 /**
- * Retrieve the PRS_LexStrChar at #index from a PRS_LexStrCharChars. 
+ * Retrieve the PRS_LexStrChar at #index from a PRS_LexStrCharChars.
  * \param[in] arg PRS_LexStrCharChars to retrieve the PRS_LexStrChar from
  * \param[in] index index to use to point in the PRS_LexStrCharChars
  * \return PRS_LexStrChar at position #index in #arg
@@ -1665,7 +1665,7 @@ PRS_LexStrChar _PRS_getLexStrCharCharsLexStrCharAt(PRS_LexStrCharChars arg, int 
 }
 
 /**
- * Replace the PRS_LexStrChar at #index from a PRS_LexStrCharChars by a new one. 
+ * Replace the PRS_LexStrChar at #index from a PRS_LexStrCharChars by a new one.
  * \param[in] arg PRS_LexStrCharChars to retrieve the PRS_LexStrChar from
  * \param[in] elem new PRS_LexStrChar to replace another
  * \param[in] index index to use to point in the PRS_LexStrCharChars
@@ -1676,7 +1676,7 @@ PRS_LexStrCharChars _PRS_replaceLexStrCharCharsLexStrCharAt(PRS_LexStrCharChars 
 }
 
 /**
- * Builds a PRS_LexStrCharChars of 2 consecutive elements. 
+ * Builds a PRS_LexStrCharChars of 2 consecutive elements.
  * \param[in] elem1 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem2 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \return A new PRS_LexStrCharChars consisting of 2 PRS_LexStrChars
@@ -1686,7 +1686,7 @@ PRS_LexStrCharChars _PRS_makeLexStrCharChars2(PRS_LexStrChar elem1, PRS_LexStrCh
 }
 
 /**
- * Builds a PRS_LexStrCharChars of 3 consecutive elements. 
+ * Builds a PRS_LexStrCharChars of 3 consecutive elements.
  * \param[in] elem1 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem2 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem3 One PRS_LexStrChar element of the new PRS_LexStrCharChars
@@ -1697,7 +1697,7 @@ PRS_LexStrCharChars _PRS_makeLexStrCharChars3(PRS_LexStrChar elem1, PRS_LexStrCh
 }
 
 /**
- * Builds a PRS_LexStrCharChars of 4 consecutive elements. 
+ * Builds a PRS_LexStrCharChars of 4 consecutive elements.
  * \param[in] elem1 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem2 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem3 One PRS_LexStrChar element of the new PRS_LexStrCharChars
@@ -1709,7 +1709,7 @@ PRS_LexStrCharChars _PRS_makeLexStrCharChars4(PRS_LexStrChar elem1, PRS_LexStrCh
 }
 
 /**
- * Builds a PRS_LexStrCharChars of 5 consecutive elements. 
+ * Builds a PRS_LexStrCharChars of 5 consecutive elements.
  * \param[in] elem1 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem2 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem3 One PRS_LexStrChar element of the new PRS_LexStrCharChars
@@ -1722,7 +1722,7 @@ PRS_LexStrCharChars _PRS_makeLexStrCharChars5(PRS_LexStrChar elem1, PRS_LexStrCh
 }
 
 /**
- * Builds a PRS_LexStrCharChars of 6 consecutive elements. 
+ * Builds a PRS_LexStrCharChars of 6 consecutive elements.
  * \param[in] elem1 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem2 One PRS_LexStrChar element of the new PRS_LexStrCharChars
  * \param[in] elem3 One PRS_LexStrChar element of the new PRS_LexStrCharChars
@@ -2578,7 +2578,7 @@ ATbool PRS_isValidOptLayout(PRS_OptLayout arg) {
  * \param[in] arg input PRS_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Absent, or ATfalse otherwise
  */
-inline ATbool PRS_isOptLayoutAbsent(PRS_OptLayout arg){
+ATbool PRS_isOptLayoutAbsent(PRS_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2617,7 +2617,7 @@ inline ATbool PRS_isOptLayoutAbsent(PRS_OptLayout arg){
  * \param[in] arg input PRS_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Present, or ATfalse otherwise
  */
-inline ATbool PRS_isOptLayoutPresent(PRS_OptLayout arg){
+ATbool PRS_isOptLayoutPresent(PRS_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2669,7 +2669,7 @@ inline ATbool PRS_isOptLayoutPresent(PRS_OptLayout arg){
 }
 
 /**
- * Assert whether a PRS_OptLayout has a layout. 
+ * Assert whether a PRS_OptLayout has a layout.
  * \param[in] arg input PRS_OptLayout
  * \return ATtrue if the PRS_OptLayout had a layout, or ATfalse otherwise
  */
@@ -2686,7 +2686,7 @@ ATbool PRS_hasOptLayoutLayout(PRS_OptLayout arg) {
  * \return the layout of #arg, if it exist or an undefined value if it does not
  */
 PRS_Layout PRS_getOptLayoutLayout(PRS_OptLayout arg) {
-  
+
     return (PRS_Layout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -2722,7 +2722,7 @@ ATbool PRS_isValidLayout(PRS_Layout arg) {
  * \param[in] arg input PRS_Layout
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PRS_isLayoutLexToCf(PRS_Layout arg){
+ATbool PRS_isLayoutLexToCf(PRS_Layout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2795,7 +2795,7 @@ inline ATbool PRS_isLayoutLexToCf(PRS_Layout arg){
 }
 
 /**
- * Assert whether a PRS_Layout has a list. 
+ * Assert whether a PRS_Layout has a list.
  * \param[in] arg input PRS_Layout
  * \return ATtrue if the PRS_Layout had a list, or ATfalse otherwise
  */
@@ -2812,7 +2812,7 @@ ATbool PRS_hasLayoutList(PRS_Layout arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexLayoutList PRS_getLayoutList(PRS_Layout arg) {
-  
+
     return (PRS_LexLayoutList)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1);
 }
 
@@ -2854,7 +2854,7 @@ ATbool PRS_isValidLexLayoutList(PRS_LexLayoutList arg) {
  * \param[in] arg input PRS_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PRS_isLexLayoutListEmpty(PRS_LexLayoutList arg){
+ATbool PRS_isLexLayoutListEmpty(PRS_LexLayoutList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2866,7 +2866,7 @@ inline ATbool PRS_isLexLayoutListEmpty(PRS_LexLayoutList arg){
  * \param[in] arg input PRS_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PRS_isLexLayoutListSingle(PRS_LexLayoutList arg){
+ATbool PRS_isLexLayoutListSingle(PRS_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2882,7 +2882,7 @@ inline ATbool PRS_isLexLayoutListSingle(PRS_LexLayoutList arg){
  * \param[in] arg input PRS_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PRS_isLexLayoutListMany(PRS_LexLayoutList arg){
+ATbool PRS_isLexLayoutListMany(PRS_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2890,7 +2890,7 @@ inline ATbool PRS_isLexLayoutListMany(PRS_LexLayoutList arg){
 }
 
 /**
- * Assert whether a PRS_LexLayoutList has a head. 
+ * Assert whether a PRS_LexLayoutList has a head.
  * \param[in] arg input PRS_LexLayoutList
  * \return ATtrue if the PRS_LexLayoutList had a head, or ATfalse otherwise
  */
@@ -2905,7 +2905,7 @@ ATbool PRS_hasLexLayoutListHead(PRS_LexLayoutList arg) {
 }
 
 /**
- * Assert whether a PRS_LexLayoutList has a tail. 
+ * Assert whether a PRS_LexLayoutList has a tail.
  * \param[in] arg input PRS_LexLayoutList
  * \return ATtrue if the PRS_LexLayoutList had a tail, or ATfalse otherwise
  */
@@ -2925,7 +2925,7 @@ PRS_LexLayout PRS_getLexLayoutListHead(PRS_LexLayoutList arg) {
   if (PRS_isLexLayoutListSingle(arg)) {
     return (PRS_LexLayout)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PRS_LexLayout)ATgetFirst((ATermList)arg);
 }
 
@@ -2935,7 +2935,7 @@ PRS_LexLayout PRS_getLexLayoutListHead(PRS_LexLayoutList arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexLayoutList PRS_getLexLayoutListTail(PRS_LexLayoutList arg) {
-  
+
     return (PRS_LexLayoutList)ATgetNext((ATermList)arg);
 }
 
@@ -3007,7 +3007,7 @@ ATbool PRS_isValidRElem(PRS_RElem arg) {
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a int, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemInt(PRS_RElem arg){
+ATbool PRS_isRElemInt(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3087,7 +3087,7 @@ inline ATbool PRS_isRElemInt(PRS_RElem arg){
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a str, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemStr(PRS_RElem arg){
+ATbool PRS_isRElemStr(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3167,7 +3167,7 @@ inline ATbool PRS_isRElemStr(PRS_RElem arg){
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a bool, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemBool(PRS_RElem arg){
+ATbool PRS_isRElemBool(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3247,7 +3247,7 @@ inline ATbool PRS_isRElemBool(PRS_RElem arg){
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a loc, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemLoc(PRS_RElem arg){
+ATbool PRS_isRElemLoc(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3327,7 +3327,7 @@ inline ATbool PRS_isRElemLoc(PRS_RElem arg){
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a set, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemSet(PRS_RElem arg){
+ATbool PRS_isRElemSet(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3628,7 +3628,7 @@ inline ATbool PRS_isRElemSet(PRS_RElem arg){
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a bag, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemBag(PRS_RElem arg){
+ATbool PRS_isRElemBag(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3981,7 +3981,7 @@ inline ATbool PRS_isRElemBag(PRS_RElem arg){
  * \param[in] arg input PRS_RElem
  * \return ATtrue if #arg corresponds to the signature of a tuple, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemTuple(PRS_RElem arg){
+ATbool PRS_isRElemTuple(PRS_RElem arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4278,7 +4278,7 @@ inline ATbool PRS_isRElemTuple(PRS_RElem arg){
 }
 
 /**
- * Assert whether a PRS_RElem has a Integer. 
+ * Assert whether a PRS_RElem has a Integer.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a Integer, or ATfalse otherwise
  */
@@ -4290,7 +4290,7 @@ ATbool PRS_hasRElemInteger(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a StrCon. 
+ * Assert whether a PRS_RElem has a StrCon.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a StrCon, or ATfalse otherwise
  */
@@ -4302,7 +4302,7 @@ ATbool PRS_hasRElemStrCon(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a BoolCon. 
+ * Assert whether a PRS_RElem has a BoolCon.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a BoolCon, or ATfalse otherwise
  */
@@ -4314,7 +4314,7 @@ ATbool PRS_hasRElemBoolCon(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a Location. 
+ * Assert whether a PRS_RElem has a Location.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a Location, or ATfalse otherwise
  */
@@ -4326,7 +4326,7 @@ ATbool PRS_hasRElemLocation(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a ws-after-{. 
+ * Assert whether a PRS_RElem has a ws-after-{.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a ws-after-{, or ATfalse otherwise
  */
@@ -4338,7 +4338,7 @@ ATbool PRS_hasRElemWsAfterBraceOpen(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a elements. 
+ * Assert whether a PRS_RElem has a elements.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a elements, or ATfalse otherwise
  */
@@ -4356,7 +4356,7 @@ ATbool PRS_hasRElemElements(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a ws-after-elements. 
+ * Assert whether a PRS_RElem has a ws-after-elements.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a ws-after-elements, or ATfalse otherwise
  */
@@ -4374,7 +4374,7 @@ ATbool PRS_hasRElemWsAfterElements(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a ws-after-{|. 
+ * Assert whether a PRS_RElem has a ws-after-{|.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a ws-after-{|, or ATfalse otherwise
  */
@@ -4386,7 +4386,7 @@ ATbool PRS_hasRElemWsAfterBraceOpenBar(PRS_RElem arg) {
 }
 
 /**
- * Assert whether a PRS_RElem has a ws-after-<. 
+ * Assert whether a PRS_RElem has a ws-after-<.
  * \param[in] arg input PRS_RElem
  * \return ATtrue if the PRS_RElem had a ws-after-<, or ATfalse otherwise
  */
@@ -4403,7 +4403,7 @@ ATbool PRS_hasRElemWsAfterLessThan(PRS_RElem arg) {
  * \return the Integer of #arg, if it exist or an undefined value if it does not
  */
 PRS_Integer PRS_getRElemInteger(PRS_RElem arg) {
-  
+
     return (PRS_Integer)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4413,7 +4413,7 @@ PRS_Integer PRS_getRElemInteger(PRS_RElem arg) {
  * \return the StrCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_StrCon PRS_getRElemStrCon(PRS_RElem arg) {
-  
+
     return (PRS_StrCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4423,7 +4423,7 @@ PRS_StrCon PRS_getRElemStrCon(PRS_RElem arg) {
  * \return the BoolCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_BoolCon PRS_getRElemBoolCon(PRS_RElem arg) {
-  
+
     return (PRS_BoolCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4433,7 +4433,7 @@ PRS_BoolCon PRS_getRElemBoolCon(PRS_RElem arg) {
  * \return the Location of #arg, if it exist or an undefined value if it does not
  */
 PRS_Location PRS_getRElemLocation(PRS_RElem arg) {
-  
+
     return (PRS_Location)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -4443,7 +4443,7 @@ PRS_Location PRS_getRElemLocation(PRS_RElem arg) {
  * \return the ws-after-{ of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRElemWsAfterBraceOpen(PRS_RElem arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -4459,7 +4459,7 @@ PRS_RElemElements PRS_getRElemElements(PRS_RElem arg) {
   else if (PRS_isRElemBag(arg)) {
     return (PRS_RElemElements)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2), 1);
   }
-  else 
+  else
     return (PRS_RElemElements)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2), 1);
 }
 
@@ -4475,7 +4475,7 @@ PRS_OptLayout PRS_getRElemWsAfterElements(PRS_RElem arg) {
   else if (PRS_isRElemBag(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -4485,7 +4485,7 @@ PRS_OptLayout PRS_getRElemWsAfterElements(PRS_RElem arg) {
  * \return the ws-after-{| of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRElemWsAfterBraceOpenBar(PRS_RElem arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -4495,7 +4495,7 @@ PRS_OptLayout PRS_getRElemWsAfterBraceOpenBar(PRS_RElem arg) {
  * \return the ws-after-< of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRElemWsAfterLessThan(PRS_RElem arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -4690,7 +4690,7 @@ ATbool PRS_isValidRType(PRS_RType arg) {
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a int, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeInt(PRS_RType arg){
+ATbool PRS_isRTypeInt(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4875,7 +4875,7 @@ inline ATbool PRS_isRTypeInt(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a bool, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeBool(PRS_RType arg){
+ATbool PRS_isRTypeBool(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5086,7 +5086,7 @@ inline ATbool PRS_isRTypeBool(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a str, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeStr(PRS_RType arg){
+ATbool PRS_isRTypeStr(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5271,7 +5271,7 @@ inline ATbool PRS_isRTypeStr(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a loc, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeLoc(PRS_RType arg){
+ATbool PRS_isRTypeLoc(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5456,7 +5456,7 @@ inline ATbool PRS_isRTypeLoc(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a tuple, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeTuple(PRS_RType arg){
+ATbool PRS_isRTypeTuple(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5757,7 +5757,7 @@ inline ATbool PRS_isRTypeTuple(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a set, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeSet(PRS_RType arg){
+ATbool PRS_isRTypeSet(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6154,7 +6154,7 @@ inline ATbool PRS_isRTypeSet(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a bag, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeBag(PRS_RType arg){
+ATbool PRS_isRTypeBag(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6551,7 +6551,7 @@ inline ATbool PRS_isRTypeBag(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a relation, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeRelation(PRS_RType arg){
+ATbool PRS_isRTypeRelation(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6992,7 +6992,7 @@ inline ATbool PRS_isRTypeRelation(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a user-defined, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeUserDefined(PRS_RType arg){
+ATbool PRS_isRTypeUserDefined(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7072,7 +7072,7 @@ inline ATbool PRS_isRTypeUserDefined(PRS_RType arg){
  * \param[in] arg input PRS_RType
  * \return ATtrue if #arg corresponds to the signature of a parameter, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeParameter(PRS_RType arg){
+ATbool PRS_isRTypeParameter(PRS_RType arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7237,7 +7237,7 @@ inline ATbool PRS_isRTypeParameter(PRS_RType arg){
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-<. 
+ * Assert whether a PRS_RType has a ws-after-<.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-<, or ATfalse otherwise
  */
@@ -7249,7 +7249,7 @@ ATbool PRS_hasRTypeWsAfterLessThan(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a column-types. 
+ * Assert whether a PRS_RType has a column-types.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a column-types, or ATfalse otherwise
  */
@@ -7264,7 +7264,7 @@ ATbool PRS_hasRTypeColumnTypes(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-column-types. 
+ * Assert whether a PRS_RType has a ws-after-column-types.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-column-types, or ATfalse otherwise
  */
@@ -7279,7 +7279,7 @@ ATbool PRS_hasRTypeWsAfterColumnTypes(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-set. 
+ * Assert whether a PRS_RType has a ws-after-set.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-set, or ATfalse otherwise
  */
@@ -7291,7 +7291,7 @@ ATbool PRS_hasRTypeWsAfterSet(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-[. 
+ * Assert whether a PRS_RType has a ws-after-[.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-[, or ATfalse otherwise
  */
@@ -7309,7 +7309,7 @@ ATbool PRS_hasRTypeWsAfterBracketOpen(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a element-type. 
+ * Assert whether a PRS_RType has a element-type.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a element-type, or ATfalse otherwise
  */
@@ -7324,7 +7324,7 @@ ATbool PRS_hasRTypeElementType(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-element-type. 
+ * Assert whether a PRS_RType has a ws-after-element-type.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-element-type, or ATfalse otherwise
  */
@@ -7339,7 +7339,7 @@ ATbool PRS_hasRTypeWsAfterElementType(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-bag. 
+ * Assert whether a PRS_RType has a ws-after-bag.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-bag, or ATfalse otherwise
  */
@@ -7351,7 +7351,7 @@ ATbool PRS_hasRTypeWsAfterBag(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-rel. 
+ * Assert whether a PRS_RType has a ws-after-rel.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-rel, or ATfalse otherwise
  */
@@ -7363,7 +7363,7 @@ ATbool PRS_hasRTypeWsAfterRel(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a type-name. 
+ * Assert whether a PRS_RType has a type-name.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a type-name, or ATfalse otherwise
  */
@@ -7375,7 +7375,7 @@ ATbool PRS_hasRTypeTypeName(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a ws-after-&. 
+ * Assert whether a PRS_RType has a ws-after-&.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a ws-after-&, or ATfalse otherwise
  */
@@ -7387,7 +7387,7 @@ ATbool PRS_hasRTypeWsAfterAmp(PRS_RType arg) {
 }
 
 /**
- * Assert whether a PRS_RType has a parameter-name. 
+ * Assert whether a PRS_RType has a parameter-name.
  * \param[in] arg input PRS_RType
  * \return ATtrue if the PRS_RType had a parameter-name, or ATfalse otherwise
  */
@@ -7404,7 +7404,7 @@ ATbool PRS_hasRTypeParameterName(PRS_RType arg) {
  * \return the ws-after-< of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeWsAfterLessThan(PRS_RType arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -7417,7 +7417,7 @@ PRS_RTypeColumnTypes PRS_getRTypeColumnTypes(PRS_RType arg) {
   if (PRS_isRTypeTuple(arg)) {
     return (PRS_RTypeColumnTypes)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2), 1);
   }
-  else 
+  else
     return (PRS_RTypeColumnTypes)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4), 1);
 }
 
@@ -7430,7 +7430,7 @@ PRS_OptLayout PRS_getRTypeWsAfterColumnTypes(PRS_RType arg) {
   if (PRS_isRTypeTuple(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -7440,7 +7440,7 @@ PRS_OptLayout PRS_getRTypeWsAfterColumnTypes(PRS_RType arg) {
  * \return the ws-after-set of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeWsAfterSet(PRS_RType arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -7456,7 +7456,7 @@ PRS_OptLayout PRS_getRTypeWsAfterBracketOpen(PRS_RType arg) {
   else if (PRS_isRTypeBag(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -7469,7 +7469,7 @@ PRS_RType PRS_getRTypeElementType(PRS_RType arg) {
   if (PRS_isRTypeSet(arg)) {
     return (PRS_RType)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (PRS_RType)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -7482,7 +7482,7 @@ PRS_OptLayout PRS_getRTypeWsAfterElementType(PRS_RType arg) {
   if (PRS_isRTypeSet(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -7492,7 +7492,7 @@ PRS_OptLayout PRS_getRTypeWsAfterElementType(PRS_RType arg) {
  * \return the ws-after-bag of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeWsAfterBag(PRS_RType arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -7502,7 +7502,7 @@ PRS_OptLayout PRS_getRTypeWsAfterBag(PRS_RType arg) {
  * \return the ws-after-rel of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeWsAfterRel(PRS_RType arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -7512,7 +7512,7 @@ PRS_OptLayout PRS_getRTypeWsAfterRel(PRS_RType arg) {
  * \return the type-name of #arg, if it exist or an undefined value if it does not
  */
 PRS_IdCon PRS_getRTypeTypeName(PRS_RType arg) {
-  
+
     return (PRS_IdCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -7522,7 +7522,7 @@ PRS_IdCon PRS_getRTypeTypeName(PRS_RType arg) {
  * \return the ws-after-& of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeWsAfterAmp(PRS_RType arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -7532,7 +7532,7 @@ PRS_OptLayout PRS_getRTypeWsAfterAmp(PRS_RType arg) {
  * \return the parameter-name of #arg, if it exist or an undefined value if it does not
  */
 PRS_IdCon PRS_getRTypeParameterName(PRS_RType arg) {
-  
+
     return (PRS_IdCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2);
 }
 
@@ -7751,7 +7751,7 @@ ATbool PRS_isValidRTuple(PRS_RTuple arg) {
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if #arg corresponds to the signature of a rtuple, or ATfalse otherwise
  */
-inline ATbool PRS_isRTupleRtuple(PRS_RTuple arg){
+ATbool PRS_isRTupleRtuple(PRS_RTuple arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -8252,7 +8252,7 @@ inline ATbool PRS_isRTupleRtuple(PRS_RTuple arg){
 }
 
 /**
- * Assert whether a PRS_RTuple has a ws-after-<. 
+ * Assert whether a PRS_RTuple has a ws-after-<.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a ws-after-<, or ATfalse otherwise
  */
@@ -8264,7 +8264,7 @@ ATbool PRS_hasRTupleWsAfterLessThan(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a variable. 
+ * Assert whether a PRS_RTuple has a variable.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a variable, or ATfalse otherwise
  */
@@ -8276,7 +8276,7 @@ ATbool PRS_hasRTupleVariable(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a ws-after-variable. 
+ * Assert whether a PRS_RTuple has a ws-after-variable.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a ws-after-variable, or ATfalse otherwise
  */
@@ -8288,7 +8288,7 @@ ATbool PRS_hasRTupleWsAfterVariable(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a ws-after-,. 
+ * Assert whether a PRS_RTuple has a ws-after-,.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a ws-after-,, or ATfalse otherwise
  */
@@ -8300,7 +8300,7 @@ ATbool PRS_hasRTupleWsAfterComma(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a rtype. 
+ * Assert whether a PRS_RTuple has a rtype.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a rtype, or ATfalse otherwise
  */
@@ -8312,7 +8312,7 @@ ATbool PRS_hasRTupleRtype(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a ws-after-rtype. 
+ * Assert whether a PRS_RTuple has a ws-after-rtype.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a ws-after-rtype, or ATfalse otherwise
  */
@@ -8324,7 +8324,7 @@ ATbool PRS_hasRTupleWsAfterRtype(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a ws-after-,-1. 
+ * Assert whether a PRS_RTuple has a ws-after-,-1.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a ws-after-,-1, or ATfalse otherwise
  */
@@ -8336,7 +8336,7 @@ ATbool PRS_hasRTupleWsAfterComma1(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a value. 
+ * Assert whether a PRS_RTuple has a value.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a value, or ATfalse otherwise
  */
@@ -8348,7 +8348,7 @@ ATbool PRS_hasRTupleValue(PRS_RTuple arg) {
 }
 
 /**
- * Assert whether a PRS_RTuple has a ws-after-value. 
+ * Assert whether a PRS_RTuple has a ws-after-value.
  * \param[in] arg input PRS_RTuple
  * \return ATtrue if the PRS_RTuple had a ws-after-value, or ATfalse otherwise
  */
@@ -8365,7 +8365,7 @@ ATbool PRS_hasRTupleWsAfterValue(PRS_RTuple arg) {
  * \return the ws-after-< of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleWsAfterLessThan(PRS_RTuple arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -8375,7 +8375,7 @@ PRS_OptLayout PRS_getRTupleWsAfterLessThan(PRS_RTuple arg) {
  * \return the variable of #arg, if it exist or an undefined value if it does not
  */
 PRS_IdCon PRS_getRTupleVariable(PRS_RTuple arg) {
-  
+
     return (PRS_IdCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2);
 }
 
@@ -8385,7 +8385,7 @@ PRS_IdCon PRS_getRTupleVariable(PRS_RTuple arg) {
  * \return the ws-after-variable of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleWsAfterVariable(PRS_RTuple arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -8395,7 +8395,7 @@ PRS_OptLayout PRS_getRTupleWsAfterVariable(PRS_RTuple arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleWsAfterComma(PRS_RTuple arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -8405,7 +8405,7 @@ PRS_OptLayout PRS_getRTupleWsAfterComma(PRS_RTuple arg) {
  * \return the rtype of #arg, if it exist or an undefined value if it does not
  */
 PRS_RType PRS_getRTupleRtype(PRS_RTuple arg) {
-  
+
     return (PRS_RType)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 6);
 }
 
@@ -8415,7 +8415,7 @@ PRS_RType PRS_getRTupleRtype(PRS_RTuple arg) {
  * \return the ws-after-rtype of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleWsAfterRtype(PRS_RTuple arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -8425,7 +8425,7 @@ PRS_OptLayout PRS_getRTupleWsAfterRtype(PRS_RTuple arg) {
  * \return the ws-after-,-1 of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleWsAfterComma1(PRS_RTuple arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -8435,7 +8435,7 @@ PRS_OptLayout PRS_getRTupleWsAfterComma1(PRS_RTuple arg) {
  * \return the value of #arg, if it exist or an undefined value if it does not
  */
 PRS_RElem PRS_getRTupleValue(PRS_RTuple arg) {
-  
+
     return (PRS_RElem)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 10);
 }
 
@@ -8445,7 +8445,7 @@ PRS_RElem PRS_getRTupleValue(PRS_RTuple arg) {
  * \return the ws-after-value of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleWsAfterValue(PRS_RTuple arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -8601,7 +8601,7 @@ ATbool PRS_isValidRStore(PRS_RStore arg) {
  * \param[in] arg input PRS_RStore
  * \return ATtrue if #arg corresponds to the signature of a rstore, or ATfalse otherwise
  */
-inline ATbool PRS_isRStoreRstore(PRS_RStore arg){
+ATbool PRS_isRStoreRstore(PRS_RStore arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -9292,7 +9292,7 @@ inline ATbool PRS_isRStoreRstore(PRS_RStore arg){
 }
 
 /**
- * Assert whether a PRS_RStore has a ws-after-rstore. 
+ * Assert whether a PRS_RStore has a ws-after-rstore.
  * \param[in] arg input PRS_RStore
  * \return ATtrue if the PRS_RStore had a ws-after-rstore, or ATfalse otherwise
  */
@@ -9304,7 +9304,7 @@ ATbool PRS_hasRStoreWsAfterRstore(PRS_RStore arg) {
 }
 
 /**
- * Assert whether a PRS_RStore has a ws-after-(. 
+ * Assert whether a PRS_RStore has a ws-after-(.
  * \param[in] arg input PRS_RStore
  * \return ATtrue if the PRS_RStore had a ws-after-(, or ATfalse otherwise
  */
@@ -9316,7 +9316,7 @@ ATbool PRS_hasRStoreWsAfterParenOpen(PRS_RStore arg) {
 }
 
 /**
- * Assert whether a PRS_RStore has a ws-after-[. 
+ * Assert whether a PRS_RStore has a ws-after-[.
  * \param[in] arg input PRS_RStore
  * \return ATtrue if the PRS_RStore had a ws-after-[, or ATfalse otherwise
  */
@@ -9328,7 +9328,7 @@ ATbool PRS_hasRStoreWsAfterBracketOpen(PRS_RStore arg) {
 }
 
 /**
- * Assert whether a PRS_RStore has a rtuples. 
+ * Assert whether a PRS_RStore has a rtuples.
  * \param[in] arg input PRS_RStore
  * \return ATtrue if the PRS_RStore had a rtuples, or ATfalse otherwise
  */
@@ -9340,7 +9340,7 @@ ATbool PRS_hasRStoreRtuples(PRS_RStore arg) {
 }
 
 /**
- * Assert whether a PRS_RStore has a ws-after-rtuples. 
+ * Assert whether a PRS_RStore has a ws-after-rtuples.
  * \param[in] arg input PRS_RStore
  * \return ATtrue if the PRS_RStore had a ws-after-rtuples, or ATfalse otherwise
  */
@@ -9352,7 +9352,7 @@ ATbool PRS_hasRStoreWsAfterRtuples(PRS_RStore arg) {
 }
 
 /**
- * Assert whether a PRS_RStore has a ws-after-]. 
+ * Assert whether a PRS_RStore has a ws-after-].
  * \param[in] arg input PRS_RStore
  * \return ATtrue if the PRS_RStore had a ws-after-], or ATfalse otherwise
  */
@@ -9369,7 +9369,7 @@ ATbool PRS_hasRStoreWsAfterBracketClose(PRS_RStore arg) {
  * \return the ws-after-rstore of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRStoreWsAfterRstore(PRS_RStore arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -9379,7 +9379,7 @@ PRS_OptLayout PRS_getRStoreWsAfterRstore(PRS_RStore arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRStoreWsAfterParenOpen(PRS_RStore arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -9389,7 +9389,7 @@ PRS_OptLayout PRS_getRStoreWsAfterParenOpen(PRS_RStore arg) {
  * \return the ws-after-[ of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRStoreWsAfterBracketOpen(PRS_RStore arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -9399,7 +9399,7 @@ PRS_OptLayout PRS_getRStoreWsAfterBracketOpen(PRS_RStore arg) {
  * \return the rtuples of #arg, if it exist or an undefined value if it does not
  */
 PRS_RTupleRtuples PRS_getRStoreRtuples(PRS_RStore arg) {
-  
+
     return (PRS_RTupleRtuples)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 6), 1);
 }
 
@@ -9409,7 +9409,7 @@ PRS_RTupleRtuples PRS_getRStoreRtuples(PRS_RStore arg) {
  * \return the ws-after-rtuples of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRStoreWsAfterRtuples(PRS_RStore arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -9419,7 +9419,7 @@ PRS_OptLayout PRS_getRStoreWsAfterRtuples(PRS_RStore arg) {
  * \return the ws-after-] of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRStoreWsAfterBracketClose(PRS_RStore arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -9533,7 +9533,7 @@ ATbool PRS_isValidStart(PRS_Start arg) {
  * \param[in] arg input PRS_Start
  * \return ATtrue if #arg corresponds to the signature of a RStore, or ATfalse otherwise
  */
-inline ATbool PRS_isStartRStore(PRS_Start arg){
+ATbool PRS_isStartRStore(PRS_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun51) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -9632,7 +9632,7 @@ inline ATbool PRS_isStartRStore(PRS_Start arg){
  * \param[in] arg input PRS_Start
  * \return ATtrue if #arg corresponds to the signature of a BoolCon, or ATfalse otherwise
  */
-inline ATbool PRS_isStartBoolCon(PRS_Start arg){
+ATbool PRS_isStartBoolCon(PRS_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun51) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -9727,7 +9727,7 @@ inline ATbool PRS_isStartBoolCon(PRS_Start arg){
 }
 
 /**
- * Assert whether a PRS_Start has a ws-before. 
+ * Assert whether a PRS_Start has a ws-before.
  * \param[in] arg input PRS_Start
  * \return ATtrue if the PRS_Start had a ws-before, or ATfalse otherwise
  */
@@ -9742,7 +9742,7 @@ ATbool PRS_hasStartWsBefore(PRS_Start arg) {
 }
 
 /**
- * Assert whether a PRS_Start has a top-RStore. 
+ * Assert whether a PRS_Start has a top-RStore.
  * \param[in] arg input PRS_Start
  * \return ATtrue if the PRS_Start had a top-RStore, or ATfalse otherwise
  */
@@ -9754,7 +9754,7 @@ ATbool PRS_hasStartTopRStore(PRS_Start arg) {
 }
 
 /**
- * Assert whether a PRS_Start has a ws-after. 
+ * Assert whether a PRS_Start has a ws-after.
  * \param[in] arg input PRS_Start
  * \return ATtrue if the PRS_Start had a ws-after, or ATfalse otherwise
  */
@@ -9769,7 +9769,7 @@ ATbool PRS_hasStartWsAfter(PRS_Start arg) {
 }
 
 /**
- * Assert whether a PRS_Start has a amb-cnt. 
+ * Assert whether a PRS_Start has a amb-cnt.
  * \param[in] arg input PRS_Start
  * \return ATtrue if the PRS_Start had a amb-cnt, or ATfalse otherwise
  */
@@ -9784,7 +9784,7 @@ ATbool PRS_hasStartAmbCnt(PRS_Start arg) {
 }
 
 /**
- * Assert whether a PRS_Start has a top-BoolCon. 
+ * Assert whether a PRS_Start has a top-BoolCon.
  * \param[in] arg input PRS_Start
  * \return ATtrue if the PRS_Start had a top-BoolCon, or ATfalse otherwise
  */
@@ -9804,7 +9804,7 @@ PRS_OptLayout PRS_getStartWsBefore(PRS_Start arg) {
   if (PRS_isStartRStore(arg)) {
     return (PRS_OptLayout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1));
   }
-  else 
+  else
     return (PRS_OptLayout)ATgetFirst((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1));
 }
 
@@ -9814,7 +9814,7 @@ PRS_OptLayout PRS_getStartWsBefore(PRS_Start arg) {
  * \return the top-RStore of #arg, if it exist or an undefined value if it does not
  */
 PRS_RStore PRS_getStartTopRStore(PRS_Start arg) {
-  
+
     return (PRS_RStore)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -9827,7 +9827,7 @@ PRS_OptLayout PRS_getStartWsAfter(PRS_Start arg) {
   if (PRS_isStartRStore(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 2);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 2);
 }
 
@@ -9840,7 +9840,7 @@ int PRS_getStartAmbCnt(PRS_Start arg) {
   if (PRS_isStartRStore(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -9850,7 +9850,7 @@ int PRS_getStartAmbCnt(PRS_Start arg) {
  * \return the top-BoolCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_BoolCon PRS_getStartTopBoolCon(PRS_Start arg) {
-  
+
     return (PRS_BoolCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 0), 1), 1);
 }
 
@@ -9961,7 +9961,7 @@ ATbool PRS_isValidRElemElements(PRS_RElemElements arg) {
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemElementsEmpty(PRS_RElemElements arg){
+ATbool PRS_isRElemElementsEmpty(PRS_RElemElements arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -9973,7 +9973,7 @@ inline ATbool PRS_isRElemElementsEmpty(PRS_RElemElements arg){
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemElementsSingle(PRS_RElemElements arg){
+ATbool PRS_isRElemElementsSingle(PRS_RElemElements arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -9989,7 +9989,7 @@ inline ATbool PRS_isRElemElementsSingle(PRS_RElemElements arg){
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PRS_isRElemElementsMany(PRS_RElemElements arg){
+ATbool PRS_isRElemElementsMany(PRS_RElemElements arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -10064,7 +10064,7 @@ inline ATbool PRS_isRElemElementsMany(PRS_RElemElements arg){
 }
 
 /**
- * Assert whether a PRS_RElemElements has a head. 
+ * Assert whether a PRS_RElemElements has a head.
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if the PRS_RElemElements had a head, or ATfalse otherwise
  */
@@ -10079,7 +10079,7 @@ ATbool PRS_hasRElemElementsHead(PRS_RElemElements arg) {
 }
 
 /**
- * Assert whether a PRS_RElemElements has a ws-after-head. 
+ * Assert whether a PRS_RElemElements has a ws-after-head.
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if the PRS_RElemElements had a ws-after-head, or ATfalse otherwise
  */
@@ -10091,7 +10091,7 @@ ATbool PRS_hasRElemElementsWsAfterHead(PRS_RElemElements arg) {
 }
 
 /**
- * Assert whether a PRS_RElemElements has a ws-after-sep. 
+ * Assert whether a PRS_RElemElements has a ws-after-sep.
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if the PRS_RElemElements had a ws-after-sep, or ATfalse otherwise
  */
@@ -10103,7 +10103,7 @@ ATbool PRS_hasRElemElementsWsAfterSep(PRS_RElemElements arg) {
 }
 
 /**
- * Assert whether a PRS_RElemElements has a tail. 
+ * Assert whether a PRS_RElemElements has a tail.
  * \param[in] arg input PRS_RElemElements
  * \return ATtrue if the PRS_RElemElements had a tail, or ATfalse otherwise
  */
@@ -10115,7 +10115,7 @@ ATbool PRS_hasRElemElementsTail(PRS_RElemElements arg) {
 }
 
 /**
- * Returns a list of all but the first element of a PRS_RElemElements. 
+ * Returns a list of all but the first element of a PRS_RElemElements.
  * \param[in] arg input PRS_RElemElements
  * \return A new PRS_RElemElements, without the first element and the separator(s) just after it.)
  */
@@ -10125,7 +10125,7 @@ PRS_RElemElements PRS_getRElemElementsTail(PRS_RElemElements arg) {
     return (PRS_RElemElements) PRS_makeRElemElementsEmpty();
   }
   else {
-  
+
     return (PRS_RElemElements)ATgetTail((ATermList)arg, 4);
   }
 }
@@ -10139,7 +10139,7 @@ PRS_RElem PRS_getRElemElementsHead(PRS_RElemElements arg) {
   if (PRS_isRElemElementsSingle(arg)) {
     return (PRS_RElem)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PRS_RElem)ATgetFirst((ATermList)arg);
 }
 
@@ -10149,7 +10149,7 @@ PRS_RElem PRS_getRElemElementsHead(PRS_RElemElements arg) {
  * \return the ws-after-head of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRElemElementsWsAfterHead(PRS_RElemElements arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)arg, 1);
 }
 
@@ -10159,7 +10159,7 @@ PRS_OptLayout PRS_getRElemElementsWsAfterHead(PRS_RElemElements arg) {
  * \return the ws-after-sep of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRElemElementsWsAfterSep(PRS_RElemElements arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)arg, 3);
 }
 
@@ -10249,7 +10249,7 @@ ATbool PRS_isValidRTypeColumnTypes(PRS_RTypeColumnTypes arg) {
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeColumnTypesEmpty(PRS_RTypeColumnTypes arg){
+ATbool PRS_isRTypeColumnTypesEmpty(PRS_RTypeColumnTypes arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -10261,7 +10261,7 @@ inline ATbool PRS_isRTypeColumnTypesEmpty(PRS_RTypeColumnTypes arg){
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeColumnTypesSingle(PRS_RTypeColumnTypes arg){
+ATbool PRS_isRTypeColumnTypesSingle(PRS_RTypeColumnTypes arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -10277,7 +10277,7 @@ inline ATbool PRS_isRTypeColumnTypesSingle(PRS_RTypeColumnTypes arg){
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PRS_isRTypeColumnTypesMany(PRS_RTypeColumnTypes arg){
+ATbool PRS_isRTypeColumnTypesMany(PRS_RTypeColumnTypes arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -10352,7 +10352,7 @@ inline ATbool PRS_isRTypeColumnTypesMany(PRS_RTypeColumnTypes arg){
 }
 
 /**
- * Assert whether a PRS_RTypeColumnTypes has a head. 
+ * Assert whether a PRS_RTypeColumnTypes has a head.
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if the PRS_RTypeColumnTypes had a head, or ATfalse otherwise
  */
@@ -10367,7 +10367,7 @@ ATbool PRS_hasRTypeColumnTypesHead(PRS_RTypeColumnTypes arg) {
 }
 
 /**
- * Assert whether a PRS_RTypeColumnTypes has a ws-after-head. 
+ * Assert whether a PRS_RTypeColumnTypes has a ws-after-head.
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if the PRS_RTypeColumnTypes had a ws-after-head, or ATfalse otherwise
  */
@@ -10379,7 +10379,7 @@ ATbool PRS_hasRTypeColumnTypesWsAfterHead(PRS_RTypeColumnTypes arg) {
 }
 
 /**
- * Assert whether a PRS_RTypeColumnTypes has a ws-after-sep. 
+ * Assert whether a PRS_RTypeColumnTypes has a ws-after-sep.
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if the PRS_RTypeColumnTypes had a ws-after-sep, or ATfalse otherwise
  */
@@ -10391,7 +10391,7 @@ ATbool PRS_hasRTypeColumnTypesWsAfterSep(PRS_RTypeColumnTypes arg) {
 }
 
 /**
- * Assert whether a PRS_RTypeColumnTypes has a tail. 
+ * Assert whether a PRS_RTypeColumnTypes has a tail.
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return ATtrue if the PRS_RTypeColumnTypes had a tail, or ATfalse otherwise
  */
@@ -10403,7 +10403,7 @@ ATbool PRS_hasRTypeColumnTypesTail(PRS_RTypeColumnTypes arg) {
 }
 
 /**
- * Returns a list of all but the first element of a PRS_RTypeColumnTypes. 
+ * Returns a list of all but the first element of a PRS_RTypeColumnTypes.
  * \param[in] arg input PRS_RTypeColumnTypes
  * \return A new PRS_RTypeColumnTypes, without the first element and the separator(s) just after it.)
  */
@@ -10413,7 +10413,7 @@ PRS_RTypeColumnTypes PRS_getRTypeColumnTypesTail(PRS_RTypeColumnTypes arg) {
     return (PRS_RTypeColumnTypes) PRS_makeRTypeColumnTypesEmpty();
   }
   else {
-  
+
     return (PRS_RTypeColumnTypes)ATgetTail((ATermList)arg, 4);
   }
 }
@@ -10427,7 +10427,7 @@ PRS_RType PRS_getRTypeColumnTypesHead(PRS_RTypeColumnTypes arg) {
   if (PRS_isRTypeColumnTypesSingle(arg)) {
     return (PRS_RType)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PRS_RType)ATgetFirst((ATermList)arg);
 }
 
@@ -10437,7 +10437,7 @@ PRS_RType PRS_getRTypeColumnTypesHead(PRS_RTypeColumnTypes arg) {
  * \return the ws-after-head of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeColumnTypesWsAfterHead(PRS_RTypeColumnTypes arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)arg, 1);
 }
 
@@ -10447,7 +10447,7 @@ PRS_OptLayout PRS_getRTypeColumnTypesWsAfterHead(PRS_RTypeColumnTypes arg) {
  * \return the ws-after-sep of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTypeColumnTypesWsAfterSep(PRS_RTypeColumnTypes arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)arg, 3);
 }
 
@@ -10537,7 +10537,7 @@ ATbool PRS_isValidRTupleRtuples(PRS_RTupleRtuples arg) {
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PRS_isRTupleRtuplesEmpty(PRS_RTupleRtuples arg){
+ATbool PRS_isRTupleRtuplesEmpty(PRS_RTupleRtuples arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -10549,7 +10549,7 @@ inline ATbool PRS_isRTupleRtuplesEmpty(PRS_RTupleRtuples arg){
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PRS_isRTupleRtuplesSingle(PRS_RTupleRtuples arg){
+ATbool PRS_isRTupleRtuplesSingle(PRS_RTupleRtuples arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -10565,7 +10565,7 @@ inline ATbool PRS_isRTupleRtuplesSingle(PRS_RTupleRtuples arg){
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PRS_isRTupleRtuplesMany(PRS_RTupleRtuples arg){
+ATbool PRS_isRTupleRtuplesMany(PRS_RTupleRtuples arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -10640,7 +10640,7 @@ inline ATbool PRS_isRTupleRtuplesMany(PRS_RTupleRtuples arg){
 }
 
 /**
- * Assert whether a PRS_RTupleRtuples has a head. 
+ * Assert whether a PRS_RTupleRtuples has a head.
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if the PRS_RTupleRtuples had a head, or ATfalse otherwise
  */
@@ -10655,7 +10655,7 @@ ATbool PRS_hasRTupleRtuplesHead(PRS_RTupleRtuples arg) {
 }
 
 /**
- * Assert whether a PRS_RTupleRtuples has a ws-after-head. 
+ * Assert whether a PRS_RTupleRtuples has a ws-after-head.
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if the PRS_RTupleRtuples had a ws-after-head, or ATfalse otherwise
  */
@@ -10667,7 +10667,7 @@ ATbool PRS_hasRTupleRtuplesWsAfterHead(PRS_RTupleRtuples arg) {
 }
 
 /**
- * Assert whether a PRS_RTupleRtuples has a ws-after-sep. 
+ * Assert whether a PRS_RTupleRtuples has a ws-after-sep.
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if the PRS_RTupleRtuples had a ws-after-sep, or ATfalse otherwise
  */
@@ -10679,7 +10679,7 @@ ATbool PRS_hasRTupleRtuplesWsAfterSep(PRS_RTupleRtuples arg) {
 }
 
 /**
- * Assert whether a PRS_RTupleRtuples has a tail. 
+ * Assert whether a PRS_RTupleRtuples has a tail.
  * \param[in] arg input PRS_RTupleRtuples
  * \return ATtrue if the PRS_RTupleRtuples had a tail, or ATfalse otherwise
  */
@@ -10691,7 +10691,7 @@ ATbool PRS_hasRTupleRtuplesTail(PRS_RTupleRtuples arg) {
 }
 
 /**
- * Returns a list of all but the first element of a PRS_RTupleRtuples. 
+ * Returns a list of all but the first element of a PRS_RTupleRtuples.
  * \param[in] arg input PRS_RTupleRtuples
  * \return A new PRS_RTupleRtuples, without the first element and the separator(s) just after it.)
  */
@@ -10701,7 +10701,7 @@ PRS_RTupleRtuples PRS_getRTupleRtuplesTail(PRS_RTupleRtuples arg) {
     return (PRS_RTupleRtuples) PRS_makeRTupleRtuplesEmpty();
   }
   else {
-  
+
     return (PRS_RTupleRtuples)ATgetTail((ATermList)arg, 4);
   }
 }
@@ -10715,7 +10715,7 @@ PRS_RTuple PRS_getRTupleRtuplesHead(PRS_RTupleRtuples arg) {
   if (PRS_isRTupleRtuplesSingle(arg)) {
     return (PRS_RTuple)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PRS_RTuple)ATgetFirst((ATermList)arg);
 }
 
@@ -10725,7 +10725,7 @@ PRS_RTuple PRS_getRTupleRtuplesHead(PRS_RTupleRtuples arg) {
  * \return the ws-after-head of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleRtuplesWsAfterHead(PRS_RTupleRtuples arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)arg, 1);
 }
 
@@ -10735,7 +10735,7 @@ PRS_OptLayout PRS_getRTupleRtuplesWsAfterHead(PRS_RTupleRtuples arg) {
  * \return the ws-after-sep of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getRTupleRtuplesWsAfterSep(PRS_RTupleRtuples arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)arg, 3);
 }
 
@@ -10834,7 +10834,7 @@ ATbool PRS_isValidLexStrChar(PRS_LexStrChar arg) {
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a newline, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharNewline(PRS_LexStrChar arg){
+ATbool PRS_isLexStrCharNewline(PRS_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -10993,7 +10993,7 @@ inline ATbool PRS_isLexStrCharNewline(PRS_LexStrChar arg){
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a tab, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharTab(PRS_LexStrChar arg){
+ATbool PRS_isLexStrCharTab(PRS_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -11152,7 +11152,7 @@ inline ATbool PRS_isLexStrCharTab(PRS_LexStrChar arg){
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a quote, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharQuote(PRS_LexStrChar arg){
+ATbool PRS_isLexStrCharQuote(PRS_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -11311,7 +11311,7 @@ inline ATbool PRS_isLexStrCharQuote(PRS_LexStrChar arg){
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a backslash, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharBackslash(PRS_LexStrChar arg){
+ATbool PRS_isLexStrCharBackslash(PRS_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -11470,7 +11470,7 @@ inline ATbool PRS_isLexStrCharBackslash(PRS_LexStrChar arg){
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a decimal, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharDecimal(PRS_LexStrChar arg){
+ATbool PRS_isLexStrCharDecimal(PRS_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -11702,7 +11702,7 @@ inline ATbool PRS_isLexStrCharDecimal(PRS_LexStrChar arg){
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a normal, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharNormal(PRS_LexStrChar arg){
+ATbool PRS_isLexStrCharNormal(PRS_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -11824,7 +11824,7 @@ inline ATbool PRS_isLexStrCharNormal(PRS_LexStrChar arg){
 }
 
 /**
- * Assert whether a PRS_LexStrChar has a a. 
+ * Assert whether a PRS_LexStrChar has a a.
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if the PRS_LexStrChar had a a, or ATfalse otherwise
  */
@@ -11836,7 +11836,7 @@ ATbool PRS_hasLexStrCharA(PRS_LexStrChar arg) {
 }
 
 /**
- * Assert whether a PRS_LexStrChar has a b. 
+ * Assert whether a PRS_LexStrChar has a b.
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if the PRS_LexStrChar had a b, or ATfalse otherwise
  */
@@ -11848,7 +11848,7 @@ ATbool PRS_hasLexStrCharB(PRS_LexStrChar arg) {
 }
 
 /**
- * Assert whether a PRS_LexStrChar has a c. 
+ * Assert whether a PRS_LexStrChar has a c.
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if the PRS_LexStrChar had a c, or ATfalse otherwise
  */
@@ -11860,7 +11860,7 @@ ATbool PRS_hasLexStrCharC(PRS_LexStrChar arg) {
 }
 
 /**
- * Assert whether a PRS_LexStrChar has a ch. 
+ * Assert whether a PRS_LexStrChar has a ch.
  * \param[in] arg input PRS_LexStrChar
  * \return ATtrue if the PRS_LexStrChar had a ch, or ATfalse otherwise
  */
@@ -11877,7 +11877,7 @@ ATbool PRS_hasLexStrCharCh(PRS_LexStrChar arg) {
  * \return the a of #arg, if it exist or an undefined value if it does not
  */
 char PRS_getLexStrCharA(PRS_LexStrChar arg) {
-  
+
     return (char)PRS_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1));
 }
 
@@ -11887,7 +11887,7 @@ char PRS_getLexStrCharA(PRS_LexStrChar arg) {
  * \return the b of #arg, if it exist or an undefined value if it does not
  */
 char PRS_getLexStrCharB(PRS_LexStrChar arg) {
-  
+
     return (char)PRS_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2));
 }
 
@@ -11897,7 +11897,7 @@ char PRS_getLexStrCharB(PRS_LexStrChar arg) {
  * \return the c of #arg, if it exist or an undefined value if it does not
  */
 char PRS_getLexStrCharC(PRS_LexStrChar arg) {
-  
+
     return (char)PRS_charToByte((ATerm)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3));
 }
 
@@ -11907,7 +11907,7 @@ char PRS_getLexStrCharC(PRS_LexStrChar arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char PRS_getLexStrCharCh(PRS_LexStrChar arg) {
-  
+
     return (char)PRS_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -11988,7 +11988,7 @@ ATbool PRS_isValidStrChar(PRS_StrChar arg) {
  * \param[in] arg input PRS_StrChar
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PRS_isStrCharLexToCf(PRS_StrChar arg){
+ATbool PRS_isStrCharLexToCf(PRS_StrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -12044,7 +12044,7 @@ inline ATbool PRS_isStrCharLexToCf(PRS_StrChar arg){
 }
 
 /**
- * Assert whether a PRS_StrChar has a StrChar. 
+ * Assert whether a PRS_StrChar has a StrChar.
  * \param[in] arg input PRS_StrChar
  * \return ATtrue if the PRS_StrChar had a StrChar, or ATfalse otherwise
  */
@@ -12061,7 +12061,7 @@ ATbool PRS_hasStrCharStrChar(PRS_StrChar arg) {
  * \return the StrChar of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexStrChar PRS_getStrCharStrChar(PRS_StrChar arg) {
-  
+
     return (PRS_LexStrChar)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -12097,7 +12097,7 @@ ATbool PRS_isValidLexStrCon(PRS_LexStrCon arg) {
  * \param[in] arg input PRS_LexStrCon
  * \return ATtrue if #arg corresponds to the signature of a default, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrConDefault(PRS_LexStrCon arg){
+ATbool PRS_isLexStrConDefault(PRS_LexStrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -12254,7 +12254,7 @@ inline ATbool PRS_isLexStrConDefault(PRS_LexStrCon arg){
 }
 
 /**
- * Assert whether a PRS_LexStrCon has a chars. 
+ * Assert whether a PRS_LexStrCon has a chars.
  * \param[in] arg input PRS_LexStrCon
  * \return ATtrue if the PRS_LexStrCon had a chars, or ATfalse otherwise
  */
@@ -12271,7 +12271,7 @@ ATbool PRS_hasLexStrConChars(PRS_LexStrCon arg) {
  * \return the chars of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexStrCharChars PRS_getLexStrConChars(PRS_LexStrCon arg) {
-  
+
     return (PRS_LexStrCharChars)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1), 1);
 }
 
@@ -12307,7 +12307,7 @@ ATbool PRS_isValidStrCon(PRS_StrCon arg) {
  * \param[in] arg input PRS_StrCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PRS_isStrConLexToCf(PRS_StrCon arg){
+ATbool PRS_isStrConLexToCf(PRS_StrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -12363,7 +12363,7 @@ inline ATbool PRS_isStrConLexToCf(PRS_StrCon arg){
 }
 
 /**
- * Assert whether a PRS_StrCon has a StrCon. 
+ * Assert whether a PRS_StrCon has a StrCon.
  * \param[in] arg input PRS_StrCon
  * \return ATtrue if the PRS_StrCon had a StrCon, or ATfalse otherwise
  */
@@ -12380,7 +12380,7 @@ ATbool PRS_hasStrConStrCon(PRS_StrCon arg) {
  * \return the StrCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexStrCon PRS_getStrConStrCon(PRS_StrCon arg) {
-  
+
     return (PRS_LexStrCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -12422,7 +12422,7 @@ ATbool PRS_isValidLexStrCharChars(PRS_LexStrCharChars arg) {
  * \param[in] arg input PRS_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharCharsEmpty(PRS_LexStrCharChars arg){
+ATbool PRS_isLexStrCharCharsEmpty(PRS_LexStrCharChars arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -12434,7 +12434,7 @@ inline ATbool PRS_isLexStrCharCharsEmpty(PRS_LexStrCharChars arg){
  * \param[in] arg input PRS_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharCharsSingle(PRS_LexStrCharChars arg){
+ATbool PRS_isLexStrCharCharsSingle(PRS_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -12450,7 +12450,7 @@ inline ATbool PRS_isLexStrCharCharsSingle(PRS_LexStrCharChars arg){
  * \param[in] arg input PRS_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PRS_isLexStrCharCharsMany(PRS_LexStrCharChars arg){
+ATbool PRS_isLexStrCharCharsMany(PRS_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -12458,7 +12458,7 @@ inline ATbool PRS_isLexStrCharCharsMany(PRS_LexStrCharChars arg){
 }
 
 /**
- * Assert whether a PRS_LexStrCharChars has a head. 
+ * Assert whether a PRS_LexStrCharChars has a head.
  * \param[in] arg input PRS_LexStrCharChars
  * \return ATtrue if the PRS_LexStrCharChars had a head, or ATfalse otherwise
  */
@@ -12473,7 +12473,7 @@ ATbool PRS_hasLexStrCharCharsHead(PRS_LexStrCharChars arg) {
 }
 
 /**
- * Assert whether a PRS_LexStrCharChars has a tail. 
+ * Assert whether a PRS_LexStrCharChars has a tail.
  * \param[in] arg input PRS_LexStrCharChars
  * \return ATtrue if the PRS_LexStrCharChars had a tail, or ATfalse otherwise
  */
@@ -12493,7 +12493,7 @@ PRS_LexStrChar PRS_getLexStrCharCharsHead(PRS_LexStrCharChars arg) {
   if (PRS_isLexStrCharCharsSingle(arg)) {
     return (PRS_LexStrChar)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (PRS_LexStrChar)ATgetFirst((ATermList)arg);
 }
 
@@ -12503,7 +12503,7 @@ PRS_LexStrChar PRS_getLexStrCharCharsHead(PRS_LexStrCharChars arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexStrCharChars PRS_getLexStrCharCharsTail(PRS_LexStrCharChars arg) {
-  
+
     return (PRS_LexStrCharChars)ATgetNext((ATermList)arg);
 }
 
@@ -12560,7 +12560,7 @@ ATbool PRS_isValidBoolCon(PRS_BoolCon arg) {
  * \param[in] arg input PRS_BoolCon
  * \return ATtrue if #arg corresponds to the signature of a true, or ATfalse otherwise
  */
-inline ATbool PRS_isBoolConTrue(PRS_BoolCon arg){
+ATbool PRS_isBoolConTrue(PRS_BoolCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -12771,7 +12771,7 @@ inline ATbool PRS_isBoolConTrue(PRS_BoolCon arg){
  * \param[in] arg input PRS_BoolCon
  * \return ATtrue if #arg corresponds to the signature of a false, or ATfalse otherwise
  */
-inline ATbool PRS_isBoolConFalse(PRS_BoolCon arg){
+ATbool PRS_isBoolConFalse(PRS_BoolCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13020,7 +13020,7 @@ ATbool PRS_isValidLexNatCon(PRS_LexNatCon arg) {
  * \param[in] arg input PRS_LexNatCon
  * \return ATtrue if #arg corresponds to the signature of a digits, or ATfalse otherwise
  */
-inline ATbool PRS_isLexNatConDigits(PRS_LexNatCon arg){
+ATbool PRS_isLexNatConDigits(PRS_LexNatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13160,7 +13160,7 @@ inline ATbool PRS_isLexNatConDigits(PRS_LexNatCon arg){
 }
 
 /**
- * Assert whether a PRS_LexNatCon has a list. 
+ * Assert whether a PRS_LexNatCon has a list.
  * \param[in] arg input PRS_LexNatCon
  * \return ATtrue if the PRS_LexNatCon had a list, or ATfalse otherwise
  */
@@ -13177,7 +13177,7 @@ ATbool PRS_hasLexNatConList(PRS_LexNatCon arg) {
  * \return the list of #arg, if it exist or an undefined value if it does not
  */
 char* PRS_getLexNatConList(PRS_LexNatCon arg) {
-  
+
     return (char*)PRS_charsToString((ATerm)ATgetArgument((ATermAppl)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)), 1));
 }
 
@@ -13213,7 +13213,7 @@ ATbool PRS_isValidNatCon(PRS_NatCon arg) {
  * \param[in] arg input PRS_NatCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PRS_isNatConLexToCf(PRS_NatCon arg){
+ATbool PRS_isNatConLexToCf(PRS_NatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13269,7 +13269,7 @@ inline ATbool PRS_isNatConLexToCf(PRS_NatCon arg){
 }
 
 /**
- * Assert whether a PRS_NatCon has a NatCon. 
+ * Assert whether a PRS_NatCon has a NatCon.
  * \param[in] arg input PRS_NatCon
  * \return ATtrue if the PRS_NatCon had a NatCon, or ATfalse otherwise
  */
@@ -13286,7 +13286,7 @@ ATbool PRS_hasNatConNatCon(PRS_NatCon arg) {
  * \return the NatCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexNatCon PRS_getNatConNatCon(PRS_NatCon arg) {
-  
+
     return (PRS_LexNatCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -13322,7 +13322,7 @@ ATbool PRS_isValidLexIdCon(PRS_LexIdCon arg) {
  * \param[in] arg input PRS_LexIdCon
  * \return ATtrue if #arg corresponds to the signature of a default, or ATfalse otherwise
  */
-inline ATbool PRS_isLexIdConDefault(PRS_LexIdCon arg){
+ATbool PRS_isLexIdConDefault(PRS_LexIdCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13584,7 +13584,7 @@ inline ATbool PRS_isLexIdConDefault(PRS_LexIdCon arg){
 }
 
 /**
- * Assert whether a PRS_LexIdCon has a head. 
+ * Assert whether a PRS_LexIdCon has a head.
  * \param[in] arg input PRS_LexIdCon
  * \return ATtrue if the PRS_LexIdCon had a head, or ATfalse otherwise
  */
@@ -13596,7 +13596,7 @@ ATbool PRS_hasLexIdConHead(PRS_LexIdCon arg) {
 }
 
 /**
- * Assert whether a PRS_LexIdCon has a tail. 
+ * Assert whether a PRS_LexIdCon has a tail.
  * \param[in] arg input PRS_LexIdCon
  * \return ATtrue if the PRS_LexIdCon had a tail, or ATfalse otherwise
  */
@@ -13613,7 +13613,7 @@ ATbool PRS_hasLexIdConTail(PRS_LexIdCon arg) {
  * \return the head of #arg, if it exist or an undefined value if it does not
  */
 char PRS_getLexIdConHead(PRS_LexIdCon arg) {
-  
+
     return (char)PRS_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -13623,7 +13623,7 @@ char PRS_getLexIdConHead(PRS_LexIdCon arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 char* PRS_getLexIdConTail(PRS_LexIdCon arg) {
-  
+
     return (char*)PRS_charsToString((ATerm)ATgetArgument((ATermAppl)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1), 1));
 }
 
@@ -13674,7 +13674,7 @@ ATbool PRS_isValidIdCon(PRS_IdCon arg) {
  * \param[in] arg input PRS_IdCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PRS_isIdConLexToCf(PRS_IdCon arg){
+ATbool PRS_isIdConLexToCf(PRS_IdCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13730,7 +13730,7 @@ inline ATbool PRS_isIdConLexToCf(PRS_IdCon arg){
 }
 
 /**
- * Assert whether a PRS_IdCon has a IdCon. 
+ * Assert whether a PRS_IdCon has a IdCon.
  * \param[in] arg input PRS_IdCon
  * \return ATtrue if the PRS_IdCon had a IdCon, or ATfalse otherwise
  */
@@ -13747,7 +13747,7 @@ ATbool PRS_hasIdConIdCon(PRS_IdCon arg) {
  * \return the IdCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_LexIdCon PRS_getIdConIdCon(PRS_IdCon arg) {
-  
+
     return (PRS_LexIdCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -13789,7 +13789,7 @@ ATbool PRS_isValidInteger(PRS_Integer arg) {
  * \param[in] arg input PRS_Integer
  * \return ATtrue if #arg corresponds to the signature of a nat-con, or ATfalse otherwise
  */
-inline ATbool PRS_isIntegerNatCon(PRS_Integer arg){
+ATbool PRS_isIntegerNatCon(PRS_Integer arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13869,7 +13869,7 @@ inline ATbool PRS_isIntegerNatCon(PRS_Integer arg){
  * \param[in] arg input PRS_Integer
  * \return ATtrue if #arg corresponds to the signature of a positive, or ATfalse otherwise
  */
-inline ATbool PRS_isIntegerPositive(PRS_Integer arg){
+ATbool PRS_isIntegerPositive(PRS_Integer arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -14049,7 +14049,7 @@ inline ATbool PRS_isIntegerPositive(PRS_Integer arg){
  * \param[in] arg input PRS_Integer
  * \return ATtrue if #arg corresponds to the signature of a negative, or ATfalse otherwise
  */
-inline ATbool PRS_isIntegerNegative(PRS_Integer arg){
+ATbool PRS_isIntegerNegative(PRS_Integer arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -14225,7 +14225,7 @@ inline ATbool PRS_isIntegerNegative(PRS_Integer arg){
 }
 
 /**
- * Assert whether a PRS_Integer has a NatCon. 
+ * Assert whether a PRS_Integer has a NatCon.
  * \param[in] arg input PRS_Integer
  * \return ATtrue if the PRS_Integer had a NatCon, or ATfalse otherwise
  */
@@ -14237,7 +14237,7 @@ ATbool PRS_hasIntegerNatCon(PRS_Integer arg) {
 }
 
 /**
- * Assert whether a PRS_Integer has a ws-after-+. 
+ * Assert whether a PRS_Integer has a ws-after-+.
  * \param[in] arg input PRS_Integer
  * \return ATtrue if the PRS_Integer had a ws-after-+, or ATfalse otherwise
  */
@@ -14249,7 +14249,7 @@ ATbool PRS_hasIntegerWsAfterPlus(PRS_Integer arg) {
 }
 
 /**
- * Assert whether a PRS_Integer has a integer. 
+ * Assert whether a PRS_Integer has a integer.
  * \param[in] arg input PRS_Integer
  * \return ATtrue if the PRS_Integer had a integer, or ATfalse otherwise
  */
@@ -14264,7 +14264,7 @@ ATbool PRS_hasIntegerInteger(PRS_Integer arg) {
 }
 
 /**
- * Assert whether a PRS_Integer has a ws-after--. 
+ * Assert whether a PRS_Integer has a ws-after--.
  * \param[in] arg input PRS_Integer
  * \return ATtrue if the PRS_Integer had a ws-after--, or ATfalse otherwise
  */
@@ -14281,7 +14281,7 @@ ATbool PRS_hasIntegerWsAfter(PRS_Integer arg) {
  * \return the NatCon of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getIntegerNatCon(PRS_Integer arg) {
-  
+
     return (PRS_NatCon)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -14291,7 +14291,7 @@ PRS_NatCon PRS_getIntegerNatCon(PRS_Integer arg) {
  * \return the ws-after-+ of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getIntegerWsAfterPlus(PRS_Integer arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -14304,7 +14304,7 @@ PRS_Integer PRS_getIntegerInteger(PRS_Integer arg) {
   if (PRS_isIntegerPositive(arg)) {
     return (PRS_Integer)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2);
   }
-  else 
+  else
     return (PRS_Integer)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 2);
 }
 
@@ -14314,7 +14314,7 @@ PRS_Integer PRS_getIntegerInteger(PRS_Integer arg) {
  * \return the ws-after-- of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getIntegerWsAfter(PRS_Integer arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -14398,7 +14398,7 @@ ATbool PRS_isValidLexLayout(PRS_LexLayout arg) {
  * \param[in] arg input PRS_LexLayout
  * \return ATtrue if #arg corresponds to the signature of a whitespace, or ATfalse otherwise
  */
-inline ATbool PRS_isLexLayoutWhitespace(PRS_LexLayout arg){
+ATbool PRS_isLexLayoutWhitespace(PRS_LexLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -14500,7 +14500,7 @@ inline ATbool PRS_isLexLayoutWhitespace(PRS_LexLayout arg){
 }
 
 /**
- * Assert whether a PRS_LexLayout has a ch. 
+ * Assert whether a PRS_LexLayout has a ch.
  * \param[in] arg input PRS_LexLayout
  * \return ATtrue if the PRS_LexLayout had a ch, or ATfalse otherwise
  */
@@ -14517,7 +14517,7 @@ ATbool PRS_hasLexLayoutCh(PRS_LexLayout arg) {
  * \return the ch of #arg, if it exist or an undefined value if it does not
  */
 char PRS_getLexLayoutCh(PRS_LexLayout arg) {
-  
+
     return (char)PRS_charToByte((ATerm)ATgetFirst((ATermList)ATgetArgument((ATermAppl)arg, 1)));
 }
 
@@ -14559,7 +14559,7 @@ ATbool PRS_isValidLocation(PRS_Location arg) {
  * \param[in] arg input PRS_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool PRS_isLocationFile(PRS_Location arg){
+ATbool PRS_isLocationFile(PRS_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -14982,7 +14982,7 @@ inline ATbool PRS_isLocationFile(PRS_Location arg){
  * \param[in] arg input PRS_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool PRS_isLocationArea(PRS_Location arg){
+ATbool PRS_isLocationArea(PRS_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -15405,7 +15405,7 @@ inline ATbool PRS_isLocationArea(PRS_Location arg){
  * \param[in] arg input PRS_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool PRS_isLocationAreaInFile(PRS_Location arg){
+ATbool PRS_isLocationAreaInFile(PRS_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -16156,7 +16156,7 @@ inline ATbool PRS_isLocationAreaInFile(PRS_Location arg){
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-file. 
+ * Assert whether a PRS_Location has a ws-after-file.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-file, or ATfalse otherwise
  */
@@ -16168,7 +16168,7 @@ ATbool PRS_hasLocationWsAfterFile(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-(. 
+ * Assert whether a PRS_Location has a ws-after-(.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-(, or ATfalse otherwise
  */
@@ -16186,7 +16186,7 @@ ATbool PRS_hasLocationWsAfterParenOpen(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a filename. 
+ * Assert whether a PRS_Location has a filename.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a filename, or ATfalse otherwise
  */
@@ -16201,7 +16201,7 @@ ATbool PRS_hasLocationFilename(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-filename. 
+ * Assert whether a PRS_Location has a ws-after-filename.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-filename, or ATfalse otherwise
  */
@@ -16216,7 +16216,7 @@ ATbool PRS_hasLocationWsAfterFilename(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-a. 
+ * Assert whether a PRS_Location has a ws-after-a.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-a, or ATfalse otherwise
  */
@@ -16228,7 +16228,7 @@ ATbool PRS_hasLocationWsAfterA(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a Area. 
+ * Assert whether a PRS_Location has a Area.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a Area, or ATfalse otherwise
  */
@@ -16243,7 +16243,7 @@ ATbool PRS_hasLocationArea(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-Area. 
+ * Assert whether a PRS_Location has a ws-after-Area.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-Area, or ATfalse otherwise
  */
@@ -16258,7 +16258,7 @@ ATbool PRS_hasLocationWsAfterArea(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-area-in-file. 
+ * Assert whether a PRS_Location has a ws-after-area-in-file.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-area-in-file, or ATfalse otherwise
  */
@@ -16270,7 +16270,7 @@ ATbool PRS_hasLocationWsAfterAreaInFile(PRS_Location arg) {
 }
 
 /**
- * Assert whether a PRS_Location has a ws-after-,. 
+ * Assert whether a PRS_Location has a ws-after-,.
  * \param[in] arg input PRS_Location
  * \return ATtrue if the PRS_Location had a ws-after-,, or ATfalse otherwise
  */
@@ -16287,7 +16287,7 @@ ATbool PRS_hasLocationWsAfterComma(PRS_Location arg) {
  * \return the ws-after-file of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getLocationWsAfterFile(PRS_Location arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -16303,7 +16303,7 @@ PRS_OptLayout PRS_getLocationWsAfterParenOpen(PRS_Location arg) {
   else if (PRS_isLocationArea(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -16316,7 +16316,7 @@ PRS_StrCon PRS_getLocationFilename(PRS_Location arg) {
   if (PRS_isLocationFile(arg)) {
     return (PRS_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (PRS_StrCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -16329,7 +16329,7 @@ PRS_OptLayout PRS_getLocationWsAfterFilename(PRS_Location arg) {
   if (PRS_isLocationFile(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -16339,7 +16339,7 @@ PRS_OptLayout PRS_getLocationWsAfterFilename(PRS_Location arg) {
  * \return the ws-after-a of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getLocationWsAfterA(PRS_Location arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -16352,7 +16352,7 @@ PRS_Area PRS_getLocationArea(PRS_Location arg) {
   if (PRS_isLocationArea(arg)) {
     return (PRS_Area)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
   }
-  else 
+  else
     return (PRS_Area)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -16365,7 +16365,7 @@ PRS_OptLayout PRS_getLocationWsAfterArea(PRS_Location arg) {
   if (PRS_isLocationArea(arg)) {
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
   }
-  else 
+  else
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -16375,7 +16375,7 @@ PRS_OptLayout PRS_getLocationWsAfterArea(PRS_Location arg) {
  * \return the ws-after-area-in-file of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getLocationWsAfterAreaInFile(PRS_Location arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -16385,7 +16385,7 @@ PRS_OptLayout PRS_getLocationWsAfterAreaInFile(PRS_Location arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getLocationWsAfterComma(PRS_Location arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -16559,7 +16559,7 @@ ATbool PRS_isValidArea(PRS_Area arg) {
  * \param[in] arg input PRS_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool PRS_isAreaArea(PRS_Area arg){
+ATbool PRS_isAreaArea(PRS_Area arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PRS_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -17598,7 +17598,7 @@ inline ATbool PRS_isAreaArea(PRS_Area arg){
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-area. 
+ * Assert whether a PRS_Area has a ws-after-area.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-area, or ATfalse otherwise
  */
@@ -17610,7 +17610,7 @@ ATbool PRS_hasAreaWsAfterArea(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-(. 
+ * Assert whether a PRS_Area has a ws-after-(.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-(, or ATfalse otherwise
  */
@@ -17622,7 +17622,7 @@ ATbool PRS_hasAreaWsAfterParenOpen(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a begin-line. 
+ * Assert whether a PRS_Area has a begin-line.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a begin-line, or ATfalse otherwise
  */
@@ -17634,7 +17634,7 @@ ATbool PRS_hasAreaBeginLine(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-begin-line. 
+ * Assert whether a PRS_Area has a ws-after-begin-line.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-begin-line, or ATfalse otherwise
  */
@@ -17646,7 +17646,7 @@ ATbool PRS_hasAreaWsAfterBeginLine(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-,. 
+ * Assert whether a PRS_Area has a ws-after-,.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-,, or ATfalse otherwise
  */
@@ -17658,7 +17658,7 @@ ATbool PRS_hasAreaWsAfterComma(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a begin-column. 
+ * Assert whether a PRS_Area has a begin-column.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a begin-column, or ATfalse otherwise
  */
@@ -17670,7 +17670,7 @@ ATbool PRS_hasAreaBeginColumn(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-begin-column. 
+ * Assert whether a PRS_Area has a ws-after-begin-column.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-begin-column, or ATfalse otherwise
  */
@@ -17682,7 +17682,7 @@ ATbool PRS_hasAreaWsAfterBeginColumn(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-,-1. 
+ * Assert whether a PRS_Area has a ws-after-,-1.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-,-1, or ATfalse otherwise
  */
@@ -17694,7 +17694,7 @@ ATbool PRS_hasAreaWsAfterComma1(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a end-line. 
+ * Assert whether a PRS_Area has a end-line.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a end-line, or ATfalse otherwise
  */
@@ -17706,7 +17706,7 @@ ATbool PRS_hasAreaEndLine(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-end-line. 
+ * Assert whether a PRS_Area has a ws-after-end-line.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-end-line, or ATfalse otherwise
  */
@@ -17718,7 +17718,7 @@ ATbool PRS_hasAreaWsAfterEndLine(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-,-2. 
+ * Assert whether a PRS_Area has a ws-after-,-2.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-,-2, or ATfalse otherwise
  */
@@ -17730,7 +17730,7 @@ ATbool PRS_hasAreaWsAfterComma2(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a end-column. 
+ * Assert whether a PRS_Area has a end-column.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a end-column, or ATfalse otherwise
  */
@@ -17742,7 +17742,7 @@ ATbool PRS_hasAreaEndColumn(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-end-column. 
+ * Assert whether a PRS_Area has a ws-after-end-column.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-end-column, or ATfalse otherwise
  */
@@ -17754,7 +17754,7 @@ ATbool PRS_hasAreaWsAfterEndColumn(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-,-3. 
+ * Assert whether a PRS_Area has a ws-after-,-3.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-,-3, or ATfalse otherwise
  */
@@ -17766,7 +17766,7 @@ ATbool PRS_hasAreaWsAfterComma3(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a offset. 
+ * Assert whether a PRS_Area has a offset.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a offset, or ATfalse otherwise
  */
@@ -17778,7 +17778,7 @@ ATbool PRS_hasAreaOffset(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-offset. 
+ * Assert whether a PRS_Area has a ws-after-offset.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-offset, or ATfalse otherwise
  */
@@ -17790,7 +17790,7 @@ ATbool PRS_hasAreaWsAfterOffset(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-,-4. 
+ * Assert whether a PRS_Area has a ws-after-,-4.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-,-4, or ATfalse otherwise
  */
@@ -17802,7 +17802,7 @@ ATbool PRS_hasAreaWsAfterComma4(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a length. 
+ * Assert whether a PRS_Area has a length.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a length, or ATfalse otherwise
  */
@@ -17814,7 +17814,7 @@ ATbool PRS_hasAreaLength(PRS_Area arg) {
 }
 
 /**
- * Assert whether a PRS_Area has a ws-after-length. 
+ * Assert whether a PRS_Area has a ws-after-length.
  * \param[in] arg input PRS_Area
  * \return ATtrue if the PRS_Area had a ws-after-length, or ATfalse otherwise
  */
@@ -17831,7 +17831,7 @@ ATbool PRS_hasAreaWsAfterLength(PRS_Area arg) {
  * \return the ws-after-area of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterArea(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 1);
 }
 
@@ -17841,7 +17841,7 @@ PRS_OptLayout PRS_getAreaWsAfterArea(PRS_Area arg) {
  * \return the ws-after-( of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterParenOpen(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 3);
 }
 
@@ -17851,7 +17851,7 @@ PRS_OptLayout PRS_getAreaWsAfterParenOpen(PRS_Area arg) {
  * \return the begin-line of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getAreaBeginLine(PRS_Area arg) {
-  
+
     return (PRS_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 4);
 }
 
@@ -17861,7 +17861,7 @@ PRS_NatCon PRS_getAreaBeginLine(PRS_Area arg) {
  * \return the ws-after-begin-line of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterBeginLine(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 5);
 }
 
@@ -17871,7 +17871,7 @@ PRS_OptLayout PRS_getAreaWsAfterBeginLine(PRS_Area arg) {
  * \return the ws-after-, of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterComma(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 7);
 }
 
@@ -17881,7 +17881,7 @@ PRS_OptLayout PRS_getAreaWsAfterComma(PRS_Area arg) {
  * \return the begin-column of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getAreaBeginColumn(PRS_Area arg) {
-  
+
     return (PRS_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 8);
 }
 
@@ -17891,7 +17891,7 @@ PRS_NatCon PRS_getAreaBeginColumn(PRS_Area arg) {
  * \return the ws-after-begin-column of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterBeginColumn(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 9);
 }
 
@@ -17901,7 +17901,7 @@ PRS_OptLayout PRS_getAreaWsAfterBeginColumn(PRS_Area arg) {
  * \return the ws-after-,-1 of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterComma1(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 11);
 }
 
@@ -17911,7 +17911,7 @@ PRS_OptLayout PRS_getAreaWsAfterComma1(PRS_Area arg) {
  * \return the end-line of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getAreaEndLine(PRS_Area arg) {
-  
+
     return (PRS_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 12);
 }
 
@@ -17921,7 +17921,7 @@ PRS_NatCon PRS_getAreaEndLine(PRS_Area arg) {
  * \return the ws-after-end-line of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterEndLine(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 13);
 }
 
@@ -17931,7 +17931,7 @@ PRS_OptLayout PRS_getAreaWsAfterEndLine(PRS_Area arg) {
  * \return the ws-after-,-2 of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterComma2(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 15);
 }
 
@@ -17941,7 +17941,7 @@ PRS_OptLayout PRS_getAreaWsAfterComma2(PRS_Area arg) {
  * \return the end-column of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getAreaEndColumn(PRS_Area arg) {
-  
+
     return (PRS_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 16);
 }
 
@@ -17951,7 +17951,7 @@ PRS_NatCon PRS_getAreaEndColumn(PRS_Area arg) {
  * \return the ws-after-end-column of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterEndColumn(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 17);
 }
 
@@ -17961,7 +17961,7 @@ PRS_OptLayout PRS_getAreaWsAfterEndColumn(PRS_Area arg) {
  * \return the ws-after-,-3 of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterComma3(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 19);
 }
 
@@ -17971,7 +17971,7 @@ PRS_OptLayout PRS_getAreaWsAfterComma3(PRS_Area arg) {
  * \return the offset of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getAreaOffset(PRS_Area arg) {
-  
+
     return (PRS_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 20);
 }
 
@@ -17981,7 +17981,7 @@ PRS_NatCon PRS_getAreaOffset(PRS_Area arg) {
  * \return the ws-after-offset of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterOffset(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 21);
 }
 
@@ -17991,7 +17991,7 @@ PRS_OptLayout PRS_getAreaWsAfterOffset(PRS_Area arg) {
  * \return the ws-after-,-4 of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterComma4(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 23);
 }
 
@@ -18001,7 +18001,7 @@ PRS_OptLayout PRS_getAreaWsAfterComma4(PRS_Area arg) {
  * \return the length of #arg, if it exist or an undefined value if it does not
  */
 PRS_NatCon PRS_getAreaLength(PRS_Area arg) {
-  
+
     return (PRS_NatCon)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 24);
 }
 
@@ -18011,7 +18011,7 @@ PRS_NatCon PRS_getAreaLength(PRS_Area arg) {
  * \return the ws-after-length of #arg, if it exist or an undefined value if it does not
  */
 PRS_OptLayout PRS_getAreaWsAfterLength(PRS_Area arg) {
-  
+
     return (PRS_OptLayout)ATelementAt((ATermList)ATgetArgument((ATermAppl)arg, 1), 25);
 }
 
@@ -18301,7 +18301,7 @@ PRS_Area PRS_setAreaWsAfterLength(PRS_Area arg, PRS_OptLayout wsAfterLength) {
 }
 
 /**
- * Apply functions to the children of a PRS_OptLayout. 
+ * Apply functions to the children of a PRS_OptLayout.
  * \return A new PRS_OptLayout with new children where the argument functions might have applied
  */
 PRS_OptLayout PRS_visitOptLayout(PRS_OptLayout arg, PRS_Layout (*acceptLayout)(PRS_Layout)) {
@@ -18316,7 +18316,7 @@ PRS_OptLayout PRS_visitOptLayout(PRS_OptLayout arg, PRS_Layout (*acceptLayout)(P
   return (PRS_OptLayout)NULL;
 }
 /**
- * Apply functions to the children of a PRS_Layout. 
+ * Apply functions to the children of a PRS_Layout.
  * \return A new PRS_Layout with new children where the argument functions might have applied
  */
 PRS_Layout PRS_visitLayout(PRS_Layout arg, PRS_LexLayoutList (*acceptList)(PRS_LexLayoutList)) {
@@ -18328,7 +18328,7 @@ PRS_Layout PRS_visitLayout(PRS_Layout arg, PRS_LexLayoutList (*acceptList)(PRS_L
   return (PRS_Layout)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexLayoutList. 
+ * Apply functions to the children of a PRS_LexLayoutList.
  * \return A new PRS_LexLayoutList with new children where the argument functions might have applied
  */
 PRS_LexLayoutList PRS_visitLexLayoutList(PRS_LexLayoutList arg, PRS_LexLayout (*acceptHead)(PRS_LexLayout)) {
@@ -18348,7 +18348,7 @@ PRS_LexLayoutList PRS_visitLexLayoutList(PRS_LexLayoutList arg, PRS_LexLayout (*
   return (PRS_LexLayoutList)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RElem. 
+ * Apply functions to the children of a PRS_RElem.
  * \return A new PRS_RElem with new children where the argument functions might have applied
  */
 PRS_RElem PRS_visitRElem(PRS_RElem arg, PRS_Integer (*acceptInteger)(PRS_Integer), PRS_StrCon (*acceptStrCon)(PRS_StrCon), PRS_BoolCon (*acceptBoolCon)(PRS_BoolCon), PRS_Location (*acceptLocation)(PRS_Location), PRS_OptLayout (*acceptWsAfterBraceOpen)(PRS_OptLayout), PRS_RElemElements (*acceptElements)(PRS_RElemElements), PRS_OptLayout (*acceptWsAfterElements)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterBraceOpenBar)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterLessThan)(PRS_OptLayout)) {
@@ -18390,7 +18390,7 @@ PRS_RElem PRS_visitRElem(PRS_RElem arg, PRS_Integer (*acceptInteger)(PRS_Integer
   return (PRS_RElem)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RType. 
+ * Apply functions to the children of a PRS_RType.
  * \return A new PRS_RType with new children where the argument functions might have applied
  */
 PRS_RType PRS_visitRType(PRS_RType arg, PRS_OptLayout (*acceptWsAfterLessThan)(PRS_OptLayout), PRS_RTypeColumnTypes (*acceptColumnTypes)(PRS_RTypeColumnTypes), PRS_OptLayout (*acceptWsAfterColumnTypes)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterSet)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterBracketOpen)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterElementType)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterBag)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterRel)(PRS_OptLayout), PRS_IdCon (*acceptTypeName)(PRS_IdCon), PRS_OptLayout (*acceptWsAfterAmp)(PRS_OptLayout), PRS_IdCon (*acceptParameterName)(PRS_IdCon)) {
@@ -18446,7 +18446,7 @@ PRS_RType PRS_visitRType(PRS_RType arg, PRS_OptLayout (*acceptWsAfterLessThan)(P
   return (PRS_RType)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RTuple. 
+ * Apply functions to the children of a PRS_RTuple.
  * \return A new PRS_RTuple with new children where the argument functions might have applied
  */
 PRS_RTuple PRS_visitRTuple(PRS_RTuple arg, PRS_OptLayout (*acceptWsAfterLessThan)(PRS_OptLayout), PRS_IdCon (*acceptVariable)(PRS_IdCon), PRS_OptLayout (*acceptWsAfterVariable)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma)(PRS_OptLayout), PRS_RType (*acceptRtype)(PRS_RType), PRS_OptLayout (*acceptWsAfterRtype)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma1)(PRS_OptLayout), PRS_RElem (*acceptValue)(PRS_RElem), PRS_OptLayout (*acceptWsAfterValue)(PRS_OptLayout)) {
@@ -18466,7 +18466,7 @@ PRS_RTuple PRS_visitRTuple(PRS_RTuple arg, PRS_OptLayout (*acceptWsAfterLessThan
   return (PRS_RTuple)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RStore. 
+ * Apply functions to the children of a PRS_RStore.
  * \return A new PRS_RStore with new children where the argument functions might have applied
  */
 PRS_RStore PRS_visitRStore(PRS_RStore arg, PRS_OptLayout (*acceptWsAfterRstore)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterParenOpen)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterBracketOpen)(PRS_OptLayout), PRS_RTupleRtuples (*acceptRtuples)(PRS_RTupleRtuples), PRS_OptLayout (*acceptWsAfterRtuples)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterBracketClose)(PRS_OptLayout)) {
@@ -18483,7 +18483,7 @@ PRS_RStore PRS_visitRStore(PRS_RStore arg, PRS_OptLayout (*acceptWsAfterRstore)(
   return (PRS_RStore)NULL;
 }
 /**
- * Apply functions to the children of a PRS_Start. 
+ * Apply functions to the children of a PRS_Start.
  * \return A new PRS_Start with new children where the argument functions might have applied
  */
 PRS_Start PRS_visitStart(PRS_Start arg, PRS_OptLayout (*acceptWsBefore)(PRS_OptLayout), PRS_RStore (*acceptTopRStore)(PRS_RStore), PRS_OptLayout (*acceptWsAfter)(PRS_OptLayout), int (*acceptAmbCnt)(int), PRS_BoolCon (*acceptTopBoolCon)(PRS_BoolCon)) {
@@ -18505,7 +18505,7 @@ PRS_Start PRS_visitStart(PRS_Start arg, PRS_OptLayout (*acceptWsBefore)(PRS_OptL
   return (PRS_Start)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RElemElements. 
+ * Apply functions to the children of a PRS_RElemElements.
  * \return A new PRS_RElemElements with new children where the argument functions might have applied
  */
 PRS_RElemElements PRS_visitRElemElements(PRS_RElemElements arg, PRS_RElem (*acceptHead)(PRS_RElem), PRS_OptLayout (*acceptWsAfterHead)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterSep)(PRS_OptLayout)) {
@@ -18527,7 +18527,7 @@ PRS_RElemElements PRS_visitRElemElements(PRS_RElemElements arg, PRS_RElem (*acce
   return (PRS_RElemElements)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RTypeColumnTypes. 
+ * Apply functions to the children of a PRS_RTypeColumnTypes.
  * \return A new PRS_RTypeColumnTypes with new children where the argument functions might have applied
  */
 PRS_RTypeColumnTypes PRS_visitRTypeColumnTypes(PRS_RTypeColumnTypes arg, PRS_RType (*acceptHead)(PRS_RType), PRS_OptLayout (*acceptWsAfterHead)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterSep)(PRS_OptLayout)) {
@@ -18549,7 +18549,7 @@ PRS_RTypeColumnTypes PRS_visitRTypeColumnTypes(PRS_RTypeColumnTypes arg, PRS_RTy
   return (PRS_RTypeColumnTypes)NULL;
 }
 /**
- * Apply functions to the children of a PRS_RTupleRtuples. 
+ * Apply functions to the children of a PRS_RTupleRtuples.
  * \return A new PRS_RTupleRtuples with new children where the argument functions might have applied
  */
 PRS_RTupleRtuples PRS_visitRTupleRtuples(PRS_RTupleRtuples arg, PRS_RTuple (*acceptHead)(PRS_RTuple), PRS_OptLayout (*acceptWsAfterHead)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterSep)(PRS_OptLayout)) {
@@ -18571,7 +18571,7 @@ PRS_RTupleRtuples PRS_visitRTupleRtuples(PRS_RTupleRtuples arg, PRS_RTuple (*acc
   return (PRS_RTupleRtuples)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexStrChar. 
+ * Apply functions to the children of a PRS_LexStrChar.
  * \return A new PRS_LexStrChar with new children where the argument functions might have applied
  */
 PRS_LexStrChar PRS_visitLexStrChar(PRS_LexStrChar arg, char (*acceptA)(char), char (*acceptB)(char), char (*acceptC)(char), char (*acceptCh)(char)) {
@@ -18601,7 +18601,7 @@ PRS_LexStrChar PRS_visitLexStrChar(PRS_LexStrChar arg, char (*acceptA)(char), ch
   return (PRS_LexStrChar)NULL;
 }
 /**
- * Apply functions to the children of a PRS_StrChar. 
+ * Apply functions to the children of a PRS_StrChar.
  * \return A new PRS_StrChar with new children where the argument functions might have applied
  */
 PRS_StrChar PRS_visitStrChar(PRS_StrChar arg, PRS_LexStrChar (*acceptStrChar)(PRS_LexStrChar)) {
@@ -18613,7 +18613,7 @@ PRS_StrChar PRS_visitStrChar(PRS_StrChar arg, PRS_LexStrChar (*acceptStrChar)(PR
   return (PRS_StrChar)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexStrCon. 
+ * Apply functions to the children of a PRS_LexStrCon.
  * \return A new PRS_LexStrCon with new children where the argument functions might have applied
  */
 PRS_LexStrCon PRS_visitLexStrCon(PRS_LexStrCon arg, PRS_LexStrCharChars (*acceptChars)(PRS_LexStrCharChars)) {
@@ -18625,7 +18625,7 @@ PRS_LexStrCon PRS_visitLexStrCon(PRS_LexStrCon arg, PRS_LexStrCharChars (*accept
   return (PRS_LexStrCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_StrCon. 
+ * Apply functions to the children of a PRS_StrCon.
  * \return A new PRS_StrCon with new children where the argument functions might have applied
  */
 PRS_StrCon PRS_visitStrCon(PRS_StrCon arg, PRS_LexStrCon (*acceptStrCon)(PRS_LexStrCon)) {
@@ -18637,7 +18637,7 @@ PRS_StrCon PRS_visitStrCon(PRS_StrCon arg, PRS_LexStrCon (*acceptStrCon)(PRS_Lex
   return (PRS_StrCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexStrCharChars. 
+ * Apply functions to the children of a PRS_LexStrCharChars.
  * \return A new PRS_LexStrCharChars with new children where the argument functions might have applied
  */
 PRS_LexStrCharChars PRS_visitLexStrCharChars(PRS_LexStrCharChars arg, PRS_LexStrChar (*acceptHead)(PRS_LexStrChar)) {
@@ -18657,7 +18657,7 @@ PRS_LexStrCharChars PRS_visitLexStrCharChars(PRS_LexStrCharChars arg, PRS_LexStr
   return (PRS_LexStrCharChars)NULL;
 }
 /**
- * Apply functions to the children of a PRS_BoolCon. 
+ * Apply functions to the children of a PRS_BoolCon.
  * \return A new PRS_BoolCon with new children where the argument functions might have applied
  */
 PRS_BoolCon PRS_visitBoolCon(PRS_BoolCon arg) {
@@ -18671,7 +18671,7 @@ PRS_BoolCon PRS_visitBoolCon(PRS_BoolCon arg) {
   return (PRS_BoolCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexNatCon. 
+ * Apply functions to the children of a PRS_LexNatCon.
  * \return A new PRS_LexNatCon with new children where the argument functions might have applied
  */
 PRS_LexNatCon PRS_visitLexNatCon(PRS_LexNatCon arg, char* (*acceptList)(char*)) {
@@ -18683,7 +18683,7 @@ PRS_LexNatCon PRS_visitLexNatCon(PRS_LexNatCon arg, char* (*acceptList)(char*)) 
   return (PRS_LexNatCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_NatCon. 
+ * Apply functions to the children of a PRS_NatCon.
  * \return A new PRS_NatCon with new children where the argument functions might have applied
  */
 PRS_NatCon PRS_visitNatCon(PRS_NatCon arg, PRS_LexNatCon (*acceptNatCon)(PRS_LexNatCon)) {
@@ -18695,7 +18695,7 @@ PRS_NatCon PRS_visitNatCon(PRS_NatCon arg, PRS_LexNatCon (*acceptNatCon)(PRS_Lex
   return (PRS_NatCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexIdCon. 
+ * Apply functions to the children of a PRS_LexIdCon.
  * \return A new PRS_LexIdCon with new children where the argument functions might have applied
  */
 PRS_LexIdCon PRS_visitLexIdCon(PRS_LexIdCon arg, char (*acceptHead)(char), char* (*acceptTail)(char*)) {
@@ -18708,7 +18708,7 @@ PRS_LexIdCon PRS_visitLexIdCon(PRS_LexIdCon arg, char (*acceptHead)(char), char*
   return (PRS_LexIdCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_IdCon. 
+ * Apply functions to the children of a PRS_IdCon.
  * \return A new PRS_IdCon with new children where the argument functions might have applied
  */
 PRS_IdCon PRS_visitIdCon(PRS_IdCon arg, PRS_LexIdCon (*acceptIdCon)(PRS_LexIdCon)) {
@@ -18720,7 +18720,7 @@ PRS_IdCon PRS_visitIdCon(PRS_IdCon arg, PRS_LexIdCon (*acceptIdCon)(PRS_LexIdCon
   return (PRS_IdCon)NULL;
 }
 /**
- * Apply functions to the children of a PRS_Integer. 
+ * Apply functions to the children of a PRS_Integer.
  * \return A new PRS_Integer with new children where the argument functions might have applied
  */
 PRS_Integer PRS_visitInteger(PRS_Integer arg, PRS_NatCon (*acceptNatCon)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterPlus)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfter)(PRS_OptLayout)) {
@@ -18742,7 +18742,7 @@ PRS_Integer PRS_visitInteger(PRS_Integer arg, PRS_NatCon (*acceptNatCon)(PRS_Nat
   return (PRS_Integer)NULL;
 }
 /**
- * Apply functions to the children of a PRS_LexLayout. 
+ * Apply functions to the children of a PRS_LexLayout.
  * \return A new PRS_LexLayout with new children where the argument functions might have applied
  */
 PRS_LexLayout PRS_visitLexLayout(PRS_LexLayout arg, char (*acceptCh)(char)) {
@@ -18754,7 +18754,7 @@ PRS_LexLayout PRS_visitLexLayout(PRS_LexLayout arg, char (*acceptCh)(char)) {
   return (PRS_LexLayout)NULL;
 }
 /**
- * Apply functions to the children of a PRS_Location. 
+ * Apply functions to the children of a PRS_Location.
  * \return A new PRS_Location with new children where the argument functions might have applied
  */
 PRS_Location PRS_visitLocation(PRS_Location arg, PRS_OptLayout (*acceptWsAfterFile)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterParenOpen)(PRS_OptLayout), PRS_StrCon (*acceptFilename)(PRS_StrCon), PRS_OptLayout (*acceptWsAfterFilename)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterA)(PRS_OptLayout), PRS_Area (*acceptArea)(PRS_Area), PRS_OptLayout (*acceptWsAfterArea)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterAreaInFile)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma)(PRS_OptLayout)) {
@@ -18786,7 +18786,7 @@ PRS_Location PRS_visitLocation(PRS_Location arg, PRS_OptLayout (*acceptWsAfterFi
   return (PRS_Location)NULL;
 }
 /**
- * Apply functions to the children of a PRS_Area. 
+ * Apply functions to the children of a PRS_Area.
  * \return A new PRS_Area with new children where the argument functions might have applied
  */
 PRS_Area PRS_visitArea(PRS_Area arg, PRS_OptLayout (*acceptWsAfterArea)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterParenOpen)(PRS_OptLayout), PRS_NatCon (*acceptBeginLine)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterBeginLine)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma)(PRS_OptLayout), PRS_NatCon (*acceptBeginColumn)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterBeginColumn)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma1)(PRS_OptLayout), PRS_NatCon (*acceptEndLine)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterEndLine)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma2)(PRS_OptLayout), PRS_NatCon (*acceptEndColumn)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterEndColumn)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma3)(PRS_OptLayout), PRS_NatCon (*acceptOffset)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterOffset)(PRS_OptLayout), PRS_OptLayout (*acceptWsAfterComma4)(PRS_OptLayout), PRS_NatCon (*acceptLength)(PRS_NatCon), PRS_OptLayout (*acceptWsAfterLength)(PRS_OptLayout)) {

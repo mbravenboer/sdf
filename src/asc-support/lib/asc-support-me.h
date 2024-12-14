@@ -1,12 +1,12 @@
 #ifndef ASC_SUPPORT_H
 #define ASC_SUPPORT_H
 
-#include <aterm2.h> 
+#include <aterm2.h>
 #include <atb-tool.h>
 #include <sglrInterface.h>
 #include <MEPT-utils.h>
-#include <asc-muasf2pt.h>
 
+#include "asc-muasf2pt.h"
 #include "asc-builtins.h"
 
 #define INITIAL_TABLE_SIZE 8191
@@ -60,7 +60,7 @@ extern AFun record_sym;
 #define CONS_ENTRY(sym,appl)
 #define CONS_EXIT(rhs) return rhs
 #define CONS_EXIT_CONST(constant,rhs) return ( constant ? constant : ( constant = rhs)) ;
-#define FUNC_ENTRY(sym,appl) 
+#define FUNC_ENTRY(sym,appl)
 #define FUNC_EXIT(rhs) return rhs;
 #define FUNC_EXIT_CONST(constant,rhs) return ( constant ? constant : ( constant = rhs)) ;
 
@@ -332,15 +332,15 @@ extern ATerm get_sort(ATerm tree);
 extern ATerm unquote(ATerm t);
 extern ATerm call_using_list(funcptr func, ATermList args);
 extern ATerm call_kids_trafo(funcptr trav, ATerm arg, ATermList extra_args);
-extern ATerm call_kids_accu(funcptr trav, ATerm arg, ATerm accu, 
+extern ATerm call_kids_accu(funcptr trav, ATerm arg, ATerm accu,
 			    ATermList extra_args);
-extern ATerm call_kids_accutrafo(funcptr trav, ATerm arg, ATerm accu, 
+extern ATerm call_kids_accutrafo(funcptr trav, ATerm arg, ATerm accu,
 				 ATermList extra_args);
-extern ATerm call_kids_trafo_with_fail(funcptr trav, ATerm arg, 
+extern ATerm call_kids_trafo_with_fail(funcptr trav, ATerm arg,
 				       ATermList extra_args);
-extern ATerm call_kids_accu_with_fail(funcptr trav, ATerm arg, ATerm accu, 
+extern ATerm call_kids_accu_with_fail(funcptr trav, ATerm arg, ATerm accu,
 				      ATermList extra_args);
-extern ATerm call_kids_accutrafo_with_fail(funcptr trav, ATerm arg, ATerm accu, 
+extern ATerm call_kids_accutrafo_with_fail(funcptr trav, ATerm arg, ATerm accu,
 					   ATermList extra_args);
 
 extern ATerm correct_tuple(ATerm arg, ATerm rhs);
@@ -351,7 +351,7 @@ int asc_support_main(ATerm *bottom, int argc, char *argv[],
                      void (*resolve_all)(void),
                      void (*init_all)(void),
 		     unsigned const char *tableBaf,
-		     size_t tableSize, 
+		     size_t tableSize,
 		     ATbool parseInput,
 		     ATBhandler handler
 		     );
@@ -365,7 +365,7 @@ ATerm innermost(PT_Tree tree);
 PTBL_ParseTable getParseTable();
 void setParseTable(PTBL_ParseTable tbl);
 const char *getParseTableID();
-ATbool loadParseTable(); 
+ATbool loadParseTable();
 void initParser(const char *toolname, const char *filename);
 void setKeepAnnotations(ATbool on);
 void setCid(int cur_cid);

@@ -10,10 +10,10 @@
 #include <aterm1.h>
 #include <aterm2.h>
 #include <MEPT.h>
-#include "parser/parserOptions.h"
 #include <Error.h>
+#include <ptable.h>
 
-#include "ptable.h"
+#include "parser/parserOptions.h"
 #include "inputString-data.h"
 
 typedef struct _apigen_prepared *SGLR_ParseTable;

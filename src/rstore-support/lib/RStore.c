@@ -5,7 +5,7 @@
 #include "RStore.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm RS_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm RS_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -595,7 +595,7 @@ ATerm _RS_AreaToTerm(RS_Area arg) {
 }
 
 /**
- * Retrieve the length of a RS_RElemElements. 
+ * Retrieve the length of a RS_RElemElements.
  * \param[in] arg input RS_RElemElements
  * \return The number of elements in the RS_RElemElements
  */
@@ -604,7 +604,7 @@ int _RS_getRElemElementsLength(RS_RElemElements arg) {
 }
 
 /**
- * Reverse a RS_RElemElements. 
+ * Reverse a RS_RElemElements.
  * \param[in] arg RS_RElemElements to be reversed
  * \return a reversed #arg
  */
@@ -613,7 +613,7 @@ RS_RElemElements _RS_reverseRElemElements(RS_RElemElements arg) {
 }
 
 /**
- * Append a RS_RElem to the end of a RS_RElemElements. 
+ * Append a RS_RElem to the end of a RS_RElemElements.
  * \param[in] arg RS_RElemElements to append the RS_RElem to
  * \param[in] elem RS_RElem to be appended
  * \return new RS_RElemElements with #elem appended
@@ -623,7 +623,7 @@ RS_RElemElements _RS_appendRElemElements(RS_RElemElements arg, RS_RElem elem) {
 }
 
 /**
- * Concatenate two RS_RElemElementss. 
+ * Concatenate two RS_RElemElementss.
  * \param[in] arg0 first RS_RElemElements
  * \param[in] arg1 second RS_RElemElements
  * \return RS_RElemElements with the elements of #arg0 before the elements of #arg1
@@ -633,7 +633,7 @@ RS_RElemElements _RS_concatRElemElements(RS_RElemElements arg0, RS_RElemElements
 }
 
 /**
- * Extract a sublist from a RS_RElemElements. 
+ * Extract a sublist from a RS_RElemElements.
  * \param[in] arg RS_RElemElements to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -644,7 +644,7 @@ RS_RElemElements _RS_sliceRElemElements(RS_RElemElements arg, int start, int end
 }
 
 /**
- * Retrieve the RS_RElem at #index from a RS_RElemElements. 
+ * Retrieve the RS_RElem at #index from a RS_RElemElements.
  * \param[in] arg RS_RElemElements to retrieve the RS_RElem from
  * \param[in] index index to use to point in the RS_RElemElements
  * \return RS_RElem at position #index in #arg
@@ -654,7 +654,7 @@ RS_RElem _RS_getRElemElementsRElemAt(RS_RElemElements arg, int index) {
 }
 
 /**
- * Replace the RS_RElem at #index from a RS_RElemElements by a new one. 
+ * Replace the RS_RElem at #index from a RS_RElemElements by a new one.
  * \param[in] arg RS_RElemElements to retrieve the RS_RElem from
  * \param[in] elem new RS_RElem to replace another
  * \param[in] index index to use to point in the RS_RElemElements
@@ -665,7 +665,7 @@ RS_RElemElements _RS_replaceRElemElementsRElemAt(RS_RElemElements arg, RS_RElem 
 }
 
 /**
- * Builds a RS_RElemElements of 2 consecutive elements. 
+ * Builds a RS_RElemElements of 2 consecutive elements.
  * \param[in] elem1 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem2 One RS_RElem element of the new RS_RElemElements
  * \return A new RS_RElemElements consisting of 2 RS_RElems
@@ -675,7 +675,7 @@ RS_RElemElements _RS_makeRElemElements2(RS_RElem elem1, RS_RElem elem2) {
 }
 
 /**
- * Builds a RS_RElemElements of 3 consecutive elements. 
+ * Builds a RS_RElemElements of 3 consecutive elements.
  * \param[in] elem1 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem2 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem3 One RS_RElem element of the new RS_RElemElements
@@ -686,7 +686,7 @@ RS_RElemElements _RS_makeRElemElements3(RS_RElem elem1, RS_RElem elem2, RS_RElem
 }
 
 /**
- * Builds a RS_RElemElements of 4 consecutive elements. 
+ * Builds a RS_RElemElements of 4 consecutive elements.
  * \param[in] elem1 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem2 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem3 One RS_RElem element of the new RS_RElemElements
@@ -698,7 +698,7 @@ RS_RElemElements _RS_makeRElemElements4(RS_RElem elem1, RS_RElem elem2, RS_RElem
 }
 
 /**
- * Builds a RS_RElemElements of 5 consecutive elements. 
+ * Builds a RS_RElemElements of 5 consecutive elements.
  * \param[in] elem1 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem2 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem3 One RS_RElem element of the new RS_RElemElements
@@ -711,7 +711,7 @@ RS_RElemElements _RS_makeRElemElements5(RS_RElem elem1, RS_RElem elem2, RS_RElem
 }
 
 /**
- * Builds a RS_RElemElements of 6 consecutive elements. 
+ * Builds a RS_RElemElements of 6 consecutive elements.
  * \param[in] elem1 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem2 One RS_RElem element of the new RS_RElemElements
  * \param[in] elem3 One RS_RElem element of the new RS_RElemElements
@@ -725,7 +725,7 @@ RS_RElemElements _RS_makeRElemElements6(RS_RElem elem1, RS_RElem elem2, RS_RElem
 }
 
 /**
- * Retrieve the length of a RS_RTypeColumnTypes. 
+ * Retrieve the length of a RS_RTypeColumnTypes.
  * \param[in] arg input RS_RTypeColumnTypes
  * \return The number of elements in the RS_RTypeColumnTypes
  */
@@ -734,7 +734,7 @@ int _RS_getRTypeColumnTypesLength(RS_RTypeColumnTypes arg) {
 }
 
 /**
- * Reverse a RS_RTypeColumnTypes. 
+ * Reverse a RS_RTypeColumnTypes.
  * \param[in] arg RS_RTypeColumnTypes to be reversed
  * \return a reversed #arg
  */
@@ -743,7 +743,7 @@ RS_RTypeColumnTypes _RS_reverseRTypeColumnTypes(RS_RTypeColumnTypes arg) {
 }
 
 /**
- * Append a RS_RType to the end of a RS_RTypeColumnTypes. 
+ * Append a RS_RType to the end of a RS_RTypeColumnTypes.
  * \param[in] arg RS_RTypeColumnTypes to append the RS_RType to
  * \param[in] elem RS_RType to be appended
  * \return new RS_RTypeColumnTypes with #elem appended
@@ -753,7 +753,7 @@ RS_RTypeColumnTypes _RS_appendRTypeColumnTypes(RS_RTypeColumnTypes arg, RS_RType
 }
 
 /**
- * Concatenate two RS_RTypeColumnTypess. 
+ * Concatenate two RS_RTypeColumnTypess.
  * \param[in] arg0 first RS_RTypeColumnTypes
  * \param[in] arg1 second RS_RTypeColumnTypes
  * \return RS_RTypeColumnTypes with the elements of #arg0 before the elements of #arg1
@@ -763,7 +763,7 @@ RS_RTypeColumnTypes _RS_concatRTypeColumnTypes(RS_RTypeColumnTypes arg0, RS_RTyp
 }
 
 /**
- * Extract a sublist from a RS_RTypeColumnTypes. 
+ * Extract a sublist from a RS_RTypeColumnTypes.
  * \param[in] arg RS_RTypeColumnTypes to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -774,7 +774,7 @@ RS_RTypeColumnTypes _RS_sliceRTypeColumnTypes(RS_RTypeColumnTypes arg, int start
 }
 
 /**
- * Retrieve the RS_RType at #index from a RS_RTypeColumnTypes. 
+ * Retrieve the RS_RType at #index from a RS_RTypeColumnTypes.
  * \param[in] arg RS_RTypeColumnTypes to retrieve the RS_RType from
  * \param[in] index index to use to point in the RS_RTypeColumnTypes
  * \return RS_RType at position #index in #arg
@@ -784,7 +784,7 @@ RS_RType _RS_getRTypeColumnTypesRTypeAt(RS_RTypeColumnTypes arg, int index) {
 }
 
 /**
- * Replace the RS_RType at #index from a RS_RTypeColumnTypes by a new one. 
+ * Replace the RS_RType at #index from a RS_RTypeColumnTypes by a new one.
  * \param[in] arg RS_RTypeColumnTypes to retrieve the RS_RType from
  * \param[in] elem new RS_RType to replace another
  * \param[in] index index to use to point in the RS_RTypeColumnTypes
@@ -795,7 +795,7 @@ RS_RTypeColumnTypes _RS_replaceRTypeColumnTypesRTypeAt(RS_RTypeColumnTypes arg, 
 }
 
 /**
- * Builds a RS_RTypeColumnTypes of 2 consecutive elements. 
+ * Builds a RS_RTypeColumnTypes of 2 consecutive elements.
  * \param[in] elem1 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem2 One RS_RType element of the new RS_RTypeColumnTypes
  * \return A new RS_RTypeColumnTypes consisting of 2 RS_RTypes
@@ -805,7 +805,7 @@ RS_RTypeColumnTypes _RS_makeRTypeColumnTypes2(RS_RType elem1, RS_RType elem2) {
 }
 
 /**
- * Builds a RS_RTypeColumnTypes of 3 consecutive elements. 
+ * Builds a RS_RTypeColumnTypes of 3 consecutive elements.
  * \param[in] elem1 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem2 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem3 One RS_RType element of the new RS_RTypeColumnTypes
@@ -816,7 +816,7 @@ RS_RTypeColumnTypes _RS_makeRTypeColumnTypes3(RS_RType elem1, RS_RType elem2, RS
 }
 
 /**
- * Builds a RS_RTypeColumnTypes of 4 consecutive elements. 
+ * Builds a RS_RTypeColumnTypes of 4 consecutive elements.
  * \param[in] elem1 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem2 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem3 One RS_RType element of the new RS_RTypeColumnTypes
@@ -828,7 +828,7 @@ RS_RTypeColumnTypes _RS_makeRTypeColumnTypes4(RS_RType elem1, RS_RType elem2, RS
 }
 
 /**
- * Builds a RS_RTypeColumnTypes of 5 consecutive elements. 
+ * Builds a RS_RTypeColumnTypes of 5 consecutive elements.
  * \param[in] elem1 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem2 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem3 One RS_RType element of the new RS_RTypeColumnTypes
@@ -841,7 +841,7 @@ RS_RTypeColumnTypes _RS_makeRTypeColumnTypes5(RS_RType elem1, RS_RType elem2, RS
 }
 
 /**
- * Builds a RS_RTypeColumnTypes of 6 consecutive elements. 
+ * Builds a RS_RTypeColumnTypes of 6 consecutive elements.
  * \param[in] elem1 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem2 One RS_RType element of the new RS_RTypeColumnTypes
  * \param[in] elem3 One RS_RType element of the new RS_RTypeColumnTypes
@@ -855,7 +855,7 @@ RS_RTypeColumnTypes _RS_makeRTypeColumnTypes6(RS_RType elem1, RS_RType elem2, RS
 }
 
 /**
- * Retrieve the length of a RS_RTupleRtuples. 
+ * Retrieve the length of a RS_RTupleRtuples.
  * \param[in] arg input RS_RTupleRtuples
  * \return The number of elements in the RS_RTupleRtuples
  */
@@ -864,7 +864,7 @@ int _RS_getRTupleRtuplesLength(RS_RTupleRtuples arg) {
 }
 
 /**
- * Reverse a RS_RTupleRtuples. 
+ * Reverse a RS_RTupleRtuples.
  * \param[in] arg RS_RTupleRtuples to be reversed
  * \return a reversed #arg
  */
@@ -873,7 +873,7 @@ RS_RTupleRtuples _RS_reverseRTupleRtuples(RS_RTupleRtuples arg) {
 }
 
 /**
- * Append a RS_RTuple to the end of a RS_RTupleRtuples. 
+ * Append a RS_RTuple to the end of a RS_RTupleRtuples.
  * \param[in] arg RS_RTupleRtuples to append the RS_RTuple to
  * \param[in] elem RS_RTuple to be appended
  * \return new RS_RTupleRtuples with #elem appended
@@ -883,7 +883,7 @@ RS_RTupleRtuples _RS_appendRTupleRtuples(RS_RTupleRtuples arg, RS_RTuple elem) {
 }
 
 /**
- * Concatenate two RS_RTupleRtupless. 
+ * Concatenate two RS_RTupleRtupless.
  * \param[in] arg0 first RS_RTupleRtuples
  * \param[in] arg1 second RS_RTupleRtuples
  * \return RS_RTupleRtuples with the elements of #arg0 before the elements of #arg1
@@ -893,7 +893,7 @@ RS_RTupleRtuples _RS_concatRTupleRtuples(RS_RTupleRtuples arg0, RS_RTupleRtuples
 }
 
 /**
- * Extract a sublist from a RS_RTupleRtuples. 
+ * Extract a sublist from a RS_RTupleRtuples.
  * \param[in] arg RS_RTupleRtuples to extract a slice from
  * \param[in] start inclusive start index of the sublist
  * \param[in] end exclusive end index of the sublist
@@ -904,7 +904,7 @@ RS_RTupleRtuples _RS_sliceRTupleRtuples(RS_RTupleRtuples arg, int start, int end
 }
 
 /**
- * Retrieve the RS_RTuple at #index from a RS_RTupleRtuples. 
+ * Retrieve the RS_RTuple at #index from a RS_RTupleRtuples.
  * \param[in] arg RS_RTupleRtuples to retrieve the RS_RTuple from
  * \param[in] index index to use to point in the RS_RTupleRtuples
  * \return RS_RTuple at position #index in #arg
@@ -914,7 +914,7 @@ RS_RTuple _RS_getRTupleRtuplesRTupleAt(RS_RTupleRtuples arg, int index) {
 }
 
 /**
- * Replace the RS_RTuple at #index from a RS_RTupleRtuples by a new one. 
+ * Replace the RS_RTuple at #index from a RS_RTupleRtuples by a new one.
  * \param[in] arg RS_RTupleRtuples to retrieve the RS_RTuple from
  * \param[in] elem new RS_RTuple to replace another
  * \param[in] index index to use to point in the RS_RTupleRtuples
@@ -925,7 +925,7 @@ RS_RTupleRtuples _RS_replaceRTupleRtuplesRTupleAt(RS_RTupleRtuples arg, RS_RTupl
 }
 
 /**
- * Builds a RS_RTupleRtuples of 2 consecutive elements. 
+ * Builds a RS_RTupleRtuples of 2 consecutive elements.
  * \param[in] elem1 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem2 One RS_RTuple element of the new RS_RTupleRtuples
  * \return A new RS_RTupleRtuples consisting of 2 RS_RTuples
@@ -935,7 +935,7 @@ RS_RTupleRtuples _RS_makeRTupleRtuples2(RS_RTuple elem1, RS_RTuple elem2) {
 }
 
 /**
- * Builds a RS_RTupleRtuples of 3 consecutive elements. 
+ * Builds a RS_RTupleRtuples of 3 consecutive elements.
  * \param[in] elem1 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem2 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem3 One RS_RTuple element of the new RS_RTupleRtuples
@@ -946,7 +946,7 @@ RS_RTupleRtuples _RS_makeRTupleRtuples3(RS_RTuple elem1, RS_RTuple elem2, RS_RTu
 }
 
 /**
- * Builds a RS_RTupleRtuples of 4 consecutive elements. 
+ * Builds a RS_RTupleRtuples of 4 consecutive elements.
  * \param[in] elem1 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem2 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem3 One RS_RTuple element of the new RS_RTupleRtuples
@@ -958,7 +958,7 @@ RS_RTupleRtuples _RS_makeRTupleRtuples4(RS_RTuple elem1, RS_RTuple elem2, RS_RTu
 }
 
 /**
- * Builds a RS_RTupleRtuples of 5 consecutive elements. 
+ * Builds a RS_RTupleRtuples of 5 consecutive elements.
  * \param[in] elem1 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem2 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem3 One RS_RTuple element of the new RS_RTupleRtuples
@@ -971,7 +971,7 @@ RS_RTupleRtuples _RS_makeRTupleRtuples5(RS_RTuple elem1, RS_RTuple elem2, RS_RTu
 }
 
 /**
- * Builds a RS_RTupleRtuples of 6 consecutive elements. 
+ * Builds a RS_RTupleRtuples of 6 consecutive elements.
  * \param[in] elem1 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem2 One RS_RTuple element of the new RS_RTupleRtuples
  * \param[in] elem3 One RS_RTuple element of the new RS_RTupleRtuples
@@ -1500,7 +1500,7 @@ ATbool RS_isValidRElem(RS_RElem arg) {
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a int, or ATfalse otherwise
  */
-inline ATbool RS_isRElemInt(RS_RElem arg){
+ATbool RS_isRElemInt(RS_RElem arg){
   /* checking for: int */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun0) {
     return ATtrue;
@@ -1513,7 +1513,7 @@ inline ATbool RS_isRElemInt(RS_RElem arg){
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a str, or ATfalse otherwise
  */
-inline ATbool RS_isRElemStr(RS_RElem arg){
+ATbool RS_isRElemStr(RS_RElem arg){
   /* checking for: str */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun1) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1529,7 +1529,7 @@ inline ATbool RS_isRElemStr(RS_RElem arg){
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a bool, or ATfalse otherwise
  */
-inline ATbool RS_isRElemBool(RS_RElem arg){
+ATbool RS_isRElemBool(RS_RElem arg){
   /* checking for: bool */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun2) {
     return ATtrue;
@@ -1542,7 +1542,7 @@ inline ATbool RS_isRElemBool(RS_RElem arg){
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a loc, or ATfalse otherwise
  */
-inline ATbool RS_isRElemLoc(RS_RElem arg){
+ATbool RS_isRElemLoc(RS_RElem arg){
   /* checking for: loc */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun3) {
     return ATtrue;
@@ -1555,7 +1555,7 @@ inline ATbool RS_isRElemLoc(RS_RElem arg){
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a set, or ATfalse otherwise
  */
-inline ATbool RS_isRElemSet(RS_RElem arg){
+ATbool RS_isRElemSet(RS_RElem arg){
   /* checking for: set */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun4) {
     return ATtrue;
@@ -1568,7 +1568,7 @@ inline ATbool RS_isRElemSet(RS_RElem arg){
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a bag, or ATfalse otherwise
  */
-inline ATbool RS_isRElemBag(RS_RElem arg){
+ATbool RS_isRElemBag(RS_RElem arg){
   /* checking for: bag */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun5) {
     return ATtrue;
@@ -1581,7 +1581,7 @@ inline ATbool RS_isRElemBag(RS_RElem arg){
  * \param[in] arg input RS_RElem
  * \return ATtrue if #arg corresponds to the signature of a tuple, or ATfalse otherwise
  */
-inline ATbool RS_isRElemTuple(RS_RElem arg){
+ATbool RS_isRElemTuple(RS_RElem arg){
   /* checking for: tuple */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun6) {
     return ATtrue;
@@ -1590,7 +1590,7 @@ inline ATbool RS_isRElemTuple(RS_RElem arg){
 }
 
 /**
- * Assert whether a RS_RElem has a Integer. 
+ * Assert whether a RS_RElem has a Integer.
  * \param[in] arg input RS_RElem
  * \return ATtrue if the RS_RElem had a Integer, or ATfalse otherwise
  */
@@ -1602,7 +1602,7 @@ ATbool RS_hasRElemInteger(RS_RElem arg) {
 }
 
 /**
- * Assert whether a RS_RElem has a StrCon. 
+ * Assert whether a RS_RElem has a StrCon.
  * \param[in] arg input RS_RElem
  * \return ATtrue if the RS_RElem had a StrCon, or ATfalse otherwise
  */
@@ -1614,7 +1614,7 @@ ATbool RS_hasRElemStrCon(RS_RElem arg) {
 }
 
 /**
- * Assert whether a RS_RElem has a BoolCon. 
+ * Assert whether a RS_RElem has a BoolCon.
  * \param[in] arg input RS_RElem
  * \return ATtrue if the RS_RElem had a BoolCon, or ATfalse otherwise
  */
@@ -1626,7 +1626,7 @@ ATbool RS_hasRElemBoolCon(RS_RElem arg) {
 }
 
 /**
- * Assert whether a RS_RElem has a Location. 
+ * Assert whether a RS_RElem has a Location.
  * \param[in] arg input RS_RElem
  * \return ATtrue if the RS_RElem had a Location, or ATfalse otherwise
  */
@@ -1638,7 +1638,7 @@ ATbool RS_hasRElemLocation(RS_RElem arg) {
 }
 
 /**
- * Assert whether a RS_RElem has a elements. 
+ * Assert whether a RS_RElem has a elements.
  * \param[in] arg input RS_RElem
  * \return ATtrue if the RS_RElem had a elements, or ATfalse otherwise
  */
@@ -1661,7 +1661,7 @@ ATbool RS_hasRElemElements(RS_RElem arg) {
  * \return the Integer of #arg, if it exist or an undefined value if it does not
  */
 RS_Integer RS_getRElemInteger(RS_RElem arg) {
-  
+
     return (RS_Integer)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1671,7 +1671,7 @@ RS_Integer RS_getRElemInteger(RS_RElem arg) {
  * \return the StrCon of #arg, if it exist or an undefined value if it does not
  */
 char* RS_getRElemStrCon(RS_RElem arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -1681,7 +1681,7 @@ char* RS_getRElemStrCon(RS_RElem arg) {
  * \return the BoolCon of #arg, if it exist or an undefined value if it does not
  */
 RS_BoolCon RS_getRElemBoolCon(RS_RElem arg) {
-  
+
     return (RS_BoolCon)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1691,7 +1691,7 @@ RS_BoolCon RS_getRElemBoolCon(RS_RElem arg) {
  * \return the Location of #arg, if it exist or an undefined value if it does not
  */
 RS_Location RS_getRElemLocation(RS_RElem arg) {
-  
+
     return (RS_Location)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1707,7 +1707,7 @@ RS_RElemElements RS_getRElemElements(RS_RElem arg) {
   else if (RS_isRElemBag(arg)) {
     return (RS_RElemElements)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (RS_RElemElements)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -1836,7 +1836,7 @@ ATbool RS_isValidRType(RS_RType arg) {
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a int, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeInt(RS_RType arg){
+ATbool RS_isRTypeInt(RS_RType arg){
   /* checking for: int */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun7) {
     return ATtrue;
@@ -1849,7 +1849,7 @@ inline ATbool RS_isRTypeInt(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a bool, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeBool(RS_RType arg){
+ATbool RS_isRTypeBool(RS_RType arg){
   /* checking for: bool */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun8) {
     return ATtrue;
@@ -1862,7 +1862,7 @@ inline ATbool RS_isRTypeBool(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a str, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeStr(RS_RType arg){
+ATbool RS_isRTypeStr(RS_RType arg){
   /* checking for: str */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun9) {
     return ATtrue;
@@ -1875,7 +1875,7 @@ inline ATbool RS_isRTypeStr(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a loc, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeLoc(RS_RType arg){
+ATbool RS_isRTypeLoc(RS_RType arg){
   /* checking for: loc */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun10) {
     return ATtrue;
@@ -1888,7 +1888,7 @@ inline ATbool RS_isRTypeLoc(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a tuple, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeTuple(RS_RType arg){
+ATbool RS_isRTypeTuple(RS_RType arg){
   /* checking for: tuple */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun6) {
     return ATtrue;
@@ -1901,7 +1901,7 @@ inline ATbool RS_isRTypeTuple(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a set, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeSet(RS_RType arg){
+ATbool RS_isRTypeSet(RS_RType arg){
   /* checking for: set */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun4) {
     return ATtrue;
@@ -1914,7 +1914,7 @@ inline ATbool RS_isRTypeSet(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a bag, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeBag(RS_RType arg){
+ATbool RS_isRTypeBag(RS_RType arg){
   /* checking for: bag */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun5) {
     return ATtrue;
@@ -1927,7 +1927,7 @@ inline ATbool RS_isRTypeBag(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a relation, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeRelation(RS_RType arg){
+ATbool RS_isRTypeRelation(RS_RType arg){
   /* checking for: relation */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun11) {
     return ATtrue;
@@ -1940,7 +1940,7 @@ inline ATbool RS_isRTypeRelation(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a user-defined, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeUserDefined(RS_RType arg){
+ATbool RS_isRTypeUserDefined(RS_RType arg){
   /* checking for: user-defined */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun12) {
     return ATtrue;
@@ -1953,7 +1953,7 @@ inline ATbool RS_isRTypeUserDefined(RS_RType arg){
  * \param[in] arg input RS_RType
  * \return ATtrue if #arg corresponds to the signature of a parameter, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeParameter(RS_RType arg){
+ATbool RS_isRTypeParameter(RS_RType arg){
   /* checking for: parameter */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun13) {
     return ATtrue;
@@ -1962,7 +1962,7 @@ inline ATbool RS_isRTypeParameter(RS_RType arg){
 }
 
 /**
- * Assert whether a RS_RType has a column-types. 
+ * Assert whether a RS_RType has a column-types.
  * \param[in] arg input RS_RType
  * \return ATtrue if the RS_RType had a column-types, or ATfalse otherwise
  */
@@ -1977,7 +1977,7 @@ ATbool RS_hasRTypeColumnTypes(RS_RType arg) {
 }
 
 /**
- * Assert whether a RS_RType has a element-type. 
+ * Assert whether a RS_RType has a element-type.
  * \param[in] arg input RS_RType
  * \return ATtrue if the RS_RType had a element-type, or ATfalse otherwise
  */
@@ -1992,7 +1992,7 @@ ATbool RS_hasRTypeElementType(RS_RType arg) {
 }
 
 /**
- * Assert whether a RS_RType has a type-name. 
+ * Assert whether a RS_RType has a type-name.
  * \param[in] arg input RS_RType
  * \return ATtrue if the RS_RType had a type-name, or ATfalse otherwise
  */
@@ -2004,7 +2004,7 @@ ATbool RS_hasRTypeTypeName(RS_RType arg) {
 }
 
 /**
- * Assert whether a RS_RType has a parameter-name. 
+ * Assert whether a RS_RType has a parameter-name.
  * \param[in] arg input RS_RType
  * \return ATtrue if the RS_RType had a parameter-name, or ATfalse otherwise
  */
@@ -2024,7 +2024,7 @@ RS_RTypeColumnTypes RS_getRTypeColumnTypes(RS_RType arg) {
   if (RS_isRTypeTuple(arg)) {
     return (RS_RTypeColumnTypes)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (RS_RTypeColumnTypes)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2037,7 +2037,7 @@ RS_RType RS_getRTypeElementType(RS_RType arg) {
   if (RS_isRTypeSet(arg)) {
     return (RS_RType)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (RS_RType)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2047,7 +2047,7 @@ RS_RType RS_getRTypeElementType(RS_RType arg) {
  * \return the type-name of #arg, if it exist or an undefined value if it does not
  */
 RS_IdCon RS_getRTypeTypeName(RS_RType arg) {
-  
+
     return (RS_IdCon)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2057,7 +2057,7 @@ RS_IdCon RS_getRTypeTypeName(RS_RType arg) {
  * \return the parameter-name of #arg, if it exist or an undefined value if it does not
  */
 RS_IdCon RS_getRTypeParameterName(RS_RType arg) {
-  
+
     return (RS_IdCon)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2144,7 +2144,7 @@ ATbool RS_isValidRTuple(RS_RTuple arg) {
  * \param[in] arg input RS_RTuple
  * \return ATtrue if #arg corresponds to the signature of a rtuple, or ATfalse otherwise
  */
-inline ATbool RS_isRTupleRtuple(RS_RTuple arg){
+ATbool RS_isRTupleRtuple(RS_RTuple arg){
   /* checking for: rtuple */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun14) {
     return ATtrue;
@@ -2153,7 +2153,7 @@ inline ATbool RS_isRTupleRtuple(RS_RTuple arg){
 }
 
 /**
- * Assert whether a RS_RTuple has a variable. 
+ * Assert whether a RS_RTuple has a variable.
  * \param[in] arg input RS_RTuple
  * \return ATtrue if the RS_RTuple had a variable, or ATfalse otherwise
  */
@@ -2165,7 +2165,7 @@ ATbool RS_hasRTupleVariable(RS_RTuple arg) {
 }
 
 /**
- * Assert whether a RS_RTuple has a rtype. 
+ * Assert whether a RS_RTuple has a rtype.
  * \param[in] arg input RS_RTuple
  * \return ATtrue if the RS_RTuple had a rtype, or ATfalse otherwise
  */
@@ -2177,7 +2177,7 @@ ATbool RS_hasRTupleRtype(RS_RTuple arg) {
 }
 
 /**
- * Assert whether a RS_RTuple has a value. 
+ * Assert whether a RS_RTuple has a value.
  * \param[in] arg input RS_RTuple
  * \return ATtrue if the RS_RTuple had a value, or ATfalse otherwise
  */
@@ -2194,7 +2194,7 @@ ATbool RS_hasRTupleValue(RS_RTuple arg) {
  * \return the variable of #arg, if it exist or an undefined value if it does not
  */
 RS_IdCon RS_getRTupleVariable(RS_RTuple arg) {
-  
+
     return (RS_IdCon)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2204,7 +2204,7 @@ RS_IdCon RS_getRTupleVariable(RS_RTuple arg) {
  * \return the rtype of #arg, if it exist or an undefined value if it does not
  */
 RS_RType RS_getRTupleRtype(RS_RTuple arg) {
-  
+
     return (RS_RType)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -2214,7 +2214,7 @@ RS_RType RS_getRTupleRtype(RS_RTuple arg) {
  * \return the value of #arg, if it exist or an undefined value if it does not
  */
 RS_RElem RS_getRTupleValue(RS_RTuple arg) {
-  
+
     return (RS_RElem)ATgetArgument((ATermAppl)arg, 2);
 }
 
@@ -2280,7 +2280,7 @@ ATbool RS_isValidRStore(RS_RStore arg) {
  * \param[in] arg input RS_RStore
  * \return ATtrue if #arg corresponds to the signature of a rstore, or ATfalse otherwise
  */
-inline ATbool RS_isRStoreRstore(RS_RStore arg){
+ATbool RS_isRStoreRstore(RS_RStore arg){
   /* checking for: rstore */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun15) {
     return ATtrue;
@@ -2289,7 +2289,7 @@ inline ATbool RS_isRStoreRstore(RS_RStore arg){
 }
 
 /**
- * Assert whether a RS_RStore has a rtuples. 
+ * Assert whether a RS_RStore has a rtuples.
  * \param[in] arg input RS_RStore
  * \return ATtrue if the RS_RStore had a rtuples, or ATfalse otherwise
  */
@@ -2306,7 +2306,7 @@ ATbool RS_hasRStoreRtuples(RS_RStore arg) {
  * \return the rtuples of #arg, if it exist or an undefined value if it does not
  */
 RS_RTupleRtuples RS_getRStoreRtuples(RS_RStore arg) {
-  
+
     return (RS_RTupleRtuples)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -2348,7 +2348,7 @@ ATbool RS_isValidRElemElements(RS_RElemElements arg) {
  * \param[in] arg input RS_RElemElements
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool RS_isRElemElementsEmpty(RS_RElemElements arg){
+ATbool RS_isRElemElementsEmpty(RS_RElemElements arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2360,7 +2360,7 @@ inline ATbool RS_isRElemElementsEmpty(RS_RElemElements arg){
  * \param[in] arg input RS_RElemElements
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool RS_isRElemElementsSingle(RS_RElemElements arg){
+ATbool RS_isRElemElementsSingle(RS_RElemElements arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2376,7 +2376,7 @@ inline ATbool RS_isRElemElementsSingle(RS_RElemElements arg){
  * \param[in] arg input RS_RElemElements
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool RS_isRElemElementsMany(RS_RElemElements arg){
+ATbool RS_isRElemElementsMany(RS_RElemElements arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2384,7 +2384,7 @@ inline ATbool RS_isRElemElementsMany(RS_RElemElements arg){
 }
 
 /**
- * Assert whether a RS_RElemElements has a head. 
+ * Assert whether a RS_RElemElements has a head.
  * \param[in] arg input RS_RElemElements
  * \return ATtrue if the RS_RElemElements had a head, or ATfalse otherwise
  */
@@ -2399,7 +2399,7 @@ ATbool RS_hasRElemElementsHead(RS_RElemElements arg) {
 }
 
 /**
- * Assert whether a RS_RElemElements has a tail. 
+ * Assert whether a RS_RElemElements has a tail.
  * \param[in] arg input RS_RElemElements
  * \return ATtrue if the RS_RElemElements had a tail, or ATfalse otherwise
  */
@@ -2419,7 +2419,7 @@ RS_RElem RS_getRElemElementsHead(RS_RElemElements arg) {
   if (RS_isRElemElementsSingle(arg)) {
     return (RS_RElem)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (RS_RElem)ATgetFirst((ATermList)arg);
 }
 
@@ -2429,7 +2429,7 @@ RS_RElem RS_getRElemElementsHead(RS_RElemElements arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 RS_RElemElements RS_getRElemElementsTail(RS_RElemElements arg) {
-  
+
     return (RS_RElemElements)ATgetNext((ATermList)arg);
 }
 
@@ -2489,7 +2489,7 @@ ATbool RS_isValidRTypeColumnTypes(RS_RTypeColumnTypes arg) {
  * \param[in] arg input RS_RTypeColumnTypes
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeColumnTypesEmpty(RS_RTypeColumnTypes arg){
+ATbool RS_isRTypeColumnTypesEmpty(RS_RTypeColumnTypes arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2501,7 +2501,7 @@ inline ATbool RS_isRTypeColumnTypesEmpty(RS_RTypeColumnTypes arg){
  * \param[in] arg input RS_RTypeColumnTypes
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeColumnTypesSingle(RS_RTypeColumnTypes arg){
+ATbool RS_isRTypeColumnTypesSingle(RS_RTypeColumnTypes arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2517,7 +2517,7 @@ inline ATbool RS_isRTypeColumnTypesSingle(RS_RTypeColumnTypes arg){
  * \param[in] arg input RS_RTypeColumnTypes
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool RS_isRTypeColumnTypesMany(RS_RTypeColumnTypes arg){
+ATbool RS_isRTypeColumnTypesMany(RS_RTypeColumnTypes arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2525,7 +2525,7 @@ inline ATbool RS_isRTypeColumnTypesMany(RS_RTypeColumnTypes arg){
 }
 
 /**
- * Assert whether a RS_RTypeColumnTypes has a head. 
+ * Assert whether a RS_RTypeColumnTypes has a head.
  * \param[in] arg input RS_RTypeColumnTypes
  * \return ATtrue if the RS_RTypeColumnTypes had a head, or ATfalse otherwise
  */
@@ -2540,7 +2540,7 @@ ATbool RS_hasRTypeColumnTypesHead(RS_RTypeColumnTypes arg) {
 }
 
 /**
- * Assert whether a RS_RTypeColumnTypes has a tail. 
+ * Assert whether a RS_RTypeColumnTypes has a tail.
  * \param[in] arg input RS_RTypeColumnTypes
  * \return ATtrue if the RS_RTypeColumnTypes had a tail, or ATfalse otherwise
  */
@@ -2560,7 +2560,7 @@ RS_RType RS_getRTypeColumnTypesHead(RS_RTypeColumnTypes arg) {
   if (RS_isRTypeColumnTypesSingle(arg)) {
     return (RS_RType)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (RS_RType)ATgetFirst((ATermList)arg);
 }
 
@@ -2570,7 +2570,7 @@ RS_RType RS_getRTypeColumnTypesHead(RS_RTypeColumnTypes arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 RS_RTypeColumnTypes RS_getRTypeColumnTypesTail(RS_RTypeColumnTypes arg) {
-  
+
     return (RS_RTypeColumnTypes)ATgetNext((ATermList)arg);
 }
 
@@ -2630,7 +2630,7 @@ ATbool RS_isValidRTupleRtuples(RS_RTupleRtuples arg) {
  * \param[in] arg input RS_RTupleRtuples
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool RS_isRTupleRtuplesEmpty(RS_RTupleRtuples arg){
+ATbool RS_isRTupleRtuplesEmpty(RS_RTupleRtuples arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2642,7 +2642,7 @@ inline ATbool RS_isRTupleRtuplesEmpty(RS_RTupleRtuples arg){
  * \param[in] arg input RS_RTupleRtuples
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool RS_isRTupleRtuplesSingle(RS_RTupleRtuples arg){
+ATbool RS_isRTupleRtuplesSingle(RS_RTupleRtuples arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2658,7 +2658,7 @@ inline ATbool RS_isRTupleRtuplesSingle(RS_RTupleRtuples arg){
  * \param[in] arg input RS_RTupleRtuples
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool RS_isRTupleRtuplesMany(RS_RTupleRtuples arg){
+ATbool RS_isRTupleRtuplesMany(RS_RTupleRtuples arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2666,7 +2666,7 @@ inline ATbool RS_isRTupleRtuplesMany(RS_RTupleRtuples arg){
 }
 
 /**
- * Assert whether a RS_RTupleRtuples has a head. 
+ * Assert whether a RS_RTupleRtuples has a head.
  * \param[in] arg input RS_RTupleRtuples
  * \return ATtrue if the RS_RTupleRtuples had a head, or ATfalse otherwise
  */
@@ -2681,7 +2681,7 @@ ATbool RS_hasRTupleRtuplesHead(RS_RTupleRtuples arg) {
 }
 
 /**
- * Assert whether a RS_RTupleRtuples has a tail. 
+ * Assert whether a RS_RTupleRtuples has a tail.
  * \param[in] arg input RS_RTupleRtuples
  * \return ATtrue if the RS_RTupleRtuples had a tail, or ATfalse otherwise
  */
@@ -2701,7 +2701,7 @@ RS_RTuple RS_getRTupleRtuplesHead(RS_RTupleRtuples arg) {
   if (RS_isRTupleRtuplesSingle(arg)) {
     return (RS_RTuple)ATgetFirst((ATermList)arg);
   }
-  else 
+  else
     return (RS_RTuple)ATgetFirst((ATermList)arg);
 }
 
@@ -2711,7 +2711,7 @@ RS_RTuple RS_getRTupleRtuplesHead(RS_RTupleRtuples arg) {
  * \return the tail of #arg, if it exist or an undefined value if it does not
  */
 RS_RTupleRtuples RS_getRTupleRtuplesTail(RS_RTupleRtuples arg) {
-  
+
     return (RS_RTupleRtuples)ATgetNext((ATermList)arg);
 }
 
@@ -2765,7 +2765,7 @@ ATbool RS_isValidStrChar(RS_StrChar arg) {
  * \param[in] arg input RS_StrChar
  * \return ATtrue if #arg corresponds to the signature of a StrChar, or ATfalse otherwise
  */
-inline ATbool RS_isStrCharStrChar(RS_StrChar arg){
+ATbool RS_isStrCharStrChar(RS_StrChar arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -2773,7 +2773,7 @@ inline ATbool RS_isStrCharStrChar(RS_StrChar arg){
 }
 
 /**
- * Assert whether a RS_StrChar has a string. 
+ * Assert whether a RS_StrChar has a string.
  * \param[in] arg input RS_StrChar
  * \return ATtrue if the RS_StrChar had a string, or ATfalse otherwise
  */
@@ -2790,7 +2790,7 @@ ATbool RS_hasStrCharString(RS_StrChar arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* RS_getStrCharString(RS_StrChar arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -2826,7 +2826,7 @@ ATbool RS_isValidStrCon(RS_StrCon arg) {
  * \param[in] arg input RS_StrCon
  * \return ATtrue if #arg corresponds to the signature of a StrCon, or ATfalse otherwise
  */
-inline ATbool RS_isStrConStrCon(RS_StrCon arg){
+ATbool RS_isStrConStrCon(RS_StrCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -2834,7 +2834,7 @@ inline ATbool RS_isStrConStrCon(RS_StrCon arg){
 }
 
 /**
- * Assert whether a RS_StrCon has a string. 
+ * Assert whether a RS_StrCon has a string.
  * \param[in] arg input RS_StrCon
  * \return ATtrue if the RS_StrCon had a string, or ATfalse otherwise
  */
@@ -2851,7 +2851,7 @@ ATbool RS_hasStrConString(RS_StrCon arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* RS_getStrConString(RS_StrCon arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -2890,7 +2890,7 @@ ATbool RS_isValidBoolCon(RS_BoolCon arg) {
  * \param[in] arg input RS_BoolCon
  * \return ATtrue if #arg corresponds to the signature of a true, or ATfalse otherwise
  */
-inline ATbool RS_isBoolConTrue(RS_BoolCon arg){
+ATbool RS_isBoolConTrue(RS_BoolCon arg){
   /* checking for: true */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun16) {
     return ATtrue;
@@ -2903,7 +2903,7 @@ inline ATbool RS_isBoolConTrue(RS_BoolCon arg){
  * \param[in] arg input RS_BoolCon
  * \return ATtrue if #arg corresponds to the signature of a false, or ATfalse otherwise
  */
-inline ATbool RS_isBoolConFalse(RS_BoolCon arg){
+ATbool RS_isBoolConFalse(RS_BoolCon arg){
   /* checking for: false */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun17) {
     return ATtrue;
@@ -2928,7 +2928,7 @@ ATbool RS_isValidNatCon(RS_NatCon arg) {
  * \param[in] arg input RS_NatCon
  * \return ATtrue if #arg corresponds to the signature of a NatCon, or ATfalse otherwise
  */
-inline ATbool RS_isNatConNatCon(RS_NatCon arg){
+ATbool RS_isNatConNatCon(RS_NatCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -2936,7 +2936,7 @@ inline ATbool RS_isNatConNatCon(RS_NatCon arg){
 }
 
 /**
- * Assert whether a RS_NatCon has a string. 
+ * Assert whether a RS_NatCon has a string.
  * \param[in] arg input RS_NatCon
  * \return ATtrue if the RS_NatCon had a string, or ATfalse otherwise
  */
@@ -2953,7 +2953,7 @@ ATbool RS_hasNatConString(RS_NatCon arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* RS_getNatConString(RS_NatCon arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -2989,7 +2989,7 @@ ATbool RS_isValidIdCon(RS_IdCon arg) {
  * \param[in] arg input RS_IdCon
  * \return ATtrue if #arg corresponds to the signature of a IdCon, or ATfalse otherwise
  */
-inline ATbool RS_isIdConIdCon(RS_IdCon arg){
+ATbool RS_isIdConIdCon(RS_IdCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -2997,7 +2997,7 @@ inline ATbool RS_isIdConIdCon(RS_IdCon arg){
 }
 
 /**
- * Assert whether a RS_IdCon has a string. 
+ * Assert whether a RS_IdCon has a string.
  * \param[in] arg input RS_IdCon
  * \return ATtrue if the RS_IdCon had a string, or ATfalse otherwise
  */
@@ -3014,7 +3014,7 @@ ATbool RS_hasIdConString(RS_IdCon arg) {
  * \return the string of #arg, if it exist or an undefined value if it does not
  */
 char* RS_getIdConString(RS_IdCon arg) {
-  
+
     return (char*)ATgetName(ATgetAFun((ATermAppl) arg));
 }
 
@@ -3056,7 +3056,7 @@ ATbool RS_isValidInteger(RS_Integer arg) {
  * \param[in] arg input RS_Integer
  * \return ATtrue if #arg corresponds to the signature of a nat-con, or ATfalse otherwise
  */
-inline ATbool RS_isIntegerNatCon(RS_Integer arg){
+ATbool RS_isIntegerNatCon(RS_Integer arg){
   /* checking for: nat-con */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun18) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3072,7 +3072,7 @@ inline ATbool RS_isIntegerNatCon(RS_Integer arg){
  * \param[in] arg input RS_Integer
  * \return ATtrue if #arg corresponds to the signature of a positive, or ATfalse otherwise
  */
-inline ATbool RS_isIntegerPositive(RS_Integer arg){
+ATbool RS_isIntegerPositive(RS_Integer arg){
   /* checking for: positive */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun19) {
     return ATtrue;
@@ -3085,7 +3085,7 @@ inline ATbool RS_isIntegerPositive(RS_Integer arg){
  * \param[in] arg input RS_Integer
  * \return ATtrue if #arg corresponds to the signature of a negative, or ATfalse otherwise
  */
-inline ATbool RS_isIntegerNegative(RS_Integer arg){
+ATbool RS_isIntegerNegative(RS_Integer arg){
   /* checking for: negative */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun20) {
     return ATtrue;
@@ -3094,7 +3094,7 @@ inline ATbool RS_isIntegerNegative(RS_Integer arg){
 }
 
 /**
- * Assert whether a RS_Integer has a NatCon. 
+ * Assert whether a RS_Integer has a NatCon.
  * \param[in] arg input RS_Integer
  * \return ATtrue if the RS_Integer had a NatCon, or ATfalse otherwise
  */
@@ -3106,7 +3106,7 @@ ATbool RS_hasIntegerNatCon(RS_Integer arg) {
 }
 
 /**
- * Assert whether a RS_Integer has a integer. 
+ * Assert whether a RS_Integer has a integer.
  * \param[in] arg input RS_Integer
  * \return ATtrue if the RS_Integer had a integer, or ATfalse otherwise
  */
@@ -3126,7 +3126,7 @@ ATbool RS_hasIntegerInteger(RS_Integer arg) {
  * \return the NatCon of #arg, if it exist or an undefined value if it does not
  */
 int RS_getIntegerNatCon(RS_Integer arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -3139,7 +3139,7 @@ RS_Integer RS_getIntegerInteger(RS_Integer arg) {
   if (RS_isIntegerPositive(arg)) {
     return (RS_Integer)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (RS_Integer)ATgetArgument((ATermAppl)arg, 0);
 }
 
@@ -3199,7 +3199,7 @@ ATbool RS_isValidLocation(RS_Location arg) {
  * \param[in] arg input RS_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool RS_isLocationFile(RS_Location arg){
+ATbool RS_isLocationFile(RS_Location arg){
   /* checking for: file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun21) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3215,7 +3215,7 @@ inline ATbool RS_isLocationFile(RS_Location arg){
  * \param[in] arg input RS_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool RS_isLocationArea(RS_Location arg){
+ATbool RS_isLocationArea(RS_Location arg){
   /* checking for: area */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun22) {
     return ATtrue;
@@ -3228,7 +3228,7 @@ inline ATbool RS_isLocationArea(RS_Location arg){
  * \param[in] arg input RS_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool RS_isLocationAreaInFile(RS_Location arg){
+ATbool RS_isLocationAreaInFile(RS_Location arg){
   /* checking for: area-in-file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun23) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3240,7 +3240,7 @@ inline ATbool RS_isLocationAreaInFile(RS_Location arg){
 }
 
 /**
- * Assert whether a RS_Location has a filename. 
+ * Assert whether a RS_Location has a filename.
  * \param[in] arg input RS_Location
  * \return ATtrue if the RS_Location had a filename, or ATfalse otherwise
  */
@@ -3255,7 +3255,7 @@ ATbool RS_hasLocationFilename(RS_Location arg) {
 }
 
 /**
- * Assert whether a RS_Location has a Area. 
+ * Assert whether a RS_Location has a Area.
  * \param[in] arg input RS_Location
  * \return ATtrue if the RS_Location had a Area, or ATfalse otherwise
  */
@@ -3278,7 +3278,7 @@ char* RS_getLocationFilename(RS_Location arg) {
   if (RS_isLocationFile(arg)) {
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
   }
-  else 
+  else
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -3291,7 +3291,7 @@ RS_Area RS_getLocationArea(RS_Location arg) {
   if (RS_isLocationArea(arg)) {
     return (RS_Area)ATgetArgument((ATermAppl)arg, 0);
   }
-  else 
+  else
     return (RS_Area)ATgetArgument((ATermAppl)arg, 1);
 }
 
@@ -3348,7 +3348,7 @@ ATbool RS_isValidArea(RS_Area arg) {
  * \param[in] arg input RS_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool RS_isAreaArea(RS_Area arg){
+ATbool RS_isAreaArea(RS_Area arg){
   /* checking for: area */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == RS_afun24) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3375,7 +3375,7 @@ inline ATbool RS_isAreaArea(RS_Area arg){
 }
 
 /**
- * Assert whether a RS_Area has a begin-line. 
+ * Assert whether a RS_Area has a begin-line.
  * \param[in] arg input RS_Area
  * \return ATtrue if the RS_Area had a begin-line, or ATfalse otherwise
  */
@@ -3387,7 +3387,7 @@ ATbool RS_hasAreaBeginLine(RS_Area arg) {
 }
 
 /**
- * Assert whether a RS_Area has a begin-column. 
+ * Assert whether a RS_Area has a begin-column.
  * \param[in] arg input RS_Area
  * \return ATtrue if the RS_Area had a begin-column, or ATfalse otherwise
  */
@@ -3399,7 +3399,7 @@ ATbool RS_hasAreaBeginColumn(RS_Area arg) {
 }
 
 /**
- * Assert whether a RS_Area has a end-line. 
+ * Assert whether a RS_Area has a end-line.
  * \param[in] arg input RS_Area
  * \return ATtrue if the RS_Area had a end-line, or ATfalse otherwise
  */
@@ -3411,7 +3411,7 @@ ATbool RS_hasAreaEndLine(RS_Area arg) {
 }
 
 /**
- * Assert whether a RS_Area has a end-column. 
+ * Assert whether a RS_Area has a end-column.
  * \param[in] arg input RS_Area
  * \return ATtrue if the RS_Area had a end-column, or ATfalse otherwise
  */
@@ -3423,7 +3423,7 @@ ATbool RS_hasAreaEndColumn(RS_Area arg) {
 }
 
 /**
- * Assert whether a RS_Area has a offset. 
+ * Assert whether a RS_Area has a offset.
  * \param[in] arg input RS_Area
  * \return ATtrue if the RS_Area had a offset, or ATfalse otherwise
  */
@@ -3435,7 +3435,7 @@ ATbool RS_hasAreaOffset(RS_Area arg) {
 }
 
 /**
- * Assert whether a RS_Area has a length. 
+ * Assert whether a RS_Area has a length.
  * \param[in] arg input RS_Area
  * \return ATtrue if the RS_Area had a length, or ATfalse otherwise
  */
@@ -3452,7 +3452,7 @@ ATbool RS_hasAreaLength(RS_Area arg) {
  * \return the begin-line of #arg, if it exist or an undefined value if it does not
  */
 int RS_getAreaBeginLine(RS_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 0));
 }
 
@@ -3462,7 +3462,7 @@ int RS_getAreaBeginLine(RS_Area arg) {
  * \return the begin-column of #arg, if it exist or an undefined value if it does not
  */
 int RS_getAreaBeginColumn(RS_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -3472,7 +3472,7 @@ int RS_getAreaBeginColumn(RS_Area arg) {
  * \return the end-line of #arg, if it exist or an undefined value if it does not
  */
 int RS_getAreaEndLine(RS_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 2));
 }
 
@@ -3482,7 +3482,7 @@ int RS_getAreaEndLine(RS_Area arg) {
  * \return the end-column of #arg, if it exist or an undefined value if it does not
  */
 int RS_getAreaEndColumn(RS_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 3));
 }
 
@@ -3492,7 +3492,7 @@ int RS_getAreaEndColumn(RS_Area arg) {
  * \return the offset of #arg, if it exist or an undefined value if it does not
  */
 int RS_getAreaOffset(RS_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 4));
 }
 
@@ -3502,7 +3502,7 @@ int RS_getAreaOffset(RS_Area arg) {
  * \return the length of #arg, if it exist or an undefined value if it does not
  */
 int RS_getAreaLength(RS_Area arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 5));
 }
 
@@ -3597,7 +3597,7 @@ RS_Area RS_setAreaLength(RS_Area arg, int length) {
 }
 
 /**
- * Apply functions to the children of a RS_RElem. 
+ * Apply functions to the children of a RS_RElem.
  * \return A new RS_RElem with new children where the argument functions might have applied
  */
 RS_RElem RS_visitRElem(RS_RElem arg, RS_Integer (*acceptInteger)(RS_Integer), char* (*acceptStrCon)(char*), RS_BoolCon (*acceptBoolCon)(RS_BoolCon), RS_Location (*acceptLocation)(RS_Location), RS_RElemElements (*acceptElements)(RS_RElemElements)) {
@@ -3633,7 +3633,7 @@ RS_RElem RS_visitRElem(RS_RElem arg, RS_Integer (*acceptInteger)(RS_Integer), ch
   return (RS_RElem)NULL;
 }
 /**
- * Apply functions to the children of a RS_RType. 
+ * Apply functions to the children of a RS_RType.
  * \return A new RS_RType with new children where the argument functions might have applied
  */
 RS_RType RS_visitRType(RS_RType arg, RS_RTypeColumnTypes (*acceptColumnTypes)(RS_RTypeColumnTypes), RS_IdCon (*acceptTypeName)(RS_IdCon), RS_IdCon (*acceptParameterName)(RS_IdCon)) {
@@ -3677,7 +3677,7 @@ RS_RType RS_visitRType(RS_RType arg, RS_RTypeColumnTypes (*acceptColumnTypes)(RS
   return (RS_RType)NULL;
 }
 /**
- * Apply functions to the children of a RS_RTuple. 
+ * Apply functions to the children of a RS_RTuple.
  * \return A new RS_RTuple with new children where the argument functions might have applied
  */
 RS_RTuple RS_visitRTuple(RS_RTuple arg, RS_IdCon (*acceptVariable)(RS_IdCon), RS_RType (*acceptRtype)(RS_RType), RS_RElem (*acceptValue)(RS_RElem)) {
@@ -3691,7 +3691,7 @@ RS_RTuple RS_visitRTuple(RS_RTuple arg, RS_IdCon (*acceptVariable)(RS_IdCon), RS
   return (RS_RTuple)NULL;
 }
 /**
- * Apply functions to the children of a RS_RStore. 
+ * Apply functions to the children of a RS_RStore.
  * \return A new RS_RStore with new children where the argument functions might have applied
  */
 RS_RStore RS_visitRStore(RS_RStore arg, RS_RTupleRtuples (*acceptRtuples)(RS_RTupleRtuples)) {
@@ -3703,7 +3703,7 @@ RS_RStore RS_visitRStore(RS_RStore arg, RS_RTupleRtuples (*acceptRtuples)(RS_RTu
   return (RS_RStore)NULL;
 }
 /**
- * Apply functions to the children of a RS_RElemElements. 
+ * Apply functions to the children of a RS_RElemElements.
  * \return A new RS_RElemElements with new children where the argument functions might have applied
  */
 RS_RElemElements RS_visitRElemElements(RS_RElemElements arg, RS_RElem (*acceptHead)(RS_RElem)) {
@@ -3723,7 +3723,7 @@ RS_RElemElements RS_visitRElemElements(RS_RElemElements arg, RS_RElem (*acceptHe
   return (RS_RElemElements)NULL;
 }
 /**
- * Apply functions to the children of a RS_RTypeColumnTypes. 
+ * Apply functions to the children of a RS_RTypeColumnTypes.
  * \return A new RS_RTypeColumnTypes with new children where the argument functions might have applied
  */
 RS_RTypeColumnTypes RS_visitRTypeColumnTypes(RS_RTypeColumnTypes arg, RS_RType (*acceptHead)(RS_RType)) {
@@ -3743,7 +3743,7 @@ RS_RTypeColumnTypes RS_visitRTypeColumnTypes(RS_RTypeColumnTypes arg, RS_RType (
   return (RS_RTypeColumnTypes)NULL;
 }
 /**
- * Apply functions to the children of a RS_RTupleRtuples. 
+ * Apply functions to the children of a RS_RTupleRtuples.
  * \return A new RS_RTupleRtuples with new children where the argument functions might have applied
  */
 RS_RTupleRtuples RS_visitRTupleRtuples(RS_RTupleRtuples arg, RS_RTuple (*acceptHead)(RS_RTuple)) {
@@ -3763,7 +3763,7 @@ RS_RTupleRtuples RS_visitRTupleRtuples(RS_RTupleRtuples arg, RS_RTuple (*acceptH
   return (RS_RTupleRtuples)NULL;
 }
 /**
- * Apply functions to the children of a RS_StrChar. 
+ * Apply functions to the children of a RS_StrChar.
  * \return A new RS_StrChar with new children where the argument functions might have applied
  */
 RS_StrChar RS_visitStrChar(RS_StrChar arg, char* (*acceptString)(char*)) {
@@ -3775,7 +3775,7 @@ RS_StrChar RS_visitStrChar(RS_StrChar arg, char* (*acceptString)(char*)) {
   return (RS_StrChar)NULL;
 }
 /**
- * Apply functions to the children of a RS_StrCon. 
+ * Apply functions to the children of a RS_StrCon.
  * \return A new RS_StrCon with new children where the argument functions might have applied
  */
 RS_StrCon RS_visitStrCon(RS_StrCon arg, char* (*acceptString)(char*)) {
@@ -3787,7 +3787,7 @@ RS_StrCon RS_visitStrCon(RS_StrCon arg, char* (*acceptString)(char*)) {
   return (RS_StrCon)NULL;
 }
 /**
- * Apply functions to the children of a RS_BoolCon. 
+ * Apply functions to the children of a RS_BoolCon.
  * \return A new RS_BoolCon with new children where the argument functions might have applied
  */
 RS_BoolCon RS_visitBoolCon(RS_BoolCon arg) {
@@ -3801,7 +3801,7 @@ RS_BoolCon RS_visitBoolCon(RS_BoolCon arg) {
   return (RS_BoolCon)NULL;
 }
 /**
- * Apply functions to the children of a RS_NatCon. 
+ * Apply functions to the children of a RS_NatCon.
  * \return A new RS_NatCon with new children where the argument functions might have applied
  */
 RS_NatCon RS_visitNatCon(RS_NatCon arg, char* (*acceptString)(char*)) {
@@ -3813,7 +3813,7 @@ RS_NatCon RS_visitNatCon(RS_NatCon arg, char* (*acceptString)(char*)) {
   return (RS_NatCon)NULL;
 }
 /**
- * Apply functions to the children of a RS_IdCon. 
+ * Apply functions to the children of a RS_IdCon.
  * \return A new RS_IdCon with new children where the argument functions might have applied
  */
 RS_IdCon RS_visitIdCon(RS_IdCon arg, char* (*acceptString)(char*)) {
@@ -3825,7 +3825,7 @@ RS_IdCon RS_visitIdCon(RS_IdCon arg, char* (*acceptString)(char*)) {
   return (RS_IdCon)NULL;
 }
 /**
- * Apply functions to the children of a RS_Integer. 
+ * Apply functions to the children of a RS_Integer.
  * \return A new RS_Integer with new children where the argument functions might have applied
  */
 RS_Integer RS_visitInteger(RS_Integer arg, int (*acceptNatCon)(int)) {
@@ -3845,7 +3845,7 @@ RS_Integer RS_visitInteger(RS_Integer arg, int (*acceptNatCon)(int)) {
   return (RS_Integer)NULL;
 }
 /**
- * Apply functions to the children of a RS_Location. 
+ * Apply functions to the children of a RS_Location.
  * \return A new RS_Location with new children where the argument functions might have applied
  */
 RS_Location RS_visitLocation(RS_Location arg, char* (*acceptFilename)(char*), RS_Area (*acceptArea)(RS_Area)) {
@@ -3866,7 +3866,7 @@ RS_Location RS_visitLocation(RS_Location arg, char* (*acceptFilename)(char*), RS
   return (RS_Location)NULL;
 }
 /**
- * Apply functions to the children of a RS_Area. 
+ * Apply functions to the children of a RS_Area.
  * \return A new RS_Area with new children where the argument functions might have applied
  */
 RS_Area RS_visitArea(RS_Area arg, int (*acceptBeginLine)(int), int (*acceptBeginColumn)(int), int (*acceptEndLine)(int), int (*acceptEndColumn)(int), int (*acceptOffset)(int), int (*acceptLength)(int)) {

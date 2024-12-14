@@ -1,12 +1,12 @@
-#include <asc-termstore.h>
+#include "asc-termstore.h"
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
 
 #define TERM_STORE_INITIAL_SIZE    (8*1024)
 
-size_t term_store_begin; 
-size_t term_store_end;   
+size_t term_store_begin;
+size_t term_store_end;
 size_t term_store_size;
 ATerm* term_store = NULL;
 
@@ -68,7 +68,7 @@ size_t TS_push(size_t size)
     }
 
     /* Make sure 0 is in the uninitialized part of the array */
-    memset(term_store + old_size, 0, 
+    memset(term_store + old_size, 0,
 	   (term_store_size - old_size) * sizeof(ATerm));
 
     ATprotectArray((ATerm*) term_store, term_store_size);

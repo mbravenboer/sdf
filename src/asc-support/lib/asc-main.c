@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <aterm2.h>
 #include <sglrInterface.h>
-#include <filterOptions.h>
+#include <parseForest/filterOptions.h>
 #include <inputStringBuilder.h>
 
 #include <atb-tool.h>
@@ -100,7 +100,7 @@ static PT_ParseTree parsetreeFromString(const char *string) {
 
 static PT_ParseTree parsetreeFromATermFile(const char *filename) {
   ATerm term = NULL;
-    
+
   term = ATreadFromNamedFile(filename);
 
   if (term != NULL && ATmatch(term, "parsetree(<term>,<int>)", NULL, NULL)) {
@@ -114,7 +114,7 @@ static PT_ParseTree parsetreeFromATermFile(const char *filename) {
 static PT_ParseTree parsetreeFromTextFile(const char *filename) {
   PT_ParseTree parseResult = NULL;
   InputString inputString;
-  
+
   FLT_setInjectionCountFlag(ATfalse);
   FLT_setPreferenceCountFlag(ATfalse);
 
@@ -133,7 +133,7 @@ static PT_ParseTree parsetreeFromTextFile(const char *filename) {
     ATerror("asc-main: unknown error while parsing %s\n", filename);
     exit(1);
   }
-  
+
   return NULL;
 }
 
@@ -158,7 +158,7 @@ static PT_ParseTree applyFunction(const char *function, const char *sort, int nI
 }
 
 void usage(char *prg) {
-  fprintf(stderr, 
+  fprintf(stderr,
 	  "Usage: %s -h -f <name> -i <file> -s <string> -o <file> -m -r <sort> -S"
 	  " -s -t -v\n"
 	  "Options:\n"
@@ -239,16 +239,16 @@ int asc_support_main(ATerm *bottomOfStack, int argc, char *argv[], void (*regist
     ATBconnect(NULL, NULL, -1, asf_toolbus_handler);
     ATBeventloop();
   }
-  else {    
+  else {
     handleOptions(argc, argv, parseInput);
 
     numberOfInputs = ASC_getNumberOfParseTrees();
     outputFilename = ASC_getOutputFilename();
 
     if (!streq(ASC_getPrefixFunction(),"")) {
-      pt = applyFunction((const char*) ASC_getPrefixFunction(), 
+      pt = applyFunction((const char*) ASC_getPrefixFunction(),
 			 (const char*) ASC_getResultNonTermName(), numberOfInputs, inputs);
-    } 
+    }
     else {
       if (numberOfInputs == 0) {
 	pt = parsetreeFromFile("-", parseInput);

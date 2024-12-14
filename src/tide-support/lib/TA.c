@@ -5,7 +5,7 @@
 #include "TA.h"
 
 /**
- * Converts a string to an ATermList of integers (ASCII values). 
+ * Converts a string to an ATermList of integers (ASCII values).
  * \param[in] str An ASCII string
  * \return An ATermList containing the ASCII values of #arg as ATermInts
  */
@@ -22,7 +22,7 @@ ATerm TA_stringToChars(const char *str) {
 }
 
 /**
- * Converts an ASCII char to an ATermInt. 
+ * Converts an ASCII char to an ATermInt.
  * \param[in] ch an ASCII character
  * \return An ATerm representing the ASCII value of #arg
  */
@@ -31,7 +31,7 @@ ATerm TA_byteToChar(char ch) {
 }
 
 /**
- * Converts a list of integers (ASCII values) to a C string. 
+ * Converts a list of integers (ASCII values) to a C string.
  * \param[in] arg An ATermList with ATermInts, such as [32,32,10]
  * \return String containing the characters from #arg as characters
  */
@@ -247,7 +247,7 @@ ATbool TA_isValidLocation(TA_Location arg) {
  * \param[in] arg input TA_Location
  * \return ATtrue if #arg corresponds to the signature of a line, or ATfalse otherwise
  */
-inline ATbool TA_isLocationLine(TA_Location arg){
+ATbool TA_isLocationLine(TA_Location arg){
   /* checking for: line */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -266,7 +266,7 @@ inline ATbool TA_isLocationLine(TA_Location arg){
  * \param[in] arg input TA_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool TA_isLocationArea(TA_Location arg){
+ATbool TA_isLocationArea(TA_Location arg){
   /* checking for: area-in-file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun1) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -304,7 +304,7 @@ inline ATbool TA_isLocationArea(TA_Location arg){
  * \param[in] arg input TA_Location
  * \return ATtrue if #arg corresponds to the signature of a line-col, or ATfalse otherwise
  */
-inline ATbool TA_isLocationLineCol(TA_Location arg){
+ATbool TA_isLocationLineCol(TA_Location arg){
   /* checking for: lc */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun3) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -326,7 +326,7 @@ inline ATbool TA_isLocationLineCol(TA_Location arg){
  * \param[in] arg input TA_Location
  * \return ATtrue if #arg corresponds to the signature of a unknown, or ATfalse otherwise
  */
-inline ATbool TA_isLocationUnknown(TA_Location arg){
+ATbool TA_isLocationUnknown(TA_Location arg){
   /* checking for: unknown */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun4) {
     return ATtrue;
@@ -335,7 +335,7 @@ inline ATbool TA_isLocationUnknown(TA_Location arg){
 }
 
 /**
- * Assert whether a TA_Location has a file. 
+ * Assert whether a TA_Location has a file.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a file, or ATfalse otherwise
  */
@@ -353,7 +353,7 @@ ATbool TA_hasLocationFile(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a line. 
+ * Assert whether a TA_Location has a line.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a line, or ATfalse otherwise
  */
@@ -368,7 +368,7 @@ ATbool TA_hasLocationLine(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a start-line. 
+ * Assert whether a TA_Location has a start-line.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a start-line, or ATfalse otherwise
  */
@@ -380,7 +380,7 @@ ATbool TA_hasLocationStartLine(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a start-col. 
+ * Assert whether a TA_Location has a start-col.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a start-col, or ATfalse otherwise
  */
@@ -392,7 +392,7 @@ ATbool TA_hasLocationStartCol(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a end-line. 
+ * Assert whether a TA_Location has a end-line.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a end-line, or ATfalse otherwise
  */
@@ -404,7 +404,7 @@ ATbool TA_hasLocationEndLine(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a end-col. 
+ * Assert whether a TA_Location has a end-col.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a end-col, or ATfalse otherwise
  */
@@ -416,7 +416,7 @@ ATbool TA_hasLocationEndCol(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a offset. 
+ * Assert whether a TA_Location has a offset.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a offset, or ATfalse otherwise
  */
@@ -428,7 +428,7 @@ ATbool TA_hasLocationOffset(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a length. 
+ * Assert whether a TA_Location has a length.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a length, or ATfalse otherwise
  */
@@ -440,7 +440,7 @@ ATbool TA_hasLocationLength(TA_Location arg) {
 }
 
 /**
- * Assert whether a TA_Location has a col. 
+ * Assert whether a TA_Location has a col.
  * \param[in] arg input TA_Location
  * \return ATtrue if the TA_Location had a col, or ATfalse otherwise
  */
@@ -463,7 +463,7 @@ char* TA_getLocationFile(TA_Location arg) {
   else if (TA_isLocationArea(arg)) {
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
   }
-  else 
+  else
     return (char*)ATgetName(ATgetAFun((ATermAppl) ATgetArgument((ATermAppl)arg, 0)));
 }
 
@@ -476,7 +476,7 @@ int TA_getLocationLine(TA_Location arg) {
   if (TA_isLocationLine(arg)) {
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
   }
-  else 
+  else
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 1));
 }
 
@@ -486,7 +486,7 @@ int TA_getLocationLine(TA_Location arg) {
  * \return the start-line of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationStartLine(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 1), 0));
 }
 
@@ -496,7 +496,7 @@ int TA_getLocationStartLine(TA_Location arg) {
  * \return the start-col of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationStartCol(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 1), 1));
 }
 
@@ -506,7 +506,7 @@ int TA_getLocationStartCol(TA_Location arg) {
  * \return the end-line of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationEndLine(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 1), 2));
 }
 
@@ -516,7 +516,7 @@ int TA_getLocationEndLine(TA_Location arg) {
  * \return the end-col of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationEndCol(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 1), 3));
 }
 
@@ -526,7 +526,7 @@ int TA_getLocationEndCol(TA_Location arg) {
  * \return the offset of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationOffset(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 1), 4));
 }
 
@@ -536,7 +536,7 @@ int TA_getLocationOffset(TA_Location arg) {
  * \return the length of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationLength(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)ATgetArgument((ATermAppl)arg, 1), 5));
 }
 
@@ -546,7 +546,7 @@ int TA_getLocationLength(TA_Location arg) {
  * \return the col of #arg, if it exist or an undefined value if it does not
  */
 int TA_getLocationCol(TA_Location arg) {
-  
+
     return (int)ATgetInt((ATermInt) ATgetArgument((ATermAppl)arg, 2));
 }
 
@@ -717,7 +717,7 @@ ATbool TA_isValidPort(TA_Port arg) {
  * \param[in] arg input TA_Port
  * \return ATtrue if #arg corresponds to the signature of a step, or ATfalse otherwise
  */
-inline ATbool TA_isPortStep(TA_Port arg){
+ATbool TA_isPortStep(TA_Port arg){
   /* checking for: step */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun5) {
     return ATtrue;
@@ -730,7 +730,7 @@ inline ATbool TA_isPortStep(TA_Port arg){
  * \param[in] arg input TA_Port
  * \return ATtrue if #arg corresponds to the signature of a stopped, or ATfalse otherwise
  */
-inline ATbool TA_isPortStopped(TA_Port arg){
+ATbool TA_isPortStopped(TA_Port arg){
   /* checking for: stopped */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun6) {
     return ATtrue;
@@ -743,7 +743,7 @@ inline ATbool TA_isPortStopped(TA_Port arg){
  * \param[in] arg input TA_Port
  * \return ATtrue if #arg corresponds to the signature of a started, or ATfalse otherwise
  */
-inline ATbool TA_isPortStarted(TA_Port arg){
+ATbool TA_isPortStarted(TA_Port arg){
   /* checking for: started */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == TA_afun7) {
     return ATtrue;
@@ -752,7 +752,7 @@ inline ATbool TA_isPortStarted(TA_Port arg){
 }
 
 /**
- * Apply functions to the children of a TA_Location. 
+ * Apply functions to the children of a TA_Location.
  * \return A new TA_Location with new children where the argument functions might have applied
  */
 TA_Location TA_visitLocation(TA_Location arg, char* (*acceptFile)(char*), int (*acceptLine)(int), int (*acceptStartLine)(int), int (*acceptStartCol)(int), int (*acceptEndLine)(int), int (*acceptEndCol)(int), int (*acceptOffset)(int), int (*acceptLength)(int), int (*acceptCol)(int)) {
@@ -784,7 +784,7 @@ TA_Location TA_visitLocation(TA_Location arg, char* (*acceptFile)(char*), int (*
   return (TA_Location)NULL;
 }
 /**
- * Apply functions to the children of a TA_Port. 
+ * Apply functions to the children of a TA_Port.
  * \return A new TA_Port with new children where the argument functions might have applied
  */
 TA_Port TA_visitPort(TA_Port arg) {

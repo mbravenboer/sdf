@@ -1,12 +1,13 @@
-#include <RStore.h>
-#include <ParsedRStore.h>
 #include <assert.h>
 #include <ctype.h>
+
+#include "RStore.h"
+#include "ParsedRStore.h"
 
 static PRS_IdCon RS_liftIdCon(RS_IdCon in)
 {
   PRS_LexIdCon result = NULL;
- 
+
   if (RS_isValidIdCon(in))  {
     const char *string = RS_getIdConString(in);
     result = PRS_makeLexIdConDefault(string[0], string+1);
@@ -60,30 +61,30 @@ static PRS_RType RS_liftRType(RS_RType in)
   else if (RS_isRTypeStr(in)) {
     return PRS_makeRTypeStr();
   }
-  else if (RS_isRTypeLoc(in)) { 
+  else if (RS_isRTypeLoc(in)) {
     return PRS_makeRTypeLoc();
   }
-  else if (RS_isRTypeTuple(in)) { 
+  else if (RS_isRTypeTuple(in)) {
     PRS_RTypeColumnTypes types = RS_liftColumnTypes(RS_getRTypeColumnTypes(in));
     return PRS_makeRTypeTuple(e, types, e);
   }
-  else if (RS_isRTypeSet(in)) { 
+  else if (RS_isRTypeSet(in)) {
     PRS_RType type = RS_liftRType(RS_getRTypeElementType(in));
     return PRS_makeRTypeSet(e, e, type, e);
   }
-  else if (RS_isRTypeBag(in)) { 
+  else if (RS_isRTypeBag(in)) {
     PRS_RType type = RS_liftRType(RS_getRTypeElementType(in));
     return PRS_makeRTypeSet(e, e, type, e);
   }
-  else if (RS_isRTypeRelation(in)) { 
+  else if (RS_isRTypeRelation(in)) {
     PRS_RTypeColumnTypes types = RS_liftColumnTypes(RS_getRTypeColumnTypes(in));
     return PRS_makeRTypeRelation(e, e, types, e);
   }
-  else if (RS_isRTypeUserDefined(in)) { 
+  else if (RS_isRTypeUserDefined(in)) {
     PRS_IdCon id = RS_liftIdCon(RS_getRTypeTypeName(in));
     return PRS_makeRTypeUserDefined(id);
   }
-  else if (RS_isRTypeParameter(in)) { 
+  else if (RS_isRTypeParameter(in)) {
     PRS_IdCon name = RS_liftIdCon(RS_getRTypeParameterName(in));
     return PRS_makeRTypeParameter(e, name);
   }
@@ -214,7 +215,7 @@ static PRS_Area RS_liftArea(RS_Area in)
     ATwarning("lift rstore: this is not a valid Area: %t, default to 0,0,0,0\n", in);
     PRS_NatCon nat = RS_liftNatCon(0);
     return PRS_makeAreaArea(e, e, nat, e, e, nat,
-			    e, e, nat, e, e, nat, 
+			    e, e, nat, e, e, nat,
 			    e, e, nat, e, e, nat, e);
   }
 }
@@ -248,11 +249,11 @@ static PRS_Location RS_liftLocation(RS_Location in)
 
 static PRS_RElem RS_liftRElem(RS_RElem in);
 
-static PRS_RElemElements RS_liftRElemElements(RS_RElemElements in) 
+static PRS_RElemElements RS_liftRElemElements(RS_RElemElements in)
 {
   PRS_OptLayout e = PRS_makeOptLayoutAbsent();
   PRS_RElemElements elems = PRS_makeRElemElementsEmpty();
-  
+
   if (RS_isValidRElemElements(in)) {
     for ( ; !RS_isRElemElementsEmpty(in); in = RS_getRElemElementsTail(in)) {
       PRS_RElem elem = RS_liftRElem(RS_getRElemElementsHead(in));
@@ -270,7 +271,7 @@ static PRS_RElemElements RS_liftRElemElements(RS_RElemElements in)
 
   /* order is irrelevant */
   return elems;
-} 
+}
 
 static PRS_RElem RS_liftRElem(RS_RElem in)
 {

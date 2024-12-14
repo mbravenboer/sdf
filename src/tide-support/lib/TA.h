@@ -84,10 +84,10 @@ ATbool _TA_isEqualPort(TA_Port arg0, TA_Port arg1);
 #define TA_isEqualPort(arg0, arg1) (_TA_isEqualPort(arg0, arg1))
 #endif
 ATbool TA_isValidLocation(TA_Location arg);
-inline ATbool TA_isLocationLine(TA_Location arg);
-inline ATbool TA_isLocationArea(TA_Location arg);
-inline ATbool TA_isLocationLineCol(TA_Location arg);
-inline ATbool TA_isLocationUnknown(TA_Location arg);
+ATbool TA_isLocationLine(TA_Location arg);
+ATbool TA_isLocationArea(TA_Location arg);
+ATbool TA_isLocationLineCol(TA_Location arg);
+ATbool TA_isLocationUnknown(TA_Location arg);
 ATbool TA_hasLocationFile(TA_Location arg);
 ATbool TA_hasLocationLine(TA_Location arg);
 ATbool TA_hasLocationStartLine(TA_Location arg);
@@ -116,9 +116,9 @@ TA_Location TA_setLocationOffset(TA_Location arg, int offset);
 TA_Location TA_setLocationLength(TA_Location arg, int length);
 TA_Location TA_setLocationCol(TA_Location arg, int col);
 ATbool TA_isValidPort(TA_Port arg);
-inline ATbool TA_isPortStep(TA_Port arg);
-inline ATbool TA_isPortStopped(TA_Port arg);
-inline ATbool TA_isPortStarted(TA_Port arg);
+ATbool TA_isPortStep(TA_Port arg);
+ATbool TA_isPortStopped(TA_Port arg);
+ATbool TA_isPortStarted(TA_Port arg);
 TA_Location TA_visitLocation(TA_Location arg, char* (*acceptFile)(char*), int (*acceptLine)(int), int (*acceptStartLine)(int), int (*acceptStartCol)(int), int (*acceptEndLine)(int), int (*acceptEndCol)(int), int (*acceptOffset)(int), int (*acceptLength)(int), int (*acceptCol)(int));
 TA_Port TA_visitPort(TA_Port arg);
 
