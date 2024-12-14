@@ -231,7 +231,7 @@ sglr_pgen_exe = executable('sdf2table', [
   ],
   dependencies : [aterm],
   link_with : [sglr_library, sglr_pgen_library],
-  install: true,
+q  install: true,
   # TODO
   install_rpath : '/opt/stratego/lib/x86_64-linux-gnu/')
 
