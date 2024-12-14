@@ -1,5 +1,0 @@
-dnl $Id$
-
-AC_INIT
-META_SETUP
-AC_OUTPUT

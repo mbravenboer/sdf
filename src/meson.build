@@ -334,3 +334,5 @@ test('SDF2TABLE regression tests',
 test('SDF2TABLE load tests',
   files('pgen/test/loadTests.sh.src'),
   env : test_env + ['TESTDIR=' + meson.current_source_dir() + '/pgen/test'])
+
+subdir('sdf-library')
