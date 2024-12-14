@@ -3,8 +3,8 @@
 #include <assert.h>
 #include <aterm2.h>
 #include <logging.h>
-#include "ksdf2table.h" 
-#include "priorities.h" 
+#include "ksdf2table.h"
+#include "priorities.h"
 #include "flatten.h"
 #include "first.h"
 #include "pgenOptions.h"
@@ -50,12 +50,12 @@ static void sort_on_rhs_symbol(PT_Production prod, int prodnr) {
   }
 }
 
-/* Assign production numbers, group productions on rhs symbol, save 
+/* Assign production numbers, group productions on rhs symbol, save
  * attributes and initialize first set attributes. */
 static PTBL_Labels process_productions(SDF_ProductionList prods) {
   ATermIndexedSet unique_prods = ATindexedSetCreate(1024, 75);
   SDF_ProductionList localProds = prods;
-  SDF_Production prod; 
+  SDF_Production prod;
   SDF_Production newProd;
   PTBL_Label labelentry;
   PTBL_Labels labelentries = PTBL_makeLabelsEmpty();
@@ -63,9 +63,9 @@ static PTBL_Labels process_productions(SDF_ProductionList prods) {
   PT_Symbols args;
   ATbool isnew;
   int cnt = 0;
-  int idx; 
+  int idx;
   int max_idx = 0;
-  int arg; 
+  int arg;
   int nr_args;
   int maxProdNumber;
 
@@ -240,9 +240,9 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
   ATbool isnew;
   int cnt = 0;
   int idx;
-  int localIdx1; 
+  int localIdx1;
   int localIdx2;
-  int max_idx; 
+  int max_idx;
 
   /* Store the chain priorities */
   max_idx = -1;
@@ -270,7 +270,7 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
         if (isnew) {
           if (idx > max_idx) {
             max_idx = idx;
-          } 
+          }
 
           prioentries = PTBL_makePrioritiesMany(prioentry, prioentries);
         }
@@ -285,11 +285,11 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
   }
 
   /* Calculate the transitive closure of the priorities */
-  for (localIdx1=0; localIdx1<=max_idx; localIdx1++) {    
+  for (localIdx1=0; localIdx1<=max_idx; localIdx1++) {
     PTBL_Priority prioentry1 = PGEN_getPriority(localIdx1);
     int rightnr1 = PTBL_getPriorityLabel2(prioentry1);
 
-    for (localIdx2=0; localIdx2<=max_idx; localIdx2++) {    
+    for (localIdx2=0; localIdx2<=max_idx; localIdx2++) {
       PTBL_Priority prioentry2 = PGEN_getPriority(localIdx2);
       int leftnr2 = PTBL_getPriorityLabel1(prioentry2);
 
@@ -301,7 +301,7 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
         if (isnew) {
           if (idx > max_idx) {
             max_idx = idx;
-          } 
+          }
           prioentries = PTBL_makePrioritiesMany(prioentry, prioentries);
           cnt++;
         }
@@ -312,7 +312,7 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
   /* Removed in merge.
      while (SDF_hasPriorityListHead(prios)) {
      SDF_Priority prio = SDF_getPriorityListHead(prios);
-     
+
      if (SDF_isPriorityAssoc(prio)) {
      ATabort("Assoc priorities may not occur after normalization %t\n", prio);
      prioentry = NULL;
@@ -332,7 +332,7 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
      prios = SDF_getPriorityListTail(prios);
      }
   */
-  
+
   loop = nonTransitivePrioEntries;
   while(!PTBL_isPrioritiesEmpty(loop)) {
     PTBL_Priority next = PTBL_getPrioritiesHead(loop);
@@ -350,27 +350,27 @@ static PTBL_Priorities process_priorities(SDF_PriorityList prios) {
   return PTBL_concatPriorities(prioentries, nonTransitivePrioEntries);
 }
 
-/* Process the grammar's follow restrictions and associate all defined 
+/* Process the grammar's follow restrictions and associate all defined
  * lookaheads to the approapriate non-terminals. */
 static void process_restrictions(SDF_RestrictionList restricts) {
   int cnt = 0;
 
   /* For each follow restriction defined... */
   while (SDF_hasRestrictionListHead(restricts)) {
-    SDF_Restriction restrict = SDF_getRestrictionListHead(restricts);
+    SDF_Restriction restr = SDF_getRestrictionListHead(restricts);
 
     cnt++;
-    if (SDF_isRestrictionFollow(restrict)) {
-      SDF_Symbols symbols = SDF_getRestrictionSymbols(restrict);
+    if (SDF_isRestrictionFollow(restr)) {
+      SDF_Symbols symbols = SDF_getRestrictionSymbols(restr);
       SDF_SymbolList symbolList = SDF_getSymbolsList(symbols);
-      SDF_Lookaheads lookaheads = SDF_getRestrictionLookaheads(restrict);
+      SDF_Lookaheads lookaheads = SDF_getRestrictionLookaheads(restr);
 
       /* The lookaheads have already been normalized to LookaheadsList. */
       if (SDF_isLookaheadsList(lookaheads)) {
         SDF_LookaheadList lookaheadList = SDF_getLookaheadsList(lookaheads);
         PTBL_Restrictions restrictions = PTBL_makeRestrictionsEmpty();
 
-        /* Process the new lookaheads defined in the current follow 
+        /* Process the new lookaheads defined in the current follow
          * restriction. */
         while (SDF_hasLookaheadListHead(lookaheadList)) {
           SDF_Lookahead lookahead = SDF_getLookaheadListHead(lookaheadList);
@@ -384,9 +384,9 @@ static void process_restrictions(SDF_RestrictionList restricts) {
           lookaheadList = SDF_getLookaheadListTail(lookaheadList);
         }
 
-        /* Get any existing lookaheads for the symbols in the current follow 
-         * restriction (other lookaheads may have been defined in previous 
-         * follow restrictions) and add the new lookaheads to the symbol's 
+        /* Get any existing lookaheads for the symbols in the current follow
+         * restriction (other lookaheads may have been defined in previous
+         * follow restrictions) and add the new lookaheads to the symbol's
          * follow restrictions. */
         while (SDF_hasSymbolListHead(symbolList)) {
           SDF_Symbol symbol = SDF_getSymbolListHead(symbolList);
@@ -531,7 +531,7 @@ static ATermList compress_gotos(ATermList goto_list)
 /*}}}  */
 #endif
 
-/* Process a grammar and extract the productions, follow restrictions and 
+/* Process a grammar and extract the productions, follow restrictions and
  * priorities. */
 void PGEN_processGrammar(PT_Tree ptTree) {
   SDF_Grammar grammarTerm = SDF_GrammarFromTerm(PT_TreeToTerm(ptTree));
@@ -545,7 +545,7 @@ void PGEN_processGrammar(PT_Tree ptTree) {
     priosection = process_priorities(prios);
 
     PTBL_protectLabels(&labelsection);
-    PTBL_protectPriorities(&priosection); 
+    PTBL_protectPriorities(&priosection);
 
     process_restrictions(restricts);
   }

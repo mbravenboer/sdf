@@ -132,6 +132,7 @@ libsglr_pgen_sources = files(
     'sdf-support/lib/prod.c',
     'sdf-support/lib/restrict.c',
     'sdf-support/lib/import-operations.c',
+    'sdf-support/lib/sdf2pt.c',
     'sdf-support/lib/sort.c',
     'rstore-support/lib/RStore.c',
     'rstore-support/lib/RStore_dict.c',
@@ -166,8 +167,26 @@ libsglr_pgen_sources = files(
     'asc-support/lib/asc-traversals.c',
     'asc-support/lib/builtin-forward.c',
     'asc-support/lib/Library.c',
-    'asc-support/lib/Library_dict.c')
-
+    'asc-support/lib/Library_dict.c',
+    'pgen/src/generate.c',
+    'pgen/src/ksdf2table.c',
+    'pgen/src/atsets.c',
+    'pgen/src/flatten.c',
+    'pgen/src/characters.c',
+    'pgen/src/first.c',
+    'pgen/src/follow.c',
+    'pgen/src/goto.c',
+    'pgen/src/predicted.c',
+    'pgen/src/priorities.c',
+    'pgen/src/intset.c',
+    'pgen/src/item.c',
+    'pgen/src/itemset.c',
+    'pgen/src/pgen-symbol.c',
+    'pgen/src/pgenOptions.c',
+    'pgen/src/parseTable-data.c',
+    'pgen/src/normalize.c',
+    'pgen/src/Sdf2-Normalization.c',
+    'pgen/src/parseTable-stats.c')
 
 sglr_pgen_library = library(
   'sglr-generator',
@@ -176,16 +195,45 @@ sglr_pgen_library = library(
     'pt-support/libmept',
     'pt-support/libptmept',
     'ptable-support/lib',
+    'asc-support/lib',
     'asf-support/lib',
     'rstore-support/lib',
     'tide-support/lib',
     'config-support/lib',
     'toolbuslib/src',
     'error-support/lib',
+    'c-library/logging',
     'c-library/statistics',
-    'sglr/src'
+    'sdf-support/lib',
+    'sglr/src',
     ],
   link_args : ['-Wl,-no-undefined'],
   dependencies : [aterm],
   link_with : [sglr_library],
   install: true)
+
+sglr_pgen_exe = executable('sdf2table', [
+    'pgen/src/parsetablegen.c',
+    'pgen/src/load.c',
+    'pgen/src/main.c',
+    'pgen/src/Sdf2-Load.c'
+  ],
+  include_directories : [
+    'asc-support/lib',
+    'c-library/logging',
+    'config-support/lib',
+    'error-support/lib',
+    'pt-support/libmept',
+    'ptable-support/lib',
+    'sdf-support/lib',
+    'sglr/src',
+    'toolbuslib/src',
+  ],
+  dependencies : [aterm],
+  link_with : [sglr_library, sglr_pgen_library],
+  install: true,
+  # TODO
+  install_rpath : '/opt/stratego/lib/x86_64-linux-gnu/')
+
+
+# TODO test-chars pgen

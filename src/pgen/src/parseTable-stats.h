@@ -3,15 +3,15 @@
 #ifndef __PARSETABLESTATS_H__
 #define __PARSETABLESTATS_H__
 
-#include <pgenOptions.h>
+#include "pgenOptions.h"
 
-extern unsigned int PGEN_STATS_actions; 
-extern unsigned int PGEN_STATS_gotos;  
-extern unsigned int PGEN_STATS_items; 
+extern unsigned int PGEN_STATS_actions;
+extern unsigned int PGEN_STATS_gotos;
+extern unsigned int PGEN_STATS_items;
 
 extern unsigned int PGEN_STATS_maxActionsInStates;
-extern unsigned int PGEN_STATS_maxGotosInState; 
-extern unsigned int PGEN_STATS_maxItemsInState; 
+extern unsigned int PGEN_STATS_maxGotosInState;
+extern unsigned int PGEN_STATS_maxItemsInState;
 
 extern int PGEN_STATS_userRejects;
 extern int PGEN_STATS_userPrefers;
@@ -51,7 +51,7 @@ void PGEN_STATS_print(void);
       PGEN_STATS_maxActionsInStates = value;\
     }\
   }
-#else 
+#else
 #define PGEN_STATS_increaseActions(value) ;
 #endif
 
@@ -63,7 +63,7 @@ void PGEN_STATS_print(void);
       PGEN_STATS_maxGotosInState = value;\
     }\
   }
-#else 
+#else
 #define PGEN_STATS_increaseGotos(value) ;
 #endif
 
@@ -75,7 +75,7 @@ void PGEN_STATS_print(void);
       PGEN_STATS_maxItemsInState = value;\
     }\
   }
-#else 
+#else
 #define PGEN_STATS_increaseItems(value) ;
 #endif
 
@@ -95,7 +95,7 @@ void PGEN_STATS_print(void);
       PGEN_STATS_maxUserProductionLhsLength = value;\
     }\
   }
-#else 
+#else
 #define PGEN_STATS_setMaxUserProductionLhsLength(value) ;
 #endif
 
@@ -106,7 +106,7 @@ void PGEN_STATS_print(void);
       PGEN_STATS_maxProductionLhsLength = value;\
     }\
   }
-#else 
+#else
 #define PGEN_STATS_setMaxProductionLhsSymbols(value) ;
 #endif
 
