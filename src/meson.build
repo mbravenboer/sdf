@@ -111,8 +111,7 @@ sglr_exe = executable('sglr', [
     dependencies : [aterm],
     link_with : [sglr_library],
     install: true,
-    # TODO
-    install_rpath : '/opt/stratego/lib/x86_64-linux-gnu/')
+    install_rpath : libdir)
 
 # Parser generator
 # ============================================================================
@@ -212,13 +211,7 @@ sglr_pgen_library = library(
   link_with : [sglr_library],
   install: true)
 
-sdf2table_exe = executable('sdf2table', [
-    'pgen/src/parsetablegen.c',
-    'pgen/src/load.c',
-    'pgen/src/main.c',
-    'pgen/src/Sdf2-Load.c'
-  ],
-  include_directories : [
+sglr_pgen_include_dirs = include_directories(
     'asc-support/lib',
     'c-library/logging',
     'config-support/lib',
@@ -227,14 +220,19 @@ sdf2table_exe = executable('sdf2table', [
     'ptable-support/lib',
     'sdf-support/lib',
     'sglr/src',
-    'toolbuslib/src',
+    'toolbuslib/src')
+
+sdf2table_exe = executable('sdf2table', [
+    'pgen/src/parsetablegen.c',
+    'pgen/src/load.c',
+    'pgen/src/main.c',
+    'pgen/src/Sdf2-Load.c'
   ],
+  include_directories : sglr_pgen_include_dirs,
   dependencies : [aterm],
   link_with : [sglr_library, sglr_pgen_library],
   install: true,
-  # TODO
-  install_rpath : '/opt/stratego/lib/x86_64-linux-gnu/')
-
+  install_rpath : libdir)
 
 # TODO test-chars pgen
 
@@ -324,15 +322,6 @@ test('SGLR regression tests',
   files('sglr/test/regressionTests.sh.src'),
   env : test_env + ['TESTDIR=' + meson.current_source_dir() + '/sglr/test'])
 
-# Tests for SDF parser generator
-# ============================================================================
-
-test('SDF2TABLE regression tests',
-  files('pgen/test/regressionTests.sh.src'),
-  env : test_env + ['TESTDIR=' + meson.current_source_dir() + '/pgen/test'])
-
-test('SDF2TABLE load tests',
-  files('pgen/test/loadTests.sh.src'),
-  env : test_env + ['TESTDIR=' + meson.current_source_dir() + '/pgen/test'])
 
 subdir('sdf-library')
+subdir('pgen')

@@ -2659,7 +2659,7 @@ ATbool CFG_isValidVirtualButton(CFG_VirtualButton arg) {
  * \param[in] arg input CFG_VirtualButton
  * \return ATtrue if #arg corresponds to the signature of a NOBUTTON, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualButtonNOBUTTON(CFG_VirtualButton arg){
+ATbool CFG_isVirtualButtonNOBUTTON(CFG_VirtualButton arg){
   /* checking for: NOBUTTON */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun0) {
     return ATtrue;
@@ -2672,7 +2672,7 @@ inline ATbool CFG_isVirtualButtonNOBUTTON(CFG_VirtualButton arg){
  * \param[in] arg input CFG_VirtualButton
  * \return ATtrue if #arg corresponds to the signature of a BUTTON1, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualButtonBUTTON1(CFG_VirtualButton arg){
+ATbool CFG_isVirtualButtonBUTTON1(CFG_VirtualButton arg){
   /* checking for: BUTTON1 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun1) {
     return ATtrue;
@@ -2685,7 +2685,7 @@ inline ATbool CFG_isVirtualButtonBUTTON1(CFG_VirtualButton arg){
  * \param[in] arg input CFG_VirtualButton
  * \return ATtrue if #arg corresponds to the signature of a BUTTON2, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualButtonBUTTON2(CFG_VirtualButton arg){
+ATbool CFG_isVirtualButtonBUTTON2(CFG_VirtualButton arg){
   /* checking for: BUTTON2 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun2) {
     return ATtrue;
@@ -2698,7 +2698,7 @@ inline ATbool CFG_isVirtualButtonBUTTON2(CFG_VirtualButton arg){
  * \param[in] arg input CFG_VirtualButton
  * \return ATtrue if #arg corresponds to the signature of a BUTTON3, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualButtonBUTTON3(CFG_VirtualButton arg){
+ATbool CFG_isVirtualButtonBUTTON3(CFG_VirtualButton arg){
   /* checking for: BUTTON3 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun3) {
     return ATtrue;
@@ -2729,7 +2729,7 @@ ATbool CFG_isValidKeyModifier(CFG_KeyModifier arg) {
  * \param[in] arg input CFG_KeyModifier
  * \return ATtrue if #arg corresponds to the signature of a M_ALT, or ATfalse otherwise
  */
-inline ATbool CFG_isKeyModifierMUnderscoreALT(CFG_KeyModifier arg){
+ATbool CFG_isKeyModifierMUnderscoreALT(CFG_KeyModifier arg){
   /* checking for: M_ALT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun4) {
     return ATtrue;
@@ -2742,7 +2742,7 @@ inline ATbool CFG_isKeyModifierMUnderscoreALT(CFG_KeyModifier arg){
  * \param[in] arg input CFG_KeyModifier
  * \return ATtrue if #arg corresponds to the signature of a M_CTRL, or ATfalse otherwise
  */
-inline ATbool CFG_isKeyModifierMUnderscoreCTRL(CFG_KeyModifier arg){
+ATbool CFG_isKeyModifierMUnderscoreCTRL(CFG_KeyModifier arg){
   /* checking for: M_CTRL */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun5) {
     return ATtrue;
@@ -2755,7 +2755,7 @@ inline ATbool CFG_isKeyModifierMUnderscoreCTRL(CFG_KeyModifier arg){
  * \param[in] arg input CFG_KeyModifier
  * \return ATtrue if #arg corresponds to the signature of a M_SHIFT, or ATfalse otherwise
  */
-inline ATbool CFG_isKeyModifierMUnderscoreSHIFT(CFG_KeyModifier arg){
+ATbool CFG_isKeyModifierMUnderscoreSHIFT(CFG_KeyModifier arg){
   /* checking for: M_SHIFT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun6) {
     return ATtrue;
@@ -3071,7 +3071,7 @@ ATbool CFG_isValidVirtualKey(CFG_VirtualKey arg) {
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_0, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore0(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore0(CFG_VirtualKey arg){
   /* checking for: VK_0 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun7) {
     return ATtrue;
@@ -3084,7 +3084,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore0(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_1, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore1(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore1(CFG_VirtualKey arg){
   /* checking for: VK_1 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun8) {
     return ATtrue;
@@ -3097,7 +3097,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore1(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_2, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore2(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore2(CFG_VirtualKey arg){
   /* checking for: VK_2 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun9) {
     return ATtrue;
@@ -3110,7 +3110,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore2(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_3, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore3(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore3(CFG_VirtualKey arg){
   /* checking for: VK_3 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun10) {
     return ATtrue;
@@ -3123,7 +3123,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore3(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_4, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore4(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore4(CFG_VirtualKey arg){
   /* checking for: VK_4 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun11) {
     return ATtrue;
@@ -3136,7 +3136,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore4(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_5, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore5(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore5(CFG_VirtualKey arg){
   /* checking for: VK_5 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun12) {
     return ATtrue;
@@ -3149,7 +3149,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore5(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_6, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore6(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore6(CFG_VirtualKey arg){
   /* checking for: VK_6 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun13) {
     return ATtrue;
@@ -3162,7 +3162,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore6(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_7, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore7(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore7(CFG_VirtualKey arg){
   /* checking for: VK_7 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun14) {
     return ATtrue;
@@ -3175,7 +3175,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore7(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_8, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore8(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore8(CFG_VirtualKey arg){
   /* checking for: VK_8 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun15) {
     return ATtrue;
@@ -3188,7 +3188,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore8(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_9, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscore9(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscore9(CFG_VirtualKey arg){
   /* checking for: VK_9 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun16) {
     return ATtrue;
@@ -3201,7 +3201,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscore9(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_A, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreA(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreA(CFG_VirtualKey arg){
   /* checking for: VK_A */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun17) {
     return ATtrue;
@@ -3214,7 +3214,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreA(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_B, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreB(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreB(CFG_VirtualKey arg){
   /* checking for: VK_B */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun18) {
     return ATtrue;
@@ -3227,7 +3227,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreB(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_C, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreC(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreC(CFG_VirtualKey arg){
   /* checking for: VK_C */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun19) {
     return ATtrue;
@@ -3240,7 +3240,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreC(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_D, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreD(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreD(CFG_VirtualKey arg){
   /* checking for: VK_D */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun20) {
     return ATtrue;
@@ -3253,7 +3253,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreD(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_E, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreE(CFG_VirtualKey arg){
   /* checking for: VK_E */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun21) {
     return ATtrue;
@@ -3266,7 +3266,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF(CFG_VirtualKey arg){
   /* checking for: VK_F */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun22) {
     return ATtrue;
@@ -3279,7 +3279,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_G, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreG(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreG(CFG_VirtualKey arg){
   /* checking for: VK_G */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun23) {
     return ATtrue;
@@ -3292,7 +3292,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreG(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_H, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreH(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreH(CFG_VirtualKey arg){
   /* checking for: VK_H */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun24) {
     return ATtrue;
@@ -3305,7 +3305,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreH(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_I, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreI(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreI(CFG_VirtualKey arg){
   /* checking for: VK_I */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun25) {
     return ATtrue;
@@ -3318,7 +3318,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreI(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_J, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreJ(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreJ(CFG_VirtualKey arg){
   /* checking for: VK_J */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun26) {
     return ATtrue;
@@ -3331,7 +3331,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreJ(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_K, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreK(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreK(CFG_VirtualKey arg){
   /* checking for: VK_K */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun27) {
     return ATtrue;
@@ -3344,7 +3344,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreK(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_L, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreL(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreL(CFG_VirtualKey arg){
   /* checking for: VK_L */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun28) {
     return ATtrue;
@@ -3357,7 +3357,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreL(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_M, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreM(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreM(CFG_VirtualKey arg){
   /* checking for: VK_M */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun29) {
     return ATtrue;
@@ -3370,7 +3370,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreM(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_N, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreN(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreN(CFG_VirtualKey arg){
   /* checking for: VK_N */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun30) {
     return ATtrue;
@@ -3383,7 +3383,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreN(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_O, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreO(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreO(CFG_VirtualKey arg){
   /* checking for: VK_O */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun31) {
     return ATtrue;
@@ -3396,7 +3396,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreO(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_P, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreP(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreP(CFG_VirtualKey arg){
   /* checking for: VK_P */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun32) {
     return ATtrue;
@@ -3409,7 +3409,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreP(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_Q, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreQ(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreQ(CFG_VirtualKey arg){
   /* checking for: VK_Q */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun33) {
     return ATtrue;
@@ -3422,7 +3422,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreQ(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_R, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreR(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreR(CFG_VirtualKey arg){
   /* checking for: VK_R */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun34) {
     return ATtrue;
@@ -3435,7 +3435,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreR(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_S, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreS(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreS(CFG_VirtualKey arg){
   /* checking for: VK_S */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun35) {
     return ATtrue;
@@ -3448,7 +3448,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreS(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_T, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreT(CFG_VirtualKey arg){
   /* checking for: VK_T */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun36) {
     return ATtrue;
@@ -3461,7 +3461,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreT(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_U, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreU(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreU(CFG_VirtualKey arg){
   /* checking for: VK_U */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun37) {
     return ATtrue;
@@ -3474,7 +3474,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreU(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_V, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreV(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreV(CFG_VirtualKey arg){
   /* checking for: VK_V */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun38) {
     return ATtrue;
@@ -3487,7 +3487,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreV(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_W, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreW(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreW(CFG_VirtualKey arg){
   /* checking for: VK_W */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun39) {
     return ATtrue;
@@ -3500,7 +3500,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreW(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_X, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreX(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreX(CFG_VirtualKey arg){
   /* checking for: VK_X */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun40) {
     return ATtrue;
@@ -3513,7 +3513,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreX(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_Y, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreY(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreY(CFG_VirtualKey arg){
   /* checking for: VK_Y */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun41) {
     return ATtrue;
@@ -3526,7 +3526,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreY(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_Z, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreZ(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreZ(CFG_VirtualKey arg){
   /* checking for: VK_Z */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun42) {
     return ATtrue;
@@ -3539,7 +3539,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreZ(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_AMPERSAND, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreAMPERSAND(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreAMPERSAND(CFG_VirtualKey arg){
   /* checking for: VK_AMPERSAND */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun43) {
     return ATtrue;
@@ -3552,7 +3552,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreAMPERSAND(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_ASTERISK, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreASTERISK(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreASTERISK(CFG_VirtualKey arg){
   /* checking for: VK_ASTERISK */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun44) {
     return ATtrue;
@@ -3565,7 +3565,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreASTERISK(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_AT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreAT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreAT(CFG_VirtualKey arg){
   /* checking for: VK_AT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun45) {
     return ATtrue;
@@ -3578,7 +3578,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreAT(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_BACK_QUOTE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreQUOTE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreQUOTE(CFG_VirtualKey arg){
   /* checking for: VK_BACK_QUOTE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun46) {
     return ATtrue;
@@ -3591,7 +3591,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreQUOTE(CFG_VirtualKey arg
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_BACK_SLASH, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreSLASH(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreSLASH(CFG_VirtualKey arg){
   /* checking for: VK_BACK_SLASH */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun47) {
     return ATtrue;
@@ -3604,7 +3604,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreSLASH(CFG_VirtualKey arg
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_BACK_SPACE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreSPACE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreSPACE(CFG_VirtualKey arg){
   /* checking for: VK_BACK_SPACE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun48) {
     return ATtrue;
@@ -3617,7 +3617,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreBACKUnderscoreSPACE(CFG_VirtualKey arg
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_BEGIN, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreBEGIN(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreBEGIN(CFG_VirtualKey arg){
   /* checking for: VK_BEGIN */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun49) {
     return ATtrue;
@@ -3630,7 +3630,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreBEGIN(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_BRACE_LEFT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreBRACEUnderscoreLEFT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreBRACEUnderscoreLEFT(CFG_VirtualKey arg){
   /* checking for: VK_BRACE_LEFT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun50) {
     return ATtrue;
@@ -3643,7 +3643,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreBRACEUnderscoreLEFT(CFG_VirtualKey arg
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_BRACE_RIGHT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreBRACEUnderscoreRIGHT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreBRACEUnderscoreRIGHT(CFG_VirtualKey arg){
   /* checking for: VK_BRACE_RIGHT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun51) {
     return ATtrue;
@@ -3656,7 +3656,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreBRACEUnderscoreRIGHT(CFG_VirtualKey ar
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_CIRCUMFLEX, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreCIRCUMFLEX(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreCIRCUMFLEX(CFG_VirtualKey arg){
   /* checking for: VK_CIRCUMFLEX */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun52) {
     return ATtrue;
@@ -3669,7 +3669,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreCIRCUMFLEX(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_CLEAR, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreCLEAR(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreCLEAR(CFG_VirtualKey arg){
   /* checking for: VK_CLEAR */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun53) {
     return ATtrue;
@@ -3682,7 +3682,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreCLEAR(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_CLOSE_BRACKET, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreCLOSEUnderscoreBRACKET(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreCLOSEUnderscoreBRACKET(CFG_VirtualKey arg){
   /* checking for: VK_CLOSE_BRACKET */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun54) {
     return ATtrue;
@@ -3695,7 +3695,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreCLOSEUnderscoreBRACKET(CFG_VirtualKey 
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_COLON, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreCOLON(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreCOLON(CFG_VirtualKey arg){
   /* checking for: VK_COLON */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun55) {
     return ATtrue;
@@ -3708,7 +3708,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreCOLON(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_COMMA, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreCOMMA(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreCOMMA(CFG_VirtualKey arg){
   /* checking for: VK_COMMA */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun56) {
     return ATtrue;
@@ -3721,7 +3721,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreCOMMA(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_DECIMAL, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreDECIMAL(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreDECIMAL(CFG_VirtualKey arg){
   /* checking for: VK_DECIMAL */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun57) {
     return ATtrue;
@@ -3734,7 +3734,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreDECIMAL(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_DELETE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreDELETE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreDELETE(CFG_VirtualKey arg){
   /* checking for: VK_DELETE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun58) {
     return ATtrue;
@@ -3747,7 +3747,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreDELETE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_DIVIDE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreDIVIDE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreDIVIDE(CFG_VirtualKey arg){
   /* checking for: VK_DIVIDE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun59) {
     return ATtrue;
@@ -3760,7 +3760,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreDIVIDE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_DOLLAR, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreDOLLAR(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreDOLLAR(CFG_VirtualKey arg){
   /* checking for: VK_DOLLAR */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun60) {
     return ATtrue;
@@ -3773,7 +3773,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreDOLLAR(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_DOWN, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreDOWN(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreDOWN(CFG_VirtualKey arg){
   /* checking for: VK_DOWN */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun61) {
     return ATtrue;
@@ -3786,7 +3786,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreDOWN(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_END, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreEND(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreEND(CFG_VirtualKey arg){
   /* checking for: VK_END */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun62) {
     return ATtrue;
@@ -3799,7 +3799,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreEND(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_ENTER, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreENTER(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreENTER(CFG_VirtualKey arg){
   /* checking for: VK_ENTER */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun63) {
     return ATtrue;
@@ -3812,7 +3812,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreENTER(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_EQUALS, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreEQUALS(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreEQUALS(CFG_VirtualKey arg){
   /* checking for: VK_EQUALS */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun64) {
     return ATtrue;
@@ -3825,7 +3825,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreEQUALS(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_ESCAPE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreESCAPE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreESCAPE(CFG_VirtualKey arg){
   /* checking for: VK_ESCAPE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun65) {
     return ATtrue;
@@ -3838,7 +3838,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreESCAPE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_EXCLAMATION_MARK, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreEXCLAMATIONUnderscoreMARK(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreEXCLAMATIONUnderscoreMARK(CFG_VirtualKey arg){
   /* checking for: VK_EXCLAMATION_MARK */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun66) {
     return ATtrue;
@@ -3851,7 +3851,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreEXCLAMATIONUnderscoreMARK(CFG_VirtualK
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F1, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF1(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF1(CFG_VirtualKey arg){
   /* checking for: VK_F1 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun67) {
     return ATtrue;
@@ -3864,7 +3864,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF1(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F2, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF2(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF2(CFG_VirtualKey arg){
   /* checking for: VK_F2 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun68) {
     return ATtrue;
@@ -3877,7 +3877,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF2(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F3, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF3(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF3(CFG_VirtualKey arg){
   /* checking for: VK_F3 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun69) {
     return ATtrue;
@@ -3890,7 +3890,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF3(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F4, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF4(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF4(CFG_VirtualKey arg){
   /* checking for: VK_F4 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun70) {
     return ATtrue;
@@ -3903,7 +3903,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF4(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F5, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF5(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF5(CFG_VirtualKey arg){
   /* checking for: VK_F5 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun71) {
     return ATtrue;
@@ -3916,7 +3916,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF5(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F6, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF6(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF6(CFG_VirtualKey arg){
   /* checking for: VK_F6 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun72) {
     return ATtrue;
@@ -3929,7 +3929,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF6(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F7, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF7(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF7(CFG_VirtualKey arg){
   /* checking for: VK_F7 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun73) {
     return ATtrue;
@@ -3942,7 +3942,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF7(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F8, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF8(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF8(CFG_VirtualKey arg){
   /* checking for: VK_F8 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun74) {
     return ATtrue;
@@ -3955,7 +3955,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF8(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F9, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF9(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF9(CFG_VirtualKey arg){
   /* checking for: VK_F9 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun75) {
     return ATtrue;
@@ -3968,7 +3968,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF9(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F10, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF10(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF10(CFG_VirtualKey arg){
   /* checking for: VK_F10 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun76) {
     return ATtrue;
@@ -3981,7 +3981,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF10(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F11, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF11(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF11(CFG_VirtualKey arg){
   /* checking for: VK_F11 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun77) {
     return ATtrue;
@@ -3994,7 +3994,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF11(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_F12, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreF12(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreF12(CFG_VirtualKey arg){
   /* checking for: VK_F12 */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun78) {
     return ATtrue;
@@ -4007,7 +4007,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreF12(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_GREATER, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreGREATER(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreGREATER(CFG_VirtualKey arg){
   /* checking for: VK_GREATER */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun79) {
     return ATtrue;
@@ -4020,7 +4020,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreGREATER(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_HOME, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreHOME(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreHOME(CFG_VirtualKey arg){
   /* checking for: VK_HOME */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun80) {
     return ATtrue;
@@ -4033,7 +4033,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreHOME(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_INSERT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreINSERT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreINSERT(CFG_VirtualKey arg){
   /* checking for: VK_INSERT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun81) {
     return ATtrue;
@@ -4046,7 +4046,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreINSERT(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_LEFT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreLEFT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreLEFT(CFG_VirtualKey arg){
   /* checking for: VK_LEFT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun82) {
     return ATtrue;
@@ -4059,7 +4059,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreLEFT(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_LEFT_PARENTHESIS, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreLEFTUnderscorePARENTHESIS(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreLEFTUnderscorePARENTHESIS(CFG_VirtualKey arg){
   /* checking for: VK_LEFT_PARENTHESIS */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun83) {
     return ATtrue;
@@ -4072,7 +4072,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreLEFTUnderscorePARENTHESIS(CFG_VirtualK
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_MINUS, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreMINUS(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreMINUS(CFG_VirtualKey arg){
   /* checking for: VK_MINUS */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun84) {
     return ATtrue;
@@ -4085,7 +4085,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreMINUS(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_MULTIPLY, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreMULTIPLY(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreMULTIPLY(CFG_VirtualKey arg){
   /* checking for: VK_MULTIPLY */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun85) {
     return ATtrue;
@@ -4098,7 +4098,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreMULTIPLY(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_NUMBER_SIGN, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreNUMBERUnderscoreSIGN(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreNUMBERUnderscoreSIGN(CFG_VirtualKey arg){
   /* checking for: VK_NUMBER_SIGN */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun86) {
     return ATtrue;
@@ -4111,7 +4111,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreNUMBERUnderscoreSIGN(CFG_VirtualKey ar
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_OPEN_BRACKET, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreOPENUnderscoreBRACKET(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreOPENUnderscoreBRACKET(CFG_VirtualKey arg){
   /* checking for: VK_OPEN_BRACKET */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun87) {
     return ATtrue;
@@ -4124,7 +4124,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreOPENUnderscoreBRACKET(CFG_VirtualKey a
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_PAGE_DOWN, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscorePAGEUnderscoreDOWN(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscorePAGEUnderscoreDOWN(CFG_VirtualKey arg){
   /* checking for: VK_PAGE_DOWN */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun88) {
     return ATtrue;
@@ -4137,7 +4137,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscorePAGEUnderscoreDOWN(CFG_VirtualKey arg)
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_PAGE_UP, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscorePAGEUnderscoreUP(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscorePAGEUnderscoreUP(CFG_VirtualKey arg){
   /* checking for: VK_PAGE_UP */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun89) {
     return ATtrue;
@@ -4150,7 +4150,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscorePAGEUnderscoreUP(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_PAUSE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscorePAUSE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscorePAUSE(CFG_VirtualKey arg){
   /* checking for: VK_PAUSE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun90) {
     return ATtrue;
@@ -4163,7 +4163,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscorePAUSE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_PERIOD, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscorePERIOD(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscorePERIOD(CFG_VirtualKey arg){
   /* checking for: VK_PERIOD */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun91) {
     return ATtrue;
@@ -4176,7 +4176,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscorePERIOD(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_PLUS, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscorePLUS(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscorePLUS(CFG_VirtualKey arg){
   /* checking for: VK_PLUS */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun92) {
     return ATtrue;
@@ -4189,7 +4189,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscorePLUS(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_PRINTSCREEN, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscorePRINTSCREEN(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscorePRINTSCREEN(CFG_VirtualKey arg){
   /* checking for: VK_PRINTSCREEN */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun93) {
     return ATtrue;
@@ -4202,7 +4202,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscorePRINTSCREEN(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_QUOTE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreQUOTE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreQUOTE(CFG_VirtualKey arg){
   /* checking for: VK_QUOTE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun94) {
     return ATtrue;
@@ -4215,7 +4215,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreQUOTE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_QUOTEDBL, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreQUOTEDBL(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreQUOTEDBL(CFG_VirtualKey arg){
   /* checking for: VK_QUOTEDBL */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun95) {
     return ATtrue;
@@ -4228,7 +4228,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreQUOTEDBL(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_RIGHT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreRIGHT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreRIGHT(CFG_VirtualKey arg){
   /* checking for: VK_RIGHT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun96) {
     return ATtrue;
@@ -4241,7 +4241,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreRIGHT(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_RIGHT_PARENTHESIS, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreRIGHTUnderscorePARENTHESIS(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreRIGHTUnderscorePARENTHESIS(CFG_VirtualKey arg){
   /* checking for: VK_RIGHT_PARENTHESIS */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun97) {
     return ATtrue;
@@ -4254,7 +4254,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreRIGHTUnderscorePARENTHESIS(CFG_Virtual
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_SEMICOLON, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreSEMICOLON(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreSEMICOLON(CFG_VirtualKey arg){
   /* checking for: VK_SEMICOLON */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun98) {
     return ATtrue;
@@ -4267,7 +4267,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreSEMICOLON(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_SLASH, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreSLASH(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreSLASH(CFG_VirtualKey arg){
   /* checking for: VK_SLASH */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun99) {
     return ATtrue;
@@ -4280,7 +4280,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreSLASH(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_SPACE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreSPACE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreSPACE(CFG_VirtualKey arg){
   /* checking for: VK_SPACE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun100) {
     return ATtrue;
@@ -4293,7 +4293,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreSPACE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_SUBTRACT, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreSUBTRACT(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreSUBTRACT(CFG_VirtualKey arg){
   /* checking for: VK_SUBTRACT */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun101) {
     return ATtrue;
@@ -4306,7 +4306,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreSUBTRACT(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_TAB, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreTAB(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreTAB(CFG_VirtualKey arg){
   /* checking for: VK_TAB */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun102) {
     return ATtrue;
@@ -4319,7 +4319,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreTAB(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_UNDERSCORE, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreUNDERSCORE(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreUNDERSCORE(CFG_VirtualKey arg){
   /* checking for: VK_UNDERSCORE */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun103) {
     return ATtrue;
@@ -4332,7 +4332,7 @@ inline ATbool CFG_isVirtualKeyVKUnderscoreUNDERSCORE(CFG_VirtualKey arg){
  * \param[in] arg input CFG_VirtualKey
  * \return ATtrue if #arg corresponds to the signature of a VK_UP, or ATfalse otherwise
  */
-inline ATbool CFG_isVirtualKeyVKUnderscoreUP(CFG_VirtualKey arg){
+ATbool CFG_isVirtualKeyVKUnderscoreUP(CFG_VirtualKey arg){
   /* checking for: VK_UP */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun104) {
     return ATtrue;
@@ -4357,7 +4357,7 @@ ATbool CFG_isValidColor(CFG_Color arg) {
  * \param[in] arg input CFG_Color
  * \return ATtrue if #arg corresponds to the signature of a rgb, or ATfalse otherwise
  */
-inline ATbool CFG_isColorRgb(CFG_Color arg){
+ATbool CFG_isColorRgb(CFG_Color arg){
   /* checking for: rgb */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun105) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4502,7 +4502,7 @@ ATbool CFG_isValidConfiguration(CFG_Configuration arg) {
  * \param[in] arg input CFG_Configuration
  * \return ATtrue if #arg corresponds to the signature of a configuration, or ATfalse otherwise
  */
-inline ATbool CFG_isConfigurationConfiguration(CFG_Configuration arg){
+ATbool CFG_isConfigurationConfiguration(CFG_Configuration arg){
   /* checking for: configuration */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun106) {
     return ATtrue;
@@ -4585,7 +4585,7 @@ ATbool CFG_isValidProperty(CFG_Property arg) {
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a import, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyImport(CFG_Property arg){
+ATbool CFG_isPropertyImport(CFG_Property arg){
   /* checking for: import */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun107) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4601,7 +4601,7 @@ inline ATbool CFG_isPropertyImport(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a script, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyScript(CFG_Property arg){
+ATbool CFG_isPropertyScript(CFG_Property arg){
   /* checking for: script */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun108) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4617,7 +4617,7 @@ inline ATbool CFG_isPropertyScript(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a script-path, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyScriptPath(CFG_Property arg){
+ATbool CFG_isPropertyScriptPath(CFG_Property arg){
   /* checking for: script-path */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun109) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4633,7 +4633,7 @@ inline ATbool CFG_isPropertyScriptPath(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a action, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyAction(CFG_Property arg){
+ATbool CFG_isPropertyAction(CFG_Property arg){
   /* checking for: action */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun110) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -4649,7 +4649,7 @@ inline ATbool CFG_isPropertyAction(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a editor, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyEditor(CFG_Property arg){
+ATbool CFG_isPropertyEditor(CFG_Property arg){
   /* checking for: editor */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun111) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4671,7 +4671,7 @@ inline ATbool CFG_isPropertyEditor(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a library-path, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyLibraryPath(CFG_Property arg){
+ATbool CFG_isPropertyLibraryPath(CFG_Property arg){
   /* checking for: library-path */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun112) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4690,7 +4690,7 @@ inline ATbool CFG_isPropertyLibraryPath(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a module-path, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyModulePath(CFG_Property arg){
+ATbool CFG_isPropertyModulePath(CFG_Property arg){
   /* checking for: module-path */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun113) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4709,7 +4709,7 @@ inline ATbool CFG_isPropertyModulePath(CFG_Property arg){
  * \param[in] arg input CFG_Property
  * \return ATtrue if #arg corresponds to the signature of a text-category, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyTextCategory(CFG_Property arg){
+ATbool CFG_isPropertyTextCategory(CFG_Property arg){
   /* checking for: text-category */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun114) {
     return ATtrue;
@@ -5112,7 +5112,7 @@ ATbool CFG_isValidActionDescription(CFG_ActionDescription arg) {
  * \param[in] arg input CFG_ActionDescription
  * \return ATtrue if #arg corresponds to the signature of a description, or ATfalse otherwise
  */
-inline ATbool CFG_isActionDescriptionDescription(CFG_ActionDescription arg){
+ATbool CFG_isActionDescriptionDescription(CFG_ActionDescription arg){
   /* checking for: description */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun115) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5226,7 +5226,7 @@ ATbool CFG_isValidEvent(CFG_Event arg) {
  * \param[in] arg input CFG_Event
  * \return ATtrue if #arg corresponds to the signature of a popup, or ATfalse otherwise
  */
-inline ATbool CFG_isEventPopup(CFG_Event arg){
+ATbool CFG_isEventPopup(CFG_Event arg){
   /* checking for: popup */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun116) {
     return ATtrue;
@@ -5239,7 +5239,7 @@ inline ATbool CFG_isEventPopup(CFG_Event arg){
  * \param[in] arg input CFG_Event
  * \return ATtrue if #arg corresponds to the signature of a click, or ATfalse otherwise
  */
-inline ATbool CFG_isEventClick(CFG_Event arg){
+ATbool CFG_isEventClick(CFG_Event arg){
   /* checking for: click */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun117) {
     return ATtrue;
@@ -5252,7 +5252,7 @@ inline ATbool CFG_isEventClick(CFG_Event arg){
  * \param[in] arg input CFG_Event
  * \return ATtrue if #arg corresponds to the signature of a icon, or ATfalse otherwise
  */
-inline ATbool CFG_isEventIcon(CFG_Event arg){
+ATbool CFG_isEventIcon(CFG_Event arg){
   /* checking for: icon */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun118) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5271,7 +5271,7 @@ inline ATbool CFG_isEventIcon(CFG_Event arg){
  * \param[in] arg input CFG_Event
  * \return ATtrue if #arg corresponds to the signature of a menu, or ATfalse otherwise
  */
-inline ATbool CFG_isEventMenu(CFG_Event arg){
+ATbool CFG_isEventMenu(CFG_Event arg){
   /* checking for: menu */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun119) {
     ATerm arg_arg1 = ATgetArgument(arg, 1);
@@ -5287,7 +5287,7 @@ inline ATbool CFG_isEventMenu(CFG_Event arg){
  * \param[in] arg input CFG_Event
  * \return ATtrue if #arg corresponds to the signature of a menu-shortcut, or ATfalse otherwise
  */
-inline ATbool CFG_isEventMenuShortcut(CFG_Event arg){
+ATbool CFG_isEventMenuShortcut(CFG_Event arg){
   /* checking for: menu-shortcut */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun120) {
     ATerm arg_arg2 = ATgetArgument(arg, 2);
@@ -5592,7 +5592,7 @@ ATbool CFG_isValidItem(CFG_Item arg) {
  * \param[in] arg input CFG_Item
  * \return ATtrue if #arg corresponds to the signature of a label, or ATfalse otherwise
  */
-inline ATbool CFG_isItemLabel(CFG_Item arg){
+ATbool CFG_isItemLabel(CFG_Item arg){
   /* checking for: label */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun121) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5666,7 +5666,7 @@ ATbool CFG_isValidTextCategoryName(CFG_TextCategoryName arg) {
  * \param[in] arg input CFG_TextCategoryName
  * \return ATtrue if #arg corresponds to the signature of a focus, or ATfalse otherwise
  */
-inline ATbool CFG_isTextCategoryNameFocus(CFG_TextCategoryName arg){
+ATbool CFG_isTextCategoryNameFocus(CFG_TextCategoryName arg){
   /* checking for: focus */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun122) {
     return ATtrue;
@@ -5679,7 +5679,7 @@ inline ATbool CFG_isTextCategoryNameFocus(CFG_TextCategoryName arg){
  * \param[in] arg input CFG_TextCategoryName
  * \return ATtrue if #arg corresponds to the signature of a selection, or ATfalse otherwise
  */
-inline ATbool CFG_isTextCategoryNameSelection(CFG_TextCategoryName arg){
+ATbool CFG_isTextCategoryNameSelection(CFG_TextCategoryName arg){
   /* checking for: selection */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun123) {
     return ATtrue;
@@ -5692,7 +5692,7 @@ inline ATbool CFG_isTextCategoryNameSelection(CFG_TextCategoryName arg){
  * \param[in] arg input CFG_TextCategoryName
  * \return ATtrue if #arg corresponds to the signature of a normal, or ATfalse otherwise
  */
-inline ATbool CFG_isTextCategoryNameNormal(CFG_TextCategoryName arg){
+ATbool CFG_isTextCategoryNameNormal(CFG_TextCategoryName arg){
   /* checking for: normal */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun124) {
     return ATtrue;
@@ -5705,7 +5705,7 @@ inline ATbool CFG_isTextCategoryNameNormal(CFG_TextCategoryName arg){
  * \param[in] arg input CFG_TextCategoryName
  * \return ATtrue if #arg corresponds to the signature of a extern, or ATfalse otherwise
  */
-inline ATbool CFG_isTextCategoryNameExtern(CFG_TextCategoryName arg){
+ATbool CFG_isTextCategoryNameExtern(CFG_TextCategoryName arg){
   /* checking for: extern */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun125) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5782,7 +5782,7 @@ ATbool CFG_isValidTextAttribute(CFG_TextAttribute arg) {
  * \param[in] arg input CFG_TextAttribute
  * \return ATtrue if #arg corresponds to the signature of a foreground-color, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeForegroundColor(CFG_TextAttribute arg){
+ATbool CFG_isTextAttributeForegroundColor(CFG_TextAttribute arg){
   /* checking for: foreground-color */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun126) {
     return ATtrue;
@@ -5795,7 +5795,7 @@ inline ATbool CFG_isTextAttributeForegroundColor(CFG_TextAttribute arg){
  * \param[in] arg input CFG_TextAttribute
  * \return ATtrue if #arg corresponds to the signature of a background-color, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeBackgroundColor(CFG_TextAttribute arg){
+ATbool CFG_isTextAttributeBackgroundColor(CFG_TextAttribute arg){
   /* checking for: background-color */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun127) {
     return ATtrue;
@@ -5808,7 +5808,7 @@ inline ATbool CFG_isTextAttributeBackgroundColor(CFG_TextAttribute arg){
  * \param[in] arg input CFG_TextAttribute
  * \return ATtrue if #arg corresponds to the signature of a style, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeStyle(CFG_TextAttribute arg){
+ATbool CFG_isTextAttributeStyle(CFG_TextAttribute arg){
   /* checking for: style */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun128) {
     return ATtrue;
@@ -5821,7 +5821,7 @@ inline ATbool CFG_isTextAttributeStyle(CFG_TextAttribute arg){
  * \param[in] arg input CFG_TextAttribute
  * \return ATtrue if #arg corresponds to the signature of a font, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeFont(CFG_TextAttribute arg){
+ATbool CFG_isTextAttributeFont(CFG_TextAttribute arg){
   /* checking for: font */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun129) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5837,7 +5837,7 @@ inline ATbool CFG_isTextAttributeFont(CFG_TextAttribute arg){
  * \param[in] arg input CFG_TextAttribute
  * \return ATtrue if #arg corresponds to the signature of a size, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeSize(CFG_TextAttribute arg){
+ATbool CFG_isTextAttributeSize(CFG_TextAttribute arg){
   /* checking for: size */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun130) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6022,7 +6022,7 @@ ATbool CFG_isValidShortCut(CFG_ShortCut arg) {
  * \param[in] arg input CFG_ShortCut
  * \return ATtrue if #arg corresponds to the signature of a shortcut, or ATfalse otherwise
  */
-inline ATbool CFG_isShortCutShortcut(CFG_ShortCut arg){
+ATbool CFG_isShortCutShortcut(CFG_ShortCut arg){
   /* checking for: shortcut */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun131) {
     return ATtrue;
@@ -6127,7 +6127,7 @@ ATbool CFG_isValidTextStyle(CFG_TextStyle arg) {
  * \param[in] arg input CFG_TextStyle
  * \return ATtrue if #arg corresponds to the signature of a bold, or ATfalse otherwise
  */
-inline ATbool CFG_isTextStyleBold(CFG_TextStyle arg){
+ATbool CFG_isTextStyleBold(CFG_TextStyle arg){
   /* checking for: bold */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun132) {
     return ATtrue;
@@ -6140,7 +6140,7 @@ inline ATbool CFG_isTextStyleBold(CFG_TextStyle arg){
  * \param[in] arg input CFG_TextStyle
  * \return ATtrue if #arg corresponds to the signature of a italics, or ATfalse otherwise
  */
-inline ATbool CFG_isTextStyleItalics(CFG_TextStyle arg){
+ATbool CFG_isTextStyleItalics(CFG_TextStyle arg){
   /* checking for: italics */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun133) {
     return ATtrue;
@@ -6153,7 +6153,7 @@ inline ATbool CFG_isTextStyleItalics(CFG_TextStyle arg){
  * \param[in] arg input CFG_TextStyle
  * \return ATtrue if #arg corresponds to the signature of a underlined, or ATfalse otherwise
  */
-inline ATbool CFG_isTextStyleUnderlined(CFG_TextStyle arg){
+ATbool CFG_isTextStyleUnderlined(CFG_TextStyle arg){
   /* checking for: underlined */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == CFG_afun134) {
     return ATtrue;
@@ -6184,7 +6184,7 @@ ATbool CFG_isValidPropertyList(CFG_PropertyList arg) {
  * \param[in] arg input CFG_PropertyList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyListEmpty(CFG_PropertyList arg){
+ATbool CFG_isPropertyListEmpty(CFG_PropertyList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -6196,7 +6196,7 @@ inline ATbool CFG_isPropertyListEmpty(CFG_PropertyList arg){
  * \param[in] arg input CFG_PropertyList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyListSingle(CFG_PropertyList arg){
+ATbool CFG_isPropertyListSingle(CFG_PropertyList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -6212,7 +6212,7 @@ inline ATbool CFG_isPropertyListSingle(CFG_PropertyList arg){
  * \param[in] arg input CFG_PropertyList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CFG_isPropertyListMany(CFG_PropertyList arg){
+ATbool CFG_isPropertyListMany(CFG_PropertyList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -6325,7 +6325,7 @@ ATbool CFG_isValidActionDescriptionList(CFG_ActionDescriptionList arg) {
  * \param[in] arg input CFG_ActionDescriptionList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CFG_isActionDescriptionListEmpty(CFG_ActionDescriptionList arg){
+ATbool CFG_isActionDescriptionListEmpty(CFG_ActionDescriptionList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -6337,7 +6337,7 @@ inline ATbool CFG_isActionDescriptionListEmpty(CFG_ActionDescriptionList arg){
  * \param[in] arg input CFG_ActionDescriptionList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CFG_isActionDescriptionListSingle(CFG_ActionDescriptionList arg){
+ATbool CFG_isActionDescriptionListSingle(CFG_ActionDescriptionList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -6353,7 +6353,7 @@ inline ATbool CFG_isActionDescriptionListSingle(CFG_ActionDescriptionList arg){
  * \param[in] arg input CFG_ActionDescriptionList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CFG_isActionDescriptionListMany(CFG_ActionDescriptionList arg){
+ATbool CFG_isActionDescriptionListMany(CFG_ActionDescriptionList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -6466,7 +6466,7 @@ ATbool CFG_isValidTextAttributeMap(CFG_TextAttributeMap arg) {
  * \param[in] arg input CFG_TextAttributeMap
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeMapEmpty(CFG_TextAttributeMap arg){
+ATbool CFG_isTextAttributeMapEmpty(CFG_TextAttributeMap arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -6478,7 +6478,7 @@ inline ATbool CFG_isTextAttributeMapEmpty(CFG_TextAttributeMap arg){
  * \param[in] arg input CFG_TextAttributeMap
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeMapSingle(CFG_TextAttributeMap arg){
+ATbool CFG_isTextAttributeMapSingle(CFG_TextAttributeMap arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -6494,7 +6494,7 @@ inline ATbool CFG_isTextAttributeMapSingle(CFG_TextAttributeMap arg){
  * \param[in] arg input CFG_TextAttributeMap
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CFG_isTextAttributeMapMany(CFG_TextAttributeMap arg){
+ATbool CFG_isTextAttributeMapMany(CFG_TextAttributeMap arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -6607,7 +6607,7 @@ ATbool CFG_isValidKeyModifierList(CFG_KeyModifierList arg) {
  * \param[in] arg input CFG_KeyModifierList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CFG_isKeyModifierListEmpty(CFG_KeyModifierList arg){
+ATbool CFG_isKeyModifierListEmpty(CFG_KeyModifierList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -6619,7 +6619,7 @@ inline ATbool CFG_isKeyModifierListEmpty(CFG_KeyModifierList arg){
  * \param[in] arg input CFG_KeyModifierList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CFG_isKeyModifierListSingle(CFG_KeyModifierList arg){
+ATbool CFG_isKeyModifierListSingle(CFG_KeyModifierList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -6635,7 +6635,7 @@ inline ATbool CFG_isKeyModifierListSingle(CFG_KeyModifierList arg){
  * \param[in] arg input CFG_KeyModifierList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CFG_isKeyModifierListMany(CFG_KeyModifierList arg){
+ATbool CFG_isKeyModifierListMany(CFG_KeyModifierList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -6748,7 +6748,7 @@ ATbool CFG_isValidItemLabels(CFG_ItemLabels arg) {
  * \param[in] arg input CFG_ItemLabels
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool CFG_isItemLabelsEmpty(CFG_ItemLabels arg){
+ATbool CFG_isItemLabelsEmpty(CFG_ItemLabels arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -6760,7 +6760,7 @@ inline ATbool CFG_isItemLabelsEmpty(CFG_ItemLabels arg){
  * \param[in] arg input CFG_ItemLabels
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool CFG_isItemLabelsSingle(CFG_ItemLabels arg){
+ATbool CFG_isItemLabelsSingle(CFG_ItemLabels arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -6776,7 +6776,7 @@ inline ATbool CFG_isItemLabelsSingle(CFG_ItemLabels arg){
  * \param[in] arg input CFG_ItemLabels
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool CFG_isItemLabelsMany(CFG_ItemLabels arg){
+ATbool CFG_isItemLabelsMany(CFG_ItemLabels arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }

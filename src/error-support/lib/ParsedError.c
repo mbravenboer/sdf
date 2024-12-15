@@ -2286,7 +2286,7 @@ ATbool PERR_isValidOptLayout(PERR_OptLayout arg) {
  * \param[in] arg input PERR_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Absent, or ATfalse otherwise
  */
-inline ATbool PERR_isOptLayoutAbsent(PERR_OptLayout arg){
+ATbool PERR_isOptLayoutAbsent(PERR_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2325,7 +2325,7 @@ inline ATbool PERR_isOptLayoutAbsent(PERR_OptLayout arg){
  * \param[in] arg input PERR_OptLayout
  * \return ATtrue if #arg corresponds to the signature of a Present, or ATfalse otherwise
  */
-inline ATbool PERR_isOptLayoutPresent(PERR_OptLayout arg){
+ATbool PERR_isOptLayoutPresent(PERR_OptLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2430,7 +2430,7 @@ ATbool PERR_isValidLayout(PERR_Layout arg) {
  * \param[in] arg input PERR_Layout
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PERR_isLayoutLexToCf(PERR_Layout arg){
+ATbool PERR_isLayoutLexToCf(PERR_Layout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2562,7 +2562,7 @@ ATbool PERR_isValidLexLayoutList(PERR_LexLayoutList arg) {
  * \param[in] arg input PERR_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PERR_isLexLayoutListEmpty(PERR_LexLayoutList arg){
+ATbool PERR_isLexLayoutListEmpty(PERR_LexLayoutList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -2574,7 +2574,7 @@ inline ATbool PERR_isLexLayoutListEmpty(PERR_LexLayoutList arg){
  * \param[in] arg input PERR_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PERR_isLexLayoutListSingle(PERR_LexLayoutList arg){
+ATbool PERR_isLexLayoutListSingle(PERR_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -2590,7 +2590,7 @@ inline ATbool PERR_isLexLayoutListSingle(PERR_LexLayoutList arg){
  * \param[in] arg input PERR_LexLayoutList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PERR_isLexLayoutListMany(PERR_LexLayoutList arg){
+ATbool PERR_isLexLayoutListMany(PERR_LexLayoutList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -2712,7 +2712,7 @@ ATbool PERR_isValidLexStrChar(PERR_LexStrChar arg) {
  * \param[in] arg input PERR_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a newline, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharNewline(PERR_LexStrChar arg){
+ATbool PERR_isLexStrCharNewline(PERR_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -2871,7 +2871,7 @@ inline ATbool PERR_isLexStrCharNewline(PERR_LexStrChar arg){
  * \param[in] arg input PERR_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a tab, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharTab(PERR_LexStrChar arg){
+ATbool PERR_isLexStrCharTab(PERR_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3030,7 +3030,7 @@ inline ATbool PERR_isLexStrCharTab(PERR_LexStrChar arg){
  * \param[in] arg input PERR_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a quote, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharQuote(PERR_LexStrChar arg){
+ATbool PERR_isLexStrCharQuote(PERR_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3189,7 +3189,7 @@ inline ATbool PERR_isLexStrCharQuote(PERR_LexStrChar arg){
  * \param[in] arg input PERR_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a backslash, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharBackslash(PERR_LexStrChar arg){
+ATbool PERR_isLexStrCharBackslash(PERR_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3348,7 +3348,7 @@ inline ATbool PERR_isLexStrCharBackslash(PERR_LexStrChar arg){
  * \param[in] arg input PERR_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a decimal, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharDecimal(PERR_LexStrChar arg){
+ATbool PERR_isLexStrCharDecimal(PERR_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3580,7 +3580,7 @@ inline ATbool PERR_isLexStrCharDecimal(PERR_LexStrChar arg){
  * \param[in] arg input PERR_LexStrChar
  * \return ATtrue if #arg corresponds to the signature of a normal, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharNormal(PERR_LexStrChar arg){
+ATbool PERR_isLexStrCharNormal(PERR_LexStrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3866,7 +3866,7 @@ ATbool PERR_isValidStrChar(PERR_StrChar arg) {
  * \param[in] arg input PERR_StrChar
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PERR_isStrCharLexToCf(PERR_StrChar arg){
+ATbool PERR_isStrCharLexToCf(PERR_StrChar arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -3975,7 +3975,7 @@ ATbool PERR_isValidLexStrCon(PERR_LexStrCon arg) {
  * \param[in] arg input PERR_LexStrCon
  * \return ATtrue if #arg corresponds to the signature of a default, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrConDefault(PERR_LexStrCon arg){
+ATbool PERR_isLexStrConDefault(PERR_LexStrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4185,7 +4185,7 @@ ATbool PERR_isValidStrCon(PERR_StrCon arg) {
  * \param[in] arg input PERR_StrCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PERR_isStrConLexToCf(PERR_StrCon arg){
+ATbool PERR_isStrConLexToCf(PERR_StrCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4300,7 +4300,7 @@ ATbool PERR_isValidLexStrCharChars(PERR_LexStrCharChars arg) {
  * \param[in] arg input PERR_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharCharsEmpty(PERR_LexStrCharChars arg){
+ATbool PERR_isLexStrCharCharsEmpty(PERR_LexStrCharChars arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -4312,7 +4312,7 @@ inline ATbool PERR_isLexStrCharCharsEmpty(PERR_LexStrCharChars arg){
  * \param[in] arg input PERR_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharCharsSingle(PERR_LexStrCharChars arg){
+ATbool PERR_isLexStrCharCharsSingle(PERR_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -4328,7 +4328,7 @@ inline ATbool PERR_isLexStrCharCharsSingle(PERR_LexStrCharChars arg){
  * \param[in] arg input PERR_LexStrCharChars
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PERR_isLexStrCharCharsMany(PERR_LexStrCharChars arg){
+ATbool PERR_isLexStrCharCharsMany(PERR_LexStrCharChars arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
@@ -4435,7 +4435,7 @@ ATbool PERR_isValidLexNatCon(PERR_LexNatCon arg) {
  * \param[in] arg input PERR_LexNatCon
  * \return ATtrue if #arg corresponds to the signature of a digits, or ATfalse otherwise
  */
-inline ATbool PERR_isLexNatConDigits(PERR_LexNatCon arg){
+ATbool PERR_isLexNatConDigits(PERR_LexNatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4628,7 +4628,7 @@ ATbool PERR_isValidNatCon(PERR_NatCon arg) {
  * \param[in] arg input PERR_NatCon
  * \return ATtrue if #arg corresponds to the signature of a Lex-to-cf, or ATfalse otherwise
  */
-inline ATbool PERR_isNatConLexToCf(PERR_NatCon arg){
+ATbool PERR_isNatConLexToCf(PERR_NatCon arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4737,7 +4737,7 @@ ATbool PERR_isValidLexLayout(PERR_LexLayout arg) {
  * \param[in] arg input PERR_LexLayout
  * \return ATtrue if #arg corresponds to the signature of a whitespace, or ATfalse otherwise
  */
-inline ATbool PERR_isLexLayoutWhitespace(PERR_LexLayout arg){
+ATbool PERR_isLexLayoutWhitespace(PERR_LexLayout arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4895,7 +4895,7 @@ ATbool PERR_isValidStart(PERR_Start arg) {
  * \param[in] arg input PERR_Start
  * \return ATtrue if #arg corresponds to the signature of a Summary, or ATfalse otherwise
  */
-inline ATbool PERR_isStartSummary(PERR_Start arg){
+ATbool PERR_isStartSummary(PERR_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun34) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -4994,7 +4994,7 @@ inline ATbool PERR_isStartSummary(PERR_Start arg){
  * \param[in] arg input PERR_Start
  * \return ATtrue if #arg corresponds to the signature of a Error, or ATfalse otherwise
  */
-inline ATbool PERR_isStartError(PERR_Start arg){
+ATbool PERR_isStartError(PERR_Start arg){
   /* checking for: parsetree */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun34) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5320,7 +5320,7 @@ ATbool PERR_isValidSubject(PERR_Subject arg) {
  * \param[in] arg input PERR_Subject
  * \return ATtrue if #arg corresponds to the signature of a subject, or ATfalse otherwise
  */
-inline ATbool PERR_isSubjectSubject(PERR_Subject arg){
+ATbool PERR_isSubjectSubject(PERR_Subject arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -5821,7 +5821,7 @@ inline ATbool PERR_isSubjectSubject(PERR_Subject arg){
  * \param[in] arg input PERR_Subject
  * \return ATtrue if #arg corresponds to the signature of a localized, or ATfalse otherwise
  */
-inline ATbool PERR_isSubjectLocalized(PERR_Subject arg){
+ATbool PERR_isSubjectLocalized(PERR_Subject arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -6842,7 +6842,7 @@ ATbool PERR_isValidError(PERR_Error arg) {
  * \param[in] arg input PERR_Error
  * \return ATtrue if #arg corresponds to the signature of a info, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorInfo(PERR_Error arg){
+ATbool PERR_isErrorInfo(PERR_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -7609,7 +7609,7 @@ inline ATbool PERR_isErrorInfo(PERR_Error arg){
  * \param[in] arg input PERR_Error
  * \return ATtrue if #arg corresponds to the signature of a warning, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorWarning(PERR_Error arg){
+ATbool PERR_isErrorWarning(PERR_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -8454,7 +8454,7 @@ inline ATbool PERR_isErrorWarning(PERR_Error arg){
  * \param[in] arg input PERR_Error
  * \return ATtrue if #arg corresponds to the signature of a error, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorError(PERR_Error arg){
+ATbool PERR_isErrorError(PERR_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -9247,7 +9247,7 @@ inline ATbool PERR_isErrorError(PERR_Error arg){
  * \param[in] arg input PERR_Error
  * \return ATtrue if #arg corresponds to the signature of a fatal, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorFatal(PERR_Error arg){
+ATbool PERR_isErrorFatal(PERR_Error arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -10712,7 +10712,7 @@ ATbool PERR_isValidSummary(PERR_Summary arg) {
  * \param[in] arg input PERR_Summary
  * \return ATtrue if #arg corresponds to the signature of a summary, or ATfalse otherwise
  */
-inline ATbool PERR_isSummarySummary(PERR_Summary arg){
+ATbool PERR_isSummarySummary(PERR_Summary arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -12143,7 +12143,7 @@ ATbool PERR_isValidSubjectList(PERR_SubjectList arg) {
  * \param[in] arg input PERR_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PERR_isSubjectListEmpty(PERR_SubjectList arg){
+ATbool PERR_isSubjectListEmpty(PERR_SubjectList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -12155,7 +12155,7 @@ inline ATbool PERR_isSubjectListEmpty(PERR_SubjectList arg){
  * \param[in] arg input PERR_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PERR_isSubjectListSingle(PERR_SubjectList arg){
+ATbool PERR_isSubjectListSingle(PERR_SubjectList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -12171,7 +12171,7 @@ inline ATbool PERR_isSubjectListSingle(PERR_SubjectList arg){
  * \param[in] arg input PERR_SubjectList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PERR_isSubjectListMany(PERR_SubjectList arg){
+ATbool PERR_isSubjectListMany(PERR_SubjectList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -12431,7 +12431,7 @@ ATbool PERR_isValidErrorList(PERR_ErrorList arg) {
  * \param[in] arg input PERR_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorListEmpty(PERR_ErrorList arg){
+ATbool PERR_isErrorListEmpty(PERR_ErrorList arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -12443,7 +12443,7 @@ inline ATbool PERR_isErrorListEmpty(PERR_ErrorList arg){
  * \param[in] arg input PERR_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorListSingle(PERR_ErrorList arg){
+ATbool PERR_isErrorListSingle(PERR_ErrorList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -12459,7 +12459,7 @@ inline ATbool PERR_isErrorListSingle(PERR_ErrorList arg){
  * \param[in] arg input PERR_ErrorList
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PERR_isErrorListMany(PERR_ErrorList arg){
+ATbool PERR_isErrorListMany(PERR_ErrorList arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;
@@ -12719,7 +12719,7 @@ ATbool PERR_isValidLocation(PERR_Location arg) {
  * \param[in] arg input PERR_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool PERR_isLocationFile(PERR_Location arg){
+ATbool PERR_isLocationFile(PERR_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13142,7 +13142,7 @@ inline ATbool PERR_isLocationFile(PERR_Location arg){
  * \param[in] arg input PERR_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool PERR_isLocationArea(PERR_Location arg){
+ATbool PERR_isLocationArea(PERR_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -13565,7 +13565,7 @@ inline ATbool PERR_isLocationArea(PERR_Location arg){
  * \param[in] arg input PERR_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool PERR_isLocationAreaInFile(PERR_Location arg){
+ATbool PERR_isLocationAreaInFile(PERR_Location arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -14719,7 +14719,7 @@ ATbool PERR_isValidArea(PERR_Area arg) {
  * \param[in] arg input PERR_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool PERR_isAreaArea(PERR_Area arg){
+ATbool PERR_isAreaArea(PERR_Area arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -16477,7 +16477,7 @@ ATbool PERR_isValidSlice(PERR_Slice arg) {
  * \param[in] arg input PERR_Slice
  * \return ATtrue if #arg corresponds to the signature of a slice, or ATfalse otherwise
  */
-inline ATbool PERR_isSliceSlice(PERR_Slice arg){
+ATbool PERR_isSliceSlice(PERR_Slice arg){
   /* checking for: appl */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == PERR_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -17621,7 +17621,7 @@ ATbool PERR_isValidAreaAreas(PERR_AreaAreas arg) {
  * \param[in] arg input PERR_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool PERR_isAreaAreasEmpty(PERR_AreaAreas arg){
+ATbool PERR_isAreaAreasEmpty(PERR_AreaAreas arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -17633,7 +17633,7 @@ inline ATbool PERR_isAreaAreasEmpty(PERR_AreaAreas arg){
  * \param[in] arg input PERR_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool PERR_isAreaAreasSingle(PERR_AreaAreas arg){
+ATbool PERR_isAreaAreasSingle(PERR_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -17649,7 +17649,7 @@ inline ATbool PERR_isAreaAreasSingle(PERR_AreaAreas arg){
  * \param[in] arg input PERR_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool PERR_isAreaAreasMany(PERR_AreaAreas arg){
+ATbool PERR_isAreaAreasMany(PERR_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATerm arg_head;
     ATermList arg_list = (ATermList)arg;

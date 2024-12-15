@@ -627,7 +627,7 @@ ATbool LOC_isValidStrChar(LOC_StrChar arg) {
  * \param[in] arg input LOC_StrChar
  * \return ATtrue if #arg corresponds to the signature of a StrChar, or ATfalse otherwise
  */
-inline ATbool LOC_isStrCharStrChar(LOC_StrChar arg){
+ATbool LOC_isStrCharStrChar(LOC_StrChar arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -688,7 +688,7 @@ ATbool LOC_isValidStrCon(LOC_StrCon arg) {
  * \param[in] arg input LOC_StrCon
  * \return ATtrue if #arg corresponds to the signature of a StrCon, or ATfalse otherwise
  */
-inline ATbool LOC_isStrConStrCon(LOC_StrCon arg){
+ATbool LOC_isStrConStrCon(LOC_StrCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -749,7 +749,7 @@ ATbool LOC_isValidNatCon(LOC_NatCon arg) {
  * \param[in] arg input LOC_NatCon
  * \return ATtrue if #arg corresponds to the signature of a NatCon, or ATfalse otherwise
  */
-inline ATbool LOC_isNatConNatCon(LOC_NatCon arg){
+ATbool LOC_isNatConNatCon(LOC_NatCon arg){
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetArity(ATgetAFun((ATermAppl)arg)) == 0 && ATisQuoted(ATgetAFun((ATermAppl)arg)) == ATtrue) {
     return ATtrue;
   }
@@ -816,7 +816,7 @@ ATbool LOC_isValidLocation(LOC_Location arg) {
  * \param[in] arg input LOC_Location
  * \return ATtrue if #arg corresponds to the signature of a file, or ATfalse otherwise
  */
-inline ATbool LOC_isLocationFile(LOC_Location arg){
+ATbool LOC_isLocationFile(LOC_Location arg){
   /* checking for: file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == LOC_afun0) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -832,7 +832,7 @@ inline ATbool LOC_isLocationFile(LOC_Location arg){
  * \param[in] arg input LOC_Location
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool LOC_isLocationArea(LOC_Location arg){
+ATbool LOC_isLocationArea(LOC_Location arg){
   /* checking for: area */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == LOC_afun1) {
     return ATtrue;
@@ -845,7 +845,7 @@ inline ATbool LOC_isLocationArea(LOC_Location arg){
  * \param[in] arg input LOC_Location
  * \return ATtrue if #arg corresponds to the signature of a area-in-file, or ATfalse otherwise
  */
-inline ATbool LOC_isLocationAreaInFile(LOC_Location arg){
+ATbool LOC_isLocationAreaInFile(LOC_Location arg){
   /* checking for: area-in-file */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == LOC_afun2) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -965,7 +965,7 @@ ATbool LOC_isValidArea(LOC_Area arg) {
  * \param[in] arg input LOC_Area
  * \return ATtrue if #arg corresponds to the signature of a area, or ATfalse otherwise
  */
-inline ATbool LOC_isAreaArea(LOC_Area arg){
+ATbool LOC_isAreaArea(LOC_Area arg){
   /* checking for: area */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == LOC_afun3) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1230,7 +1230,7 @@ ATbool LOC_isValidSlice(LOC_Slice arg) {
  * \param[in] arg input LOC_Slice
  * \return ATtrue if #arg corresponds to the signature of a slice, or ATfalse otherwise
  */
-inline ATbool LOC_isSliceSlice(LOC_Slice arg){
+ATbool LOC_isSliceSlice(LOC_Slice arg){
   /* checking for: slice */
   if (ATgetType((ATerm)arg) == AT_APPL && ATgetAFun((ATermAppl)arg) == LOC_afun4) {
     ATerm arg_arg0 = ATgetArgument(arg, 0);
@@ -1338,7 +1338,7 @@ ATbool LOC_isValidAreaAreas(LOC_AreaAreas arg) {
  * \param[in] arg input LOC_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a empty, or ATfalse otherwise
  */
-inline ATbool LOC_isAreaAreasEmpty(LOC_AreaAreas arg){
+ATbool LOC_isAreaAreasEmpty(LOC_AreaAreas arg){
   if (ATisEmpty((ATermList)arg)) {
     return ATtrue;
   }
@@ -1350,7 +1350,7 @@ inline ATbool LOC_isAreaAreasEmpty(LOC_AreaAreas arg){
  * \param[in] arg input LOC_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a single, or ATfalse otherwise
  */
-inline ATbool LOC_isAreaAreasSingle(LOC_AreaAreas arg){
+ATbool LOC_isAreaAreasSingle(LOC_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     ATermList arg_list = (ATermList)arg;
     arg_list = ATgetNext(arg_list);
@@ -1366,7 +1366,7 @@ inline ATbool LOC_isAreaAreasSingle(LOC_AreaAreas arg){
  * \param[in] arg input LOC_AreaAreas
  * \return ATtrue if #arg corresponds to the signature of a many, or ATfalse otherwise
  */
-inline ATbool LOC_isAreaAreasMany(LOC_AreaAreas arg){
+ATbool LOC_isAreaAreasMany(LOC_AreaAreas arg){
   if (ATgetType((ATerm)arg) == AT_LIST && ATisEmpty((ATermList)arg) == ATfalse) {
     return ATtrue;
   }
